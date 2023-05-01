@@ -27,7 +27,7 @@ entity MEM_STAGE is
 		
 		WB_data_out:out std_logic_vector((operand_width-1) downto 0);
 		
-		WB_add_out :in std_logic_vector(2 downto 0);
+		WB_add_out :in std_logic_vector(2 downto 0)
     );
 
 end MEM_STAGE;
