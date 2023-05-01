@@ -23,7 +23,7 @@ begin
     register_write:process(clock)
     begin
         -- Write only at the rising edge of the clock
-        if(clock = '1' and clock' event) then
+        if(clock = '0' and clock' event) then
             if(RF_WR = '1') then
                 case RF_A3 is
                     when "000" =>
