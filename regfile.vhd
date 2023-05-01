@@ -8,26 +8,32 @@ entity regfile is
 	port (
         clock: in std_logic;
         RF_WR: in std_logic;
+		  PC_WR: in std_logic;
 		RF_A1: in std_logic_vector(2 downto 0);
 		RF_A2: in std_logic_vector(2 downto 0);
 		RF_A3: in std_logic_vector(2 downto 0);
         RF_D3: in std_logic_vector((operand_width - 1) downto 0);
+		  PC_in: in std_logic_vector((operand_width - 1) downto 0);
         RF_D1: out std_logic_vector((operand_width - 1) downto 0);
-        RF_D2: out std_logic_vector((operand_width - 1) downto 0)
+        RF_D2: out std_logic_vector((operand_width - 1) downto 0);
+		  PC_out: out std_logic_vector((operand_width - 1) downto 0)
         );
 end regfile;
 
 architecture behavioural of regfile is
     signal R0, R1, R2, R3, R4, R5, R6, R7: std_logic_vector((operand_width - 1) downto 0);
 begin
+	 PC_out <= R0;
     register_write:process(clock)
     begin
         -- Write only at the rising edge of the clock
         if(clock = '0' and clock' event) then
-            if(RF_WR = '1') then
-                case RF_A3 is
-                    when "000" =>
-                        R0 <= RF_D3;
+            if(PC_WR = '1' and not RD_A3 = "000") then
+					R0 <= PC_in;
+				else if(RF_WR = '1' and RD_A3 = "000")
+					R0 <= RF_D3;
+				end if;
+				if(RF_WR = '1') then    
                     when "001" =>
                         R1 <= RF_D3;
                     when "010" =>
