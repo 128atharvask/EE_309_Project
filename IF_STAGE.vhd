@@ -74,5 +74,5 @@ end component;
 --signal D : std_logic_vector(operand_width-1 downto 0);
     
 begin
-  adder: ADDER()
+  adder: ADDER(inp1, "0000000000010000", outp)
 end Structural;

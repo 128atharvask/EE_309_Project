@@ -1,5 +1,5 @@
 Analysis & Elaboration report for IITB-RISC
-Mon May 01 14:43:06 2023
+Mon May 01 19:57:12 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Failed - Mon May 01 14:43:06 2023           ;
+; Analysis & Elaboration Status      ; Failed - Mon May 01 19:57:12 2023           ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB-RISC                                   ;
 ; Top-level Entity Name              ; IITB-RISC                                   ;
@@ -164,7 +164,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon May 01 14:42:50 2023
+    Info: Processing started: Mon May 01 19:56:46 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB-RISC -c IITB-RISC --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -198,21 +198,22 @@ Info (12021): Found 2 design units, including 1 entities, in source file alu2.vh
 Info (12021): Found 2 design units, including 1 entities, in source file mux4to1.vhd
     Info (12022): Found design unit 1: mux4to1-structural File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/mux4to1.vhd Line: 17
     Info (12023): Found entity 1: mux4to1 File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/mux4to1.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file if_stage.vhd
-    Info (12022): Found design unit 1: IF_STAGE-Structural File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/IF_STAGE.vhd Line: 34
-    Info (12023): Found entity 1: IF_STAGE File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/IF_STAGE.vhd Line: 6
-Error (10500): VHDL syntax error at MEM_STAGE.vhd(31) near text ")";  expecting an identifier, or "constant", or "file", or "signal", or "variable" File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/MEM_STAGE.vhd Line: 31
-Error (10500): VHDL syntax error at MEM_STAGE.vhd(41) near text "component";  expecting ";", or an identifier ("component" is a reserved keyword), or "entity" File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/MEM_STAGE.vhd Line: 41
-Error (10396): VHDL syntax error at MEM_STAGE.vhd(71): name used in construct must match previously specified name "MEM_STAGE" File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/MEM_STAGE.vhd Line: 71
-Error (10523): Ignored construct MEM_STAGE at MEM_STAGE.vhd(6) due to previous errors File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/MEM_STAGE.vhd Line: 6
+Error (10500): VHDL syntax error at IF_STAGE.vhd(48) near text "(";  expecting "end", or "port" File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/IF_STAGE.vhd Line: 48
+Error (10500): VHDL syntax error at IF_STAGE.vhd(77) near text ")";  expecting "(", or an identifier, or  unary operator File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/IF_STAGE.vhd Line: 77
+Info (12021): Found 0 design units, including 0 entities, in source file if_stage.vhd
+Error (10500): VHDL syntax error at MEM_STAGE.vhd(45) near text "generic";  expecting "begin", or a declaration statement File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/MEM_STAGE.vhd Line: 45
+Error (10500): VHDL syntax error at MEM_STAGE.vhd(66) near text "WB_data_out";  expecting ";", or "port", or "generic" File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/MEM_STAGE.vhd Line: 66
 Info (12021): Found 0 design units, including 0 entities, in source file mem_stage.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file mux2to1.vhd
     Info (12022): Found design unit 1: mux2to1-structural File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/mux2to1.vhd Line: 9
     Info (12023): Found entity 1: mux2to1 File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/mux2to1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file regfile.vhd
+    Info (12022): Found design unit 1: regfile-behavioural File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/regfile.vhd Line: 22
+    Info (12023): Found entity 1: regfile File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/regfile.vhd Line: 4
 Error: Quartus Prime Analysis & Elaboration was unsuccessful. 4 errors, 1 warning
     Error: Peak virtual memory: 4779 megabytes
-    Error: Processing ended: Mon May 01 14:43:06 2023
-    Error: Elapsed time: 00:00:16
-    Error: Total CPU time (on all processors): 00:00:23
+    Error: Processing ended: Mon May 01 19:57:12 2023
+    Error: Elapsed time: 00:00:26
+    Error: Total CPU time (on all processors): 00:00:18
 
 
