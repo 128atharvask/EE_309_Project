@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.Gates.all;
 
-entity ALU2 is
+entity IF_STAGE is
 	 generic
 	 (
 		 operand_width : integer := 16
@@ -28,10 +28,10 @@ entity ALU2 is
 		ALU_Z:out std_logic
     );
 
-end ALU2;
+end IF_STAGE;
 
 
-architecture Structural of ALU2 is
+architecture Structural of IF_STAGE is
     component FULL_ADDER is
         port (
             A : in std_logic;
