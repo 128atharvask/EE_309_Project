@@ -68,6 +68,28 @@ signal ALU_CND : std_logic_vector(1 downto 0) := "00";
 		return bitwise_nand;
 	end nander;
 	
+	
+	--subtraction
+	--SUB
+	function sub(A: in std_logic_vector(operand_width-1 downto 0);
+	B: in std_logic_vector(operand_width-1 downto 0))
+	return std_logic_vector is
+		variable diff : std_logic_vector(operand_width downto 0):= (others=>'0');
+		variable carry : std_logic_vector(operand_width-1 downto 0):= (others=>'0');
+		begin
+		L3: for i in 0 to (operand_width-1) loop
+			if i = 0 then
+				diff(i) := A(i) xor B(i) xor '0';
+				carry(i) := A(i) and (not B(i));
+			else
+				diff(i) := A(i) xor B(i) xor carry(i-1);
+				carry(i) := (not(B(i)) and carry(i-1)) or (A(i) and carry(i-1)) or (A(i) and not(B(i)));
+			end if;
+		end loop L3;
+		diff(operand_width) := carry(operand_width-1);
+		return diff;
+	end sub;	
+	
 begin
 
     
@@ -77,6 +99,7 @@ begin
     variable carry: std_logic := '0';
     variable bitwise_nand: std_logic_vector((operand_width-1) downto 0) := "0000000000000000";
 	 variable sz_int: std_logic := '0'; -- Signal for storing computational Zero output, Z_int
+	 variable sub_result : std_logic_vector(operand_width downto 0);
 	 begin
 
 
@@ -127,6 +150,21 @@ begin
                     ALU_Z <= sz_int;
                 end if;
 
+					 
+				  --subtraction
+				 elsif(ALU_J = "10") then
+					sub_result := sub(ALU_B,ALU_A);
+					ALU_C <= sub_result((operand_width-1) downto 0);
+					ALU_Cout <= sub_result(operand_width);
+					if(sub_result((operand_width-1) downto 0) = "0000000000000000" and sub_result(operand_width) = '0') then
+						ALU_Z <= '1';
+					else
+						ALU_Z <= '0';
+					end if;
+					 
+					 
+					 
+					 
             -- For BEQ
             elsif(ALU_J = "11") then
                 if(ALU_A = ALU_B) then

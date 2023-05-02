@@ -28,6 +28,9 @@ architecture behavioural of Stage4_Exec is
     signal condcode: std_logic_vector(1 downto 0);
     signal carry, zero: std_logic;
     signal C_in,C_WR,C_out,Z_in,Z_WR,Z_out: std_logic;
+	 signal ALU2_A, ALU2_B, ALU2_C, ALU3_A, ALU3_B, ALU3_C: std_logic_vector((operand_width - 1) downto 0);
+	 signal ALU2_Cin, ALU2_Cout, ALU2_Z, ALU3_Cin, ALU3_Cout, ALU3_Z: std_logic;
+	 signal ALU2_J, ALU3_J: std_logic_vector(1 downto 0);
     component ALU_2 is
         generic
         (
@@ -71,7 +74,7 @@ begin
     ALU3: ALU_2 port map(ALU_A => ALU3_A, ALU_B => ALU3_B, ALU_Cin => ALU3_Cin, ALU_J => ALU3_J, ALU_C => ALU3_C, ALU_Cout => ALU3_Cout, ALU_Z => ALU3_Z);
     Instr_R4(11 downto 0) <= Instr_R3(11 downto 0);
 
-    stage_proc:process(clock, C_out, Z_out)
+    stage_proc:process(clock, C_out, Z_out, ALU2_A, ALU2_B, ALU3_A, ALU3_B, ALU2_Cin, C_in, Z_in)
     begin
         C_in <= ALU2_Cout; Z_in <= ALU2_Z;
         case opcode is
@@ -86,14 +89,14 @@ begin
                         ALU2_Cin <= '0';
                         C_WR <= '1';
                         Z_WR <= '1';
-                        ALU2_C => C_R4;
+                        C_R4 <= ALU2_C;
                         Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                     when "01" =>
                         if (Z_out = '1') then
                             ALU2_Cin <= '0';
                             C_WR <= '1';
                             Z_WR <= '1';
-                            ALU2_C => C_R4;
+                            C_R4 <= ALU2_C;
                             Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                         else
                             C_WR <= '0';
@@ -106,7 +109,7 @@ begin
                             ALU2_Cin <= '0';
                             C_WR <= '1';
                             Z_WR <= '1';
-                            ALU2_C => C_R4;
+                            C_R4 <= ALU2_C;
                             Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                         else
                             C_WR <= '0';
@@ -118,7 +121,7 @@ begin
                         ALU2_Cin <= C_out;
                         C_WR <= '1';
                         Z_WR <= '1';
-                        ALU2_C => C_R4;
+                        C_R4 <= ALU2_C;
                         Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                     when others =>
                         C_WR <= '0';
@@ -135,13 +138,13 @@ begin
                     when "00" =>
                         ALU2_Cin <= '0';
                         Z_WR <= '1';
-                        ALU2_C => C_R4;
+                        C_R4 <= ALU2_C;
                         Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                     when "01" =>
                         if (zero = '1') then
                             ALU2_Cin <= '0';
                             Z_WR <= '1';
-                            ALU2_C => C_R4;
+                            C_R4 <= ALU2_C;
                             Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                         else
                             ALU2_Cin <= '0';
@@ -152,7 +155,7 @@ begin
                         if (carry = '1') then
                             ALU2_Cin <= '0';
                             Z_WR <= '1';
-                            ALU2_C => C_R4;
+                            C_R4 <= ALU2_C;
                             Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                         else
                             ALU2_Cin <= '0';
@@ -165,9 +168,9 @@ begin
                 A_R4 <= A_R3;
                 ALU2_A <= B_R3;
                 ALU2_B <= C_R3;
-                ALU2_C => C_R4;
+                C_R4 <= ALU2_C;
                 ALU2_Cin <= '0';
-                ALU_J <= "00";
+                ALU2_J <= "00";
                 PC_WR <= '0';
                 Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
             when "0011" => -- LLI
@@ -181,7 +184,7 @@ begin
                 A_R4 <= A_R3;
                 ALU2_A <= B_R3;
                 ALU2_B <= C_R3;
-                ALU2_C => B_R4;
+                B_R4 <= ALU2_C;
                 Z_WR <= '1';
                 C_WR <= '0';
                 ALU2_J <= "00";
@@ -191,7 +194,7 @@ begin
                 A_R4 <= A_R3;
                 ALU2_A <= B_R3;
                 ALU2_B <= C_R3;
-                ALU2_C => B_R4;
+                B_R4 <= ALU2_C;
                 ALU2_J <= "00";
                 Z_WR <= '0';
                 C_WR <= '0';
@@ -201,7 +204,7 @@ begin
                 A_R4 <= A_R3;
                 ALU2_A <= B_R3;
                 ALU2_B <= C_R3;
-                ALU2_C => B_R4;
+                B_R4 <= ALU2_C;
                 ALU2_J <= "00";
                 Z_WR <= '0';
                 C_WR <= '0';
@@ -211,7 +214,7 @@ begin
                 A_R4 <= A_R3;
                 ALU2_A <= B_R3;
                 ALU2_B <= C_R3;
-                ALU2_C => B_R4;
+                B_R4 <= ALU2_C;
                 ALU2_J <= "00";
                 Z_WR <= '0';
                 C_WR <= '0';
@@ -225,7 +228,8 @@ begin
                 if (ALU2_Z = '1') then
                     ALU3_A <= PC_R3;
                     ALU3_B <= "000000000" & Instr_R3(5 downto 0) & "0";
-                    ALU3_C => PC;
+                    PC <= ALU3_C;
+						  ALU3_J <= "00";
                     PC_WR <= '1';
                 else 
                     PC_WR <= '0';
@@ -239,7 +243,7 @@ begin
                 if (ALU2_Cout = '1') then
                     ALU3_A <= PC_R3;
                     ALU3_B <= "000000000" & Instr_R3(5 downto 0) & "0";
-                    ALU3_C => PC;
+                    PC <= ALU3_C;
                     ALU3_J <= "00";
                     PC_WR <= '1';
                 else 
@@ -254,7 +258,7 @@ begin
                 if ((ALU2_Cout = '1') or (ALU2_Z = '1')) then
                     ALU3_A <= PC_R3;
                     ALU3_B <= "000000000" & Instr_R3(5 downto 0) & "0";
-                    ALU3_C => PC;
+                    PC <= ALU3_C;
                     ALU3_J <= "00";
                     PC_WR <= '1';
                 else
@@ -264,7 +268,7 @@ begin
             when "1100" => -- JAL
                 ALU3_A <= PC_R3;
                 ALU3_B <= "000000" & Instr_R3(8 downto 0) & "0";
-                ALU3_C => PC;
+                PC <= ALU3_C;
                 ALU3_J <= "00";
                 PC_WR <= '1';
                 Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
@@ -274,7 +278,7 @@ begin
             when "1111" => -- JRI
                 ALU3_A <= A_R3;
                 ALU3_B <= "000000" & Instr_R3(8 downto 0) & "0";
-                ALU3_C => PC;
+                PC <= ALU3_C;
                 ALU3_J <= "00";
                 PC_WR <= '1';
                 Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
