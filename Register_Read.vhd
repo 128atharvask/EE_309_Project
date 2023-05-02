@@ -13,7 +13,7 @@ entity IITB_RISC23 is		--DON'T FORGET TO CHANGE TOP LEVEL ENTITY AND EVEN IN ITS
 			ControlSig_R2:	in std_logic_vector(15 downto 0);	--later, change size of the control signals!!
 			RF_D1 : in std_logic_vector(15 downto 0);
 			RF_D2 : in std_logic_vector(15 downto 0);			
-	
+			RR_RefAdd_out : in std_logic_vector(15 downto 0);
 			
 	
 			PC_R3: out std_logic_vector(15 downto 0);
@@ -24,13 +24,14 @@ entity IITB_RISC23 is		--DON'T FORGET TO CHANGE TOP LEVEL ENTITY AND EVEN IN ITS
 			RF_A1 : out std_logic_vector(2 downto 0);
 			RF_A2 : out std_logic_vector(2 downto 0);
 			RF_D3 : out std_logic_vector(15 downto 0);
-			RF_A3 : out std_logic_vector(2 downto 0)
+			RF_A3 : out std_logic_vector(2 downto 0);
+			RR_RefAdd_E : out std_logic;
+			RR_RefAdd_in : out std_logic_vector(15 downto 0)
 			);
 end entity;			
 
 architecture RR of IITB_RISC23 is
 signal R2_11_9, R2_8_6,R2_8_0,R2_5_0 : std_logic_vector(15 downto 0);
-signal refaddoutt : std_logic_vector(15 downto 0);
 signal compRF_D2 : std_logic_vector(15 downto 0);
 
 component RefAdd is
@@ -99,8 +100,6 @@ begin
 
 
 
---initialising RefAdd
-RA : RefAdd port map(clock,RF_D2,refaddoutt, ControlSig_R2(0));		--change control signal!!
 
 --let's sign extend/complement stuff
 R2_11_9 <= "0000000000000"& Instr_R2(11 downto 9);
@@ -116,7 +115,7 @@ PC_R3 <= PC_R2;
 
 muxA_R3 : mux4to1 port map(R2_11_9,R2_8_6,RF_D1,"0000000000000000",A_R3, ControlSig_R2(1 downto 0));  --SELECT LINES!!
 
-muxB_R3 : mux4to1 port map(RF_D1,R2_8_0,RF_D2,refaddoutt,B_R3, ControlSig_R2(1 downto 0));-- CHANGE SELECT LINES!!
+muxB_R3 : mux4to1 port map(RF_D1,R2_8_0,RF_D2,RR_RefAdd_out,B_R3, ControlSig_R2(1 downto 0));-- CHANGE SELECT LINES!!
 
 muxC_R3 : mux4to1 port map(RF_D2,R2_5_0,compRF_D2,"0000000000000000",C_R3, ControlSig_R2(1 downto 0));-- CHANGE SELECT LINES!!
 
@@ -129,5 +128,7 @@ RF_A2 <= Instr_R2(8 downto 6);
 RF_D3 <= A_R2;
 
 RF_A3 <= Instr_R2(11 downto 9);
+
+RR_RefAdd_in <= RF_D2;
 
 end architecture RR;

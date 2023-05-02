@@ -424,6 +424,70 @@
 					"strict" : false
 				},
 				{
+					"name" : "RR_RefAdd_in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RR_RefAdd_in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RR_RefAdd_in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RR_RefAdd_in[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RR_RefAdd_in[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RR_RefAdd_in[5]",
+					"strict" : false
+				},
+				{
+					"name" : "RR_RefAdd_in[6]",
+					"strict" : false
+				},
+				{
+					"name" : "RR_RefAdd_in[7]",
+					"strict" : false
+				},
+				{
+					"name" : "RR_RefAdd_in[8]",
+					"strict" : false
+				},
+				{
+					"name" : "RR_RefAdd_in[9]",
+					"strict" : false
+				},
+				{
+					"name" : "RR_RefAdd_in[10]",
+					"strict" : false
+				},
+				{
+					"name" : "RR_RefAdd_in[11]",
+					"strict" : false
+				},
+				{
+					"name" : "RR_RefAdd_in[12]",
+					"strict" : false
+				},
+				{
+					"name" : "RR_RefAdd_in[13]",
+					"strict" : false
+				},
+				{
+					"name" : "RR_RefAdd_in[14]",
+					"strict" : false
+				},
+				{
+					"name" : "RR_RefAdd_in[15]",
+					"strict" : false
+				},
+				{
 					"name" : "PC_R2[0]",
 					"strict" : false
 				},
@@ -592,11 +656,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "RR_RefAdd_out[0]",
+					"strict" : false
+				},
+				{
 					"name" : "RF_D2[1]",
 					"strict" : false
 				},
 				{
 					"name" : "Instr_R2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RR_RefAdd_out[1]",
 					"strict" : false
 				},
 				{
@@ -608,6 +680,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "RR_RefAdd_out[2]",
+					"strict" : false
+				},
+				{
 					"name" : "RF_D2[3]",
 					"strict" : false
 				},
@@ -616,11 +692,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "RF_D2[4]",
+					"name" : "RR_RefAdd_out[3]",
 					"strict" : false
 				},
 				{
 					"name" : "Instr_R2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_D2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RR_RefAdd_out[4]",
 					"strict" : false
 				},
 				{
@@ -632,7 +716,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "RR_RefAdd_out[5]",
+					"strict" : false
+				},
+				{
 					"name" : "RF_D2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "RR_RefAdd_out[6]",
 					"strict" : false
 				},
 				{
@@ -640,7 +732,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "RR_RefAdd_out[7]",
+					"strict" : false
+				},
+				{
 					"name" : "RF_D2[8]",
+					"strict" : false
+				},
+				{
+					"name" : "RR_RefAdd_out[8]",
 					"strict" : false
 				},
 				{
@@ -648,7 +748,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "RR_RefAdd_out[9]",
+					"strict" : false
+				},
+				{
 					"name" : "RF_D2[10]",
+					"strict" : false
+				},
+				{
+					"name" : "RR_RefAdd_out[10]",
 					"strict" : false
 				},
 				{
@@ -656,7 +764,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "RR_RefAdd_out[11]",
+					"strict" : false
+				},
+				{
 					"name" : "RF_D2[12]",
+					"strict" : false
+				},
+				{
+					"name" : "RR_RefAdd_out[12]",
 					"strict" : false
 				},
 				{
@@ -664,11 +780,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "RR_RefAdd_out[13]",
+					"strict" : false
+				},
+				{
 					"name" : "RF_D2[14]",
 					"strict" : false
 				},
 				{
+					"name" : "RR_RefAdd_out[14]",
+					"strict" : false
+				},
+				{
 					"name" : "RF_D2[15]",
+					"strict" : false
+				},
+				{
+					"name" : "RR_RefAdd_out[15]",
 					"strict" : false
 				},
 				{
@@ -789,10 +917,6 @@
 				},
 				{
 					"name" : "A_R2[15]",
-					"strict" : false
-				},
-				{
-					"name" : "clock",
 					"strict" : false
 				}
 			]
