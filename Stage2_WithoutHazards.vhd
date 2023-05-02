@@ -6,12 +6,14 @@ library work;
 entity Stage2_WithoutHazards is
     port (PC_R1: in std_logic_vector(15 downto 0);
 	       Instr_R1: in std_logic_vector(15 downto 0);
+			 A_R1: in std_logic_vector(15 downto 0);
           ct1: in std_logic_vector(2 downto 0);
 			 ct2: in std_logic_vector(2 downto 0);
           clock: in std_logic;
 			 
           PC_R2: out std_logic_vector(15 downto 0);
 			 Instr_R2: out std_logic_vector(15 downto 0);
+			 A_R2: out std_logic_vector(15 downto 0);
 			 Counter1_R2: out std_logic_vector(2 downto 0);
 		    IF_en: out std_logic;
 			 ControlSig_R2_RFWR: out std_logic;
@@ -23,6 +25,7 @@ architecture behav of Stage2_WithoutHazards is
 begin
     opcode <= Instr_R1(15 downto 12);
     PC_R2 <= PC_R1;
+	 A_R2 <= A_R1;
 	 
     stage_proc:process(clock)
 	     variable ct1,ct2: std_logic_vector(2 downto 0);

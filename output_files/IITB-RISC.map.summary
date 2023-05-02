@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue May 02 19:43:07 2023
+Analysis & Synthesis Status : Successful - Tue May 02 22:26:12 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : IITB-RISC
-Top-level Entity Name : Stage2_WithoutHazards
+Top-level Entity Name : Flags
 Family : MAX 10
-Total logic elements : 40
-    Total combinational functions : 40
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 77
+Total logic elements : 1
+    Total combinational functions : 1
+    Dedicated logic registers : 1
+Total registers : 1
+Total pins : 4
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

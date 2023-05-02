@@ -1,12 +1,12 @@
-Power Analyzer Status : Successful - Sun Apr 30 20:25:12 2023
+Power Analyzer Status : Successful - Tue May 02 22:26:23 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : IITB-RISC
-Top-level Entity Name : Stage2_ID
+Top-level Entity Name : Flags
 Family : MAX 10
 Device : 10M25SAE144C8G
 Power Models : Final
-Total Thermal Power Dissipation : 230.11 mW
+Total Thermal Power Dissipation : 229.81 mW
 Core Dynamic Thermal Power Dissipation : 0.00 mW
 Core Static Thermal Power Dissipation : 223.00 mW
-I/O Thermal Power Dissipation : 7.11 mW
+I/O Thermal Power Dissipation : 6.81 mW
 Power Estimation Confidence : Low: user provided insufficient toggle rate data
