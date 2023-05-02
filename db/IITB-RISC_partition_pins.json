@@ -144,11 +144,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "Hzd_out",
-					"strict" : false
-				},
-				{
-					"name" : "PR1_en",
+					"name" : "IF_en",
 					"strict" : false
 				},
 				{
@@ -285,10 +281,6 @@
 				},
 				{
 					"name" : "Instr_R1[12]",
-					"strict" : false
-				},
-				{
-					"name" : "Hzd_in",
 					"strict" : false
 				}
 			]
