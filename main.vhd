@@ -68,18 +68,18 @@ architecture behav of main is
 		port (PC_R1: in std_logic_vector(15 downto 0);
 			Instr_R1: in std_logic_vector(15 downto 0);
 			ct1: in std_logic_vector(2 downto 0);
-				ct2: in std_logic_vector(2 downto 0);
+			ct2: in std_logic_vector(2 downto 0);
 			clock: in std_logic;
 				
 			PC_R2: out std_logic_vector(15 downto 0);
-				Instr_R2: out std_logic_vector(15 downto 0);
-				Counter1_R2: out std_logic_vector(2 downto 0);
-				IF_en: out std_logic;
-				ControlSig_R2_RFWR: out std_logic;
-				ControlSig_R2_M2WR: out std_logic);
+			Instr_R2: out std_logic_vector(15 downto 0);
+			Counter1_R2: out std_logic_vector(2 downto 0);
+			IF_en: out std_logic;
+			ControlSig_R2_RFWR: out std_logic;
+			ControlSig_R2_M2WR: out std_logic);
 	end component;
 
-	component Register_Read is		--DON'T FORGET TO CHANGE TOP LEVEL ENTITY AND EVEN IN ITS ARCHITECTURE!!!!!
+	component IITB_RISC23 is		--DON'T FORGET TO CHANGE TOP LEVEL ENTITY AND EVEN IN ITS ARCHITECTURE!!!!!
     port (Instr_R2:	in std_logic_vector(15 downto 0);
 			PC_R2:	in std_logic_vector(15 downto 0);
 			A_R2:	in std_logic_vector(15 downto 0);
@@ -90,7 +90,6 @@ architecture behav of main is
 			RF_D2 : in std_logic_vector(15 downto 0);			
 			RR_RefAdd_out : in std_logic_vector(15 downto 0);
 			
-	
 			PC_R3: out std_logic_vector(15 downto 0);
 			A_R3:	out std_logic_vector(15 downto 0);
 			B_R3:	out std_logic_vector(15 downto 0);
@@ -102,7 +101,8 @@ architecture behav of main is
 			RF_A3 : out std_logic_vector(2 downto 0);
 			RR_RefAdd_E : out std_logic;
 			RR_RefAdd_in : out std_logic_vector(15 downto 0);
-			Instr_R3 : out std_logic_vector(15 downto 0)
+			Instr_R3	: out std_logic_vector(15 downto 0);
+			RF_WR : out std_logic
 			);
 	end component;
 	
