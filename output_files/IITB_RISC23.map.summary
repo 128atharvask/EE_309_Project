@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Tue May 02 14:21:03 2023
+Analysis & Synthesis Status : Successful - Tue May 02 14:41:59 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : IITB_RISC23
 Top-level Entity Name : IITB_RISC23
@@ -7,7 +7,7 @@ Total logic elements : 67
     Total combinational functions : 67
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 267
+Total pins : 266
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

@@ -1,5 +1,4 @@
 |IITB_RISC23
-clock => ~NO_FANOUT~
 Instr_R2[0] => mux4to1:muxB_R3.B[0]
 Instr_R2[0] => mux4to1:muxC_R3.B[0]
 Instr_R2[1] => mux4to1:muxB_R3.B[1]

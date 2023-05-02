@@ -1,5 +1,5 @@
 Analysis & Synthesis report for IITB_RISC23
-Tue May 02 14:21:03 2023
+Tue May 02 14:41:59 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -47,7 +47,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 02 14:21:03 2023       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 02 14:41:59 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_RISC23                                 ;
 ; Top-level Entity Name              ; IITB_RISC23                                 ;
@@ -56,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Total combinational functions  ; 67                                          ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 267                                         ;
+; Total pins                         ; 266                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -201,13 +201,13 @@ https://fpgasoftware.intel.com/eula.
 ;     -- Dedicated logic registers            ; 0                      ;
 ;     -- I/O registers                        ; 0                      ;
 ;                                             ;                        ;
-; I/O pins                                    ; 267                    ;
+; I/O pins                                    ; 266                    ;
 ;                                             ;                        ;
 ; Embedded Multiplier 9-bit elements          ; 0                      ;
 ;                                             ;                        ;
 ; Maximum fan-out node                        ; ControlSig_R2[0]~input ;
 ; Maximum fan-out                             ; 62                     ;
-; Total fan-out                               ; 630                    ;
+; Total fan-out                               ; 629                    ;
 ; Average fan-out                             ; 1.05                   ;
 +---------------------------------------------+------------------------+
 
@@ -217,7 +217,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name          ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------+-------------+--------------+
-; |IITB_RISC23               ; 67 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 267  ; 0            ; 0          ; |IITB_RISC23                 ; IITB_RISC23 ; work         ;
+; |IITB_RISC23               ; 67 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 266  ; 0            ; 0          ; |IITB_RISC23                 ; IITB_RISC23 ; work         ;
 ;    |mux4to1:muxA_R3|       ; 19 (19)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IITB_RISC23|mux4to1:muxA_R3 ; mux4to1     ; work         ;
 ;    |mux4to1:muxB_R3|       ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IITB_RISC23|mux4to1:muxB_R3 ; mux4to1     ; work         ;
 ;    |mux4to1:muxC_R3|       ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IITB_RISC23|mux4to1:muxC_R3 ; mux4to1     ; work         ;
@@ -291,7 +291,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 267                         ;
+; boundary_port         ; 266                         ;
 ; cycloneiii_lcell_comb ; 68                          ;
 ;     normal            ; 68                          ;
 ;         0 data inputs ; 1                           ;
@@ -318,12 +318,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 02 14:20:48 2023
+    Info: Processing started: Tue May 02 14:41:44 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_RISC23 -c IITB_RISC23
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file register_read.vhd
-    Info (12022): Found design unit 1: IITB_RISC23-RR File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 33
+    Info (12022): Found design unit 1: IITB_RISC23-RR File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 32
     Info (12023): Found entity 1: IITB_RISC23 File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file mux2to1.vhd
     Info (12022): Found design unit 1: mux2to1-working File: D:/Project_EE309/EE_309_Project/mux2to1.vhd Line: 12
@@ -340,62 +340,64 @@ Info (12021): Found 2 design units, including 1 entities, in source file mux2to1
 Info (12021): Found 2 design units, including 1 entities, in source file complementor.vhd
     Info (12022): Found design unit 1: Complementor-doit File: D:/Project_EE309/EE_309_Project/Complementor.vhd Line: 10
     Info (12023): Found entity 1: Complementor File: D:/Project_EE309/EE_309_Project/Complementor.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file write_back.vhd
+    Info (12022): Found design unit 1: IITB_RISC231-WB File: D:/Project_EE309/EE_309_Project/Write_Back.vhd Line: 19
+    Info (12023): Found entity 1: IITB_RISC231 File: D:/Project_EE309/EE_309_Project/Write_Back.vhd Line: 6
 Info (12127): Elaborating entity "IITB_RISC23" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at Register_Read.vhd(28): used implicit default value for signal "RR_RefAdd_E" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 28
-Info (12128): Elaborating entity "Complementor" for hierarchy "Complementor:C1" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 109
-Info (12128): Elaborating entity "mux4to1" for hierarchy "mux4to1:muxA_R3" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 116
-Info (12128): Elaborating entity "mux2to1_3bit" for hierarchy "mux2to1_3bit:muxRF_A1" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 124
+Warning (10541): VHDL Signal Declaration warning at Register_Read.vhd(27): used implicit default value for signal "RR_RefAdd_E" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 27
+Info (12128): Elaborating entity "Complementor" for hierarchy "Complementor:C1" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 99
+Info (12128): Elaborating entity "mux4to1" for hierarchy "mux4to1:muxA_R3" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 106
+Info (12128): Elaborating entity "mux2to1_3bit" for hierarchy "mux2to1_3bit:muxRF_A1" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 114
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "RR_RefAdd_E" is stuck at GND File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 28
+    Warning (13410): Pin "RR_RefAdd_E" is stuck at GND File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 27
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 37 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clock" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 7
-    Warning (15610): No output dependent on input pin "Instr_R2[12]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 8
-    Warning (15610): No output dependent on input pin "Instr_R2[13]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 8
-    Warning (15610): No output dependent on input pin "Instr_R2[14]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 8
-    Warning (15610): No output dependent on input pin "Instr_R2[15]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 8
-    Warning (15610): No output dependent on input pin "B_R2[0]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "B_R2[1]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "B_R2[2]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "B_R2[3]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "B_R2[4]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "B_R2[5]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "B_R2[6]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "B_R2[7]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "B_R2[8]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "B_R2[9]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "B_R2[10]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "B_R2[11]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "B_R2[12]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "B_R2[13]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "B_R2[14]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "B_R2[15]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "C_R2[0]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "C_R2[1]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "C_R2[2]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "C_R2[3]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "C_R2[4]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "C_R2[5]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "C_R2[6]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "C_R2[7]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "C_R2[8]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "C_R2[9]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "C_R2[10]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "C_R2[11]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "C_R2[12]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "C_R2[13]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "C_R2[14]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "C_R2[15]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 12
-Info (21057): Implemented 334 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 145 input pins
+Warning (21074): Design contains 36 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "Instr_R2[12]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 7
+    Warning (15610): No output dependent on input pin "Instr_R2[13]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 7
+    Warning (15610): No output dependent on input pin "Instr_R2[14]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 7
+    Warning (15610): No output dependent on input pin "Instr_R2[15]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 7
+    Warning (15610): No output dependent on input pin "B_R2[0]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R2[1]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R2[2]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R2[3]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R2[4]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R2[5]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R2[6]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R2[7]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R2[8]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R2[9]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R2[10]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R2[11]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R2[12]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R2[13]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R2[14]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R2[15]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 10
+    Warning (15610): No output dependent on input pin "C_R2[0]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
+    Warning (15610): No output dependent on input pin "C_R2[1]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
+    Warning (15610): No output dependent on input pin "C_R2[2]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
+    Warning (15610): No output dependent on input pin "C_R2[3]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
+    Warning (15610): No output dependent on input pin "C_R2[4]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
+    Warning (15610): No output dependent on input pin "C_R2[5]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
+    Warning (15610): No output dependent on input pin "C_R2[6]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
+    Warning (15610): No output dependent on input pin "C_R2[7]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
+    Warning (15610): No output dependent on input pin "C_R2[8]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
+    Warning (15610): No output dependent on input pin "C_R2[9]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
+    Warning (15610): No output dependent on input pin "C_R2[10]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
+    Warning (15610): No output dependent on input pin "C_R2[11]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
+    Warning (15610): No output dependent on input pin "C_R2[12]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
+    Warning (15610): No output dependent on input pin "C_R2[13]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
+    Warning (15610): No output dependent on input pin "C_R2[14]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
+    Warning (15610): No output dependent on input pin "C_R2[15]" File: D:/Project_EE309/EE_309_Project/Register_Read.vhd Line: 11
+Info (21057): Implemented 333 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 144 input pins
     Info (21059): Implemented 122 output pins
     Info (21061): Implemented 67 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 42 warnings
-    Info: Peak virtual memory: 4795 megabytes
-    Info: Processing ended: Tue May 02 14:21:03 2023
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
+    Info: Peak virtual memory: 4793 megabytes
+    Info: Processing ended: Tue May 02 14:41:59 2023
     Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Total CPU time (on all processors): 00:00:16
 
 
