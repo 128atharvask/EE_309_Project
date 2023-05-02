@@ -1,0 +1,24 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+
+entity RefAdd is
+   port(clk : in std_logic;
+			RefAdd_in : in std_logic_vector(15 downto 0);
+			RefAdd_out : out std_logic_vector(15 downto 0);
+			RefAdd_E : in std_logic
+			);
+end entity RefAdd;
+
+architecture king of RefAdd is
+begin		
+	process(A,B,S)
+	begin
+	if(S = '0') then
+		F <= A;
+	else
+		F <= B;
+	end if;
+	end process;
+end king;
