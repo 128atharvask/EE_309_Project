@@ -1,0 +1,27 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library work;
+
+entity carry_flag is
+    port (c_in: in std_logic;
+	       c_en: in std_logic;
+			 c_out: out std_logic);
+end entity carry_flag;
+
+architecture behav of carry_flag is
+    signal carry: std_logic:='0';
+begin
+    c_out <= carry;
+
+carry_zero_write:process(clock, C_write, Z_write)
+    begin
+        if (clock = '1' and clock' event) then
+            if (C_write = '1') then
+                carry <= ALU2_Cout;
+            end if;
+            if (Z_write = '1') then
+                zero <= ALU2_Z;
+            end if;
+        end if;
+    end process;

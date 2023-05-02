@@ -1,5 +1,5 @@
 Analysis & Synthesis report for IITB-RISC
-Tue May 02 18:14:13 2023
+Tue May 02 19:43:07 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 02 18:14:13 2023       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 02 19:43:07 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB-RISC                                   ;
 ; Top-level Entity Name              ; Stage2_WithoutHazards                       ;
@@ -280,30 +280,35 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 02 18:14:04 2023
+    Info: Processing started: Tue May 02 19:42:59 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB-RISC -c IITB-RISC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file stage2_withouthazards.vhd
-    Info (12022): Found design unit 1: Stage2_WithoutHazards-behav File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 17
+    Info (12022): Found design unit 1: Stage2_WithoutHazards-behav File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 21
     Info (12023): Found entity 1: Stage2_WithoutHazards File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 6
+Info (12021): Found 4 design units, including 2 entities, in source file flags.vhd
+    Info (12022): Found design unit 1: carry_flag-behav File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Flags.vhd Line: 13
+    Info (12022): Found design unit 2: zero_flag-behav File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Flags.vhd Line: 46
+    Info (12023): Found entity 1: carry_flag File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Flags.vhd Line: 6
+    Info (12023): Found entity 2: zero_flag File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Flags.vhd Line: 39
 Info (12127): Elaborating entity "Stage2_WithoutHazards" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(27): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 27
-Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(44): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 44
-Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(46): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 46
+Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(31): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 31
+Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(48): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 48
 Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(50): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 50
-Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(80): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 80
-Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(82): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 82
+Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(54): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 54
+Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(84): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 84
 Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(86): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 86
-Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(103): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 103
-Warning (10631): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(23): inferring latch(es) for signal or variable "ct2", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 23
-Warning (10631): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(23): inferring latch(es) for signal or variable "ct1", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 23
-Info (10041): Inferred latch for "stage_proc:ct1[0]" at Stage2_WithoutHazards.vhd(23) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 23
-Info (10041): Inferred latch for "stage_proc:ct1[1]" at Stage2_WithoutHazards.vhd(23) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 23
-Info (10041): Inferred latch for "stage_proc:ct1[2]" at Stage2_WithoutHazards.vhd(23) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 23
-Info (10041): Inferred latch for "stage_proc:ct2[0]" at Stage2_WithoutHazards.vhd(23) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 23
-Info (10041): Inferred latch for "stage_proc:ct2[1]" at Stage2_WithoutHazards.vhd(23) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 23
-Info (10041): Inferred latch for "stage_proc:ct2[2]" at Stage2_WithoutHazards.vhd(23) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 23
+Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(90): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 90
+Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(107): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 107
+Warning (10631): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(27): inferring latch(es) for signal or variable "ct2", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 27
+Warning (10631): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(27): inferring latch(es) for signal or variable "ct1", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 27
+Info (10041): Inferred latch for "stage_proc:ct1[0]" at Stage2_WithoutHazards.vhd(27) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 27
+Info (10041): Inferred latch for "stage_proc:ct1[1]" at Stage2_WithoutHazards.vhd(27) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 27
+Info (10041): Inferred latch for "stage_proc:ct1[2]" at Stage2_WithoutHazards.vhd(27) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 27
+Info (10041): Inferred latch for "stage_proc:ct2[0]" at Stage2_WithoutHazards.vhd(27) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 27
+Info (10041): Inferred latch for "stage_proc:ct2[1]" at Stage2_WithoutHazards.vhd(27) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 27
+Info (10041): Inferred latch for "stage_proc:ct2[2]" at Stage2_WithoutHazards.vhd(27) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 27
 Warning (13012): Latch \stage_proc:ct2[0] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal \stage_proc:ct1[2]
 Warning (13012): Latch \stage_proc:ct2[1] has unsafe behavior
@@ -314,21 +319,21 @@ Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 7 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "ct1[0]" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 23
-    Warning (15610): No output dependent on input pin "ct1[1]" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 23
-    Warning (15610): No output dependent on input pin "ct1[2]" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 23
-    Warning (15610): No output dependent on input pin "ct2[0]" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 23
-    Warning (15610): No output dependent on input pin "ct2[1]" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 23
-    Warning (15610): No output dependent on input pin "ct2[2]" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 23
-    Warning (15610): No output dependent on input pin "clock" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 9
+    Warning (15610): No output dependent on input pin "ct1[0]" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 27
+    Warning (15610): No output dependent on input pin "ct1[1]" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 27
+    Warning (15610): No output dependent on input pin "ct1[2]" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 27
+    Warning (15610): No output dependent on input pin "ct2[0]" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 27
+    Warning (15610): No output dependent on input pin "ct2[1]" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 27
+    Warning (15610): No output dependent on input pin "ct2[2]" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 27
+    Warning (15610): No output dependent on input pin "clock" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 11
 Info (21057): Implemented 117 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 39 input pins
     Info (21059): Implemented 38 output pins
     Info (21061): Implemented 40 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
-    Info: Peak virtual memory: 4783 megabytes
-    Info: Processing ended: Tue May 02 18:14:13 2023
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Peak virtual memory: 4784 megabytes
+    Info: Processing ended: Tue May 02 19:43:07 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:08
 
 
