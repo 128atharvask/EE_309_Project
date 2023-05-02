@@ -3,7 +3,7 @@ library work;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity IITB_RISC23 is		--DON'T FORGET TO CHANGE TOP LEVEL ENTITY AND EVEN IN ITS ARCHITECTURE!!!!!
+entity Register_Read is		--DON'T FORGET TO CHANGE TOP LEVEL ENTITY AND EVEN IN ITS ARCHITECTURE!!!!!
    port (Instr_R2:	in std_logic_vector(15 downto 0);
 			PC_R2:	in std_logic_vector(15 downto 0);
 			A_R2:	in std_logic_vector(15 downto 0);
@@ -29,7 +29,7 @@ entity IITB_RISC23 is		--DON'T FORGET TO CHANGE TOP LEVEL ENTITY AND EVEN IN ITS
 			);
 end entity;			
 
-architecture RR of IITB_RISC23 is
+architecture RR of Register_Read is
 signal R2_11_9, R2_8_6,R2_8_0,R2_5_0 : std_logic_vector(15 downto 0);
 signal compRF_D2 : std_logic_vector(15 downto 0);
 
