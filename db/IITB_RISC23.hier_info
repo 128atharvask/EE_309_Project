@@ -1,4 +1,4 @@
-|IITB_RISC23
+|Register_Read
 Instr_R2[0] => B_R3[0].DATAB
 Instr_R2[0] => C_R3[0].DATAA
 Instr_R2[0] => Instr_R3[0].DATAIN
@@ -579,10 +579,10 @@ Instr_R3[12] <= Instr_R2[12].DB_MAX_OUTPUT_PORT_TYPE
 Instr_R3[13] <= Instr_R2[13].DB_MAX_OUTPUT_PORT_TYPE
 Instr_R3[14] <= Instr_R2[14].DB_MAX_OUTPUT_PORT_TYPE
 Instr_R3[15] <= Instr_R2[15].DB_MAX_OUTPUT_PORT_TYPE
-RF_WR <= <VCC>
+RF_WR <= RF_WR$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|IITB_RISC23|Complementor:C1
+|Register_Read|Complementor:C1
 X[0] => Y[0].DATAIN
 X[1] => Y[1].DATAIN
 X[2] => Y[2].DATAIN

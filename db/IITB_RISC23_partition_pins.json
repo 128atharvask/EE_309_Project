@@ -488,6 +488,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "RF_WR",
+					"strict" : false
+				},
+				{
 					"name" : "Instr_R2[0]",
 					"strict" : false
 				},
