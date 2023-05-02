@@ -3,7 +3,7 @@ library work;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity IITB_RISC231 is		--DON'T FORGET TO CHANGE TOP LEVEL ENTITY AND EVEN IN ITS ARCHITECTURE!!!!!
+entity Write_Back is		--DON'T FORGET TO CHANGE TOP LEVEL ENTITY AND EVEN IN ITS ARCHITECTURE!!!!!
    port (PC_R5:	in std_logic_vector(15 downto 0);
 			A_R5:	in std_logic_vector(15 downto 0);
 			B_R5:	in std_logic_vector(15 downto 0);
@@ -16,7 +16,7 @@ entity IITB_RISC231 is		--DON'T FORGET TO CHANGE TOP LEVEL ENTITY AND EVEN IN IT
 			);
 end entity;			
 
-architecture WB of IITB_RISC231 is
+architecture WB of Write_Back is
 
 
 component mux4to1 is
