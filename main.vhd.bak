@@ -1,0 +1,25 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.Gates.all;
+
+entity main is
+	 generic
+	 (
+		 operand_width : integer := 16
+	 );
+
+    port
+	 (
+    -- inputs
+
+    -- outputs
+    );
+
+end main;
+
+
+architecture behav of main is
+
+
+end behav;
