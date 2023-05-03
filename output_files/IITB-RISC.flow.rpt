@@ -1,5 +1,5 @@
 Flow report for IITB-RISC
-Wed May 03 11:39:00 2023
+Wed May 03 13:21:30 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,24 +41,24 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed May 03 11:39:00 2023       ;
+; Flow Status                        ; Successful - Wed May 03 13:21:30 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB-RISC                                   ;
-; Top-level Entity Name              ; Stage2_WithoutHazards                       ;
+; Top-level Entity Name              ; Stage2_Test                                 ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M25SAE144C8G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 40                                          ;
-;     Total combinational functions  ; 40                                          ;
-;     Dedicated logic registers      ; 0                                           ;
+; Total logic elements               ; 1 / 24,960 ( < 1 % )                        ;
+;     Total combinational functions  ; 1 / 24,960 ( < 1 % )                        ;
+;     Dedicated logic registers      ; 0 / 24,960 ( 0 % )                          ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 103                                         ;
+; Total pins                         ; 49 / 101 ( 49 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-; UFM blocks                         ; 0                                           ;
-; ADC blocks                         ; 0                                           ;
+; Total memory bits                  ; 0 / 691,200 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0 / 110 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 1 ( 0 % )                               ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
+; ADC blocks                         ; 0 / 1 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -67,37 +67,37 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/03/2023 11:38:51 ;
+; Start date & time ; 05/03/2023 13:21:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; IITB-RISC           ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                         ;
-+-------------------------------------+----------------------------------------+---------------+-----------------------+-----------------------------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name           ; Section Id                        ;
-+-------------------------------------+----------------------------------------+---------------+-----------------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 9413547625981.168309413108736          ; --            ; --                    ; --                                ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --                    ; eda_board_design_timing           ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --                    ; eda_board_design_boundary_scan    ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --                    ; eda_board_design_signal_integrity ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --                    ; eda_board_design_symbol           ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --                    ; eda_simulation                    ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --                    ; --                                ;
-; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --                    ; eda_simulation                    ;
-; FLOW_ENABLE_POWER_ANALYZER          ; On                                     ; Off           ; --                    ; --                                ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --                    ; --                                ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --                    ; --                                ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; Stage2_WithoutHazards ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; Stage2_WithoutHazards ; Top                               ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; Stage2_WithoutHazards ; Top                               ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --                    ; --                                ;
-; POWER_DEFAULT_INPUT_IO_TOGGLE_RATE  ; 12.5 %                                 ; 12.5%         ; --                    ; --                                ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --                    ; --                                ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --                    ; --                                ;
-; TOP_LEVEL_ENTITY                    ; Stage2_WithoutHazards                  ; IITB-RISC     ; --                    ; --                                ;
-+-------------------------------------+----------------------------------------+---------------+-----------------------+-----------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                               ;
++-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
++-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
+; COMPILER_SIGNATURE_ID               ; 9413547625981.168310026911168          ; --            ; --          ; --                                ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation                    ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --                                ;
+; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
+; FLOW_ENABLE_POWER_ANALYZER          ; On                                     ; Off           ; --          ; --                                ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --                                ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --                                ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; Stage2_Test ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; Stage2_Test ; Top                               ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; Stage2_Test ; Top                               ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --                                ;
+; POWER_DEFAULT_INPUT_IO_TOGGLE_RATE  ; 12.5 %                                 ; 12.5%         ; --          ; --                                ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                                ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                    ; Stage2_Test                            ; IITB-RISC     ; --          ; --                                ;
++-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -105,8 +105,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4786 MB             ; 00:00:09                           ;
-; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:09                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4784 MB             ; 00:00:09                           ;
+; Fitter               ; 00:00:04     ; 1.0                     ; 5317 MB             ; 00:00:02                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4695 MB             ; 00:00:01                           ;
+; Power Analyzer       ; 00:00:01     ; 1.0                     ; 4807 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4775 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4639 MB             ; 00:00:00                           ;
+; Total                ; 00:00:16     ; --                      ; --                  ; 00:00:13                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -116,6 +121,11 @@ https://fpgasoftware.intel.com/eula.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; DESKTOP-U9KSJ6C  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-U9KSJ6C  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-U9KSJ6C  ; Windows 10 ; 10.0       ; x86_64         ;
+; Power Analyzer       ; DESKTOP-U9KSJ6C  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-U9KSJ6C  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-U9KSJ6C  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -123,6 +133,11 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off IITB-RISC -c IITB-RISC
+quartus_fit --read_settings_files=off --write_settings_files=off IITB-RISC -c IITB-RISC
+quartus_asm --read_settings_files=off --write_settings_files=off IITB-RISC -c IITB-RISC
+quartus_pow --read_settings_files=off --write_settings_files=off IITB-RISC -c IITB-RISC
+quartus_sta IITB-RISC -c IITB-RISC
+quartus_eda --read_settings_files=off --write_settings_files=off IITB-RISC -c IITB-RISC
 
 
 

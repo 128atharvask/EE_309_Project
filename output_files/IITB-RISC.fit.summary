@@ -1,15 +1,15 @@
-Fitter Status : Successful - Tue May 02 22:26:17 2023
+Fitter Status : Successful - Wed May 03 13:21:22 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : IITB-RISC
-Top-level Entity Name : Flags
+Top-level Entity Name : Stage2_Test
 Family : MAX 10
 Device : 10M25SAE144C8G
 Timing Models : Final
-Total logic elements : 2 / 24,960 ( < 1 % )
-    Total combinational functions : 2 / 24,960 ( < 1 % )
-    Dedicated logic registers : 1 / 24,960 ( < 1 % )
-Total registers : 1
-Total pins : 4 / 101 ( 4 % )
+Total logic elements : 1 / 24,960 ( < 1 % )
+    Total combinational functions : 1 / 24,960 ( < 1 % )
+    Dedicated logic registers : 0 / 24,960 ( 0 % )
+Total registers : 0
+Total pins : 49 / 101 ( 49 % )
 Total virtual pins : 0
 Total memory bits : 0 / 691,200 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 110 ( 0 % )
