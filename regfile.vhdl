@@ -21,10 +21,11 @@ entity regfile is
 end regfile;
 
 architecture behavioural of regfile is
-    signal R0, R1, R2, R3, R4, R5, R6, R7: std_logic_vector((operand_width - 1) downto 0);
+    signal R1, R2, R3, R4, R5, R6, R7: std_logic_vector((operand_width - 1) downto 0);
+    signal R0 : std_logic_vector((operand_width - 1) downto 0) := "0000000000000000";
 begin
 	PC_out <= R0;
-    register_write:process(clock)
+    register_write:process(clock,R0,R1,R2,R3,R4,R5,R6,R7)
     begin
         -- Write only at the rising edge of the clock
         if(clock = '0' and clock' event) then
@@ -54,7 +55,7 @@ begin
             end if;
         end if;
     end process;
-    register_read_1:process(RF_A1)
+    register_read_1:process(RF_A1,R0,R1,R2,R3,R4,R5,R6,R7)
     -- Read anytime
     begin
         case RF_A1 is
@@ -77,7 +78,7 @@ begin
             when others => null;
         end case;
     end process;
-    register_read_2:process(RF_A2)
+    register_read_2:process(RF_A2,R0,R1,R2,R3,R4,R5,R6,R7)
     -- Read Anytime
     begin
         case RF_A2 is
