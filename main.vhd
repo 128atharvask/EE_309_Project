@@ -247,7 +247,7 @@ end component;
 	 RAR1 : RefAdd port map(clock, RefAdd_in, RefAdd_out, RefAdd_E); 
 	 i_mem: instr_mem port map (pc, instr);
 	 --alu1 : ADDER port map (pc,pc_in0);
-	 alu1 : ALU_2 port map(pc, "0000000000000010",'0',"00", pc_in0,alu_dummy1,alu_dummy2);
+	 alu1 : ALU_2 port map(pc, "0000000000000001",'0',"00", pc_in0,alu_dummy1,alu_dummy2);
 	 id: Stage2_WithoutHazards port map (PR1(15 downto 0),PR1(31 downto 16),PR1(47 downto 32),clock,R2(15 downto 0),R2(31 downto 16),R2(47 downto 32),R2(82 downto 80),if_en,R2(83),R2(84));
 	 reg_read: Register_Read port map (R2(31 downto 16), R2(15 downto 0), R2(47 downto 32), R2(63 downto 48), R2(79 downto 64), R2(95 downto 80),d1,d2, RefAdd_out, R3(15 downto 0), R3(47 downto 32), R3(63 downto 48), R3(79 downto 64),R3(95 downto 80), a1, a2, d3, a3, RefAdd_E, RefAdd_out, R3(31 downto 16), rf_wr);
 	 ex: Stage4_Exec port map (R3(15 downto 0),R3(31 downto 16),R3(47 downto 32),R3(63 downto 48),R3(79 downto 64), R3(95 downto 80),clock,R4(15 downto 0),R4(31 downto 16),R4(47 downto 32),R4(63 downto 48),R4(79 downto 64), R4(95 downto 80),pc_in_exec,pc_wr_ex);

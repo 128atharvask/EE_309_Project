@@ -1,0 +1,652 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Hazardless_Testbox/EE_309_Project/simulation/modelsim
+Ealu_2
+Z1 w1683103762
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 4
+R0
+Z5 8D:/Hazardless_Testbox/EE_309_Project/ALU_2.vhdl
+Z6 FD:/Hazardless_Testbox/EE_309_Project/ALU_2.vhdl
+l0
+L8 1
+V_1`iQN6aTJ35_B=TDRghP1
+!s100 9G5[U0gN7UOX5bKT9zPM42
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1683108765
+!i10b 1
+Z9 !s108 1683108765.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|D:/Hazardless_Testbox/EE_309_Project/ALU_2.vhdl|
+Z11 !s107 D:/Hazardless_Testbox/EE_309_Project/ALU_2.vhdl|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abehavioural
+R2
+R3
+R4
+DEx4 work 5 alu_2 0 22 _1`iQN6aTJ35_B=TDRghP1
+!i122 4
+l93
+L36 146
+VJTnGKl<>Um5Xc7DZFoWWQ1
+!s100 Ga4Uana`jj>n^=AUfj_oQ1
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ecarry_flag
+Z14 w1683103786
+R2
+R3
+R4
+!i122 5
+R0
+Z15 8D:/Hazardless_Testbox/EE_309_Project/Flags.vhd
+Z16 FD:/Hazardless_Testbox/EE_309_Project/Flags.vhd
+l0
+L6 1
+VJ^bz4G4=h_IMmfX;>;daC3
+!s100 0cL1aVWDJe_;2[;SozEU61
+R7
+31
+Z17 !s110 1683108766
+!i10b 1
+R9
+Z18 !s90 -reportprogress|300|-93|-work|work|D:/Hazardless_Testbox/EE_309_Project/Flags.vhd|
+Z19 !s107 D:/Hazardless_Testbox/EE_309_Project/Flags.vhd|
+!i113 1
+R12
+R13
+Abehav
+R2
+R3
+R4
+DEx4 work 10 carry_flag 0 22 J^bz4G4=h_IMmfX;>;daC3
+!i122 5
+l15
+L13 16
+VG^1MM9k<4AOOF3fVRK37`3
+!s100 KMKC<i>RMbIai6<<XcRDn1
+R7
+31
+R17
+!i10b 1
+R9
+R18
+R19
+!i113 1
+R12
+R13
+Ecomplementor
+Z20 w1683103443
+R2
+R3
+R4
+!i122 11
+R0
+Z21 8D:/Hazardless_Testbox/EE_309_Project/Complementor.vhd
+Z22 FD:/Hazardless_Testbox/EE_309_Project/Complementor.vhd
+l0
+L5 1
+VQ01eB;CVJ2z_iMS?D[2mk1
+!s100 AEW@OZHd@O6Zokm0g_Di:2
+R7
+31
+R17
+!i10b 1
+Z23 !s108 1683108766.000000
+Z24 !s90 -reportprogress|300|-93|-work|work|D:/Hazardless_Testbox/EE_309_Project/Complementor.vhd|
+Z25 !s107 D:/Hazardless_Testbox/EE_309_Project/Complementor.vhd|
+!i113 1
+R12
+R13
+Adoit
+R2
+R3
+R4
+DEx4 work 12 complementor 0 22 Q01eB;CVJ2z_iMS?D[2mk1
+!i122 11
+l11
+L10 20
+VN]TRKc_QQ6[WnOb7R[O7]1
+!s100 ihdW>CicVjdCoM<HoM9Rn3
+R7
+31
+R17
+!i10b 1
+R23
+R24
+R25
+!i113 1
+R12
+R13
+Edata_mem
+Z26 w1683103791
+R2
+R3
+R4
+!i122 3
+R0
+Z27 8D:/Hazardless_Testbox/EE_309_Project/data_mem.vhdl
+Z28 FD:/Hazardless_Testbox/EE_309_Project/data_mem.vhdl
+l0
+L5 1
+V_Qed0jGWUF:1aE8km_:X92
+!s100 O6><z1ckGk5TjaP9B9A2a3
+R7
+31
+R8
+!i10b 1
+R9
+Z29 !s90 -reportprogress|300|-93|-work|work|D:/Hazardless_Testbox/EE_309_Project/data_mem.vhdl|
+Z30 !s107 D:/Hazardless_Testbox/EE_309_Project/data_mem.vhdl|
+!i113 1
+R12
+R13
+Abehavioural
+R2
+R3
+R4
+DEx4 work 8 data_mem 0 22 _Qed0jGWUF:1aE8km_:X92
+!i122 3
+l22
+L19 17
+V[B^Ynj1fHM787IdHAYM@02
+!s100 _<1N<Mk[R_@>K8LX<STX]0
+R7
+31
+R8
+!i10b 1
+R9
+R29
+R30
+!i113 1
+R12
+R13
+Einstr_mem
+Z31 w1683105925
+R2
+R3
+R4
+!i122 2
+R0
+Z32 8D:/Hazardless_Testbox/EE_309_Project/instr_mem.vhdl
+Z33 FD:/Hazardless_Testbox/EE_309_Project/instr_mem.vhdl
+l0
+L5 1
+VOE38<WZa8RV1aNPobm=UO0
+!s100 ^^>4nBh]TcC6nE58>g4Z30
+R7
+31
+R8
+!i10b 1
+R9
+Z34 !s90 -reportprogress|300|-93|-work|work|D:/Hazardless_Testbox/EE_309_Project/instr_mem.vhdl|
+Z35 !s107 D:/Hazardless_Testbox/EE_309_Project/instr_mem.vhdl|
+!i113 1
+R12
+R13
+Abehavioural
+R2
+R3
+R4
+DEx4 work 9 instr_mem 0 22 OE38<WZa8RV1aNPobm=UO0
+!i122 2
+l23
+L15 14
+VdmR<I>PX8^z?=QBLnE:093
+!s100 9HA2o14ozahcN>=5HhR411
+R7
+31
+R8
+!i10b 1
+R9
+R34
+R35
+!i113 1
+R12
+R13
+Emain
+Z36 w1683107625
+R2
+R3
+R4
+!i122 12
+R0
+Z37 8D:/Hazardless_Testbox/EE_309_Project/main.vhd
+Z38 FD:/Hazardless_Testbox/EE_309_Project/main.vhd
+l0
+L6 1
+V<CXfUlGKj_1P[QjNXKS[Z3
+!s100 A^HEn>5YbLiMo11eL6Tje3
+R7
+31
+Z39 !s110 1683108767
+!i10b 1
+R23
+Z40 !s90 -reportprogress|300|-93|-work|work|D:/Hazardless_Testbox/EE_309_Project/main.vhd|
+Z41 !s107 D:/Hazardless_Testbox/EE_309_Project/main.vhd|
+!i113 1
+R12
+R13
+Abehav
+R2
+R3
+R4
+DEx4 work 4 main 0 22 <CXfUlGKj_1P[QjNXKS[Z3
+!i122 12
+l244
+L24 258
+V>adIJC@6B>5COJWlCNA5[3
+!s100 >Gk00fdM0G5;Bfb7i^lb23
+R7
+31
+R39
+!i10b 1
+R23
+R40
+R41
+!i113 1
+R12
+R13
+Emem_stage
+Z42 w1683103254
+R2
+R3
+R4
+!i122 10
+R0
+Z43 8D:/Hazardless_Testbox/EE_309_Project/MEM_STAGE.vhd
+Z44 FD:/Hazardless_Testbox/EE_309_Project/MEM_STAGE.vhd
+l0
+L5 1
+VHLcXEZ4A<oRD^AJR5ko1f0
+!s100 U[TmWHh==:z9G]EaT]Vk?3
+R7
+31
+R17
+!i10b 1
+R23
+Z45 !s90 -reportprogress|300|-93|-work|work|D:/Hazardless_Testbox/EE_309_Project/MEM_STAGE.vhd|
+Z46 !s107 D:/Hazardless_Testbox/EE_309_Project/MEM_STAGE.vhd|
+!i113 1
+R12
+R13
+Astructural
+R2
+R3
+R4
+DEx4 work 9 mem_stage 0 22 HLcXEZ4A<oRD^AJR5ko1f0
+!i122 10
+l58
+L33 54
+VV5zm>EbN^o=zF^HM:dzc22
+!s100 M3Q94d3H?J?5oSGeDY4Y40
+R7
+31
+R17
+!i10b 1
+R23
+R45
+R46
+!i113 1
+R12
+R13
+Emux2to1
+Z47 w1683104912
+R2
+R3
+R4
+!i122 0
+R0
+Z48 8D:/Hazardless_Testbox/EE_309_Project/mux2to1.vhd
+Z49 FD:/Hazardless_Testbox/EE_309_Project/mux2to1.vhd
+l0
+L6 1
+V8VQk[z[@Ji[6>oUZEji>O0
+!s100 8j=z2de=b`=KaD17bAZRE3
+R7
+31
+R8
+!i10b 1
+R9
+Z50 !s90 -reportprogress|300|-93|-work|work|D:/Hazardless_Testbox/EE_309_Project/mux2to1.vhd|
+Z51 !s107 D:/Hazardless_Testbox/EE_309_Project/mux2to1.vhd|
+!i113 1
+R12
+R13
+Aworking
+R2
+R3
+R4
+DEx4 work 7 mux2to1 0 22 8VQk[z[@Ji[6>oUZEji>O0
+!i122 0
+l13
+L12 11
+VZl8f]AJ=WAQhdn?bcBe300
+!s100 L>Rln72@cdoGo;2jiL_K82
+R7
+31
+R8
+!i10b 1
+R9
+R50
+R51
+!i113 1
+R12
+R13
+Erefadd
+Z52 w1683103450
+R2
+R3
+R4
+!i122 9
+R0
+Z53 8D:/Hazardless_Testbox/EE_309_Project/RefAdd.vhd
+Z54 FD:/Hazardless_Testbox/EE_309_Project/RefAdd.vhd
+l0
+L6 1
+V]jN^Lm;Ki`fWnVU=j:4E^3
+!s100 XlkFeWdBEBA=PkCf=RbE[0
+R7
+31
+R17
+!i10b 1
+R23
+Z55 !s90 -reportprogress|300|-93|-work|work|D:/Hazardless_Testbox/EE_309_Project/RefAdd.vhd|
+Z56 !s107 D:/Hazardless_Testbox/EE_309_Project/RefAdd.vhd|
+!i113 1
+R12
+R13
+Aking
+R2
+R3
+R4
+DEx4 work 6 refadd 0 22 ]jN^Lm;Ki`fWnVU=j:4E^3
+!i122 9
+l16
+L14 15
+VHU^<^2^cAn^z83>OaUK4h1
+!s100 ^_n2igPh[ddP8zFS4;8iS0
+R7
+31
+R17
+!i10b 1
+R23
+R55
+R56
+!i113 1
+R12
+R13
+Eregfile
+Z57 w1683108728
+R3
+R4
+!i122 6
+R0
+Z58 8D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl
+Z59 FD:/Hazardless_Testbox/EE_309_Project/regfile.vhdl
+l0
+L4 1
+VC_GG_F8@BbaJGgQ_iAh4e0
+!s100 I^<NUFe9KQA7LPOU1Ng>d2
+R7
+31
+R17
+!i10b 1
+R23
+Z60 !s90 -reportprogress|300|-93|-work|work|D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl|
+Z61 !s107 D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl|
+!i113 1
+R12
+R13
+Abehavioural
+R3
+R4
+DEx4 work 7 regfile 0 22 C_GG_F8@BbaJGgQ_iAh4e0
+!i122 6
+l26
+L23 82
+V52RUS5l^:nTOnE5CbjSGj1
+!s100 `Joj>DNmVif_kN4QzTf;d3
+R7
+31
+R17
+!i10b 1
+R23
+R60
+R61
+!i113 1
+R12
+R13
+Eregister_read
+Z62 w1683103457
+R2
+R3
+R4
+!i122 8
+R0
+Z63 8D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd
+Z64 FD:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd
+l0
+L6 1
+V5ZM;9NC;^kV81CZ0cbdAh0
+!s100 Z;1z=icQfi;fm:Fnzb^_60
+R7
+31
+R17
+!i10b 1
+R23
+Z65 !s90 -reportprogress|300|-93|-work|work|D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd|
+Z66 !s107 D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd|
+!i113 1
+R12
+R13
+Arr
+R2
+R3
+R4
+DEx4 work 13 register_read 0 22 5ZM;9NC;^kV81CZ0cbdAh0
+!i122 8
+l64
+L34 233
+VPU2<S6Omjc2OkISe1FZRT3
+!s100 =;HZ3dVLaL?B@11ZzJaP_2
+R7
+31
+R17
+!i10b 1
+R23
+R65
+R66
+!i113 1
+R12
+R13
+Estage2_withouthazards
+Z67 w1683107026
+R2
+R3
+R4
+!i122 13
+R0
+Z68 8D:/Hazardless_Testbox/EE_309_Project/Stage2_WithoutHazards.vhd
+Z69 FD:/Hazardless_Testbox/EE_309_Project/Stage2_WithoutHazards.vhd
+l0
+L6 1
+Vci`Nm<hQL=iPz0zE]3Ack1
+!s100 k5nX6@Nh<XQ6TRcbNb>][0
+R7
+31
+R39
+!i10b 1
+Z70 !s108 1683108767.000000
+Z71 !s90 -reportprogress|300|-93|-work|work|D:/Hazardless_Testbox/EE_309_Project/Stage2_WithoutHazards.vhd|
+!s107 D:/Hazardless_Testbox/EE_309_Project/Stage2_WithoutHazards.vhd|
+!i113 1
+R12
+R13
+Abehav
+R2
+R3
+R4
+DEx4 work 21 stage2_withouthazards 0 22 ci`Nm<hQL=iPz0zE]3Ack1
+!i122 13
+l23
+L21 100
+V]T=e[cQ36ETf^c^hmXBkl3
+!s100 F=;N@6aaSZL7o8hAmNkdG1
+R7
+31
+R39
+!i10b 1
+R70
+R71
+Z72 !s107 D:/Hazardless_Testbox/EE_309_Project/Stage2_WithoutHazards.vhd|
+!i113 1
+R12
+R13
+Estage4_exec
+Z73 w1683103412
+R3
+R4
+!i122 1
+R0
+Z74 8D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl
+Z75 FD:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl
+l0
+L4 1
+VVo]O_SEgG08n?2LQzMF2c0
+!s100 E0Jjh1jYUP:5]d3Wef^zf3
+R7
+31
+R8
+!i10b 1
+R9
+Z76 !s90 -reportprogress|300|-93|-work|work|D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl|
+Z77 !s107 D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl|
+!i113 1
+R12
+R13
+Abehavioural
+R3
+R4
+DEx4 work 11 stage4_exec 0 22 Vo]O_SEgG08n?2LQzMF2c0
+!i122 1
+l68
+L26 266
+VTG85OFb6PDZldTo4h?9QW3
+!s100 4[BY736c7B@^mQ3>DXl>33
+R7
+31
+R8
+!i10b 1
+R9
+R76
+R77
+!i113 1
+R12
+R13
+Ewrite_back
+Z78 w1683103463
+R2
+R3
+R4
+!i122 7
+R0
+Z79 8D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd
+Z80 FD:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd
+l0
+L6 1
+VFiW0>doQcP<kXWWn><NmP0
+!s100 7]4F7=4]nd`9Y^18W<Uz11
+R7
+31
+R17
+!i10b 1
+R23
+Z81 !s90 -reportprogress|300|-93|-work|work|D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd|
+Z82 !s107 D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd|
+!i113 1
+R12
+R13
+Awb
+R2
+R3
+R4
+DEx4 work 10 write_back 0 22 FiW0>doQcP<kXWWn><NmP0
+!i122 7
+l44
+L21 123
+Vl7D0XoQ0MI<@`91RcTRao0
+!s100 [1miD]nOj1@lel7RdFFW72
+R7
+31
+R17
+!i10b 1
+R23
+R81
+R82
+!i113 1
+R12
+R13
+Ezero_flag
+R14
+R2
+R3
+R4
+!i122 5
+R0
+R15
+R16
+l0
+L39 1
+Vl3L30fFk1H9_KAFKjjFiH3
+!s100 Amz3KM4H4EF8haCzCoSG00
+R7
+31
+R17
+!i10b 1
+R9
+R18
+R19
+!i113 1
+R12
+R13
+Abehav
+R2
+R3
+R4
+DEx4 work 9 zero_flag 0 22 l3L30fFk1H9_KAFKjjFiH3
+!i122 5
+l48
+L46 16
+VbnEezjknbX>ohiZH>bdkP2
+!s100 E<GYN8Fj9oVdbbUCSYg281
+R7
+31
+R17
+!i10b 1
+R9
+R18
+R19
+!i113 1
+R12
+R13

@@ -29,7 +29,8 @@ begin
 	     variable ct1,ct2: std_logic_vector(2 downto 0):="000";
 		  variable idx: integer:=0;
     begin
-        case opcode is
+        if(clock='1' and clock'event) then
+		  case opcode is
 
 -------------  LM  ----------------
 
@@ -114,5 +115,6 @@ begin
 				ct2 := ct2;
 					 
 		  end case;
+		  end if;
 	 end process;
 end architecture;

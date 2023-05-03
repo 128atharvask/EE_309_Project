@@ -69,10 +69,10 @@ set_global_assignment -name VHDL_FILE ALU_2.vhdl
 set_global_assignment -name VHDL_FILE Flags.vhd
 set_global_assignment -name VHDL_FILE regfile.vhdl
 set_global_assignment -name VHDL_FILE Write_Back.vhd
-set_global_assignment -name VHDL_FILE Stage2_WithoutHazards.vhd
 set_global_assignment -name VHDL_FILE Register_Read.vhd
 set_global_assignment -name VHDL_FILE RefAdd.vhd
 set_global_assignment -name VHDL_FILE MEM_STAGE.vhd
 set_global_assignment -name VHDL_FILE Complementor.vhd
 set_global_assignment -name VHDL_FILE main.vhd
+set_global_assignment -name VHDL_FILE Stage2_WithoutHazards.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
