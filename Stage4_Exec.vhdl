@@ -24,13 +24,13 @@ entity Stage4_Exec is
 end Stage4_Exec;
 
 architecture behavioural of Stage4_Exec is
-    signal opcode: std_logic_vector(3 downto 0);
-    signal condcode: std_logic_vector(1 downto 0);
-    signal carry, zero: std_logic;
-    signal C_in,C_WR,C_out,Z_in,Z_WR,Z_out: std_logic;
-	 signal ALU2_A, ALU2_B, ALU2_C, ALU3_A, ALU3_B, ALU3_C: std_logic_vector((operand_width - 1) downto 0);
-	 signal ALU2_Cin, ALU2_Cout, ALU2_Z, ALU3_Cin, ALU3_Cout, ALU3_Z: std_logic;
-	 signal ALU2_J, ALU3_J: std_logic_vector(1 downto 0);
+    signal opcode: std_logic_vector(3 downto 0):= (others => '0');
+    signal condcode: std_logic_vector(1 downto 0):= (others => '0');
+    signal carry, zero: std_logic:= '0';
+    signal C_in,C_WR,C_out,Z_in,Z_WR,Z_out: std_logic:= '0';
+	 signal ALU2_A, ALU2_B, ALU2_C, ALU3_A, ALU3_B, ALU3_C: std_logic_vector((operand_width - 1) downto 0):= (others => '0');
+	 signal ALU2_Cin, ALU2_Cout, ALU2_Z, ALU3_Cin, ALU3_Cout, ALU3_Z: std_logic:= '0';
+	 signal ALU2_J, ALU3_J: std_logic_vector(1 downto 0):= (others => '0');
     component ALU_2 is
         generic
         (
@@ -74,7 +74,7 @@ begin
     ALU3: ALU_2 port map(ALU_A => ALU3_A, ALU_B => ALU3_B, ALU_Cin => ALU3_Cin, ALU_J => ALU3_J, ALU_C => ALU3_C, ALU_Cout => ALU3_Cout, ALU_Z => ALU3_Z);
     Instr_R4(11 downto 0) <= Instr_R3(11 downto 0);
     ControlSig_R4 <= ControlSig_R3;
-    stage_proc:process(clock, C_out, Z_out, ALU2_A, ALU2_B, ALU3_A, ALU3_B, ALU2_Cin, C_in, Z_in)
+    stage_proc:process(clock, C_out, Z_out, ALU2_A, ALU2_B, ALU3_A, ALU3_B,ALU3_C, ALU2_Cin, C_in, Z_in,ALU2_Cout,ALU2_Z,opcode,A_R3,B_R3,C_R3,condcode,ALU2_C,Instr_R3)
     begin
         C_in <= ALU2_Cout; Z_in <= ALU2_Z;
         case opcode is

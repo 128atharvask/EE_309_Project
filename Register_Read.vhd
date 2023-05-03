@@ -32,11 +32,11 @@ entity Register_Read is		--DON'T FORGET TO CHANGE TOP LEVEL ENTITY AND EVEN IN I
 end entity;			
 
 architecture RR of Register_Read is
-signal R2_11_9, R2_8_6,R2_8_0,R2_5_0 : std_logic_vector(15 downto 0);
-signal compRF_D2 : std_logic_vector(15 downto 0);
-signal opcode : std_logic_vector(3 downto 0);
-signal condcode : std_logic_vector(2 downto 0);
-signal decisioncode : std_logic_vector(6 downto 0);
+signal R2_11_9, R2_8_6,R2_8_0,R2_5_0 : std_logic_vector(15 downto 0):= (others => '0');
+signal compRF_D2 : std_logic_vector(15 downto 0):= (others => '0');
+signal opcode : std_logic_vector(3 downto 0):= (others => '0');
+signal condcode : std_logic_vector(2 downto 0):= (others => '0');
+signal decisioncode : std_logic_vector(6 downto 0):= (others => '0');
 
 --component mux4to1 is
 --    port (A,B,C,D: in std_logic_vector(15 downto 0);
@@ -110,7 +110,7 @@ decisioncode <= opcode & condcode;
 
 --actual mapping starts
 
-linkproc: process(Instr_R2, ControlSig_R2(2 downto 0))		--need to check THE SENSITIVITY LIST!!
+linkproc: process(Instr_R2, RF_D1, RF_D2, ControlSig_R2(2 downto 0),opcode,condcode,R2_11_9,compRF_D2,R2_8_6,R2_5_0,R2_8_0,RR_RefAdd_out,PC_R2,A_R2)		--need to check THE SENSITIVITY LIST!!
 begin
 
 --	if(decisioncode = "0001000" or decisioncode = "0001001" or decisioncode = "0001010" or decisioncode = "0001011" or decisioncode = "0010000" or decisioncode="0010001" or decisioncode="0010010") then

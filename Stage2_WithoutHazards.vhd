@@ -19,7 +19,7 @@ entity Stage2_WithoutHazards is
 end entity Stage2_WithoutHazards;
 
 architecture behav of Stage2_WithoutHazards is
-    signal opcode: std_logic_vector(3 downto 0);
+    signal opcode: std_logic_vector(3 downto 0):= (others => '0');
 begin
     opcode <= Instr_R1(15 downto 12);
     PC_R2 <= PC_R1;

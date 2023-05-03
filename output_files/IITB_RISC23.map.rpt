@@ -1,5 +1,5 @@
 Analysis & Synthesis report for IITB_RISC23
-Wed May 03 15:42:26 2023
+Wed May 03 18:37:56 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -25,12 +25,16 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  17. Parameter Settings for User Entity Instance: MEM_STAGE:m_acc|data_mem:mem
  18. Port Connectivity Checks: "Write_Back:wb"
  19. Port Connectivity Checks: "Stage4_Exec:ex|ALU_2:ALU3"
- 20. Port Connectivity Checks: "Stage4_Exec:ex"
- 21. Port Connectivity Checks: "Register_Read:reg_read"
- 22. Port Connectivity Checks: "ALU_2:alu1"
- 23. Post-Synthesis Netlist Statistics for Top Partition
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
+ 20. Port Connectivity Checks: "ALU_2:alu1"
+ 21. Port Connectivity Checks: "RefAdd:RAR1"
+ 22. Port Connectivity Checks: "pipe_reg:PReg5"
+ 23. Port Connectivity Checks: "pipe_reg:PReg4"
+ 24. Port Connectivity Checks: "pipe_reg:PReg3"
+ 25. Port Connectivity Checks: "pipe_reg:PReg2"
+ 26. Port Connectivity Checks: "pipe_reg:PReg1"
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
 
 
 
@@ -57,7 +61,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 03 15:42:26 2023       ;
+; Analysis & Synthesis Status        ; Successful - Wed May 03 18:37:56 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_RISC23                                 ;
 ; Top-level Entity Name              ; main                                        ;
@@ -197,6 +201,7 @@ https://fpgasoftware.intel.com/eula.
 ; Complementor.vhd                 ; yes             ; User VHDL File  ; D:/Hazardless_Testbox/EE_309_Project/Complementor.vhd          ;         ;
 ; main.vhd                         ; yes             ; User VHDL File  ; D:/Hazardless_Testbox/EE_309_Project/main.vhd                  ;         ;
 ; Stage2_WithoutHazards.vhd        ; yes             ; User VHDL File  ; D:/Hazardless_Testbox/EE_309_Project/Stage2_WithoutHazards.vhd ;         ;
+; pipe_reg.vhd                     ; yes             ; User VHDL File  ; D:/Hazardless_Testbox/EE_309_Project/pipe_reg.vhd              ;         ;
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
 
 
@@ -346,15 +351,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------+
-; Port Connectivity Checks: "Write_Back:wb"              ;
-+----------------------+-------+----------+--------------+
-; Port                 ; Type  ; Severity ; Details      ;
-+----------------------+-------+----------+--------------+
-; pc_r5                ; Input ; Info     ; Stuck at GND ;
-; controlsig_r5[15..4] ; Input ; Info     ; Stuck at GND ;
-; controlsig_r5[2..0]  ; Input ; Info     ; Stuck at GND ;
-+----------------------+-------+----------+--------------+
++-------------------------------------------+
+; Port Connectivity Checks: "Write_Back:wb" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; c    ; Input ; Info     ; Stuck at GND    ;
+; z    ; Input ; Info     ; Stuck at GND    ;
++------+-------+----------+-----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------+
@@ -362,31 +366,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port     ; Type   ; Severity ; Details                                                                             ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
+; alu_cin  ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; alu_cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; alu_z    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Stage4_Exec:ex"                                                                                     ;
-+----------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                 ; Type   ; Severity ; Details                                                                             ;
-+----------------------+--------+----------+-------------------------------------------------------------------------------------+
-; pc_r4                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; controlsig_r4[15..5] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; controlsig_r4[2..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "Register_Read:reg_read"     ;
-+----------------------+-------+----------+--------------+
-; Port                 ; Type  ; Severity ; Details      ;
-+----------------------+-------+----------+--------------+
-; b_r2                 ; Input ; Info     ; Stuck at GND ;
-; c_r2                 ; Input ; Info     ; Stuck at GND ;
-; controlsig_r2[15..5] ; Input ; Info     ; Stuck at GND ;
-+----------------------+-------+----------+--------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------+
@@ -401,6 +384,69 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; alu_cout     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; alu_z        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "RefAdd:RAR1"     ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; refadd_in ; Input ; Info     ; Stuck at GND ;
++-----------+-------+----------+--------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "pipe_reg:PReg5"        ;
++-----------------+-------+----------+--------------+
+; Port            ; Type  ; Severity ; Details      ;
++-----------------+-------+----------+--------------+
+; pr_wr           ; Input ; Info     ; Stuck at VCC ;
+; data_in[95..84] ; Input ; Info     ; Stuck at GND ;
+; data_in[82..80] ; Input ; Info     ; Stuck at GND ;
+; data_in[15..0]  ; Input ; Info     ; Stuck at GND ;
++-----------------+-------+----------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "pipe_reg:PReg4"                                                                                 ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; pr_wr            ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; data_out[95..85] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data_out[82..80] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data_out[15..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------+
+; Port Connectivity Checks: "pipe_reg:PReg3" ;
++-------+-------+----------+-----------------+
+; Port  ; Type  ; Severity ; Details         ;
++-------+-------+----------+-----------------+
+; pr_wr ; Input ; Info     ; Stuck at VCC    ;
++-------+-------+----------+-----------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "pipe_reg:PReg2"        ;
++-----------------+-------+----------+--------------+
+; Port            ; Type  ; Severity ; Details      ;
++-----------------+-------+----------+--------------+
+; pr_wr           ; Input ; Info     ; Stuck at VCC ;
+; data_in[95..85] ; Input ; Info     ; Stuck at GND ;
+; data_in[79..48] ; Input ; Info     ; Stuck at GND ;
++-----------------+-------+----------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "pipe_reg:PReg1"                                                                                 ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; data_in[95..32]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; data_out[95..48] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -430,7 +476,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed May 03 15:42:12 2023
+    Info: Processing started: Wed May 03 18:37:46 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_RISC23 -c IITB_RISC23
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -478,23 +524,21 @@ Info (12021): Found 2 design units, including 1 entities, in source file main.vh
 Info (12021): Found 2 design units, including 1 entities, in source file stage2_withouthazards.vhd
     Info (12022): Found design unit 1: Stage2_WithoutHazards-behav File: D:/Hazardless_Testbox/EE_309_Project/Stage2_WithoutHazards.vhd Line: 21
     Info (12023): Found entity 1: Stage2_WithoutHazards File: D:/Hazardless_Testbox/EE_309_Project/Stage2_WithoutHazards.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file pipe_reg.vhd
+    Info (12022): Found design unit 1: pipe_reg-behavioural File: D:/Hazardless_Testbox/EE_309_Project/pipe_reg.vhd Line: 13
+    Info (12023): Found entity 1: pipe_reg File: D:/Hazardless_Testbox/EE_309_Project/pipe_reg.vhd Line: 4
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at main.vhd(227): used implicit default value for signal "Z_flag" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 227
-Warning (10541): VHDL Signal Declaration warning at main.vhd(227): used implicit default value for signal "C_flag" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 227
-Warning (10541): VHDL Signal Declaration warning at main.vhd(234): used implicit default value for signal "RefAdd_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 234
-Warning (10036): Verilog HDL or VHDL warning at main.vhd(242): object "alu_dummy1" assigned a value but never read File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 242
-Warning (10036): Verilog HDL or VHDL warning at main.vhd(242): object "alu_dummy2" assigned a value but never read File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 242
-Warning (10873): Using initial value X (don't care) for net "R1[47..32]" at main.vhd(238) File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 238
-Warning (10873): Using initial value X (don't care) for net "R2[95..85]" at main.vhd(238) File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 238
-Warning (10873): Using initial value X (don't care) for net "R2[79..48]" at main.vhd(238) File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 238
-Warning (10873): Using initial value X (don't care) for net "R5[95..84]" at main.vhd(238) File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 238
-Warning (10873): Using initial value X (don't care) for net "R5[82..80]" at main.vhd(238) File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 238
-Warning (10873): Using initial value X (don't care) for net "R5[15..0]" at main.vhd(238) File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 238
-Info (12128): Elaborating entity "regfile" for hierarchy "regfile:rf" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 246
-Info (12128): Elaborating entity "RefAdd" for hierarchy "RefAdd:RAR1" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 247
-Info (12128): Elaborating entity "instr_mem" for hierarchy "instr_mem:i_mem" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 248
-Warning (10492): VHDL Process Statement warning at instr_mem.vhdl(26): signal "Data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/instr_mem.vhdl Line: 26
-Info (12128): Elaborating entity "ALU_2" for hierarchy "ALU_2:alu1" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 250
+Warning (10540): VHDL Signal Declaration warning at main.vhd(235): used explicit default value for signal "Z_flag" because signal was never assigned a value File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 235
+Warning (10540): VHDL Signal Declaration warning at main.vhd(235): used explicit default value for signal "C_flag" because signal was never assigned a value File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 235
+Warning (10540): VHDL Signal Declaration warning at main.vhd(242): used explicit default value for signal "RefAdd_in" because signal was never assigned a value File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 242
+Warning (10036): Verilog HDL or VHDL warning at main.vhd(251): object "alu_dummy1" assigned a value but never read File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 251
+Warning (10036): Verilog HDL or VHDL warning at main.vhd(251): object "alu_dummy2" assigned a value but never read File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 251
+Warning (10540): VHDL Signal Declaration warning at main.vhd(253): used explicit default value for signal "PR_Write" because signal was never assigned a value File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 253
+Info (12128): Elaborating entity "pipe_reg" for hierarchy "pipe_reg:PReg1" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 256
+Info (12128): Elaborating entity "regfile" for hierarchy "regfile:rf" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 263
+Info (12128): Elaborating entity "RefAdd" for hierarchy "RefAdd:RAR1" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 264
+Info (12128): Elaborating entity "instr_mem" for hierarchy "instr_mem:i_mem" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 265
+Info (12128): Elaborating entity "ALU_2" for hierarchy "ALU_2:alu1" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 267
 Warning (10540): VHDL Signal Declaration warning at ALU_2.vhdl(37): used explicit default value for signal "ALU_CND" because signal was never assigned a value File: D:/Hazardless_Testbox/EE_309_Project/ALU_2.vhdl Line: 37
 Warning (10631): VHDL Process Statement warning at ALU_2.vhdl(96): inferring latch(es) for signal or variable "ALU_C", which holds its previous value in one or more paths through the process File: D:/Hazardless_Testbox/EE_309_Project/ALU_2.vhdl Line: 96
 Warning (10631): VHDL Process Statement warning at ALU_2.vhdl(96): inferring latch(es) for signal or variable "ALU_Cout", which holds its previous value in one or more paths through the process File: D:/Hazardless_Testbox/EE_309_Project/ALU_2.vhdl Line: 96
@@ -517,62 +561,9 @@ Info (10041): Inferred latch for "ALU_C[12]" at ALU_2.vhdl(96) File: D:/Hazardle
 Info (10041): Inferred latch for "ALU_C[13]" at ALU_2.vhdl(96) File: D:/Hazardless_Testbox/EE_309_Project/ALU_2.vhdl Line: 96
 Info (10041): Inferred latch for "ALU_C[14]" at ALU_2.vhdl(96) File: D:/Hazardless_Testbox/EE_309_Project/ALU_2.vhdl Line: 96
 Info (10041): Inferred latch for "ALU_C[15]" at ALU_2.vhdl(96) File: D:/Hazardless_Testbox/EE_309_Project/ALU_2.vhdl Line: 96
-Info (12128): Elaborating entity "Stage2_WithoutHazards" for hierarchy "Stage2_WithoutHazards:id" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 251
-Info (12128): Elaborating entity "Register_Read" for hierarchy "Register_Read:reg_read" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 252
+Info (12128): Elaborating entity "Stage2_WithoutHazards" for hierarchy "Stage2_WithoutHazards:id" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 268
+Info (12128): Elaborating entity "Register_Read" for hierarchy "Register_Read:reg_read" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 269
 Warning (10036): Verilog HDL or VHDL warning at Register_Read.vhd(39): object "decisioncode" assigned a value but never read File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 39
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(134): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 134
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(135): signal "condcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 135
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(138): signal "R2_11_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 138
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(139): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 139
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(140): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 140
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(144): signal "R2_11_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 144
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(145): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 145
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(146): signal "compRF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 146
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(149): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 149
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(151): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 151
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(152): signal "R2_8_6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 152
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(153): signal "R2_5_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 153
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(155): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 155
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(156): signal "R2_11_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 156
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(157): signal "R2_8_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 157
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(159): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 159
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(160): signal "R2_11_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 160
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(162): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 162
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(163): signal "R2_5_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 163
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(165): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 165
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(168): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 168
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(169): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 169
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(170): signal "R2_5_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 170
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(172): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 172
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(173): signal "R2_11_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 173
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(176): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 176
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(181): signal "RR_RefAdd_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 181
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(182): signal "R2_5_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 182
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(184): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 184
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(186): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 186
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(189): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 189
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(194): signal "RR_RefAdd_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 194
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(195): signal "R2_5_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 195
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(197): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 197
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(200): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 200
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(201): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 201
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(202): signal "PC_R2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 202
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(204): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 204
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(207): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 207
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(208): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 208
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(209): signal "PC_R2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 209
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(211): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 211
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(214): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 214
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(215): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 215
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(216): signal "PC_R2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 216
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(218): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 218
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(219): signal "A_R2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 219
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(220): signal "PC_R2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 220
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(222): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 222
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(225): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 225
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(227): signal "A_R2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 227
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(229): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 229
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(231): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 231
 Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "RF_A1", which holds its previous value in one or more paths through the process File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 113
 Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "RF_A2", which holds its previous value in one or more paths through the process File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 113
 Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "A_R3", which holds its previous value in one or more paths through the process File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 113
@@ -692,97 +683,19 @@ Info (10041): Inferred latch for "RF_A1[0]" at Register_Read.vhd(113) File: D:/H
 Info (10041): Inferred latch for "RF_A1[1]" at Register_Read.vhd(113) File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 113
 Info (10041): Inferred latch for "RF_A1[2]" at Register_Read.vhd(113) File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 113
 Info (12128): Elaborating entity "Complementor" for hierarchy "Register_Read:reg_read|Complementor:C1" File: D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd Line: 104
-Info (12128): Elaborating entity "Stage4_Exec" for hierarchy "Stage4_Exec:ex" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 253
+Info (12128): Elaborating entity "Stage4_Exec" for hierarchy "Stage4_Exec:ex" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 270
 Warning (10541): VHDL Signal Declaration warning at Stage4_Exec.vhdl(18): used implicit default value for signal "PC_R4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 18
-Warning (10541): VHDL Signal Declaration warning at Stage4_Exec.vhdl(29): used implicit default value for signal "carry" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 29
-Warning (10541): VHDL Signal Declaration warning at Stage4_Exec.vhdl(29): used implicit default value for signal "zero" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 29
-Warning (10541): VHDL Signal Declaration warning at Stage4_Exec.vhdl(32): used implicit default value for signal "ALU3_Cin" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 32
+Warning (10540): VHDL Signal Declaration warning at Stage4_Exec.vhdl(29): used explicit default value for signal "carry" because signal was never assigned a value File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 29
+Warning (10540): VHDL Signal Declaration warning at Stage4_Exec.vhdl(29): used explicit default value for signal "zero" because signal was never assigned a value File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 29
+Warning (10540): VHDL Signal Declaration warning at Stage4_Exec.vhdl(32): used explicit default value for signal "ALU3_Cin" because signal was never assigned a value File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 32
 Warning (10036): Verilog HDL or VHDL warning at Stage4_Exec.vhdl(32): object "ALU3_Cout" assigned a value but never read File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 32
 Warning (10036): Verilog HDL or VHDL warning at Stage4_Exec.vhdl(32): object "ALU3_Z" assigned a value but never read File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 32
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(79): signal "ALU2_Cout" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 79
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(79): signal "ALU2_Z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 79
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(80): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 80
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(82): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 82
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(83): signal "B_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 83
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(84): signal "C_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 84
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(87): signal "condcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 87
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(92): signal "ALU2_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 92
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(93): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 93
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(99): signal "ALU2_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 99
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(100): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 100
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(112): signal "ALU2_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 112
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(113): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 113
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(124): signal "ALU2_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 124
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(125): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 125
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(131): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 131
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(132): signal "B_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 132
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(133): signal "C_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 133
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(137): signal "condcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 137
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(141): signal "ALU2_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 141
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(142): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 142
 Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(144): signal "zero" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 144
 Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(155): signal "carry" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 155
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(168): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 168
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(169): signal "B_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 169
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(170): signal "C_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 170
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(171): signal "ALU2_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 171
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(175): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 175
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(177): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 177
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(178): signal "B_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 178
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(182): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 182
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(184): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 184
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(185): signal "B_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 185
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(186): signal "C_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 186
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(187): signal "ALU2_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 187
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(192): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 192
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(194): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 194
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(195): signal "B_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 195
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(196): signal "C_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 196
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(197): signal "ALU2_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 197
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(202): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 202
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(204): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 204
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(205): signal "B_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 205
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(206): signal "C_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 206
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(207): signal "ALU2_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 207
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(212): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 212
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(214): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 214
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(215): signal "B_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 215
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(216): signal "C_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 216
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(217): signal "ALU2_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 217
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(222): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 222
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(224): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 224
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(225): signal "B_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 225
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(227): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 227
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(228): signal "ALU2_Z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 228
 Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(229): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 229
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(230): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 230
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(231): signal "ALU3_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 231
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(239): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 239
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(240): signal "B_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 240
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(242): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 242
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(243): signal "ALU2_Cout" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 243
 Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(244): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 244
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(245): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 245
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(246): signal "ALU3_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 246
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(254): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 254
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(255): signal "B_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 255
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(257): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 257
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(258): signal "ALU2_Cout" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 258
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(258): signal "ALU2_Z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 258
 Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(259): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 259
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(260): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 260
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(261): signal "ALU3_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 261
 Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(269): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 269
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(270): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 270
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(271): signal "ALU3_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 271
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(274): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 274
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(275): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 275
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(278): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 278
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(279): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 279
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(281): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 281
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(282): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 282
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(284): signal "ALU3_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 284
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(287): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 287
 Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "A_R4", which holds its previous value in one or more paths through the process File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "ALU2_A", which holds its previous value in one or more paths through the process File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "ALU2_B", which holds its previous value in one or more paths through the process File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 77
@@ -940,44 +853,11 @@ Info (10041): Inferred latch for "A_R4[14]" at Stage4_Exec.vhdl(77) File: D:/Haz
 Info (10041): Inferred latch for "A_R4[15]" at Stage4_Exec.vhdl(77) File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Info (12128): Elaborating entity "carry_flag" for hierarchy "Stage4_Exec:ex|carry_flag:cf" File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 71
 Info (12128): Elaborating entity "zero_flag" for hierarchy "Stage4_Exec:ex|zero_flag:zf" File: D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl Line: 72
-Info (12128): Elaborating entity "MEM_STAGE" for hierarchy "MEM_STAGE:m_acc" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 255
-Warning (10492): VHDL Process Statement warning at MEM_STAGE.vhd(73): signal "ControlSig_R2_M2WR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/MEM_STAGE.vhd Line: 73
+Info (12128): Elaborating entity "MEM_STAGE" for hierarchy "MEM_STAGE:m_acc" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 272
 Info (12128): Elaborating entity "data_mem" for hierarchy "MEM_STAGE:m_acc|data_mem:mem" File: D:/Hazardless_Testbox/EE_309_Project/MEM_STAGE.vhd Line: 61
 Warning (10492): VHDL Process Statement warning at data_mem.vhdl(33): signal "Data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/data_mem.vhdl Line: 33
 Info (12128): Elaborating entity "mux2to1" for hierarchy "MEM_STAGE:m_acc|mux2to1:mux" File: D:/Hazardless_Testbox/EE_309_Project/MEM_STAGE.vhd Line: 62
-Info (12128): Elaborating entity "Write_Back" for hierarchy "Write_Back:wb" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 257
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(58): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 58
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(59): signal "condcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 59
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(60): signal "C_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 60
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(61): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 61
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(64): signal "condcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 64
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(66): signal "C_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 66
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(67): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 67
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(73): signal "condcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 73
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(75): signal "C_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 75
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(76): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 76
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(86): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 86
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(87): signal "C_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 87
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(88): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 88
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(91): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 91
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(92): signal "C_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 92
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(93): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 93
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(96): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 96
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(97): signal "C_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 97
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(98): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 98
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(101): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 101
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(104): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 104
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(105): signal "C_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 105
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(106): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 106
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(109): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 109
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(112): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 112
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(115): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 115
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(118): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 118
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(121): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 121
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(123): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 123
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(126): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 126
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(128): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 128
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(131): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 131
+Info (12128): Elaborating entity "Write_Back" for hierarchy "Write_Back:wb" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 274
 Warning (10631): VHDL Process Statement warning at Write_Back.vhd(55): inferring latch(es) for signal or variable "RF_D3", which holds its previous value in one or more paths through the process File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 55
 Warning (10631): VHDL Process Statement warning at Write_Back.vhd(55): inferring latch(es) for signal or variable "RF_A3", which holds its previous value in one or more paths through the process File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 55
 Info (10041): Inferred latch for "RF_A3[0]" at Write_Back.vhd(55) File: D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd Line: 55
@@ -1007,10 +887,10 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 226 warnings
-    Info: Peak virtual memory: 4787 megabytes
-    Info: Processing ended: Wed May 03 15:42:26 2023
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:16
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 56 warnings
+    Info: Peak virtual memory: 4790 megabytes
+    Info: Processing ended: Wed May 03 18:37:56 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:11
 
 

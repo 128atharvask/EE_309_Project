@@ -21,7 +21,7 @@ architecture behavioural of instr_mem is
 	 others => (others => '0')
 	 );
 begin
-    mem_read: process(mem_add)
+    mem_read: process(mem_add,Data)
     begin
     mem_data <= Data(to_integer(unsigned(mem_add)));
     end process;

@@ -17,10 +17,10 @@ entity data_mem is
 end data_mem;
 
 architecture behavioural of data_mem is
-    type memm is array (0 to 65535) of std_logic_vector((operand_width - 1) downto 0);
+    type memm is array (0 to 127) of std_logic_vector((operand_width - 1) downto 0);
     signal Data: memm := (others => (others => '0'));
 begin
-	 mem_write: process(clock)
+	 mem_write: process(clock,Data)
 	 begin
 		 if(clock = '0' and clock' event) then
 			  if(M_WR = '1') then

@@ -52,7 +52,7 @@ component mux2to1 is
           F : out std_logic_vector(15 downto 0));
 end component;
 
-signal dataout : std_logic_vector((operand_width-1) downto 0);
+signal dataout : std_logic_vector((operand_width-1) downto 0):= (others => '0');
 signal dout_select, mem_wr : std_logic := '0';
 
 begin
@@ -68,7 +68,7 @@ begin
 
 	 instr_out <= instr;
 
-	 proc: process(instr)
+	 proc: process(instr,ControlSig_R2_M2WR)
    		begin
 			if(instr(15 downto 12) = "0101" or (instr(15 downto 12) = "0111" and ControlSig_R2_M2WR = '1')) then
 				mem_wr <= '1';

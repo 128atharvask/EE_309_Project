@@ -12,7 +12,7 @@ entity RefAdd is
 end entity RefAdd;
 
 architecture king of RefAdd is
-signal content : std_logic_vector(15 downto 0);
+signal content : std_logic_vector(15 downto 0):= (others => '0');
 begin
 	
 	RefAdd_out <= content;

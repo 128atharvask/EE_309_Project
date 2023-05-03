@@ -19,8 +19,8 @@ entity Write_Back is		--DON'T FORGET TO CHANGE TOP LEVEL ENTITY AND EVEN IN ITS 
 end entity;			
 
 architecture WB of Write_Back is
-signal opcode : std_logic_vector(3 downto 0);
-signal condcode : std_logic_vector(2 downto 0);
+signal opcode : std_logic_vector(3 downto 0) := (others => '0');
+signal condcode : std_logic_vector(2 downto 0) := (others => '0');
 
 --component mux4to1 is
 --    port (A,B,C,D: in std_logic_vector(15 downto 0); 
@@ -52,7 +52,7 @@ opcode <= Instr_R5(15 downto 12);
 condcode <= Instr_R5(2 downto 0);
 
 
-linkproc: process(Instr_R5,ControlSig_R5(3),C,Z)		--need to check THE SENSITIVITY LIST!!
+linkproc: process(Instr_R5,ControlSig_R5(3),C,Z,opcode,condcode,A_R5,B_R5,C_R5)		--need to check THE SENSITIVITY LIST!!
 begin
 
 	if(opcode = "0001" or opcode="0010") then

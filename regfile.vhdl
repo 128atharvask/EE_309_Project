@@ -21,18 +21,18 @@ entity regfile is
 end regfile;
 
 architecture behavioural of regfile is
-    signal R1, R2, R3, R4, R5, R6, R7: std_logic_vector((operand_width - 1) downto 0);
+    signal R1, R2, R3, R4, R5, R6, R7: std_logic_vector((operand_width - 1) downto 0) := (others => '0');
     signal R0 : std_logic_vector((operand_width - 1) downto 0) := "0000000000000000";
 begin
 	PC_out <= R0;
-    register_write:process(clock,R0,R1,R2,R3,R4,R5,R6,R7)
+    register_write:process(clock) --check if Ri should be kept or not|| ,R0,R1,R2,R3,R4,R5,R6,R7,PC_in,RF_D3,RF_A3, PC_WR
     begin
         -- Write only at the rising edge of the clock
         if(clock = '0' and clock' event) then
             if(PC_WR = '1') then
 				R0 <= PC_in;
-			elsif(RF_WR = '1' and RF_A3 = "000") then
-				R0 <= RF_D3;
+--			elsif(RF_WR = '1' and RF_A3 = "000") then
+--				R0 <= RF_D3;
 			end if;
             if(RF_WR = '1') then    
                 case RF_A3 is
