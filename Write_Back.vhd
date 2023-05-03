@@ -22,23 +22,23 @@ architecture WB of Write_Back is
 signal opcode : std_logic_vector(3 downto 0);
 signal condcode : std_logic_vector(2 downto 0);
 
-component mux4to1 is
-    port (A,B,C,D: in std_logic_vector(15 downto 0);
-          F : out std_logic_vector(15 downto 0);
-			 S : in std_logic_vector(1 downto 0));
-end component mux4to1;
-
-component mux2to1 is
-    port (A, B: in std_logic_vector(15 downto 0);
-          F : out std_logic_vector(15 downto 0);
-			 S : in std_logic);
-end component mux2to1;
-
-component mux2to1_3bit is
-    port (A, B: in std_logic_vector(2 downto 0);
-          F : out std_logic_vector(2 downto 0);
-			 S : in std_logic);
-end component mux2to1_3bit;
+--component mux4to1 is
+--    port (A,B,C,D: in std_logic_vector(15 downto 0); 
+--          F : out std_logic_vector(15 downto 0);
+--			 S : in std_logic_vector(1 downto 0));
+--end component mux4to1;
+--
+--component mux2to1 is
+--    port (A, B: in std_logic_vector(15 downto 0);
+--          F : out std_logic_vector(15 downto 0);
+--			 S : in std_logic);
+--end component mux2to1;
+--
+--component mux2to1_3bit is
+--    port (A, B: in std_logic_vector(2 downto 0);
+--          F : out std_logic_vector(2 downto 0);
+--			 S : in std_logic);
+--end component mux2to1_3bit;
 
 
 begin
@@ -52,7 +52,7 @@ opcode <= Instr_R5(15 downto 12);
 condcode <= Instr_R5(2 downto 0);
 
 
-linkproc: process(Instr_R5)		--need to check THE SENSITIVITY LIST!!
+linkproc: process(Instr_R5,ControlSig_R5(0),C,Z)		--need to check THE SENSITIVITY LIST!!
 begin
 
 	if(opcode = "0001" or opcode="0010") then
@@ -119,7 +119,9 @@ begin
 		RF_WR <= '0';
 
 	elsif(opcode = "1100") then
-		RF_WR <= '0';
+		RF_A3 <= Instr_R5(11 downto 9);
+		RF_D3 <= A_R5;
+		RF_WR <= '1';
 
 	elsif(opcode = "1101") then
 		RF_A3 <= Instr_R5(11 downto 9);

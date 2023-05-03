@@ -38,23 +38,23 @@ signal opcode : std_logic_vector(3 downto 0);
 signal condcode : std_logic_vector(2 downto 0);
 signal decisioncode : std_logic_vector(6 downto 0);
 
-component mux4to1 is
-    port (A,B,C,D: in std_logic_vector(15 downto 0);
-          F : out std_logic_vector(15 downto 0);
-			 S : in std_logic_vector(1 downto 0));
-end component mux4to1;
-
-component mux2to1 is
-    port (A, B: in std_logic_vector(15 downto 0);
-          F : out std_logic_vector(15 downto 0);
-			 S : in std_logic);
-end component mux2to1;
-
-component mux2to1_3bit is
-    port (A, B: in std_logic_vector(2 downto 0);
-          F : out std_logic_vector(2 downto 0);
-			 S : in std_logic);
-end component mux2to1_3bit;
+--component mux4to1 is
+--    port (A,B,C,D: in std_logic_vector(15 downto 0);
+--          F : out std_logic_vector(15 downto 0);
+--			 S : in std_logic_vector(1 downto 0));
+--end component mux4to1;
+--
+--component mux2to1 is
+--    port (A, B: in std_logic_vector(15 downto 0);
+--          F : out std_logic_vector(15 downto 0);
+--			 S : in std_logic);
+--end component mux2to1;
+--
+--component mux2to1_3bit is
+--    port (A, B: in std_logic_vector(2 downto 0);
+--          F : out std_logic_vector(2 downto 0);
+--			 S : in std_logic);
+--end component mux2to1_3bit;
 
 component Complementor is
     port (X: in std_logic_vector(15 downto 0);
@@ -110,7 +110,7 @@ decisioncode <= opcode & condcode;
 
 --actual mapping starts
 
-linkproc: process(Instr_R2)		--need to check THE SENSITIVITY LIST!!
+linkproc: process(Instr_R2, ControlSig_R2(2 downto 0))		--need to check THE SENSITIVITY LIST!!
 begin
 
 --	if(decisioncode = "0001000" or decisioncode = "0001001" or decisioncode = "0001010" or decisioncode = "0001011" or decisioncode = "0010000" or decisioncode="0010001" or decisioncode="0010010") then
@@ -158,8 +158,8 @@ begin
 	
 	elsif(opcode = "0100") then 
 		A_R3 <= R2_11_9;
-		B_R3 <= RF_D2;
 		RF_A2 <= Instr_R2(8 downto 6);
+		B_R3 <= RF_D2;
 		C_R3 <= R2_5_0;
 	
 	elsif(opcode = "0101") then	
@@ -174,6 +174,9 @@ begin
 		if(ControlSig_R2(2 downto 0) = "000") then 		--CHANGE CONTROL_SIG(x downto y) HERE!!!!!!!
 			RF_A2 <= Instr_R2(8 downto 6);
 			RR_RefAdd_in <= RF_D2;
+			RR_RefAdd_E <= '1';
+		else 	
+			RR_RefAdd_E <= '0';
 		end if;
 		B_R3 <= RR_RefAdd_out;
 		C_R3 <= R2_5_0;
@@ -185,6 +188,8 @@ begin
 			RF_A2 <= Instr_R2(8 downto 6);
 			RR_RefAdd_in <= RF_D2;
 			RR_RefAdd_E <= '1';
+		else 	
+			RR_RefAdd_E <= '0';
 		end if;
 		B_R3 <= RR_RefAdd_out;
 		C_R3 <= R2_5_0;
@@ -211,9 +216,7 @@ begin
 		PC_R3 <= PC_R2;
 
 	elsif(opcode = "1100") then
-		RF_A3 <= Instr_R2(11 downto 9);
-		RF_D3 <= A_R2;
-		RF_WR <= '1';
+		A_R3 <= A_R2;
 		PC_R3 <= PC_R2;
 
 	elsif(opcode = "1101") then
@@ -221,6 +224,7 @@ begin
 		RF_WR <= '1';
 		RF_D3 <= RF_D1;		--writing to PC
 		RF_A3 <= "000";		--writing to PC
+		A_R3 <= A_R2;
 	
 	elsif(opcode = "1111") then
 		RF_A1 <= Instr_R2(11 downto 9);
