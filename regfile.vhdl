@@ -1,5 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity regfile is
 	generic(
@@ -23,16 +24,26 @@ end regfile;
 architecture behavioural of regfile is
     signal R1, R2, R3, R4, R5, R6, R7: std_logic_vector((operand_width - 1) downto 0) := (others => '0');
     signal R0 : std_logic_vector((operand_width - 1) downto 0) := "0000000000000000";
+	 signal counter : integer := 0;
+	 signal incounter,in2counter : integer := 0;
+
+	 
 begin
 	PC_out <= R0;
-    register_write:process(clock) --check if Ri should be kept or not|| ,R0,R1,R2,R3,R4,R5,R6,R7,PC_in,RF_D3,RF_A3, PC_WR
-    begin
+    register_write:process(clock, RF_A3, RF_D3, PC_WR, PC_in) --check if Ri should be kept or not|| ,R0,R1,R2,R3,R4,R5,R6,R7,PC_in,RF_D3,RF_A3, PC_WR
+
+	 begin
+	 	counter <= counter + 1;
+
         -- Write only at the rising edge of the clock
-        if(clock = '0' and clock' event) then
+        if rising_edge(clock) then
+		  incounter <= incounter + 1;
             if(PC_WR = '1') then
 				R0 <= PC_in;
---			elsif(RF_WR = '1' and RF_A3 = "000") then
---				R0 <= RF_D3;
+				in2counter <= in2counter + 1;
+			elsif(RF_WR = '1' and RF_A3 = "000") then
+				R0 <= RF_D3;
+			else null;
 			end if;
             if(RF_WR = '1') then    
                 case RF_A3 is
@@ -55,6 +66,7 @@ begin
             end if;
         end if;
     end process;
+	 	 
     register_read_1:process(RF_A1,R0,R1,R2,R3,R4,R5,R6,R7)
     -- Read anytime
     begin

@@ -12,7 +12,7 @@
 # 
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/mux2to1.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:38:17 on May 03,2023
+# Start time: 22:39:41 on May 03,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/mux2to1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -20,22 +20,22 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity mux2to1
 # -- Compiling architecture working of mux2to1
-# End time: 18:38:17 on May 03,2023, Elapsed time: 0:00:00
+# End time: 22:39:41 on May 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:38:17 on May 03,2023
+# Start time: 22:39:41 on May 03,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Stage4_Exec
 # -- Compiling architecture behavioural of Stage4_Exec
-# End time: 18:38:17 on May 03,2023, Elapsed time: 0:00:00
+# End time: 22:39:41 on May 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/instr_mem.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:38:17 on May 03,2023
+# Start time: 22:39:41 on May 03,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/instr_mem.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -43,11 +43,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity instr_mem
 # -- Compiling architecture behavioural of instr_mem
-# End time: 18:38:17 on May 03,2023, Elapsed time: 0:00:00
+# End time: 22:39:41 on May 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/data_mem.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:38:17 on May 03,2023
+# Start time: 22:39:41 on May 03,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/data_mem.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -55,11 +55,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity data_mem
 # -- Compiling architecture behavioural of data_mem
-# End time: 18:38:17 on May 03,2023, Elapsed time: 0:00:00
+# End time: 22:39:41 on May 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/ALU_2.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:38:17 on May 03,2023
+# Start time: 22:39:41 on May 03,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/ALU_2.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -67,11 +67,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity ALU_2
 # -- Compiling architecture behavioural of ALU_2
-# End time: 18:38:17 on May 03,2023, Elapsed time: 0:00:00
+# End time: 22:39:41 on May 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/Flags.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:38:17 on May 03,2023
+# Start time: 22:39:41 on May 03,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/Flags.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -81,22 +81,23 @@
 # -- Compiling architecture behav of carry_flag
 # -- Compiling entity zero_flag
 # -- Compiling architecture behav of zero_flag
-# End time: 18:38:18 on May 03,2023, Elapsed time: 0:00:01
+# End time: 22:39:41 on May 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:38:18 on May 03,2023
+# Start time: 22:39:42 on May 03,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
 # -- Compiling entity regfile
 # -- Compiling architecture behavioural of regfile
-# End time: 18:38:18 on May 03,2023, Elapsed time: 0:00:00
+# End time: 22:39:42 on May 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:38:18 on May 03,2023
+# Start time: 22:39:42 on May 03,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -104,11 +105,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Write_Back
 # -- Compiling architecture WB of Write_Back
-# End time: 18:38:18 on May 03,2023, Elapsed time: 0:00:00
+# End time: 22:39:42 on May 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:38:18 on May 03,2023
+# Start time: 22:39:42 on May 03,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -116,11 +117,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Register_Read
 # -- Compiling architecture RR of Register_Read
-# End time: 18:38:18 on May 03,2023, Elapsed time: 0:00:00
+# End time: 22:39:42 on May 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/RefAdd.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:38:18 on May 03,2023
+# Start time: 22:39:42 on May 03,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/RefAdd.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -128,11 +129,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RefAdd
 # -- Compiling architecture king of RefAdd
-# End time: 18:38:18 on May 03,2023, Elapsed time: 0:00:00
+# End time: 22:39:42 on May 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/MEM_STAGE.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:38:18 on May 03,2023
+# Start time: 22:39:42 on May 03,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/MEM_STAGE.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -140,11 +141,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity MEM_STAGE
 # -- Compiling architecture Structural of MEM_STAGE
-# End time: 18:38:18 on May 03,2023, Elapsed time: 0:00:00
+# End time: 22:39:42 on May 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/Complementor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:38:18 on May 03,2023
+# Start time: 22:39:42 on May 03,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/Complementor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -152,11 +153,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Complementor
 # -- Compiling architecture doit of Complementor
-# End time: 18:38:18 on May 03,2023, Elapsed time: 0:00:00
+# End time: 22:39:42 on May 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/main.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:38:18 on May 03,2023
+# Start time: 22:39:42 on May 03,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/main.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -164,11 +165,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity main
 # -- Compiling architecture behav of main
-# End time: 18:38:18 on May 03,2023, Elapsed time: 0:00:00
+# End time: 22:39:42 on May 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/Stage2_WithoutHazards.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:38:18 on May 03,2023
+# Start time: 22:39:43 on May 03,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/Stage2_WithoutHazards.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -176,23 +177,23 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Stage2_WithoutHazards
 # -- Compiling architecture behav of Stage2_WithoutHazards
-# End time: 18:38:19 on May 03,2023, Elapsed time: 0:00:01
+# End time: 22:39:43 on May 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/pipe_reg.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:38:19 on May 03,2023
+# Start time: 22:39:43 on May 03,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/pipe_reg.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity pipe_reg
 # -- Compiling architecture behavioural of pipe_reg
-# End time: 18:38:19 on May 03,2023, Elapsed time: 0:00:00
+# End time: 22:39:43 on May 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim work.main
 # vsim work.main 
-# Start time: 18:38:22 on May 03,2023
+# Start time: 22:40:02 on May 03,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -216,295 +217,11 @@ vsim work.main
 # ** Warning: (vsim-8683) Uninitialized out port /main/ex/PC_R4(15 downto 0) has no driver.
 # This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
 add wave -position insertpoint  \
-sim:/main/reset
+sim:/main/rf/counter
 add wave -position insertpoint  \
-sim:/main/clock
+sim:/main/rf/incounter
 add wave -position insertpoint  \
-sim:/main/rf/R1
-add wave -position insertpoint  \
-sim:/main/rf/R2
-add wave -position insertpoint  \
-sim:/main/rf/R3
-add wave -position insertpoint  \
-sim:/main/rf/R4
-add wave -position insertpoint  \
-sim:/main/rf/R5
-add wave -position insertpoint  \
-sim:/main/rf/R6
-add wave -position insertpoint  \
-sim:/main/rf/R7
-add wave -position insertpoint  \
-sim:/main/rf/R0
-add wave -position insertpoint  \
-sim:/main/pc
-add wave -position insertpoint  \
-sim:/main/instr
-add wave -position insertpoint  \
-sim:/main/Z_flag
-add wave -position insertpoint  \
-sim:/main/C_flag
-add wave -position insertpoint  \
-sim:/main/R1out
-add wave -position insertpoint  \
-sim:/main/R2out
-add wave -position insertpoint  \
-sim:/main/R3out
-add wave -position insertpoint  \
-sim:/main/R4out
-add wave -position insertpoint  \
-sim:/main/R5out
-add wave -position insertpoint  \
-sim:/main/id/Instr_R2
-add wave -position insertpoint  \
-sim:/main/reg_read/RF_A1
-add wave -position insertpoint  \
-sim:/main/reg_read/RF_A2
-add wave -position insertpoint  \
-sim:/main/reg_read/RF_D1
-add wave -position insertpoint  \
-sim:/main/reg_read/RF_D2
-add wave -position insertpoint  \
-sim:/main/pc_wr_ex
-add wave -position insertpoint  \
-sim:/main/if_en
-add wave -position insertpoint  \
-sim:/main/rf/PC_WR
-add wave -position insertpoint  \
-sim:/main/rf/PC_in
-add wave -position insertpoint  \
-sim:/main/rf/PC_out
-add wave -position insertpoint  \
-sim:/main/rf/clock
-add wave -position insertpoint  \
-sim:/main/rf/RF_A3
-add wave -position insertpoint  \
-sim:/main/rf/RF_D3
-add wave -position insertpoint  \
-sim:/main/rf/RF_WR
-add wave -position insertpoint  \
-sim:/main/wb/RF_D3
-add wave -position insertpoint  \
-sim:/main/wb/RF_A3
-add wave -position insertpoint  \
-sim:/main/wb/RF_WR
-add wave -position insertpoint  \
-sim:/main/wb/A_R5
-add wave -position insertpoint  \
-sim:/main/wb/C_R5
-add wave -position insertpoint  \
-sim:/main/ex/ALU2_C
-add wave -position insertpoint  \
-sim:/main/alu1/ALU_A
-
-force -freeze sim:/main/clock 1 10, 0 {60 ps} -r 100
-force -freeze sim:/main/rf/R1 0000000000000010 0
-force -freeze sim:/main/rf/R2 0000000000000010 0
-force -freeze sim:/main/rf/R3 0000000000000010 0
-force -freeze sim:/main/rf/R0 0000000000000000 0
-force -freeze sim:/main/pc_wr_ex 0 0
-
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /main/m_acc/mem
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /main/i_mem
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ps  Iteration: 2  Instance: /main/m_acc/mem
-run
-run
-run
-run
-run
-run
-run
-run
-add wave -position insertpoint  \
-sim:/main/PReg1/data
-add wave -position insertpoint  \
-sim:/main/PReg2/data
-add wave -position insertpoint  \
-sim:/main/PReg3/data
-add wave -position insertpoint  \
-sim:/main/PReg4/data
-add wave -position insertpoint  \
-sim:/main/PReg5/data
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-8683) Uninitialized out port /main/ex/PC_R4(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-vsim work.main
-# End time: 18:52:31 on May 03,2023, Elapsed time: 0:14:09
-# Errors: 0, Warnings: 1
-# vsim work.main 
-# Start time: 18:52:31 on May 03,2023
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.main(behav)
-# Loading work.pipe_reg(behavioural)
-# Loading work.regfile(behavioural)
-# Loading work.refadd(king)
-# Loading work.instr_mem(behavioural)
-# Loading work.alu_2(behavioural)
-# Loading work.stage2_withouthazards(behav)
-# Loading work.register_read(rr)
-# Loading work.complementor(doit)
-# Loading work.stage4_exec(behavioural)
-# Loading work.carry_flag(behav)
-# Loading work.zero_flag(behav)
-# Loading work.mem_stage(structural)
-# Loading work.data_mem(behavioural)
-# Loading work.mux2to1(working)
-# Loading work.write_back(wb)
-# ** Warning: (vsim-8683) Uninitialized out port /main/ex/PC_R4(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-add wave -position insertpoint  \
-sim:/main/reset
-add wave -position insertpoint  \
-sim:/main/clock
-add wave -position insertpoint  \
-sim:/main/rf/R1
-add wave -position insertpoint  \
-sim:/main/rf/R2
-add wave -position insertpoint  \
-sim:/main/rf/R3
-add wave -position insertpoint  \
-sim:/main/rf/R4
-add wave -position insertpoint  \
-sim:/main/rf/R5
-add wave -position insertpoint  \
-sim:/main/rf/R6
-add wave -position insertpoint  \
-sim:/main/rf/R7
-add wave -position insertpoint  \
-sim:/main/rf/R0
-add wave -position insertpoint  \
-sim:/main/pc
-add wave -position insertpoint  \
-sim:/main/instr
-add wave -position insertpoint  \
-sim:/main/Z_flag
-add wave -position insertpoint  \
-sim:/main/C_flag
-add wave -position insertpoint  \
-add wave -position insertpoint  \
-sim:/main/PReg1/data
-# ** UI-Msg: (vish-4014) No objects found matching 'add'.
-# ** UI-Msg: (vish-4014) No objects found matching 'wave'.
-# Unrecognized option: "-position" ignored.
-# ** UI-Msg: (vish-4014) No objects found matching 'insertpoint'.
-add wave -position insertpoint  \
-sim:/main/PReg2/data
-add wave -position insertpoint  \
-sim:/main/PReg3/data
-add wave -position insertpoint  \
-sim:/main/PReg4/data
-add wave -position insertpoint  \
-sim:/main/PReg5/data
-add wave -position insertpoint  \
-sim:/main/id/Instr_R2
-add wave -position insertpoint  \
-sim:/main/reg_read/RF_A1
-add wave -position insertpoint  \
-sim:/main/reg_read/RF_A2
-add wave -position insertpoint  \
-sim:/main/reg_read/RF_D1
-add wave -position insertpoint  \
-sim:/main/reg_read/RF_D2
-add wave -position insertpoint  \
-sim:/main/pc_wr_ex
-add wave -position insertpoint  \
-sim:/main/if_en
-add wave -position insertpoint  \
-sim:/main/rf/PC_WR
-add wave -position insertpoint  \
-sim:/main/rf/PC_in
-add wave -position insertpoint  \
-sim:/main/rf/PC_out
-add wave -position insertpoint  \
-sim:/main/rf/clock
-add wave -position insertpoint  \
-sim:/main/rf/RF_A3
-add wave -position insertpoint  \
-sim:/main/rf/RF_D3
-add wave -position insertpoint  \
-sim:/main/rf/RF_WR
-add wave -position insertpoint  \
-sim:/main/wb/RF_D3
-add wave -position insertpoint  \
-sim:/main/wb/RF_A3
-add wave -position insertpoint  \
-sim:/main/wb/RF_WR
-add wave -position insertpoint  \
-sim:/main/wb/A_R5
-add wave -position insertpoint  \
-sim:/main/wb/C_R5
-add wave -position insertpoint  \
-sim:/main/ex/ALU2_C
-add wave -position insertpoint  \
-sim:/main/alu1/ALU_A
-
-force -freeze sim:/main/clock 1 10, 0 {60 ps} -r 100
-force -freeze sim:/main/rf/R1 0000000000000010 0
-force -freeze sim:/main/rf/R2 0000000000000010 0
-force -freeze sim:/main/rf/R3 0000000000000010 0
-force -freeze sim:/main/rf/R0 0000000000000000 0
-force -freeze sim:/main/pc_wr_ex 0 0
-
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /main/m_acc/mem
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /main/i_mem
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ps  Iteration: 2  Instance: /main/m_acc/mem
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-add wave -position insertpoint  \
-sim:/main/alu1/ALU_C
-rest
-# ambiguous command name "rest": restart restartCmd restartDone restartError restartParse restore
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-8683) Uninitialized out port /main/ex/PC_R4(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-vsim work.main
-# End time: 18:58:15 on May 03,2023, Elapsed time: 0:05:44
-# Errors: 0, Warnings: 1
-# vsim work.main 
-# Start time: 18:58:15 on May 03,2023
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.main(behav)
-# Loading work.pipe_reg(behavioural)
-# Loading work.regfile(behavioural)
-# Loading work.refadd(king)
-# Loading work.instr_mem(behavioural)
-# Loading work.alu_2(behavioural)
-# Loading work.stage2_withouthazards(behav)
-# Loading work.register_read(rr)
-# Loading work.complementor(doit)
-# Loading work.stage4_exec(behavioural)
-# Loading work.carry_flag(behav)
-# Loading work.zero_flag(behav)
-# Loading work.mem_stage(structural)
-# Loading work.data_mem(behavioural)
-# Loading work.mux2to1(working)
-# Loading work.write_back(wb)
-# ** Warning: (vsim-8683) Uninitialized out port /main/ex/PC_R4(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
+sim:/main/rf/in2counter
 add wave -position insertpoint  \
 sim:/main/reset
 add wave -position insertpoint  \
@@ -593,7 +310,7 @@ sim:/main/alu1/ALU_C
 
 force -freeze sim:/main/clock 1 10, 0 {60 ps} -r 100
 force -freeze sim:/main/rf/R1 0000000000000010 0
-force -freeze sim:/main/rf/R2 0000000000000010 0
+force -freeze sim:/main/rf/R2 0000000000000011 0
 force -freeze sim:/main/rf/R3 0000000000000010 0
 force -freeze sim:/main/rf/R0 0000000000000000 0
 force -freeze sim:/main/pc_wr_ex 0 0
@@ -607,146 +324,5 @@ run
 #    Time: 10 ps  Iteration: 2  Instance: /main/m_acc/mem
 run
 run
-run
-run
-run
-run
-run
-run
-force -freeze sim:/main/clock 1 0, 0 {50000 ps} -r 100000
-vsim work.main
-# End time: 19:18:05 on May 03,2023, Elapsed time: 0:19:50
+# End time: 22:43:05 on May 03,2023, Elapsed time: 0:03:03
 # Errors: 0, Warnings: 4
-# vsim work.main 
-# Start time: 19:18:05 on May 03,2023
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.main(behav)
-# Loading work.pipe_reg(behavioural)
-# Loading work.regfile(behavioural)
-# Loading work.refadd(king)
-# Loading work.instr_mem(behavioural)
-# Loading work.alu_2(behavioural)
-# Loading work.stage2_withouthazards(behav)
-# Loading work.register_read(rr)
-# Loading work.complementor(doit)
-# Loading work.stage4_exec(behavioural)
-# Loading work.carry_flag(behav)
-# Loading work.zero_flag(behav)
-# Loading work.mem_stage(structural)
-# Loading work.data_mem(behavioural)
-# Loading work.mux2to1(working)
-# Loading work.write_back(wb)
-# ** Warning: (vsim-8683) Uninitialized out port /main/ex/PC_R4(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-add wave -position insertpoint  \
-sim:/main/reset
-add wave -position insertpoint  \
-sim:/main/clock
-add wave -position insertpoint  \
-sim:/main/rf/R1
-add wave -position insertpoint  \
-sim:/main/rf/R2
-add wave -position insertpoint  \
-sim:/main/rf/R3
-add wave -position insertpoint  \
-sim:/main/rf/R4
-add wave -position insertpoint  \
-sim:/main/rf/R5
-add wave -position insertpoint  \
-sim:/main/rf/R6
-add wave -position insertpoint  \
-sim:/main/rf/R7
-add wave -position insertpoint  \
-sim:/main/rf/R0
-add wave -position insertpoint  \
-sim:/main/pc
-add wave -position insertpoint  \
-sim:/main/instr
-add wave -position insertpoint  \
-sim:/main/Z_flag
-add wave -position insertpoint  \
-sim:/main/C_flag
-add wave -position insertpoint  \
-add wave -position insertpoint  \
-sim:/main/PReg1/data
-# ** UI-Msg: (vish-4014) No objects found matching 'add'.
-# ** UI-Msg: (vish-4014) No objects found matching 'wave'.
-# Unrecognized option: "-position" ignored.
-# ** UI-Msg: (vish-4014) No objects found matching 'insertpoint'.
-add wave -position insertpoint  \
-sim:/main/PReg2/data
-add wave -position insertpoint  \
-sim:/main/PReg3/data
-add wave -position insertpoint  \
-sim:/main/PReg4/data
-add wave -position insertpoint  \
-sim:/main/PReg5/data
-add wave -position insertpoint  \
-sim:/main/id/Instr_R2
-add wave -position insertpoint  \
-sim:/main/reg_read/RF_A1
-add wave -position insertpoint  \
-sim:/main/reg_read/RF_A2
-add wave -position insertpoint  \
-sim:/main/reg_read/RF_D1
-add wave -position insertpoint  \
-sim:/main/reg_read/RF_D2
-add wave -position insertpoint  \
-sim:/main/pc_wr_ex
-add wave -position insertpoint  \
-sim:/main/if_en
-add wave -position insertpoint  \
-sim:/main/rf/PC_WR
-add wave -position insertpoint  \
-sim:/main/rf/PC_in
-add wave -position insertpoint  \
-sim:/main/rf/PC_out
-add wave -position insertpoint  \
-sim:/main/rf/clock
-add wave -position insertpoint  \
-sim:/main/rf/RF_A3
-add wave -position insertpoint  \
-sim:/main/rf/RF_D3
-add wave -position insertpoint  \
-sim:/main/rf/RF_WR
-add wave -position insertpoint  \
-sim:/main/wb/RF_D3
-add wave -position insertpoint  \
-sim:/main/wb/RF_A3
-add wave -position insertpoint  \
-sim:/main/wb/RF_WR
-add wave -position insertpoint  \
-sim:/main/wb/A_R5
-add wave -position insertpoint  \
-sim:/main/wb/C_R5
-add wave -position insertpoint  \
-sim:/main/ex/ALU2_C
-add wave -position insertpoint  \
-sim:/main/alu1/ALU_C
-
-force -freeze sim:/main/clock 1 10, 0 {60 ps} -r 100
-force -freeze sim:/main/rf/R1 0000000000000010 0
-force -freeze sim:/main/rf/R2 0000000000000010 0
-force -freeze sim:/main/rf/R3 0000000000000010 0
-force -freeze sim:/main/rf/R0 0000000000000000 0
-force -freeze sim:/main/pc_wr_ex 0 0
-
-force -freeze sim:/main/clock 1 0, 0 {50000 ps} -r 100000
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /main/m_acc/mem
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /main/i_mem
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /main/m_acc/mem
-run
-run
-run
-run
-run
-run
-run
-run
