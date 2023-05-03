@@ -11,13 +11,13 @@ entity Stage4_Exec is
    -- inputs
         PC_R3, Instr_R3:in std_logic_vector((operand_width-1) downto 0);
         A_R3, B_R3, C_R3:in std_logic_vector((operand_width-1) downto 0);
-        ControlSig_R3:in std_logic_vector(1 downto 0);
+        ControlSig_R3:in std_logic_vector((operand_width - 1) downto 0);
         clock:in std_logic;
 
    -- outputs
         PC_R4, Instr_R4:out std_logic_vector((operand_width-1) downto 0);
         A_R4, B_R4, C_R4:out std_logic_vector((operand_width-1) downto 0);
-        ControlSig_R4:out std_logic_vector(1 downto 0);
+        ControlSig_R4:out std_logic_vector((operand_width - 1) downto 0);
         PC: out std_logic_vector((operand_width-1) downto 0);
         PC_WR: out std_logic
    );
@@ -73,7 +73,7 @@ begin
     ALU2: ALU_2 port map(ALU_A => ALU2_A, ALU_B => ALU2_B, ALU_Cin => ALU2_Cin, ALU_J => ALU2_J, ALU_C => ALU2_C, ALU_Cout => ALU2_Cout, ALU_Z => ALU2_Z);
     ALU3: ALU_2 port map(ALU_A => ALU3_A, ALU_B => ALU3_B, ALU_Cin => ALU3_Cin, ALU_J => ALU3_J, ALU_C => ALU3_C, ALU_Cout => ALU3_Cout, ALU_Z => ALU3_Z);
     Instr_R4(11 downto 0) <= Instr_R3(11 downto 0);
-
+    ControlSig_R4 <= ControlSig_R3;
     stage_proc:process(clock, C_out, Z_out, ALU2_A, ALU2_B, ALU3_A, ALU3_B, ALU2_Cin, C_in, Z_in)
     begin
         C_in <= ALU2_Cout; Z_in <= ALU2_Z;
