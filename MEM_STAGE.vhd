@@ -1,7 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-use work.Gates.all;
 
 entity MEM_STAGE is
 	 generic
@@ -45,12 +44,13 @@ component data_mem is
 end component;
 
 component mux2to1 is
-    port (A, B, S : in std_logic;
-          F : out std_logic);
+    port (A, B : in std_logic_vector;
+			S: in std_logic;
+          F : out std_logic_vector);
 end component;
 
-signal dataout : std_logic_vector((operand_width)-1);
-signal dout_select, mem_wr : std_logic := 0;
+signal dataout : std_logic_vector((operand_width-1) downto 0);
+signal dout_select, mem_wr : std_logic := '0';
 
 begin
     

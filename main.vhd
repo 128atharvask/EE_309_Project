@@ -79,7 +79,7 @@ architecture behav of main is
 			ControlSig_R2_M2WR: out std_logic);
 	end component;
 
-	component IITB_RISC23 is		--DON'T FORGET TO CHANGE TOP LEVEL ENTITY AND EVEN IN ITS ARCHITECTURE!!!!!
+	component Register_Read is		--DON'T FORGET TO CHANGE TOP LEVEL ENTITY AND EVEN IN ITS ARCHITECTURE!!!!!
     port (Instr_R2:	in std_logic_vector(15 downto 0);
 			PC_R2:	in std_logic_vector(15 downto 0);
 			A_R2:	in std_logic_vector(15 downto 0);
@@ -106,7 +106,27 @@ architecture behav of main is
 			);
 	end component;
 	
-	--execute
+	component Stage4_Exec is
+    generic
+    (
+        operand_width : integer := 16
+    );
+   port
+    (
+   -- inputs
+        PC_R3, Instr_R3:in std_logic_vector((operand_width-1) downto 0);
+        A_R3, B_R3, C_R3:in std_logic_vector((operand_width-1) downto 0);
+        ControlSig_R3:in std_logic_vector(1 downto 0);
+        clock:in std_logic;
+
+   -- outputs
+        PC_R4, Instr_R4:out std_logic_vector((operand_width-1) downto 0);
+        A_R4, B_R4, C_R4:out std_logic_vector((operand_width-1) downto 0);
+        ControlSig_R4:out std_logic_vector(1 downto 0);
+        PC: out std_logic_vector((operand_width-1) downto 0);
+        PC_WR: out std_logic
+   );
+	end component;
 	
 	component MEM_STAGE is
 	 generic
@@ -174,12 +194,14 @@ architecture behav of main is
 	 alu1 : ADDER port map (pc,pc_in0);
 	 id: Stage2_WithoutHazards port map (R1((operand_width-1) downto 0),R1((2*operand_width-1) downto operand_width),__,__,clock,R2((operand_width-1) downto 0),R2((2*operand_width-1) downto operand_width),__,__,__,__);
 	 reg_read: Register_Read port map (R2((2*operand_width-1) downto operand_width),R2((operand_width-1) downto 0),AR2,BR2,CR2,);
-	 --
+	 ex: Stage4_Exec port map (R3((operand_width-1) downto 0),R3((2*operand_width-1) downto operand_width),R3((3*operand_width-1) downto (2*operand_width)),R3((4*operand_width-1) downto (3*operand_width)),R3((5*operand_width-1) downto (4*operand_width)),__,clock,R4((operand_width-1) downto 0),R4((2*operand_width-1) downto operand_width),R4((3*operand_width-1) downto (2*operand_width)),R4((4*operand_width-1) downto (3*operand_width)),R4((5*operand_width-1) downto (4*operand_width)),__,pc_in1,pc_wr);
 	 m_acc: MEM_STAGE port map (D_Add,Din,C_to_din,WB_data_in,WB_add_in,mem_wr,dout_sel,Dout,WB_d_out,WB_a_out);
 	 wb: Write_Back port map (PC_R5_out,A_R5_out,B_R5_out,C_R5_out,___,d3,a3);
 	
 	 proc: process(clock)
 	 
+
+
 		if(clock = '0' and clock'event) then
 			
 			--mem stage
