@@ -127,7 +127,7 @@ begin
 		RF_WR <= '1';
 	
 	elsif(opcode = "1111") then
-		null;
+		RF_WR <= '0';
 	
 	else
 		RF_WR <= '0';		--just some bs to write something in else
