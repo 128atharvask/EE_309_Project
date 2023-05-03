@@ -16,13 +16,16 @@ entity MEM_STAGE is
 		DMem_Din:in std_logic_vector((operand_width-1) downto 0);		
 		ALU_C :in std_logic_vector((operand_width-1) downto 0);		
 		WB_data_in :in std_logic_vector((operand_width-1) downto 0);		
-		WB_add_in :in std_logic_vector(2 downto 0);
+		WB_add_in :in std_logic_vector((operand_width-1) downto 0);
 		instr :in std_logic_vector((operand_width-1) downto 0);
+		ControlSig_R2_M2WR : in std_logic;
+		ControlSig_R2_RFWR_in : in std_logic;
     -- outputs
 		Dout:out std_logic_vector((operand_width-1) downto 0);		
 		WB_data_out:out std_logic_vector((operand_width-1) downto 0);		
-		WB_add_out :out std_logic_vector(2 downto 0);
-		instr_out :out std_logic_vector((operand_width-1) downto 0)
+		WB_add_out :out std_logic_vector((operand_width-1) downto 0);
+		instr_out :out std_logic_vector((operand_width-1) downto 0);
+		ControlSig_R2_RFWR_out : out std_logic
     );
 
 end MEM_STAGE;
@@ -44,9 +47,9 @@ component data_mem is
 end component;
 
 component mux2to1 is
-    port (A, B : in std_logic_vector;
+    port (A, B : in std_logic_vector(15 downto 0);
 			S: in std_logic;
-          F : out std_logic_vector);
+          F : out std_logic_vector(15 downto 0));
 end component;
 
 signal dataout : std_logic_vector((operand_width-1) downto 0);
@@ -61,11 +64,13 @@ begin
 	 WB_data_out <= WB_data_in;
 	 WB_add_out <= WB_add_in;
 
+	 ControlSig_R2_RFWR_out <= ControlSig_R2_RFWR_in;
+
 	 instr_out <= instr;
 
 	 proc: process(instr)
    		begin
-			if(instr(15 downto 12) = "0101" or instr(15 downto 12) = "0111") then
+			if(instr(15 downto 12) = "0101" or (instr(15 downto 12) = "0111" and ControlSig_R2_M2WR = '1')) then
 				mem_wr <= '1';
 			else
 				mem_wr <= '0';
