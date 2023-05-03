@@ -68,9 +68,7 @@ architecture behav of main is
     port (PC_R1: in std_logic_vector(15 downto 0);
 	       Instr_R1: in std_logic_vector(15 downto 0);
 			 A_R1: in std_logic_vector(15 downto 0);
-          ct1: in std_logic_vector(2 downto 0);
-			 ct2: in std_logic_vector(2 downto 0);
-          clock: in std_logic;
+			 clock: in std_logic;
 			 
           PC_R2: out std_logic_vector(15 downto 0);
 			 Instr_R2: out std_logic_vector(15 downto 0);
@@ -197,39 +195,49 @@ architecture behav of main is
 	 
 	 signal D_Add, Din, C_to_din, WB_data_in, WB_add_in, Dout, WB_d_out, WB_a_out : std_logic_vector((operand_width)-1 downto 0);
 	 signal mem_wr, dout_sel : std_logic;
-	 signal RefAdd_out, RefAdd_in : std_logic_vector(15 downto 0;)
+	 signal RefAdd_out, RefAdd_in : std_logic_vector(15 downto 0);
 	 signal RefAdd_E : std_logic;
+	 signal if_en : std_logic;
+	 signal cs_execin, cs_execout: std_logic_vector(1 downto 0);
 
-	 signal R1,R2,R3,R4,R5 : std_logic_vector(95 downto 0); -- pipeleine regs
+	 signal R1,R2,R3,R4,R5 : std_logic_vector(95 downto 0); -- temp pipe regs
+	 signal PR1 : std_logic_vector(95 downto 0); -- pipeline regs
 	--ControlSig_R2(...), PC_R2(16), A_R2(16), B_R2(16), C_R2(16), Instr_R2(16)
 
 	begin
 
-	 rf: regfile port map (clock,rf_wr,PC_WR,a1,a2,a3,d3,pc_in,d1,d2,pc);
+	 rf: regfile port map (clock,rf_wr,if_en,a1,a2,a3,d3,pc_in,d1,d2,pc);
 	 RAR1 : RefAdd port map(clock, RefAdd_in, RefAdd_out, RefAdd_E); 
 	 i_mem: instr_mem port map (pc, instr);
 	 alu1 : ADDER port map (pc,pc_in0);
-	 id: Stage2_WithoutHazards port map (R1(15 downto 0),R1(31 downto 16),__,__,clock,R2(15 downto 0),R2(31 downto 16),);
+	 id: Stage2_WithoutHazards port map (R1(15 downto 0),R1(31 downto 16),R1(47 downto 32),clock,R2(15 downto 0),R2(31 downto 16),R2(47 downto 32),R2(83 downto 80),if_en,R2(84),R2(85));
 	 reg_read: Register_Read port map (R2(31 downto 16), R2(15 downto 0), R2(47 downto 32), R2(63 downto 48), R2(79 downto 64), R2(95 downto 80),d1,d2, RefAdd_out, R3(15 downto 0), R3(47 downto 32), R3(63 downto 48), R3(79 downto 64),R3(95 downto 80), a1, a2, d3, a3, RefAdd_E, RefAdd_out, R3(31 downto 16), rf_wr);
-	 ex: Stage4_Exec port map (R3(15 downto 0),R3(31 downto 16),R3(47 downto 32),R3(63 downto 48),R3(79 downto 64), ,clock,R4(15 downto 0),R4(31 downto 16),R4(47 downto 32),R4(63 downto 48),R4(79 downto 64), ,pc_in1,pc_wr_ex);
-	 
+	 ex: Stage4_Exec port map (R3(15 downto 0),R3(31 downto 16),R3(47 downto 32),R3(63 downto 48),R3(79 downto 64), R3(87 downto 86),clock,R4(15 downto 0),R4(31 downto 16),R4(47 downto 32),R4(63 downto 48),R4(79 downto 64), R4(87 downto 86),pc_in1,pc_wr_ex);
+	 --NEED TO CHECK R3 & R4(87 downto 86) in one of the inputs to Exec Stage
 	 m_acc: MEM_STAGE port map (clock,R4(63 downto 48),R4(47 downto 32),R4(79 downto 64),R4(79 downto 64),R4(47 downto 32),R4(31 downto 16),R5(63 downto 48),R5(79 downto 64),R5(47 downto 32),R5(31 downto 16));
 
 	 wb: Write_Back port map (R5(31 downto 16), R5(15 downto 0),R5(47 downto 32), R5(63 downto 48), R5(79 downto 64), R5(95 downto 80), C_flag, Z_flag, d3, a3, rf_wr);
-	 mux1: mux2to1 port map (pc_in0,pc_in1,pc_wr_ex,sel1);
-	 mux2: mux2to1 port map ();
-	 mux3: mux2to1 port map ();
-	 mux4: mux2to1 port map ();
+	 mux1: mux2to1 port map (pc_in0,pc_in1,pc_in,pc_wr_ex);
 
 	 
 	 -- IF
-	 R1((operand_width-1) downto 0) <= y1;
+	 R1(15 downto 0) <= pc;
+	 R1(31 downto 16) <= instr;
+
+	 --ID
+	 id_proc: process(if_en, R1)
+		begin
+		if(if_en = '1') then
+			PR1 <= R1;
+		end if;
+	 end process;
+
 
 	 -- RR
 
 	
 	 if_proc: process(clock)
-	 
+	 begin
 
 	 
 	 end process;
