@@ -7,8 +7,6 @@ entity Stage2_WithoutHazards is
     port (PC_R1: in std_logic_vector(15 downto 0);
 	       Instr_R1: in std_logic_vector(15 downto 0);
 			 A_R1: in std_logic_vector(15 downto 0);
-          ct1: in std_logic_vector(2 downto 0);
-			 ct2: in std_logic_vector(2 downto 0);
           clock: in std_logic;
 			 
           PC_R2: out std_logic_vector(15 downto 0);
@@ -28,8 +26,8 @@ begin
 	 A_R2 <= A_R1;
 	 
     stage_proc:process(clock)
-	     variable ct1,ct2: std_logic_vector(2 downto 0);
-		  variable idx: integer;
+	     variable ct1,ct2: std_logic_vector(2 downto 0):="000";
+		  variable idx: integer:=0;
     begin
         case opcode is
 
@@ -112,6 +110,8 @@ begin
 				ControlSig_R2_RFWR <= '0';
 				ControlSig_R2_M2WR <= '0';
 				Counter1_R2 <= "000";
+				ct1 := ct1;
+				ct2 := ct2;
 					 
 		  end case;
 	 end process;

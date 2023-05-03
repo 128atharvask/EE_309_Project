@@ -7,8 +7,6 @@ entity Stage2_ID is
     port (PC_R1: in std_logic_vector(15 downto 0);
 	       Instr_R1: in std_logic_vector(15 downto 0);
 			 A_R1: in std_logic_vector(15 downto 0);
-          ct1: in std_logic_vector(2 downto 0);
-			 ct2: in std_logic_vector(2 downto 0);
           clock: in std_logic;
 			 Hzd_in: in std_logic;
 			 
@@ -30,7 +28,7 @@ begin
 	 Hzd_out <= Hzd_in;
 	 
     stage_proc:process(clock)
-	     variable ct1,ct2: std_logic_vector(2 downto 0);
+	     variable ct1,ct2: std_logic_vector(2 downto 0):="000";
 		  variable idx: integer;
 		  variable prev1op, prev2op, prev3op: std_logic_vector(3 downto 0);
 		  variable prev1add, prev2add, prev3add: std_logic_vector(2 downto 0);
