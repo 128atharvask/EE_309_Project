@@ -1,0 +1,1049 @@
+Analysis & Synthesis report for IITB_RISC23
+Wed May 03 14:39:14 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |main
+ 10. Parameter Settings for User Entity Instance: regfile:rf
+ 11. Parameter Settings for User Entity Instance: instr_mem:i_mem
+ 12. Parameter Settings for User Entity Instance: ALU_2:alu1
+ 13. Parameter Settings for User Entity Instance: Stage4_Exec:ex
+ 14. Parameter Settings for User Entity Instance: Stage4_Exec:ex|ALU_2:ALU2
+ 15. Parameter Settings for User Entity Instance: Stage4_Exec:ex|ALU_2:ALU3
+ 16. Parameter Settings for User Entity Instance: MEM_STAGE:m_acc
+ 17. Parameter Settings for User Entity Instance: MEM_STAGE:m_acc|data_mem:mem
+ 18. Port Connectivity Checks: "Write_Back:wb"
+ 19. Port Connectivity Checks: "Stage4_Exec:ex|ALU_2:ALU3"
+ 20. Port Connectivity Checks: "Stage4_Exec:ex"
+ 21. Port Connectivity Checks: "Register_Read:reg_read"
+ 22. Port Connectivity Checks: "ALU_2:alu1"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed May 03 14:39:14 2023       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; IITB_RISC23                                 ;
+; Top-level Entity Name              ; main                                        ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 2                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M25SAE144C8G     ;                    ;
+; Top-level entity name                                            ; main               ; IITB_RISC23        ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                            ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                     ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
+; mux2to1.vhd                      ; yes             ; User VHDL File  ; D:/EE_309 Project Main/mux2to1.vhd               ;         ;
+; Stage4_Exec.vhdl                 ; yes             ; User VHDL File  ; D:/EE_309 Project Main/Stage4_Exec.vhdl          ;         ;
+; instr_mem.vhdl                   ; yes             ; User VHDL File  ; D:/EE_309 Project Main/instr_mem.vhdl            ;         ;
+; data_mem.vhdl                    ; yes             ; User VHDL File  ; D:/EE_309 Project Main/data_mem.vhdl             ;         ;
+; ALU_2.vhdl                       ; yes             ; User VHDL File  ; D:/EE_309 Project Main/ALU_2.vhdl                ;         ;
+; Flags.vhd                        ; yes             ; User VHDL File  ; D:/EE_309 Project Main/Flags.vhd                 ;         ;
+; regfile.vhdl                     ; yes             ; User VHDL File  ; D:/EE_309 Project Main/regfile.vhdl              ;         ;
+; Write_Back.vhd                   ; yes             ; User VHDL File  ; D:/EE_309 Project Main/Write_Back.vhd            ;         ;
+; Stage2_WithoutHazards.vhd        ; yes             ; User VHDL File  ; D:/EE_309 Project Main/Stage2_WithoutHazards.vhd ;         ;
+; Register_Read.vhd                ; yes             ; User VHDL File  ; D:/EE_309 Project Main/Register_Read.vhd         ;         ;
+; RefAdd.vhd                       ; yes             ; User VHDL File  ; D:/EE_309 Project Main/RefAdd.vhd                ;         ;
+; MEM_STAGE.vhd                    ; yes             ; User VHDL File  ; D:/EE_309 Project Main/MEM_STAGE.vhd             ;         ;
+; Complementor.vhd                 ; yes             ; User VHDL File  ; D:/EE_309 Project Main/Complementor.vhd          ;         ;
+; main.vhd                         ; yes             ; User VHDL File  ; D:/EE_309 Project Main/main.vhd                  ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 2     ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; reset ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 2     ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; |main                      ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 2    ; 0            ; 0          ; |main               ; main        ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |main ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; operand_width  ; 16    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:rf ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; operand_width  ; 16    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: instr_mem:i_mem ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; operand_width  ; 16    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_2:alu1 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; operand_width  ; 16    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Stage4_Exec:ex ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; operand_width  ; 16    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Stage4_Exec:ex|ALU_2:ALU2 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; operand_width  ; 16    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Stage4_Exec:ex|ALU_2:ALU3 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; operand_width  ; 16    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MEM_STAGE:m_acc ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; operand_width  ; 16    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MEM_STAGE:m_acc|data_mem:mem ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; operand_width  ; 16    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "Write_Back:wb"              ;
++----------------------+-------+----------+--------------+
+; Port                 ; Type  ; Severity ; Details      ;
++----------------------+-------+----------+--------------+
+; pc_r5                ; Input ; Info     ; Stuck at GND ;
+; controlsig_r5[15..4] ; Input ; Info     ; Stuck at GND ;
+; controlsig_r5[2..0]  ; Input ; Info     ; Stuck at GND ;
++----------------------+-------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Stage4_Exec:ex|ALU_2:ALU3"                                                              ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; alu_cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; alu_z    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Stage4_Exec:ex"                                                                                     ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                 ; Type   ; Severity ; Details                                                                             ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; pc_r4                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; controlsig_r4[15..5] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; controlsig_r4[2..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "Register_Read:reg_read"     ;
++----------------------+-------+----------+--------------+
+; Port                 ; Type  ; Severity ; Details      ;
++----------------------+-------+----------+--------------+
+; b_r2                 ; Input ; Info     ; Stuck at GND ;
+; c_r2                 ; Input ; Info     ; Stuck at GND ;
+; controlsig_r2[15..5] ; Input ; Info     ; Stuck at GND ;
++----------------------+-------+----------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_2:alu1"                                                                                 ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; alu_b[15..2] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; alu_b[1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; alu_b[0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; alu_cin      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; alu_j        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; alu_cout     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; alu_z        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 2                               ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Wed May 03 14:38:59 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_RISC23 -c IITB_RISC23
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file mux2to1.vhd
+    Info (12022): Found design unit 1: mux2to1-working File: D:/EE_309 Project Main/mux2to1.vhd Line: 12
+    Info (12023): Found entity 1: mux2to1 File: D:/EE_309 Project Main/mux2to1.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file stage4_exec.vhdl
+    Info (12022): Found design unit 1: Stage4_Exec-behavioural File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 26
+    Info (12023): Found entity 1: Stage4_Exec File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file instr_mem.vhdl
+    Info (12022): Found design unit 1: instr_mem-behavioural File: D:/EE_309 Project Main/instr_mem.vhdl Line: 15
+    Info (12023): Found entity 1: instr_mem File: D:/EE_309 Project Main/instr_mem.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file data_mem.vhdl
+    Info (12022): Found design unit 1: data_mem-behavioural File: D:/EE_309 Project Main/data_mem.vhdl Line: 19
+    Info (12023): Found entity 1: data_mem File: D:/EE_309 Project Main/data_mem.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file alu_2.vhdl
+    Info (12022): Found design unit 1: ALU_2-behavioural File: D:/EE_309 Project Main/ALU_2.vhdl Line: 36
+    Info (12023): Found entity 1: ALU_2 File: D:/EE_309 Project Main/ALU_2.vhdl Line: 8
+Info (12021): Found 4 design units, including 2 entities, in source file flags.vhd
+    Info (12022): Found design unit 1: carry_flag-behav File: D:/EE_309 Project Main/Flags.vhd Line: 13
+    Info (12022): Found design unit 2: zero_flag-behav File: D:/EE_309 Project Main/Flags.vhd Line: 46
+    Info (12023): Found entity 1: carry_flag File: D:/EE_309 Project Main/Flags.vhd Line: 6
+    Info (12023): Found entity 2: zero_flag File: D:/EE_309 Project Main/Flags.vhd Line: 39
+Info (12021): Found 2 design units, including 1 entities, in source file regfile.vhdl
+    Info (12022): Found design unit 1: regfile-behavioural File: D:/EE_309 Project Main/regfile.vhdl Line: 23
+    Info (12023): Found entity 1: regfile File: D:/EE_309 Project Main/regfile.vhdl Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file write_back.vhd
+    Info (12022): Found design unit 1: Write_Back-WB File: D:/EE_309 Project Main/Write_Back.vhd Line: 21
+    Info (12023): Found entity 1: Write_Back File: D:/EE_309 Project Main/Write_Back.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file stage2_withouthazards.vhd
+    Info (12022): Found design unit 1: Stage2_WithoutHazards-behav File: D:/EE_309 Project Main/Stage2_WithoutHazards.vhd Line: 21
+    Info (12023): Found entity 1: Stage2_WithoutHazards File: D:/EE_309 Project Main/Stage2_WithoutHazards.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file register_read.vhd
+    Info (12022): Found design unit 1: Register_Read-RR File: D:/EE_309 Project Main/Register_Read.vhd Line: 34
+    Info (12023): Found entity 1: Register_Read File: D:/EE_309 Project Main/Register_Read.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file refadd.vhd
+    Info (12022): Found design unit 1: RefAdd-king File: D:/EE_309 Project Main/RefAdd.vhd Line: 14
+    Info (12023): Found entity 1: RefAdd File: D:/EE_309 Project Main/RefAdd.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file mem_stage.vhd
+    Info (12022): Found design unit 1: MEM_STAGE-Structural File: D:/EE_309 Project Main/MEM_STAGE.vhd Line: 33
+    Info (12023): Found entity 1: MEM_STAGE File: D:/EE_309 Project Main/MEM_STAGE.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file complementor.vhd
+    Info (12022): Found design unit 1: Complementor-doit File: D:/EE_309 Project Main/Complementor.vhd Line: 10
+    Info (12023): Found entity 1: Complementor File: D:/EE_309 Project Main/Complementor.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file main.vhd
+    Info (12022): Found design unit 1: main-behav File: D:/EE_309 Project Main/main.vhd Line: 24
+    Info (12023): Found entity 1: main File: D:/EE_309 Project Main/main.vhd Line: 6
+Info (12127): Elaborating entity "main" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at main.vhd(227): used implicit default value for signal "Z_flag" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/EE_309 Project Main/main.vhd Line: 227
+Warning (10541): VHDL Signal Declaration warning at main.vhd(227): used implicit default value for signal "C_flag" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/EE_309 Project Main/main.vhd Line: 227
+Warning (10541): VHDL Signal Declaration warning at main.vhd(234): used implicit default value for signal "RefAdd_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/EE_309 Project Main/main.vhd Line: 234
+Warning (10036): Verilog HDL or VHDL warning at main.vhd(242): object "alu_dummy1" assigned a value but never read File: D:/EE_309 Project Main/main.vhd Line: 242
+Warning (10036): Verilog HDL or VHDL warning at main.vhd(242): object "alu_dummy2" assigned a value but never read File: D:/EE_309 Project Main/main.vhd Line: 242
+Warning (10873): Using initial value X (don't care) for net "R1[47..32]" at main.vhd(238) File: D:/EE_309 Project Main/main.vhd Line: 238
+Warning (10873): Using initial value X (don't care) for net "R2[95..85]" at main.vhd(238) File: D:/EE_309 Project Main/main.vhd Line: 238
+Warning (10873): Using initial value X (don't care) for net "R2[79..48]" at main.vhd(238) File: D:/EE_309 Project Main/main.vhd Line: 238
+Warning (10873): Using initial value X (don't care) for net "R5[95..84]" at main.vhd(238) File: D:/EE_309 Project Main/main.vhd Line: 238
+Warning (10873): Using initial value X (don't care) for net "R5[82..80]" at main.vhd(238) File: D:/EE_309 Project Main/main.vhd Line: 238
+Warning (10873): Using initial value X (don't care) for net "R5[15..0]" at main.vhd(238) File: D:/EE_309 Project Main/main.vhd Line: 238
+Info (12128): Elaborating entity "regfile" for hierarchy "regfile:rf" File: D:/EE_309 Project Main/main.vhd Line: 246
+Warning (10492): VHDL Process Statement warning at regfile.vhdl(62): signal "R0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/regfile.vhdl Line: 62
+Warning (10492): VHDL Process Statement warning at regfile.vhdl(64): signal "R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/regfile.vhdl Line: 64
+Warning (10492): VHDL Process Statement warning at regfile.vhdl(66): signal "R2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/regfile.vhdl Line: 66
+Warning (10492): VHDL Process Statement warning at regfile.vhdl(68): signal "R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/regfile.vhdl Line: 68
+Warning (10492): VHDL Process Statement warning at regfile.vhdl(70): signal "R4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/regfile.vhdl Line: 70
+Warning (10492): VHDL Process Statement warning at regfile.vhdl(72): signal "R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/regfile.vhdl Line: 72
+Warning (10492): VHDL Process Statement warning at regfile.vhdl(74): signal "R6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/regfile.vhdl Line: 74
+Warning (10492): VHDL Process Statement warning at regfile.vhdl(76): signal "R7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/regfile.vhdl Line: 76
+Warning (10492): VHDL Process Statement warning at regfile.vhdl(85): signal "R0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/regfile.vhdl Line: 85
+Warning (10492): VHDL Process Statement warning at regfile.vhdl(87): signal "R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/regfile.vhdl Line: 87
+Warning (10492): VHDL Process Statement warning at regfile.vhdl(89): signal "R2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/regfile.vhdl Line: 89
+Warning (10492): VHDL Process Statement warning at regfile.vhdl(91): signal "R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/regfile.vhdl Line: 91
+Warning (10492): VHDL Process Statement warning at regfile.vhdl(93): signal "R4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/regfile.vhdl Line: 93
+Warning (10492): VHDL Process Statement warning at regfile.vhdl(95): signal "R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/regfile.vhdl Line: 95
+Warning (10492): VHDL Process Statement warning at regfile.vhdl(97): signal "R6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/regfile.vhdl Line: 97
+Warning (10492): VHDL Process Statement warning at regfile.vhdl(99): signal "R7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/regfile.vhdl Line: 99
+Info (12128): Elaborating entity "RefAdd" for hierarchy "RefAdd:RAR1" File: D:/EE_309 Project Main/main.vhd Line: 247
+Info (12128): Elaborating entity "instr_mem" for hierarchy "instr_mem:i_mem" File: D:/EE_309 Project Main/main.vhd Line: 248
+Warning (10492): VHDL Process Statement warning at instr_mem.vhdl(21): signal "Data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/instr_mem.vhdl Line: 21
+Info (12128): Elaborating entity "ALU_2" for hierarchy "ALU_2:alu1" File: D:/EE_309 Project Main/main.vhd Line: 250
+Warning (10540): VHDL Signal Declaration warning at ALU_2.vhdl(37): used explicit default value for signal "ALU_CND" because signal was never assigned a value File: D:/EE_309 Project Main/ALU_2.vhdl Line: 37
+Warning (10631): VHDL Process Statement warning at ALU_2.vhdl(96): inferring latch(es) for signal or variable "ALU_C", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/ALU_2.vhdl Line: 96
+Warning (10631): VHDL Process Statement warning at ALU_2.vhdl(96): inferring latch(es) for signal or variable "ALU_Cout", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/ALU_2.vhdl Line: 96
+Warning (10631): VHDL Process Statement warning at ALU_2.vhdl(96): inferring latch(es) for signal or variable "ALU_Z", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/ALU_2.vhdl Line: 96
+Info (10041): Inferred latch for "ALU_Z" at ALU_2.vhdl(96) File: D:/EE_309 Project Main/ALU_2.vhdl Line: 96
+Info (10041): Inferred latch for "ALU_Cout" at ALU_2.vhdl(96) File: D:/EE_309 Project Main/ALU_2.vhdl Line: 96
+Info (10041): Inferred latch for "ALU_C[0]" at ALU_2.vhdl(96) File: D:/EE_309 Project Main/ALU_2.vhdl Line: 96
+Info (10041): Inferred latch for "ALU_C[1]" at ALU_2.vhdl(96) File: D:/EE_309 Project Main/ALU_2.vhdl Line: 96
+Info (10041): Inferred latch for "ALU_C[2]" at ALU_2.vhdl(96) File: D:/EE_309 Project Main/ALU_2.vhdl Line: 96
+Info (10041): Inferred latch for "ALU_C[3]" at ALU_2.vhdl(96) File: D:/EE_309 Project Main/ALU_2.vhdl Line: 96
+Info (10041): Inferred latch for "ALU_C[4]" at ALU_2.vhdl(96) File: D:/EE_309 Project Main/ALU_2.vhdl Line: 96
+Info (10041): Inferred latch for "ALU_C[5]" at ALU_2.vhdl(96) File: D:/EE_309 Project Main/ALU_2.vhdl Line: 96
+Info (10041): Inferred latch for "ALU_C[6]" at ALU_2.vhdl(96) File: D:/EE_309 Project Main/ALU_2.vhdl Line: 96
+Info (10041): Inferred latch for "ALU_C[7]" at ALU_2.vhdl(96) File: D:/EE_309 Project Main/ALU_2.vhdl Line: 96
+Info (10041): Inferred latch for "ALU_C[8]" at ALU_2.vhdl(96) File: D:/EE_309 Project Main/ALU_2.vhdl Line: 96
+Info (10041): Inferred latch for "ALU_C[9]" at ALU_2.vhdl(96) File: D:/EE_309 Project Main/ALU_2.vhdl Line: 96
+Info (10041): Inferred latch for "ALU_C[10]" at ALU_2.vhdl(96) File: D:/EE_309 Project Main/ALU_2.vhdl Line: 96
+Info (10041): Inferred latch for "ALU_C[11]" at ALU_2.vhdl(96) File: D:/EE_309 Project Main/ALU_2.vhdl Line: 96
+Info (10041): Inferred latch for "ALU_C[12]" at ALU_2.vhdl(96) File: D:/EE_309 Project Main/ALU_2.vhdl Line: 96
+Info (10041): Inferred latch for "ALU_C[13]" at ALU_2.vhdl(96) File: D:/EE_309 Project Main/ALU_2.vhdl Line: 96
+Info (10041): Inferred latch for "ALU_C[14]" at ALU_2.vhdl(96) File: D:/EE_309 Project Main/ALU_2.vhdl Line: 96
+Info (10041): Inferred latch for "ALU_C[15]" at ALU_2.vhdl(96) File: D:/EE_309 Project Main/ALU_2.vhdl Line: 96
+Info (12128): Elaborating entity "Stage2_WithoutHazards" for hierarchy "Stage2_WithoutHazards:id" File: D:/EE_309 Project Main/main.vhd Line: 251
+Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(32): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage2_WithoutHazards.vhd Line: 32
+Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(49): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage2_WithoutHazards.vhd Line: 49
+Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(51): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage2_WithoutHazards.vhd Line: 51
+Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(55): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage2_WithoutHazards.vhd Line: 55
+Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(85): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage2_WithoutHazards.vhd Line: 85
+Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(87): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage2_WithoutHazards.vhd Line: 87
+Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(91): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage2_WithoutHazards.vhd Line: 91
+Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(108): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage2_WithoutHazards.vhd Line: 108
+Warning (10631): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(28): inferring latch(es) for signal or variable "ct2", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Stage2_WithoutHazards.vhd Line: 28
+Warning (10631): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(28): inferring latch(es) for signal or variable "ct1", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Stage2_WithoutHazards.vhd Line: 28
+Info (10041): Inferred latch for "stage_proc:ct1[0]" at Stage2_WithoutHazards.vhd(28) File: D:/EE_309 Project Main/Stage2_WithoutHazards.vhd Line: 28
+Info (10041): Inferred latch for "stage_proc:ct1[1]" at Stage2_WithoutHazards.vhd(28) File: D:/EE_309 Project Main/Stage2_WithoutHazards.vhd Line: 28
+Info (10041): Inferred latch for "stage_proc:ct1[2]" at Stage2_WithoutHazards.vhd(28) File: D:/EE_309 Project Main/Stage2_WithoutHazards.vhd Line: 28
+Info (10041): Inferred latch for "stage_proc:ct2[0]" at Stage2_WithoutHazards.vhd(28) File: D:/EE_309 Project Main/Stage2_WithoutHazards.vhd Line: 28
+Info (10041): Inferred latch for "stage_proc:ct2[1]" at Stage2_WithoutHazards.vhd(28) File: D:/EE_309 Project Main/Stage2_WithoutHazards.vhd Line: 28
+Info (10041): Inferred latch for "stage_proc:ct2[2]" at Stage2_WithoutHazards.vhd(28) File: D:/EE_309 Project Main/Stage2_WithoutHazards.vhd Line: 28
+Info (12128): Elaborating entity "Register_Read" for hierarchy "Register_Read:reg_read" File: D:/EE_309 Project Main/main.vhd Line: 252
+Warning (10036): Verilog HDL or VHDL warning at Register_Read.vhd(39): object "decisioncode" assigned a value but never read File: D:/EE_309 Project Main/Register_Read.vhd Line: 39
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(134): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 134
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(135): signal "condcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 135
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(138): signal "R2_11_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 138
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(139): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 139
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(140): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 140
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(144): signal "R2_11_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 144
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(145): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 145
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(146): signal "compRF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 146
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(149): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 149
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(151): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 151
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(152): signal "R2_8_6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 152
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(153): signal "R2_5_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 153
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(155): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 155
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(156): signal "R2_11_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 156
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(157): signal "R2_8_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 157
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(159): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 159
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(160): signal "R2_11_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 160
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(162): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 162
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(163): signal "R2_5_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 163
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(165): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 165
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(168): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 168
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(169): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 169
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(170): signal "R2_5_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 170
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(172): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 172
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(173): signal "R2_11_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 173
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(176): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 176
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(181): signal "RR_RefAdd_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 181
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(182): signal "R2_5_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 182
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(184): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 184
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(186): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 186
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(189): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 189
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(194): signal "RR_RefAdd_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 194
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(195): signal "R2_5_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 195
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(197): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 197
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(200): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 200
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(201): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 201
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(202): signal "PC_R2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 202
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(204): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 204
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(207): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 207
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(208): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 208
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(209): signal "PC_R2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 209
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(211): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 211
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(214): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 214
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(215): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 215
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(216): signal "PC_R2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 216
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(218): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 218
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(219): signal "A_R2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 219
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(220): signal "PC_R2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 220
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(222): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 222
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(225): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 225
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(227): signal "A_R2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 227
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(229): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 229
+Warning (10492): VHDL Process Statement warning at Register_Read.vhd(231): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Register_Read.vhd Line: 231
+Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "RF_A1", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "RF_A2", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "A_R3", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "B_R3", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "C_R3", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "RR_RefAdd_in", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "RR_RefAdd_E", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "PC_R3", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "RF_WR", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "RF_D3", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "RF_A3", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_A3[0]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_A3[1]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_A3[2]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_D3[0]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_D3[1]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_D3[2]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_D3[3]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_D3[4]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_D3[5]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_D3[6]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_D3[7]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_D3[8]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_D3[9]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_D3[10]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_D3[11]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_D3[12]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_D3[13]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_D3[14]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_D3[15]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_WR" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "PC_R3[0]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "PC_R3[1]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "PC_R3[2]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "PC_R3[3]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "PC_R3[4]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "PC_R3[5]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "PC_R3[6]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "PC_R3[7]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "PC_R3[8]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "PC_R3[9]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "PC_R3[10]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "PC_R3[11]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "PC_R3[12]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "PC_R3[13]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "PC_R3[14]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "PC_R3[15]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RR_RefAdd_E" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RR_RefAdd_in[0]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RR_RefAdd_in[1]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RR_RefAdd_in[2]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RR_RefAdd_in[3]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RR_RefAdd_in[4]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RR_RefAdd_in[5]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RR_RefAdd_in[6]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RR_RefAdd_in[7]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RR_RefAdd_in[8]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RR_RefAdd_in[9]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RR_RefAdd_in[10]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RR_RefAdd_in[11]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RR_RefAdd_in[12]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RR_RefAdd_in[13]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RR_RefAdd_in[14]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RR_RefAdd_in[15]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "C_R3[0]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "C_R3[1]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "C_R3[2]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "C_R3[3]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "C_R3[4]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "C_R3[5]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "C_R3[6]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "C_R3[7]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "C_R3[8]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "C_R3[9]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "C_R3[10]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "C_R3[11]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "C_R3[12]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "C_R3[13]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "C_R3[14]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "C_R3[15]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "B_R3[0]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "B_R3[1]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "B_R3[2]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "B_R3[3]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "B_R3[4]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "B_R3[5]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "B_R3[6]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "B_R3[7]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "B_R3[8]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "B_R3[9]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "B_R3[10]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "B_R3[11]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "B_R3[12]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "B_R3[13]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "B_R3[14]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "B_R3[15]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "A_R3[0]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "A_R3[1]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "A_R3[2]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "A_R3[3]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "A_R3[4]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "A_R3[5]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "A_R3[6]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "A_R3[7]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "A_R3[8]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "A_R3[9]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "A_R3[10]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "A_R3[11]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "A_R3[12]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "A_R3[13]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "A_R3[14]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "A_R3[15]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_A2[0]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_A2[1]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_A2[2]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_A1[0]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_A1[1]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (10041): Inferred latch for "RF_A1[2]" at Register_Read.vhd(113) File: D:/EE_309 Project Main/Register_Read.vhd Line: 113
+Info (12128): Elaborating entity "Complementor" for hierarchy "Register_Read:reg_read|Complementor:C1" File: D:/EE_309 Project Main/Register_Read.vhd Line: 104
+Info (12128): Elaborating entity "Stage4_Exec" for hierarchy "Stage4_Exec:ex" File: D:/EE_309 Project Main/main.vhd Line: 253
+Warning (10541): VHDL Signal Declaration warning at Stage4_Exec.vhdl(18): used implicit default value for signal "PC_R4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 18
+Warning (10541): VHDL Signal Declaration warning at Stage4_Exec.vhdl(29): used implicit default value for signal "carry" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 29
+Warning (10541): VHDL Signal Declaration warning at Stage4_Exec.vhdl(29): used implicit default value for signal "zero" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 29
+Warning (10541): VHDL Signal Declaration warning at Stage4_Exec.vhdl(32): used implicit default value for signal "ALU3_Cin" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 32
+Warning (10036): Verilog HDL or VHDL warning at Stage4_Exec.vhdl(32): object "ALU3_Cout" assigned a value but never read File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 32
+Warning (10036): Verilog HDL or VHDL warning at Stage4_Exec.vhdl(32): object "ALU3_Z" assigned a value but never read File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 32
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(79): signal "ALU2_Cout" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 79
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(79): signal "ALU2_Z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 79
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(80): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 80
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(82): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 82
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(83): signal "B_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 83
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(84): signal "C_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 84
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(87): signal "condcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 87
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(92): signal "ALU2_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 92
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(93): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 93
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(99): signal "ALU2_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 99
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(100): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 100
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(112): signal "ALU2_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 112
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(113): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 113
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(124): signal "ALU2_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 124
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(125): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 125
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(131): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 131
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(132): signal "B_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 132
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(133): signal "C_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 133
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(137): signal "condcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 137
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(141): signal "ALU2_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 141
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(142): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 142
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(144): signal "zero" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 144
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(155): signal "carry" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 155
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(168): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 168
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(169): signal "B_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 169
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(170): signal "C_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 170
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(171): signal "ALU2_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 171
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(175): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 175
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(177): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 177
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(178): signal "B_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 178
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(182): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 182
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(184): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 184
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(185): signal "B_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 185
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(186): signal "C_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 186
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(187): signal "ALU2_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 187
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(192): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 192
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(194): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 194
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(195): signal "B_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 195
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(196): signal "C_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 196
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(197): signal "ALU2_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 197
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(202): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 202
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(204): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 204
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(205): signal "B_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 205
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(206): signal "C_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 206
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(207): signal "ALU2_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 207
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(212): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 212
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(214): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 214
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(215): signal "B_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 215
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(216): signal "C_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 216
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(217): signal "ALU2_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 217
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(222): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 222
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(224): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 224
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(225): signal "B_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 225
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(227): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 227
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(228): signal "ALU2_Z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 228
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(229): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 229
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(230): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 230
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(231): signal "ALU3_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 231
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(239): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 239
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(240): signal "B_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 240
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(242): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 242
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(243): signal "ALU2_Cout" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 243
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(244): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 244
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(245): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 245
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(246): signal "ALU3_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 246
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(254): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 254
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(255): signal "B_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 255
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(257): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 257
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(258): signal "ALU2_Cout" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 258
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(258): signal "ALU2_Z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 258
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(259): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 259
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(260): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 260
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(261): signal "ALU3_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 261
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(269): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 269
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(270): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 270
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(271): signal "ALU3_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 271
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(274): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 274
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(275): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 275
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(278): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 278
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(279): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 279
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(281): signal "A_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 281
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(282): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 282
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(284): signal "ALU3_C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 284
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(287): signal "Instr_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 287
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "A_R4", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "ALU2_A", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "ALU2_B", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "ALU2_J", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "PC_WR", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "ALU2_Cin", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "C_WR", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "Z_WR", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "C_R4", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "Instr_R4", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "B_R4", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "ALU3_A", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "ALU3_B", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "PC", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "ALU3_J", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_J[0]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_J[1]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "PC[0]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "PC[1]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "PC[2]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "PC[3]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "PC[4]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "PC[5]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "PC[6]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "PC[7]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "PC[8]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "PC[9]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "PC[10]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "PC[11]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "PC[12]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "PC[13]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "PC[14]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "PC[15]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_B[0]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_B[1]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_B[2]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_B[3]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_B[4]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_B[5]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_B[6]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_B[7]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_B[8]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_B[9]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_B[10]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_B[11]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_B[12]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_B[13]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_B[14]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_B[15]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_A[0]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_A[1]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_A[2]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_A[3]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_A[4]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_A[5]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_A[6]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_A[7]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_A[8]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_A[9]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_A[10]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_A[11]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_A[12]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_A[13]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_A[14]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU3_A[15]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "B_R4[0]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "B_R4[1]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "B_R4[2]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "B_R4[3]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "B_R4[4]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "B_R4[5]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "B_R4[6]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "B_R4[7]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "B_R4[8]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "B_R4[9]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "B_R4[10]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "B_R4[11]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "B_R4[12]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "B_R4[13]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "B_R4[14]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "B_R4[15]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "Instr_R4[12]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "Instr_R4[13]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "Instr_R4[14]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "Instr_R4[15]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "C_R4[0]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "C_R4[1]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "C_R4[2]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "C_R4[3]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "C_R4[4]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "C_R4[5]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "C_R4[6]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "C_R4[7]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "C_R4[8]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "C_R4[9]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "C_R4[10]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "C_R4[11]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "C_R4[12]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "C_R4[13]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "C_R4[14]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "C_R4[15]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "Z_WR" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "C_WR" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_Cin" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "PC_WR" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_J[0]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_J[1]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_B[0]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_B[1]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_B[2]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_B[3]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_B[4]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_B[5]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_B[6]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_B[7]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_B[8]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_B[9]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_B[10]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_B[11]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_B[12]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_B[13]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_B[14]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_B[15]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_A[0]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_A[1]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_A[2]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_A[3]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_A[4]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_A[5]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_A[6]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_A[7]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_A[8]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_A[9]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_A[10]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_A[11]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_A[12]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_A[13]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_A[14]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "ALU2_A[15]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "A_R4[0]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "A_R4[1]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "A_R4[2]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "A_R4[3]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "A_R4[4]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "A_R4[5]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "A_R4[6]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "A_R4[7]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "A_R4[8]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "A_R4[9]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "A_R4[10]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "A_R4[11]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "A_R4[12]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "A_R4[13]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "A_R4[14]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "A_R4[15]" at Stage4_Exec.vhdl(77) File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 77
+Info (12128): Elaborating entity "carry_flag" for hierarchy "Stage4_Exec:ex|carry_flag:cf" File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 71
+Info (12128): Elaborating entity "zero_flag" for hierarchy "Stage4_Exec:ex|zero_flag:zf" File: D:/EE_309 Project Main/Stage4_Exec.vhdl Line: 72
+Info (12128): Elaborating entity "MEM_STAGE" for hierarchy "MEM_STAGE:m_acc" File: D:/EE_309 Project Main/main.vhd Line: 255
+Warning (10492): VHDL Process Statement warning at MEM_STAGE.vhd(73): signal "ControlSig_R2_M2WR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/MEM_STAGE.vhd Line: 73
+Info (12128): Elaborating entity "data_mem" for hierarchy "MEM_STAGE:m_acc|data_mem:mem" File: D:/EE_309 Project Main/MEM_STAGE.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at data_mem.vhdl(33): signal "Data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/data_mem.vhdl Line: 33
+Info (12128): Elaborating entity "mux2to1" for hierarchy "MEM_STAGE:m_acc|mux2to1:mux" File: D:/EE_309 Project Main/MEM_STAGE.vhd Line: 62
+Info (12128): Elaborating entity "Write_Back" for hierarchy "Write_Back:wb" File: D:/EE_309 Project Main/main.vhd Line: 257
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(58): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 58
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(59): signal "condcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 59
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(60): signal "C_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 60
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(61): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(64): signal "condcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 64
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(66): signal "C_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 66
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(67): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 67
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(73): signal "condcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 73
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(75): signal "C_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 75
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(76): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 76
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(86): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 86
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(87): signal "C_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 87
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(88): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 88
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(91): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 91
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(92): signal "C_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 92
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(93): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 93
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(96): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 96
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(97): signal "C_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 97
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(98): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 98
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(101): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 101
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(104): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 104
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(105): signal "C_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 105
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(106): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 106
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(109): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 109
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(112): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 112
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(115): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 115
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(118): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 118
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(121): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 121
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(123): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 123
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(126): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 126
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(128): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 128
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(131): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE_309 Project Main/Write_Back.vhd Line: 131
+Warning (10631): VHDL Process Statement warning at Write_Back.vhd(55): inferring latch(es) for signal or variable "RF_D3", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Write_Back.vhd Line: 55
+Warning (10631): VHDL Process Statement warning at Write_Back.vhd(55): inferring latch(es) for signal or variable "RF_A3", which holds its previous value in one or more paths through the process File: D:/EE_309 Project Main/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_A3[0]" at Write_Back.vhd(55) File: D:/EE_309 Project Main/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_A3[1]" at Write_Back.vhd(55) File: D:/EE_309 Project Main/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_A3[2]" at Write_Back.vhd(55) File: D:/EE_309 Project Main/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[0]" at Write_Back.vhd(55) File: D:/EE_309 Project Main/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[1]" at Write_Back.vhd(55) File: D:/EE_309 Project Main/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[2]" at Write_Back.vhd(55) File: D:/EE_309 Project Main/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[3]" at Write_Back.vhd(55) File: D:/EE_309 Project Main/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[4]" at Write_Back.vhd(55) File: D:/EE_309 Project Main/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[5]" at Write_Back.vhd(55) File: D:/EE_309 Project Main/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[6]" at Write_Back.vhd(55) File: D:/EE_309 Project Main/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[7]" at Write_Back.vhd(55) File: D:/EE_309 Project Main/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[8]" at Write_Back.vhd(55) File: D:/EE_309 Project Main/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[9]" at Write_Back.vhd(55) File: D:/EE_309 Project Main/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[10]" at Write_Back.vhd(55) File: D:/EE_309 Project Main/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[11]" at Write_Back.vhd(55) File: D:/EE_309 Project Main/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[12]" at Write_Back.vhd(55) File: D:/EE_309 Project Main/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[13]" at Write_Back.vhd(55) File: D:/EE_309 Project Main/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[14]" at Write_Back.vhd(55) File: D:/EE_309 Project Main/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[15]" at Write_Back.vhd(55) File: D:/EE_309 Project Main/Write_Back.vhd Line: 55
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "reset" File: D:/EE_309 Project Main/main.vhd Line: 15
+    Warning (15610): No output dependent on input pin "clock" File: D:/EE_309 Project Main/main.vhd Line: 16
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 252 warnings
+    Info: Peak virtual memory: 4794 megabytes
+    Info: Processing ended: Wed May 03 14:39:14 2023
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:19
+
+
