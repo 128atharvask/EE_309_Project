@@ -1,5 +1,5 @@
 Analysis & Synthesis report for IITB_RISC23
-Wed May 03 10:53:41 2023
+Wed May 03 11:17:36 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -45,16 +45,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 03 10:53:41 2023       ;
+; Analysis & Synthesis Status        ; Successful - Wed May 03 11:17:36 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_RISC23                                 ;
-; Top-level Entity Name              ; Register_Read                               ;
+; Top-level Entity Name              ; Write_Back                                  ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 202                                         ;
-;     Total combinational functions  ; 202                                         ;
+; Total logic elements               ; 48                                          ;
+;     Total combinational functions  ; 48                                          ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 283                                         ;
+; Total pins                         ; 118                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -70,7 +70,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M25SAE144C8G     ;                    ;
-; Top-level entity name                                            ; Register_Read      ; IITB_RISC23        ;
+; Top-level entity name                                            ; Write_Back         ; IITB_RISC23        ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -159,22 +159,20 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 12          ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                             ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                      ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
-; Register_Read.vhd                ; yes             ; User VHDL File  ; D:/EE309_Project/EE_309_Project/Register_Read.vhd ;         ;
-; Complementor.vhd                 ; yes             ; User VHDL File  ; D:/EE309_Project/EE_309_Project/Complementor.vhd  ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                          ;
++----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                   ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
+; Write_Back.vhd                   ; yes             ; User VHDL File  ; D:/EE309_Project/EE_309_Project/Write_Back.vhd ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
 
 
 +----------------------------------------------------------+
@@ -182,151 +180,70 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+------------+
 ; Resource                                    ; Usage      ;
 +---------------------------------------------+------------+
-; Estimated Total logic elements              ; 202        ;
+; Estimated Total logic elements              ; 48         ;
 ;                                             ;            ;
-; Total combinational functions               ; 202        ;
+; Total combinational functions               ; 48         ;
 ; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 72         ;
-;     -- 3 input functions                    ; 127        ;
-;     -- <=2 input functions                  ; 3          ;
+;     -- 4 input functions                    ; 23         ;
+;     -- 3 input functions                    ; 25         ;
+;     -- <=2 input functions                  ; 0          ;
 ;                                             ;            ;
 ; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 202        ;
+;     -- normal mode                          ; 48         ;
 ;     -- arithmetic mode                      ; 0          ;
 ;                                             ;            ;
 ; Total registers                             ; 0          ;
 ;     -- Dedicated logic registers            ; 0          ;
 ;     -- I/O registers                        ; 0          ;
 ;                                             ;            ;
-; I/O pins                                    ; 283        ;
+; I/O pins                                    ; 118        ;
 ;                                             ;            ;
 ; Embedded Multiplier 9-bit elements          ; 0          ;
 ;                                             ;            ;
 ; Maximum fan-out node                        ; linkproc~0 ;
-; Maximum fan-out                             ; 32         ;
-; Total fan-out                               ; 1078       ;
-; Average fan-out                             ; 1.40       ;
+; Maximum fan-out                             ; 19         ;
+; Total fan-out                               ; 305        ;
+; Average fan-out                             ; 1.07       ;
 +---------------------------------------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                  ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+---------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name   ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+---------------+--------------+
-; |Register_Read             ; 202 (202)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 283  ; 0            ; 0          ; |Register_Read      ; Register_Read ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+---------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; |Write_Back                ; 48 (48)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 118  ; 0            ; 0          ; |Write_Back         ; Write_Back  ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                 ;
-+------------------------------------------------------+---------------------+------------------------+
-; Latch Name                                           ; Latch Enable Signal ; Free of Timing Hazards ;
-+------------------------------------------------------+---------------------+------------------------+
-; PC_R3[0]$latch                                       ; PC_R3[15]           ; yes                    ;
-; PC_R3[1]$latch                                       ; PC_R3[15]           ; yes                    ;
-; PC_R3[2]$latch                                       ; PC_R3[15]           ; yes                    ;
-; PC_R3[3]$latch                                       ; PC_R3[15]           ; yes                    ;
-; PC_R3[4]$latch                                       ; PC_R3[15]           ; yes                    ;
-; PC_R3[5]$latch                                       ; PC_R3[15]           ; yes                    ;
-; PC_R3[6]$latch                                       ; PC_R3[15]           ; yes                    ;
-; PC_R3[7]$latch                                       ; PC_R3[15]           ; yes                    ;
-; PC_R3[8]$latch                                       ; PC_R3[15]           ; yes                    ;
-; PC_R3[9]$latch                                       ; PC_R3[15]           ; yes                    ;
-; PC_R3[10]$latch                                      ; PC_R3[15]           ; yes                    ;
-; PC_R3[11]$latch                                      ; PC_R3[15]           ; yes                    ;
-; PC_R3[12]$latch                                      ; PC_R3[15]           ; yes                    ;
-; PC_R3[13]$latch                                      ; PC_R3[15]           ; yes                    ;
-; PC_R3[14]$latch                                      ; PC_R3[15]           ; yes                    ;
-; PC_R3[15]$latch                                      ; PC_R3[15]           ; yes                    ;
-; A_R3[0]$latch                                        ; A_R3[15]            ; yes                    ;
-; A_R3[1]$latch                                        ; A_R3[15]            ; yes                    ;
-; A_R3[2]$latch                                        ; A_R3[15]            ; yes                    ;
-; A_R3[3]$latch                                        ; A_R3[15]            ; yes                    ;
-; A_R3[4]$latch                                        ; A_R3[15]            ; yes                    ;
-; A_R3[5]$latch                                        ; A_R3[15]            ; yes                    ;
-; A_R3[6]$latch                                        ; A_R3[15]            ; yes                    ;
-; A_R3[7]$latch                                        ; A_R3[15]            ; yes                    ;
-; A_R3[8]$latch                                        ; A_R3[15]            ; yes                    ;
-; A_R3[9]$latch                                        ; A_R3[15]            ; yes                    ;
-; A_R3[10]$latch                                       ; A_R3[15]            ; yes                    ;
-; A_R3[11]$latch                                       ; A_R3[15]            ; yes                    ;
-; A_R3[12]$latch                                       ; A_R3[15]            ; yes                    ;
-; A_R3[13]$latch                                       ; A_R3[15]            ; yes                    ;
-; A_R3[14]$latch                                       ; A_R3[15]            ; yes                    ;
-; A_R3[15]$latch                                       ; A_R3[15]            ; yes                    ;
-; B_R3[0]$latch                                        ; B_R3[15]            ; yes                    ;
-; B_R3[1]$latch                                        ; B_R3[15]            ; yes                    ;
-; B_R3[2]$latch                                        ; B_R3[15]            ; yes                    ;
-; B_R3[3]$latch                                        ; B_R3[15]            ; yes                    ;
-; B_R3[4]$latch                                        ; B_R3[15]            ; yes                    ;
-; B_R3[5]$latch                                        ; B_R3[15]            ; yes                    ;
-; B_R3[6]$latch                                        ; B_R3[15]            ; yes                    ;
-; B_R3[7]$latch                                        ; B_R3[15]            ; yes                    ;
-; B_R3[8]$latch                                        ; B_R3[15]            ; yes                    ;
-; B_R3[9]$latch                                        ; B_R3[15]            ; yes                    ;
-; B_R3[10]$latch                                       ; B_R3[15]            ; yes                    ;
-; B_R3[11]$latch                                       ; B_R3[15]            ; yes                    ;
-; B_R3[12]$latch                                       ; B_R3[15]            ; yes                    ;
-; B_R3[13]$latch                                       ; B_R3[15]            ; yes                    ;
-; B_R3[14]$latch                                       ; B_R3[15]            ; yes                    ;
-; B_R3[15]$latch                                       ; B_R3[15]            ; yes                    ;
-; C_R3[0]$latch                                        ; C_R3[15]            ; yes                    ;
-; C_R3[1]$latch                                        ; C_R3[15]            ; yes                    ;
-; C_R3[2]$latch                                        ; C_R3[15]            ; yes                    ;
-; C_R3[3]$latch                                        ; C_R3[15]            ; yes                    ;
-; C_R3[4]$latch                                        ; C_R3[15]            ; yes                    ;
-; C_R3[5]$latch                                        ; C_R3[15]            ; yes                    ;
-; C_R3[6]$latch                                        ; C_R3[15]            ; yes                    ;
-; C_R3[7]$latch                                        ; C_R3[15]            ; yes                    ;
-; C_R3[8]$latch                                        ; C_R3[15]            ; yes                    ;
-; C_R3[9]$latch                                        ; C_R3[15]            ; yes                    ;
-; C_R3[10]$latch                                       ; C_R3[15]            ; yes                    ;
-; C_R3[11]$latch                                       ; C_R3[15]            ; yes                    ;
-; C_R3[12]$latch                                       ; C_R3[15]            ; yes                    ;
-; C_R3[13]$latch                                       ; C_R3[15]            ; yes                    ;
-; C_R3[14]$latch                                       ; C_R3[15]            ; yes                    ;
-; C_R3[15]$latch                                       ; C_R3[15]            ; yes                    ;
-; RF_A1[0]$latch                                       ; RF_A1[2]            ; yes                    ;
-; RF_A1[1]$latch                                       ; RF_A1[2]            ; yes                    ;
-; RF_A1[2]$latch                                       ; RF_A1[2]            ; yes                    ;
-; RF_A2[0]$latch                                       ; RF_A2[2]            ; yes                    ;
-; RF_A2[1]$latch                                       ; RF_A2[2]            ; yes                    ;
-; RF_A2[2]$latch                                       ; RF_A2[2]            ; yes                    ;
-; RF_D3[0]$latch                                       ; RF_D3[15]           ; yes                    ;
-; RF_D3[1]$latch                                       ; RF_D3[15]           ; yes                    ;
-; RF_D3[2]$latch                                       ; RF_D3[15]           ; yes                    ;
-; RF_D3[3]$latch                                       ; RF_D3[15]           ; yes                    ;
-; RF_D3[4]$latch                                       ; RF_D3[15]           ; yes                    ;
-; RF_D3[5]$latch                                       ; RF_D3[15]           ; yes                    ;
-; RF_D3[6]$latch                                       ; RF_D3[15]           ; yes                    ;
-; RF_D3[7]$latch                                       ; RF_D3[15]           ; yes                    ;
-; RF_D3[8]$latch                                       ; RF_D3[15]           ; yes                    ;
-; RF_D3[9]$latch                                       ; RF_D3[15]           ; yes                    ;
-; RF_D3[10]$latch                                      ; RF_D3[15]           ; yes                    ;
-; RF_D3[11]$latch                                      ; RF_D3[15]           ; yes                    ;
-; RF_D3[12]$latch                                      ; RF_D3[15]           ; yes                    ;
-; RF_D3[13]$latch                                      ; RF_D3[15]           ; yes                    ;
-; RF_D3[14]$latch                                      ; RF_D3[15]           ; yes                    ;
-; RF_D3[15]$latch                                      ; RF_D3[15]           ; yes                    ;
-; RR_RefAdd_E$latch                                    ; RR_RefAdd_E         ; yes                    ;
-; RR_RefAdd_in[0]$latch                                ; RR_RefAdd_in[15]    ; yes                    ;
-; RR_RefAdd_in[1]$latch                                ; RR_RefAdd_in[15]    ; yes                    ;
-; RR_RefAdd_in[2]$latch                                ; RR_RefAdd_in[15]    ; yes                    ;
-; RR_RefAdd_in[3]$latch                                ; RR_RefAdd_in[15]    ; yes                    ;
-; RR_RefAdd_in[4]$latch                                ; RR_RefAdd_in[15]    ; yes                    ;
-; RR_RefAdd_in[5]$latch                                ; RR_RefAdd_in[15]    ; yes                    ;
-; RR_RefAdd_in[6]$latch                                ; RR_RefAdd_in[15]    ; yes                    ;
-; RR_RefAdd_in[7]$latch                                ; RR_RefAdd_in[15]    ; yes                    ;
-; RR_RefAdd_in[8]$latch                                ; RR_RefAdd_in[15]    ; yes                    ;
-; RR_RefAdd_in[9]$latch                                ; RR_RefAdd_in[15]    ; yes                    ;
-; RR_RefAdd_in[10]$latch                               ; RR_RefAdd_in[15]    ; yes                    ;
-; RR_RefAdd_in[11]$latch                               ; RR_RefAdd_in[15]    ; yes                    ;
-; RR_RefAdd_in[12]$latch                               ; RR_RefAdd_in[15]    ; yes                    ;
-; Number of user-specified and inferred latches = 104  ;                     ;                        ;
-+------------------------------------------------------+---------------------+------------------------+
-Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; RF_D3[0]$latch                                      ; RF_D3[15]           ; yes                    ;
+; RF_D3[1]$latch                                      ; RF_D3[15]           ; yes                    ;
+; RF_D3[2]$latch                                      ; RF_D3[15]           ; yes                    ;
+; RF_D3[3]$latch                                      ; RF_D3[15]           ; yes                    ;
+; RF_D3[4]$latch                                      ; RF_D3[15]           ; yes                    ;
+; RF_D3[5]$latch                                      ; RF_D3[15]           ; yes                    ;
+; RF_D3[6]$latch                                      ; RF_D3[15]           ; yes                    ;
+; RF_D3[7]$latch                                      ; RF_D3[15]           ; yes                    ;
+; RF_D3[8]$latch                                      ; RF_D3[15]           ; yes                    ;
+; RF_D3[9]$latch                                      ; RF_D3[15]           ; yes                    ;
+; RF_D3[10]$latch                                     ; RF_D3[15]           ; yes                    ;
+; RF_D3[11]$latch                                     ; RF_D3[15]           ; yes                    ;
+; RF_D3[12]$latch                                     ; RF_D3[15]           ; yes                    ;
+; RF_D3[13]$latch                                     ; RF_D3[15]           ; yes                    ;
+; RF_D3[14]$latch                                     ; RF_D3[15]           ; yes                    ;
+; RF_D3[15]$latch                                     ; RF_D3[15]           ; yes                    ;
+; RF_A3[0]$latch                                      ; RF_D3[15]           ; yes                    ;
+; RF_A3[1]$latch                                      ; RF_D3[15]           ; yes                    ;
+; RF_A3[2]$latch                                      ; RF_D3[15]           ; yes                    ;
+; Number of user-specified and inferred latches = 19  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -349,12 +266,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |Register_Read|C_R3[9]     ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Register_Read|C_R3[0]     ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |Register_Read|B_R3[15]    ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |Register_Read|B_R3[8]     ;
-; 16:1               ; 13 bits   ; 130 LEs       ; 26 LEs               ; 104 LEs                ; No         ; |Register_Read|A_R3[7]     ;
-; 16:1               ; 3 bits    ; 30 LEs        ; 6 LEs                ; 24 LEs                 ; No         ; |Register_Read|A_R3[0]     ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |Write_Back|RF_A3[0]       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -363,16 +275,14 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 283                         ;
-; cycloneiii_lcell_comb ; 203                         ;
-;     normal            ; 203                         ;
-;         0 data inputs ; 1                           ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 127                         ;
-;         4 data inputs ; 72                          ;
+; boundary_port         ; 118                         ;
+; cycloneiii_lcell_comb ; 48                          ;
+;     normal            ; 48                          ;
+;         3 data inputs ; 25                          ;
+;         4 data inputs ; 23                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.53                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.32                        ;
 +-----------------------+-----------------------------+
 
 
@@ -391,7 +301,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed May 03 10:53:27 2023
+    Info: Processing started: Wed May 03 11:17:26 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_RISC23 -c IITB_RISC23
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -416,368 +326,164 @@ Info (12021): Found 2 design units, including 1 entities, in source file complem
 Info (12021): Found 2 design units, including 1 entities, in source file write_back.vhd
     Info (12022): Found design unit 1: Write_Back-WB File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 21
     Info (12023): Found entity 1: Write_Back File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 6
-Info (12127): Elaborating entity "Register_Read" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at Register_Read.vhd(22): used implicit default value for signal "ControlSig_R3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 22
-Warning (10036): Verilog HDL or VHDL warning at Register_Read.vhd(39): object "decisioncode" assigned a value but never read File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 39
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(134): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 134
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(135): signal "condcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 135
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(138): signal "R2_11_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 138
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(139): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 139
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(140): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 140
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(144): signal "R2_11_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 144
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(145): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 145
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(146): signal "compRF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 146
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(149): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 149
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(151): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 151
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(152): signal "R2_8_6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 152
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(153): signal "R2_5_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 153
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(155): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 155
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(156): signal "R2_11_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 156
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(157): signal "R2_8_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 157
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(159): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 159
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(160): signal "R2_11_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 160
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(162): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 162
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(163): signal "R2_5_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 163
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(165): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 165
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(168): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 168
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(169): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 169
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(170): signal "R2_5_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 170
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(172): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 172
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(173): signal "R2_11_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 173
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(176): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 176
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(181): signal "RR_RefAdd_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 181
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(182): signal "R2_5_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 182
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(184): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 184
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(186): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 186
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(189): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 189
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(194): signal "RR_RefAdd_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 194
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(195): signal "R2_5_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 195
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(197): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 197
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(200): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 200
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(201): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 201
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(202): signal "PC_R2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 202
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(204): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 204
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(207): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 207
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(208): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 208
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(209): signal "PC_R2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 209
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(211): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 211
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(214): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 214
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(215): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 215
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(216): signal "PC_R2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 216
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(218): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 218
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(219): signal "A_R2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 219
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(220): signal "PC_R2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 220
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(222): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 222
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(225): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 225
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(227): signal "A_R2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 227
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(229): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 229
-Warning (10492): VHDL Process Statement warning at Register_Read.vhd(231): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 231
-Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "RF_A1", which holds its previous value in one or more paths through the process File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "RF_A2", which holds its previous value in one or more paths through the process File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "A_R3", which holds its previous value in one or more paths through the process File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "B_R3", which holds its previous value in one or more paths through the process File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "C_R3", which holds its previous value in one or more paths through the process File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "RR_RefAdd_in", which holds its previous value in one or more paths through the process File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "RR_RefAdd_E", which holds its previous value in one or more paths through the process File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "PC_R3", which holds its previous value in one or more paths through the process File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "RF_WR", which holds its previous value in one or more paths through the process File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "RF_D3", which holds its previous value in one or more paths through the process File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Warning (10631): VHDL Process Statement warning at Register_Read.vhd(113): inferring latch(es) for signal or variable "RF_A3", which holds its previous value in one or more paths through the process File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_A3[0]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_A3[1]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_A3[2]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_D3[0]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_D3[1]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_D3[2]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_D3[3]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_D3[4]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_D3[5]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_D3[6]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_D3[7]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_D3[8]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_D3[9]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_D3[10]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_D3[11]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_D3[12]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_D3[13]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_D3[14]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_D3[15]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_WR" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "PC_R3[0]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "PC_R3[1]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "PC_R3[2]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "PC_R3[3]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "PC_R3[4]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "PC_R3[5]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "PC_R3[6]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "PC_R3[7]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "PC_R3[8]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "PC_R3[9]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "PC_R3[10]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "PC_R3[11]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "PC_R3[12]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "PC_R3[13]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "PC_R3[14]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "PC_R3[15]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RR_RefAdd_E" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RR_RefAdd_in[0]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RR_RefAdd_in[1]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RR_RefAdd_in[2]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RR_RefAdd_in[3]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RR_RefAdd_in[4]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RR_RefAdd_in[5]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RR_RefAdd_in[6]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RR_RefAdd_in[7]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RR_RefAdd_in[8]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RR_RefAdd_in[9]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RR_RefAdd_in[10]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RR_RefAdd_in[11]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RR_RefAdd_in[12]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RR_RefAdd_in[13]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RR_RefAdd_in[14]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RR_RefAdd_in[15]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "C_R3[0]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "C_R3[1]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "C_R3[2]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "C_R3[3]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "C_R3[4]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "C_R3[5]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "C_R3[6]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "C_R3[7]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "C_R3[8]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "C_R3[9]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "C_R3[10]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "C_R3[11]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "C_R3[12]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "C_R3[13]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "C_R3[14]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "C_R3[15]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "B_R3[0]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "B_R3[1]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "B_R3[2]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "B_R3[3]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "B_R3[4]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "B_R3[5]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "B_R3[6]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "B_R3[7]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "B_R3[8]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "B_R3[9]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "B_R3[10]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "B_R3[11]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "B_R3[12]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "B_R3[13]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "B_R3[14]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "B_R3[15]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "A_R3[0]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "A_R3[1]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "A_R3[2]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "A_R3[3]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "A_R3[4]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "A_R3[5]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "A_R3[6]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "A_R3[7]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "A_R3[8]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "A_R3[9]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "A_R3[10]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "A_R3[11]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "A_R3[12]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "A_R3[13]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "A_R3[14]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "A_R3[15]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_A2[0]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_A2[1]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_A2[2]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_A1[0]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_A1[1]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (10041): Inferred latch for "RF_A1[2]" at Register_Read.vhd(113) File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-Info (12128): Elaborating entity "Complementor" for hierarchy "Complementor:C1" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 104
-Warning (13012): Latch A_R3[0]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[12] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch A_R3[1]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[12] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch A_R3[2]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[12] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch A_R3[3]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch A_R3[4]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch A_R3[5]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch A_R3[6]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch A_R3[7]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch A_R3[8]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch A_R3[9]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch A_R3[10]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch A_R3[11]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch A_R3[12]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch A_R3[13]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch A_R3[14]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch A_R3[15]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch B_R3[0]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch B_R3[1]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch B_R3[2]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch B_R3[3]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch B_R3[4]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch B_R3[5]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch B_R3[6]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch B_R3[7]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch B_R3[8]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch B_R3[9]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch B_R3[10]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch B_R3[11]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch B_R3[12]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch B_R3[13]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch B_R3[14]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch B_R3[15]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch C_R3[0]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch C_R3[1]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch C_R3[2]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch C_R3[3]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch C_R3[4]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch C_R3[5]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch C_R3[6]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch C_R3[7]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch C_R3[8]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch C_R3[9]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch C_R3[10]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch C_R3[11]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch C_R3[12]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch C_R3[13]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch C_R3[14]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch C_R3[15]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch RF_A1[0]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch RF_A1[1]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch RF_A1[2]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch RF_A2[0]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch RF_A2[1]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch RF_A2[2]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13012): Latch RF_WR$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R2[15] File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 7
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "ControlSig_R3[0]" is stuck at GND File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 22
-    Warning (13410): Pin "ControlSig_R3[1]" is stuck at GND File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 22
-    Warning (13410): Pin "ControlSig_R3[2]" is stuck at GND File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 22
-    Warning (13410): Pin "ControlSig_R3[3]" is stuck at GND File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 22
-    Warning (13410): Pin "ControlSig_R3[4]" is stuck at GND File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 22
-    Warning (13410): Pin "ControlSig_R3[5]" is stuck at GND File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 22
-    Warning (13410): Pin "ControlSig_R3[6]" is stuck at GND File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 22
-    Warning (13410): Pin "ControlSig_R3[7]" is stuck at GND File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 22
-    Warning (13410): Pin "ControlSig_R3[8]" is stuck at GND File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 22
-    Warning (13410): Pin "ControlSig_R3[9]" is stuck at GND File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 22
-    Warning (13410): Pin "ControlSig_R3[10]" is stuck at GND File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 22
-    Warning (13410): Pin "ControlSig_R3[11]" is stuck at GND File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 22
-    Warning (13410): Pin "ControlSig_R3[12]" is stuck at GND File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 22
-    Warning (13410): Pin "ControlSig_R3[13]" is stuck at GND File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 22
-    Warning (13410): Pin "ControlSig_R3[14]" is stuck at GND File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 22
-    Warning (13410): Pin "ControlSig_R3[15]" is stuck at GND File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 22
-    Warning (13410): Pin "RF_A3[0]" is stuck at GND File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13410): Pin "RF_A3[1]" is stuck at GND File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
-    Warning (13410): Pin "RF_A3[2]" is stuck at GND File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 113
+Info (12127): Elaborating entity "Write_Back" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(58): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 58
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(59): signal "condcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 59
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(60): signal "C_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 60
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(61): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(64): signal "condcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 64
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(66): signal "C_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 66
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(67): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 67
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(73): signal "condcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 73
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(75): signal "C_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 75
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(76): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 76
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(86): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 86
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(87): signal "C_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 87
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(88): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 88
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(91): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 91
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(92): signal "C_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 92
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(93): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 93
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(96): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 96
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(97): signal "C_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 97
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(98): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 98
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(101): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 101
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(104): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 104
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(105): signal "C_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 105
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(106): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 106
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(109): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 109
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(112): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 112
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(115): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 115
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(118): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 118
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(121): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 121
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(123): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 123
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(126): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 126
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(128): signal "A_R5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 128
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(131): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 131
+Warning (10631): VHDL Process Statement warning at Write_Back.vhd(55): inferring latch(es) for signal or variable "RF_D3", which holds its previous value in one or more paths through the process File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+Warning (10631): VHDL Process Statement warning at Write_Back.vhd(55): inferring latch(es) for signal or variable "RF_A3", which holds its previous value in one or more paths through the process File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_A3[0]" at Write_Back.vhd(55) File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_A3[1]" at Write_Back.vhd(55) File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_A3[2]" at Write_Back.vhd(55) File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[0]" at Write_Back.vhd(55) File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[1]" at Write_Back.vhd(55) File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[2]" at Write_Back.vhd(55) File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[3]" at Write_Back.vhd(55) File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[4]" at Write_Back.vhd(55) File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[5]" at Write_Back.vhd(55) File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[6]" at Write_Back.vhd(55) File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[7]" at Write_Back.vhd(55) File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[8]" at Write_Back.vhd(55) File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[9]" at Write_Back.vhd(55) File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[10]" at Write_Back.vhd(55) File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[11]" at Write_Back.vhd(55) File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[12]" at Write_Back.vhd(55) File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[13]" at Write_Back.vhd(55) File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[14]" at Write_Back.vhd(55) File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+Info (10041): Inferred latch for "RF_D3[15]" at Write_Back.vhd(55) File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+Warning (13012): Latch RF_D3[0]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R5[12] File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+Warning (13012): Latch RF_D3[1]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R5[12] File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+Warning (13012): Latch RF_D3[2]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R5[12] File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+Warning (13012): Latch RF_D3[3]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R5[12] File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+Warning (13012): Latch RF_D3[4]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R5[12] File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+Warning (13012): Latch RF_D3[5]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R5[12] File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+Warning (13012): Latch RF_D3[6]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R5[12] File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+Warning (13012): Latch RF_D3[7]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R5[12] File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+Warning (13012): Latch RF_D3[8]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R5[12] File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+Warning (13012): Latch RF_D3[9]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R5[12] File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+Warning (13012): Latch RF_D3[10]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R5[12] File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+Warning (13012): Latch RF_D3[11]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R5[12] File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+Warning (13012): Latch RF_D3[12]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R5[12] File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+Warning (13012): Latch RF_D3[13]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R5[12] File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+Warning (13012): Latch RF_D3[14]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R5[12] File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+Warning (13012): Latch RF_D3[15]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R5[12] File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+Warning (13012): Latch RF_A3[0]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R5[12] File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+Warning (13012): Latch RF_A3[1]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R5[12] File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+Warning (13012): Latch RF_A3[2]$latch has unsafe behavior File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 55
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Instr_R5[12] File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 45 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "B_R2[0]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 10
-    Warning (15610): No output dependent on input pin "B_R2[1]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 10
-    Warning (15610): No output dependent on input pin "B_R2[2]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 10
-    Warning (15610): No output dependent on input pin "B_R2[3]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 10
-    Warning (15610): No output dependent on input pin "B_R2[4]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 10
-    Warning (15610): No output dependent on input pin "B_R2[5]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 10
-    Warning (15610): No output dependent on input pin "B_R2[6]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 10
-    Warning (15610): No output dependent on input pin "B_R2[7]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 10
-    Warning (15610): No output dependent on input pin "B_R2[8]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 10
-    Warning (15610): No output dependent on input pin "B_R2[9]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 10
-    Warning (15610): No output dependent on input pin "B_R2[10]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 10
-    Warning (15610): No output dependent on input pin "B_R2[11]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 10
-    Warning (15610): No output dependent on input pin "B_R2[12]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 10
-    Warning (15610): No output dependent on input pin "B_R2[13]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 10
-    Warning (15610): No output dependent on input pin "B_R2[14]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 10
-    Warning (15610): No output dependent on input pin "B_R2[15]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 10
-    Warning (15610): No output dependent on input pin "C_R2[0]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "C_R2[1]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "C_R2[2]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "C_R2[3]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "C_R2[4]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "C_R2[5]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "C_R2[6]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "C_R2[7]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "C_R2[8]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "C_R2[9]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "C_R2[10]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "C_R2[11]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "C_R2[12]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "C_R2[13]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "C_R2[14]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "C_R2[15]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 11
-    Warning (15610): No output dependent on input pin "ControlSig_R2[3]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "ControlSig_R2[4]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "ControlSig_R2[5]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "ControlSig_R2[6]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "ControlSig_R2[7]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "ControlSig_R2[8]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "ControlSig_R2[9]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "ControlSig_R2[10]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "ControlSig_R2[11]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "ControlSig_R2[12]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "ControlSig_R2[13]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "ControlSig_R2[14]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 12
-    Warning (15610): No output dependent on input pin "ControlSig_R2[15]" File: D:/EE309_Project/EE_309_Project/Register_Read.vhd Line: 12
-Info (21057): Implemented 485 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 144 input pins
-    Info (21059): Implemented 139 output pins
-    Info (21061): Implemented 202 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 243 warnings
-    Info: Peak virtual memory: 4837 megabytes
-    Info: Processing ended: Wed May 03 10:53:41 2023
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:10
+Warning (21074): Design contains 54 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "Instr_R5[2]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+    Warning (15610): No output dependent on input pin "Instr_R5[3]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+    Warning (15610): No output dependent on input pin "Instr_R5[4]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+    Warning (15610): No output dependent on input pin "Instr_R5[5]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+    Warning (15610): No output dependent on input pin "Instr_R5[6]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+    Warning (15610): No output dependent on input pin "Instr_R5[7]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+    Warning (15610): No output dependent on input pin "Instr_R5[8]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 7
+    Warning (15610): No output dependent on input pin "PC_R5[0]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 8
+    Warning (15610): No output dependent on input pin "PC_R5[1]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 8
+    Warning (15610): No output dependent on input pin "PC_R5[2]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 8
+    Warning (15610): No output dependent on input pin "PC_R5[3]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 8
+    Warning (15610): No output dependent on input pin "PC_R5[4]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 8
+    Warning (15610): No output dependent on input pin "PC_R5[5]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 8
+    Warning (15610): No output dependent on input pin "PC_R5[6]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 8
+    Warning (15610): No output dependent on input pin "PC_R5[7]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 8
+    Warning (15610): No output dependent on input pin "PC_R5[8]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 8
+    Warning (15610): No output dependent on input pin "PC_R5[9]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 8
+    Warning (15610): No output dependent on input pin "PC_R5[10]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 8
+    Warning (15610): No output dependent on input pin "PC_R5[11]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 8
+    Warning (15610): No output dependent on input pin "PC_R5[12]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 8
+    Warning (15610): No output dependent on input pin "PC_R5[13]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 8
+    Warning (15610): No output dependent on input pin "PC_R5[14]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 8
+    Warning (15610): No output dependent on input pin "PC_R5[15]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 8
+    Warning (15610): No output dependent on input pin "B_R5[0]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R5[1]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R5[2]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R5[3]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R5[4]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R5[5]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R5[6]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R5[7]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R5[8]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R5[9]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R5[10]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R5[11]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R5[12]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R5[13]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R5[14]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B_R5[15]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 10
+    Warning (15610): No output dependent on input pin "ControlSig_R5[1]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 12
+    Warning (15610): No output dependent on input pin "ControlSig_R5[2]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 12
+    Warning (15610): No output dependent on input pin "ControlSig_R5[3]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 12
+    Warning (15610): No output dependent on input pin "ControlSig_R5[4]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 12
+    Warning (15610): No output dependent on input pin "ControlSig_R5[5]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 12
+    Warning (15610): No output dependent on input pin "ControlSig_R5[6]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 12
+    Warning (15610): No output dependent on input pin "ControlSig_R5[7]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 12
+    Warning (15610): No output dependent on input pin "ControlSig_R5[8]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 12
+    Warning (15610): No output dependent on input pin "ControlSig_R5[9]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 12
+    Warning (15610): No output dependent on input pin "ControlSig_R5[10]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 12
+    Warning (15610): No output dependent on input pin "ControlSig_R5[11]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 12
+    Warning (15610): No output dependent on input pin "ControlSig_R5[12]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 12
+    Warning (15610): No output dependent on input pin "ControlSig_R5[13]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 12
+    Warning (15610): No output dependent on input pin "ControlSig_R5[14]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 12
+    Warning (15610): No output dependent on input pin "ControlSig_R5[15]" File: D:/EE309_Project/EE_309_Project/Write_Back.vhd Line: 12
+Info (21057): Implemented 166 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 98 input pins
+    Info (21059): Implemented 20 output pins
+    Info (21061): Implemented 48 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 128 warnings
+    Info: Peak virtual memory: 4797 megabytes
+    Info: Processing ended: Wed May 03 11:17:36 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:11
 
 

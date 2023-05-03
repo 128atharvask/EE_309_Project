@@ -239,6 +239,7 @@ begin
 
 end process;
 Instr_R3 <= Instr_R2;
+ControlSig_R3 <= ControlSig_R2;
 
 --PC_R3 <= PC_R2;
 --

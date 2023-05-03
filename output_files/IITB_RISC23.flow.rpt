@@ -1,5 +1,5 @@
 Flow report for IITB_RISC23
-Wed May 03 10:53:41 2023
+Wed May 03 11:17:36 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed May 03 10:53:41 2023       ;
+; Flow Status                        ; Successful - Wed May 03 11:17:36 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_RISC23                                 ;
-; Top-level Entity Name              ; Register_Read                               ;
+; Top-level Entity Name              ; Write_Back                                  ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M25SAE144C8G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 202                                         ;
-;     Total combinational functions  ; 202                                         ;
+; Total logic elements               ; 48                                          ;
+;     Total combinational functions  ; 48                                          ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 283                                         ;
+; Total pins                         ; 118                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -67,33 +67,33 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/03/2023 10:53:28 ;
+; Start date & time ; 05/03/2023 11:17:27 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; IITB_RISC23         ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                 ;
-+-------------------------------------+----------------------------------------+---------------+---------------+-----------------------------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name   ; Section Id                        ;
-+-------------------------------------+----------------------------------------+---------------+---------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 1097695366182.168309140722656          ; --            ; --            ; --                                ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --            ; eda_board_design_timing           ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --            ; eda_board_design_boundary_scan    ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --            ; eda_board_design_signal_integrity ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --            ; eda_board_design_symbol           ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --            ; eda_simulation                    ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --            ; --                                ;
-; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --            ; eda_simulation                    ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --            ; --                                ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --            ; --                                ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; Register_Read ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; Register_Read ; Top                               ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; Register_Read ; Top                               ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --            ; --                                ;
-; TOP_LEVEL_ENTITY                    ; Register_Read                          ; IITB_RISC23   ; --            ; --                                ;
-+-------------------------------------+----------------------------------------+---------------+---------------+-----------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                               ;
++-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
++-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
+; COMPILER_SIGNATURE_ID               ; 1097695366182.168309284722212          ; --            ; --          ; --                                ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation                    ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --                                ;
+; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --                                ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --                                ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; Write_Back  ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; Write_Back  ; Top                               ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; Write_Back  ; Top                               ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                    ; Write_Back                             ; IITB_RISC23   ; --          ; --                                ;
++-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -101,8 +101,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4837 MB             ; 00:00:10                           ;
-; Total                ; 00:00:10     ; --                      ; --                  ; 00:00:10                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4797 MB             ; 00:00:11                           ;
+; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:11                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

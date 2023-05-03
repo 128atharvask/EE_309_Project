@@ -1,0 +1,83 @@
+# Reading pref.tcl
+# do IITB_RISC23_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {D:/EE309_Project/EE_309_Project/Write_Back.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:17:49 on May 03,2023
+# vcom -reportprogress 300 -93 -work work D:/EE309_Project/EE_309_Project/Write_Back.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Write_Back
+# -- Compiling architecture WB of Write_Back
+# End time: 11:17:49 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.write_back
+# vsim work.write_back 
+# Start time: 11:18:54 on May 03,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.write_back(wb)
+add wave -position insertpoint  \
+sim:/write_back/Instr_R5
+add wave -position insertpoint  \
+sim:/write_back/PC_R5
+add wave -position insertpoint  \
+sim:/write_back/A_R5
+add wave -position insertpoint  \
+sim:/write_back/B_R5
+add wave -position insertpoint  \
+sim:/write_back/C_R5
+add wave -position insertpoint  \
+sim:/write_back/ControlSig_R5
+add wave -position insertpoint  \
+sim:/write_back/C
+add wave -position insertpoint  \
+sim:/write_back/Z
+add wave -position insertpoint  \
+sim:/write_back/RF_D3
+add wave -position insertpoint  \
+sim:/write_back/RF_A3
+add wave -position insertpoint  \
+sim:/write_back/RF_WR
+add wave -position insertpoint  \
+sim:/write_back/opcode
+add wave -position insertpoint  \
+sim:/write_back/condcode
+force -freeze sim:/write_back/Instr_R5 0001001010011101 0
+force -freeze sim:/write_back/PC_R5 0000000000001000 0
+force -freeze sim:/write_back/A_R5 0001001010011001 0
+force -freeze sim:/write_back/B_R5 0000000000000000 0
+force -freeze sim:/write_back/C_R5 0000000000000001 0
+force -freeze sim:/write_back/ControlSig_R5 0000000000000001 0
+force -freeze sim:/write_back/C 1 0
+force -freeze sim:/write_back/Z 1 0
+run
+run
+run
+run
+force -freeze sim:/write_back/Instr_R5 0 0, 1 {50 ps} -r 100
+# Value length (1) does not equal array index length (16).
+# ** UI-Msg: (vsim-4011) Invalid force value: 0 0, 1 {50 ps}.
+# 
+force -freeze sim:/write_back/Instr_R5 0001001010011110 0
+run
+run
+force -freeze sim:/write_back/C 0 0
+run
+run
+# End time: 11:27:20 on May 03,2023, Elapsed time: 0:08:26
+# Errors: 0, Warnings: 0

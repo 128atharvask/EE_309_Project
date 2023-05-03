@@ -52,7 +52,7 @@ opcode <= Instr_R5(15 downto 12);
 condcode <= Instr_R5(2 downto 0);
 
 
-linkproc: process(Instr_R5,ControlSig_R5(0),C,Z)		--need to check THE SENSITIVITY LIST!!
+linkproc: process(Instr_R5,ControlSig_R5(3),C,Z)		--need to check THE SENSITIVITY LIST!!
 begin
 
 	if(opcode = "0001" or opcode="0010") then
@@ -104,7 +104,7 @@ begin
 	elsif(opcode = "0110") then
 		RF_D3 <=	C_R5;
 		RF_A3 <= A_R5(2 downto 0);		
-		RF_WR <= ControlSig_R5(0);								--CHECK THE EXACT CONTROL SIGNAL HERE!!!!!!!!!!!
+		RF_WR <= ControlSig_R5(3);								--CHECK THE EXACT CONTROL SIGNAL HERE!!!!!!!!!!!
 	
 	elsif(opcode = "0111") then		
 		RF_WR <= '0';
