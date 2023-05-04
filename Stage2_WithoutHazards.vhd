@@ -28,7 +28,7 @@ begin
     begin
         opcode := Instr_R1(15 downto 12);
 		  
-		  if(clock='1' and clock'event) then
+		  if(rising_edge(clock)) then
 		  case opcode is
 
 -------------  LM  ----------------

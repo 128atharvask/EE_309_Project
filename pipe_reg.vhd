@@ -15,7 +15,7 @@ begin
     clock_proc: process(clock)
         variable data: std_logic_vector(95 downto 0) := (others => '0');
 	 begin
-        if(clock = '1' and clock' event) then
+        if(rising_edge(clock)) then
             if(PR_WR = '1') then
                 data := Data_In;
             end if;

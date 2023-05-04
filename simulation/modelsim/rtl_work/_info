@@ -24,9 +24,9 @@ V_1`iQN6aTJ35_B=TDRghP1
 !s100 9G5[U0gN7UOX5bKT9zPM42
 Z7 OV;C;2020.1;71
 31
-Z8 !s110 1683186946
+Z8 !s110 1683191695
 !i10b 1
-Z9 !s108 1683186946.000000
+Z9 !s108 1683191695.000000
 Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl|
 Z11 !s107 C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl|
 !i113 1
@@ -53,7 +53,7 @@ R11
 R12
 R13
 Ecarry_flag
-Z14 w1683046596
+Z14 w1683191578
 R2
 R3
 R4
@@ -81,10 +81,10 @@ R3
 R4
 DEx4 work 10 carry_flag 0 22 J^bz4G4=h_IMmfX;>;daC3
 !i122 5
-l15
-L13 16
-VG^1MM9k<4AOOF3fVRK37`3
-!s100 KMKC<i>RMbIai6<<XcRDn1
+l14
+L13 17
+Vd2PVfdL4j6c1zbdMfKEY`0
+!s100 >;nU]PiQ3>6CH;6DezO222
 R7
 31
 R8
@@ -110,9 +110,9 @@ VQ01eB;CVJ2z_iMS?D[2mk1
 !s100 AEW@OZHd@O6Zokm0g_Di:2
 R7
 31
-Z22 !s110 1683186947
+Z22 !s110 1683191696
 !i10b 1
-Z23 !s108 1683186947.000000
+Z23 !s108 1683191696.000000
 Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Complementor.vhd|
 Z25 !s107 C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Complementor.vhd|
 !i113 1
@@ -139,7 +139,7 @@ R25
 R12
 R13
 Edata_mem
-Z26 w1683123245
+Z26 w1683190996
 R2
 R3
 R4
@@ -167,10 +167,10 @@ R3
 R4
 DEx4 work 8 data_mem 0 22 _Qed0jGWUF:1aE8km_:X92
 !i122 3
-l22
-L19 17
-VXZI;K]8dRRf4>2?=WGZ6:0
-!s100 TjSg8UOHM;JgIeI>X9MLi0
+l21
+L19 16
+V0WCB6X`DQ=D]ozWPoPAUh0
+!s100 eJI=7:`[ILG^mCQoOZ[zW3
 R7
 31
 R8
@@ -225,7 +225,7 @@ R35
 R12
 R13
 Emain
-Z36 w1683186016
+Z36 w1683191651
 R2
 R3
 R4
@@ -239,11 +239,11 @@ V<CXfUlGKj_1P[QjNXKS[Z3
 !s100 A^HEn>5YbLiMo11eL6Tje3
 R7
 31
-R22
+Z39 !s110 1683191697
 !i10b 1
-R23
-Z39 !s90 -reportprogress|300|-93|-work|work|C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd|
-Z40 !s107 C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd|
+Z40 !s108 1683191697.000000
+Z41 !s90 -reportprogress|300|-93|-work|work|C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd|
+Z42 !s107 C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd|
 !i113 1
 R12
 R13
@@ -254,28 +254,28 @@ R4
 DEx4 work 4 main 0 22 <CXfUlGKj_1P[QjNXKS[Z3
 !i122 12
 l253
-L24 272
-VX:8h[gZ1aiG>V?4;7@QHE0
-!s100 Ya=7SS4jNWTT^E>`lj;5E2
+L24 258
+VgXXh4hY3iYm[Y7]C]:6Bn1
+!s100 KdVUaE9o9V9VTf^a3OUgN0
 R7
 31
-R22
-!i10b 1
-R23
 R39
+!i10b 1
 R40
+R41
+R42
 !i113 1
 R12
 R13
 Emem_stage
-Z41 w1683186362
+Z43 w1683186362
 R2
 R3
 R4
 !i122 10
 R0
-Z42 8C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/MEM_STAGE.vhd
-Z43 FC:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/MEM_STAGE.vhd
+Z44 8C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/MEM_STAGE.vhd
+Z45 FC:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/MEM_STAGE.vhd
 l0
 L5 1
 VHLcXEZ4A<oRD^AJR5ko1f0
@@ -285,8 +285,8 @@ R7
 R22
 !i10b 1
 R23
-Z44 !s90 -reportprogress|300|-93|-work|work|C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/MEM_STAGE.vhd|
-Z45 !s107 C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/MEM_STAGE.vhd|
+Z46 !s90 -reportprogress|300|-93|-work|work|C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/MEM_STAGE.vhd|
+Z47 !s107 C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/MEM_STAGE.vhd|
 !i113 1
 R12
 R13
@@ -305,8 +305,8 @@ R7
 R22
 !i10b 1
 R23
-R44
-R45
+R46
+R47
 !i113 1
 R12
 R13
@@ -317,19 +317,19 @@ R3
 R4
 !i122 0
 R0
-Z46 8C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/mux2to1.vhd
-Z47 FC:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/mux2to1.vhd
+Z48 8C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/mux2to1.vhd
+Z49 FC:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/mux2to1.vhd
 l0
 L6 1
 V8VQk[z[@Ji[6>oUZEji>O0
 !s100 8j=z2de=b`=KaD17bAZRE3
 R7
 31
-Z48 !s110 1683186945
+Z50 !s110 1683191694
 !i10b 1
-Z49 !s108 1683186945.000000
-Z50 !s90 -reportprogress|300|-93|-work|work|C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/mux2to1.vhd|
-Z51 !s107 C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/mux2to1.vhd|
+Z51 !s108 1683191694.000000
+Z52 !s90 -reportprogress|300|-93|-work|work|C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/mux2to1.vhd|
+Z53 !s107 C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/mux2to1.vhd|
 !i113 1
 R12
 R13
@@ -345,32 +345,32 @@ VZl8f]AJ=WAQhdn?bcBe300
 !s100 L>Rln72@cdoGo;2jiL_K82
 R7
 31
-R48
-!i10b 1
-R49
 R50
+!i10b 1
 R51
+R52
+R53
 !i113 1
 R12
 R13
 Epipe_reg
-Z52 w1683184340
+Z54 w1683191039
 R3
 R4
 !i122 14
 R0
-Z53 8C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/pipe_reg.vhd
-Z54 FC:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/pipe_reg.vhd
+Z55 8C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/pipe_reg.vhd
+Z56 FC:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/pipe_reg.vhd
 l0
 L4 1
 VaVCRTN??emKo1]VaAURi`0
 !s100 8O=Ckldj0aaV;>BT5T7EO3
 R7
 31
-R22
+R39
 !i10b 1
-R23
-Z55 !s90 -reportprogress|300|-93|-work|work|C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/pipe_reg.vhd|
+R40
+Z57 !s90 -reportprogress|300|-93|-work|work|C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/pipe_reg.vhd|
 !s107 C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/pipe_reg.vhd|
 !i113 1
 R12
@@ -382,27 +382,27 @@ DEx4 work 8 pipe_reg 0 22 aVCRTN??emKo1]VaAURi`0
 !i122 14
 l14
 L13 13
-V9QN`zN`;7ZYCc54jWOH:a0
-!s100 3WCRVKcQ;cIbmiGGVkXm23
+VTRD4YmG>U3egQ0]VX1@kH2
+!s100 TgD?RR^3C@]=>HzH52A432
 R7
 31
-R22
+R39
 !i10b 1
-R23
-R55
-Z56 !s107 C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/pipe_reg.vhd|
+R40
+R57
+Z58 !s107 C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/pipe_reg.vhd|
 !i113 1
 R12
 R13
 Erefadd
-Z57 w1683184343
+Z59 w1683184343
 R2
 R3
 R4
 !i122 9
 R0
-Z58 8C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/RefAdd.vhd
-Z59 FC:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/RefAdd.vhd
+Z60 8C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/RefAdd.vhd
+Z61 FC:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/RefAdd.vhd
 l0
 L6 1
 V]jN^Lm;Ki`fWnVU=j:4E^3
@@ -412,8 +412,8 @@ R7
 R22
 !i10b 1
 R23
-Z60 !s90 -reportprogress|300|-93|-work|work|C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/RefAdd.vhd|
-Z61 !s107 C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/RefAdd.vhd|
+Z62 !s90 -reportprogress|300|-93|-work|work|C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/RefAdd.vhd|
+Z63 !s107 C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/RefAdd.vhd|
 !i113 1
 R12
 R13
@@ -432,31 +432,31 @@ R7
 R22
 !i10b 1
 R23
-R60
-R61
+R62
+R63
 !i113 1
 R12
 R13
 Eregfile
-Z62 w1683184335
+Z64 w1683184335
 R2
 R3
 R4
 !i122 6
 R0
-Z63 8C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/regfile.vhdl
-Z64 FC:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/regfile.vhdl
+Z65 8C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/regfile.vhdl
+Z66 FC:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/regfile.vhdl
 l0
 L5 1
 V7TPgd[EV3iYINmiFGf7A61
 !s100 9`2`T:L;S0_a@APS@CGYT1
 R7
 31
-R8
+R22
 !i10b 1
-R9
-Z65 !s90 -reportprogress|300|-93|-work|work|C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/regfile.vhdl|
-Z66 !s107 C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/regfile.vhdl|
+R23
+Z67 !s90 -reportprogress|300|-93|-work|work|C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/regfile.vhdl|
+Z68 !s107 C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/regfile.vhdl|
 !i113 1
 R12
 R13
@@ -472,23 +472,23 @@ V[<V^iEPEPd7Wg8?7e;eb]0
 !s100 o_iB1LMKJZzB`mV8f:bhJ0
 R7
 31
-R8
+R22
 !i10b 1
-R9
-R65
-R66
+R23
+R67
+R68
 !i113 1
 R12
 R13
 Eregister_read
-Z67 w1683185316
+Z69 w1683185316
 R2
 R3
 R4
 !i122 8
 R0
-Z68 8C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd
-Z69 FC:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd
+Z70 8C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd
+Z71 FC:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd
 l0
 L6 1
 V5ZM;9NC;^kV81CZ0cbdAh0
@@ -497,9 +497,9 @@ R7
 31
 R22
 !i10b 1
-R9
-Z70 !s90 -reportprogress|300|-93|-work|work|C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd|
-Z71 !s107 C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd|
+R23
+Z72 !s90 -reportprogress|300|-93|-work|work|C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd|
+Z73 !s107 C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd|
 !i113 1
 R12
 R13
@@ -517,32 +517,32 @@ R7
 31
 R22
 !i10b 1
-R9
-R70
-R71
+R23
+R72
+R73
 !i113 1
 R12
 R13
 Estage2_withouthazards
-Z72 w1683184936
+Z74 w1683191628
 R2
 R3
 R4
 !i122 13
 R0
-Z73 8C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd
-Z74 FC:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd
+Z75 8C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd
+Z76 FC:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd
 l0
 L6 1
 Vci`Nm<hQL=iPz0zE]3Ack1
 !s100 k5nX6@Nh<XQ6TRcbNb>][0
 R7
 31
-R22
+R39
 !i10b 1
-R23
-Z75 !s90 -reportprogress|300|-93|-work|work|C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd|
-Z76 !s107 C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd|
+R40
+Z77 !s90 -reportprogress|300|-93|-work|work|C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd|
+Z78 !s107 C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd|
 !i113 1
 R12
 R13
@@ -554,26 +554,26 @@ DEx4 work 21 stage2_withouthazards 0 22 ci`Nm<hQL=iPz0zE]3Ack1
 !i122 13
 l22
 L21 103
-VzK56CdYMHI2Dh5k:NPKNz3
-!s100 YoC7MKO3J:KGdQ`[CGofh2
+VhFN3]kaljB:V:>V01_8^b2
+!s100 >CJn563zNB[7_UbNnLWk[3
 R7
 31
-R22
+R39
 !i10b 1
-R23
-R75
-R76
+R40
+R77
+R78
 !i113 1
 R12
 R13
 Estage4_exec
-Z77 w1683185976
+Z79 w1683185976
 R3
 R4
 !i122 1
 R0
-Z78 8C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl
-Z79 FC:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl
+Z80 8C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl
+Z81 FC:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl
 l0
 L4 1
 VVo]O_SEgG08n?2LQzMF2c0
@@ -582,9 +582,9 @@ R7
 31
 R8
 !i10b 1
-R49
-Z80 !s90 -reportprogress|300|-93|-work|work|C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl|
-Z81 !s107 C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl|
+R9
+Z82 !s90 -reportprogress|300|-93|-work|work|C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl|
+Z83 !s107 C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl|
 !i113 1
 R12
 R13
@@ -601,32 +601,32 @@ R7
 31
 R8
 !i10b 1
-R49
-R80
-R81
+R9
+R82
+R83
 !i113 1
 R12
 R13
 Ewrite_back
-Z82 w1683186493
+Z84 w1683186493
 R2
 R3
 R4
 !i122 7
 R0
-Z83 8C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Write_Back.vhd
-Z84 FC:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Write_Back.vhd
+Z85 8C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Write_Back.vhd
+Z86 FC:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Write_Back.vhd
 l0
 L6 1
 VFiW0>doQcP<kXWWn><NmP0
 !s100 7]4F7=4]nd`9Y^18W<Uz11
 R7
 31
-R8
+R22
 !i10b 1
-R9
-Z85 !s90 -reportprogress|300|-93|-work|work|C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Write_Back.vhd|
-Z86 !s107 C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Write_Back.vhd|
+R23
+Z87 !s90 -reportprogress|300|-93|-work|work|C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Write_Back.vhd|
+Z88 !s107 C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Write_Back.vhd|
 !i113 1
 R12
 R13
@@ -642,11 +642,11 @@ VOJb`SK]KXGkMi6cQajeC13
 !s100 baRPGX[QCQA7FW:DTcbPV0
 R7
 31
-R8
+R22
 !i10b 1
-R9
-R85
-R86
+R23
+R87
+R88
 !i113 1
 R12
 R13
@@ -660,9 +660,9 @@ R0
 R15
 R16
 l0
-L39 1
-Vl3L30fFk1H9_KAFKjjFiH3
-!s100 Amz3KM4H4EF8haCzCoSG00
+L40 1
+Vo:HQ1a;2L@=f_NBd`5c@F2
+!s100 OACQIUNU3mGC<1;fV_^j`0
 R7
 31
 R8
@@ -677,12 +677,12 @@ Abehav
 R2
 R3
 R4
-DEx4 work 9 zero_flag 0 22 l3L30fFk1H9_KAFKjjFiH3
+DEx4 work 9 zero_flag 0 22 o:HQ1a;2L@=f_NBd`5c@F2
 !i122 5
 l48
-L46 16
-VbnEezjknbX>ohiZH>bdkP2
-!s100 E<GYN8Fj9oVdbbUCSYg281
+L47 17
+VGeRD>fkli21TYbMn4j6ZO2
+!s100 >4dK4Pa8@^L3JjTW4VWIj3
 R7
 31
 R8

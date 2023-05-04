@@ -18,18 +18,17 @@ end data_mem;
 
 architecture behavioural of data_mem is
     type memm is array (0 to 127) of std_logic_vector((operand_width - 1) downto 0);
-    signal Data: memm := (others => (others => '0'));
 begin
-	 mem_write: process(clock,Data)
+	 mem_proc: process(clock)
+		  variable Data: memm := (others => (others => '0'));
 	 begin
-		 if(clock = '0' and clock' event) then
+		 if(falling_edge(clock)) then
 			  if(M_WR = '1') then
-					Data(to_integer(unsigned(mem_add_in))) <= mem_data_in;
+					Data(to_integer(unsigned(mem_add_in))) := mem_data_in;
 			  end if;
 		 end if;
+		 mem_data_out <= Data(to_integer(unsigned(mem_add_out)));
+	 
 	 end process;
-	 mem_read: process(mem_add_out)
-	 begin
-	 mem_data_out <= Data(to_integer(unsigned(mem_add_out)));
-	 end process;
+	 
 end architecture;

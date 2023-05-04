@@ -11,20 +11,19 @@ entity carry_flag is
 end entity carry_flag;
 
 architecture behav of carry_flag is
+    signal carry: std_logic:='0';
 begin
-    
-	 carry_proc:process(clock)
-		  variable carry: std_logic:='0';
-	 begin
-        if (falling_edge(clock)) then
+    c_out <= carry;
+
+    carry_write:process(clock)
+    begin
+        if (clock = '0' and clock' event) then
             if (c_en = '1') then
-                carry := c_in;
+                carry <= c_in;
 				else
-				    carry := carry;
+				    carry <= carry;
             end if;
         end if;
-		  c_out <= carry;
-		  
     end process;
 end architecture;
 
@@ -45,19 +44,18 @@ entity zero_flag is
 end entity zero_flag;
 
 architecture behav of zero_flag is
+    signal zero: std_logic:='0';
 begin
+    z_out <= zero;
 
-    zero_proc:process(clock)
-		  variable zero: std_logic:='0';
-	 begin
-        if (falling_edge(clock)) then
+    zero_write:process(clock)
+    begin
+        if (clock = '0' and clock' event) then
             if (z_en = '1') then
-                zero := z_in;
+                zero <= z_in;
 				else
-				    zero := zero;
+				    zero <= zero;
             end if;
         end if;
-		  z_out <= zero;
-		  
     end process;
 end architecture;

@@ -278,18 +278,4 @@ end component;
 	 R1in(15 downto 0) <= pc;
 	 R1in(31 downto 16) <= instr;
 
-	 --ID
---	 id_proc: process(if_en, R1, clock)
---		begin
---		if(clock = '0' and clock'event) then
---			if(if_en = '1') then
---				PR1 <= R1;
---			end if;
---		end if;
---	 end process;
-
-		
-
-	
-
 end behav;
