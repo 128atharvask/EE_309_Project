@@ -14,15 +14,15 @@ end instr_mem;
 
 architecture behavioural of instr_mem is
     type memm is array (0 to 127) of std_logic_vector((operand_width - 1) downto 0);
-    signal Data: memm := (
-	 0 => "0001001010011000", -- ADD
-	 1 => "0001001010011010", -- ADC
-	 2 => "0001001010011001", -- ADZ
-	 others => (others => '0')
-	 );
 begin
-    mem_read: process(mem_add,Data)
-    begin
+    mem_read: process(mem_add)
+        variable Data: memm := (
+	     0 => "0001001010011000", -- ADD
+	     1 => "0001001010011010", -- ADC
+	     2 => "0001001010011001", -- ADZ
+	     others => (others => '0')
+	 );
+	 begin
     mem_data <= Data(to_integer(unsigned(mem_add)));
     end process;
 end architecture;

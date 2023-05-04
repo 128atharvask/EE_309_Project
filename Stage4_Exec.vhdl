@@ -24,13 +24,7 @@ entity Stage4_Exec is
 end Stage4_Exec;
 
 architecture behavioural of Stage4_Exec is
-    signal opcode: std_logic_vector(3 downto 0):= (others => '0');
-    signal condcode: std_logic_vector(1 downto 0):= (others => '0');
-    signal carry, zero: std_logic:= '0';
-    signal C_in,C_WR,C_out,Z_in,Z_WR,Z_out: std_logic:= '0';
-	 signal ALU2_A, ALU2_B, ALU2_C, ALU3_A, ALU3_B, ALU3_C: std_logic_vector((operand_width - 1) downto 0):= (others => '0');
-	 signal ALU2_Cin, ALU2_Cout, ALU2_Z, ALU3_Cin, ALU3_Cout, ALU3_Z: std_logic:= '0';
-	 signal ALU2_J, ALU3_J: std_logic_vector(1 downto 0):= (others => '0');
+    
     component ALU_2 is
         generic
         (
@@ -65,18 +59,32 @@ architecture behavioural of Stage4_Exec is
 		 clock: in std_logic;
 		 z_out: out std_logic);
    end component zero_flag;
+	
+	signal C_in,C_WR,C_out,Z_in,Z_WR,Z_out: std_logic:= '0';
+	signal ALU2_A, ALU2_B, ALU2_C, ALU3_A, ALU3_B, ALU3_C: std_logic_vector((operand_width - 1) downto 0):= (others => '0');
+   signal ALU2_Cin, ALU2_Cout, ALU2_Z, ALU3_Cin, ALU3_Cout, ALU3_Z: std_logic:= '0';
+   signal ALU2_J, ALU3_J: std_logic_vector(1 downto 0):= (others => '0');
 begin
-    opcode <= Instr_R3(15 downto 12);
-    condcode <= Instr_R3(1 downto 0);
-    cf: carry_flag port map(c_in=>C_in, c_en=>C_WR, clock=>clock, c_out=>C_out);
-    zf: zero_flag port map (z_in=>Z_in, z_en=>Z_WR, clock=>clock, z_out=>Z_out);
-    ALU2: ALU_2 port map(ALU_A => ALU2_A, ALU_B => ALU2_B, ALU_Cin => ALU2_Cin, ALU_J => ALU2_J, ALU_C => ALU2_C, ALU_Cout => ALU2_Cout, ALU_Z => ALU2_Z);
-    ALU3: ALU_2 port map(ALU_A => ALU3_A, ALU_B => ALU3_B, ALU_Cin => ALU3_Cin, ALU_J => ALU3_J, ALU_C => ALU3_C, ALU_Cout => ALU3_Cout, ALU_Z => ALU3_Z);
-    Instr_R4(11 downto 0) <= Instr_R3(11 downto 0);
-    ControlSig_R4 <= ControlSig_R3;
-    stage_proc:process(clock, C_out, Z_out, ALU2_A, ALU2_B, ALU3_A, ALU3_B,ALU3_C, ALU2_Cin, C_in, Z_in,ALU2_Cout,ALU2_Z,opcode,A_R3,B_R3,C_R3,condcode,ALU2_C,Instr_R3)
-    begin
-        C_in <= ALU2_Cout; Z_in <= ALU2_Z;
+    
+	 ControlSig_R4 <= ControlSig_R3;
+	 cf: carry_flag port map(c_in=>C_in, c_en=>C_WR, clock=>clock, c_out=>C_out);
+	 zf: zero_flag port map (z_in=>Z_in, z_en=>Z_WR, clock=>clock, z_out=>Z_out);
+	 ALU2: ALU_2 port map(ALU_A => ALU2_A, ALU_B => ALU2_B, ALU_Cin => ALU2_Cin, ALU_J => ALU2_J, ALU_C => ALU2_C, ALU_Cout => ALU2_Cout, ALU_Z => ALU2_Z);
+	 ALU3: ALU_2 port map(ALU_A => ALU3_A, ALU_B => ALU3_B, ALU_Cin => ALU3_Cin, ALU_J => ALU3_J, ALU_C => ALU3_C, ALU_Cout => ALU3_Cout, ALU_Z => ALU3_Z);
+	 
+    stage_proc:process(clock, C_out, Z_out, ALU2_A, ALU2_B, ALU3_A, ALU3_B,ALU3_C, ALU2_Cin, C_in, Z_in,ALU2_Cout,ALU2_Z,A_R3,B_R3,C_R3,ALU2_C,Instr_R3)
+		 variable opcode: std_logic_vector(3 downto 0):= (others => '0');
+		 variable condcode: std_logic_vector(1 downto 0):= (others => '0');
+		 variable carry, zero: std_logic:= '0';
+		 
+	 begin
+       opcode := Instr_R3(15 downto 12);
+		 condcode := Instr_R3(1 downto 0);
+		 Instr_R4(11 downto 0) <= Instr_R3(11 downto 0);
+		 
+		  
+		  C_in <= ALU2_Cout;
+		  Z_in <= ALU2_Z;
         case opcode is
             when "0001" => -- Add
                 A_R4 <= A_R3;

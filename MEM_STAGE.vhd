@@ -69,7 +69,7 @@ begin
 	 instr_out <= instr;
 
 	 proc: process(instr,ControlSig_R2_M2WR)
-   		begin
+    begin
 			if(instr(15 downto 12) = "0101" or (instr(15 downto 12) = "0111" and ControlSig_R2_M2WR = '1')) then
 				mem_wr <= '1';
 			else

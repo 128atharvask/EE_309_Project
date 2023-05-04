@@ -11,15 +11,15 @@ entity pipe_reg is
 end pipe_reg;
     
 architecture behavioural of pipe_reg is
-		signal data: std_logic_vector(95 downto 0) := (others => '0');
 begin
-    Data_Out <= data;
-    clock_proc: process(clock, data)
-    begin
+    clock_proc: process(clock)
+        variable data: std_logic_vector(95 downto 0) := (others => '0');
+	 begin
         if(clock = '1' and clock' event) then
             if(PR_WR = '1') then
-                data <= Data_In;
+                data := Data_In;
             end if;
         end if;
+		  Data_Out <= data;
     end process;
 end architecture;

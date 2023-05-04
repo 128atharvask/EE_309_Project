@@ -19,17 +19,16 @@ entity Stage2_WithoutHazards is
 end entity Stage2_WithoutHazards;
 
 architecture behav of Stage2_WithoutHazards is
-    signal opcode: std_logic_vector(3 downto 0):= (others => '0');
 begin
-    opcode <= Instr_R1(15 downto 12);
-    PC_R2 <= PC_R1;
-	 A_R2 <= A_R1;
 	 
     stage_proc:process(clock)
-	     variable ct1,ct2: std_logic_vector(2 downto 0):="000";
+	     variable opcode: std_logic_vector(3 downto 0):= (others => '0');
+		  variable ct1,ct2: std_logic_vector(2 downto 0):="000";
 		  variable idx: integer:=0;
     begin
-        if(clock='1' and clock'event) then
+        opcode := Instr_R1(15 downto 12);
+		  
+		  if(clock='1' and clock'event) then
 		  case opcode is
 
 -------------  LM  ----------------
@@ -117,4 +116,8 @@ begin
 		  end case;
 		  end if;
 	 end process;
+	 
+	 PC_R2 <= PC_R1;
+	 A_R2 <= A_R1;
+		  
 end architecture;

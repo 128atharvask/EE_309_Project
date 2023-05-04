@@ -248,8 +248,6 @@ end component;
 	 signal PR1 : std_logic_vector(95 downto 0):= (others => '0'); -- pipeline regs
 	--ControlSig_R2(...), PC_R2(16), A_R2(16), B_R2(16), C_R2(16), Instr_R2(16)
 	
-	signal alu_dummy1, alu_dummy2 : std_logic := '0';
-	
 	signal PR_Write : std_logic := '1';
 	
 	begin
@@ -265,7 +263,7 @@ end component;
 	 RAR1 : RefAdd port map(clock, RefAdd_in, RefAdd_out, RefAdd_E); 
 	 i_mem: instr_mem port map (pc, instr);
 	 --alu1 : ADDER port map (pc,pc_in0);
-	 alu1 : ALU_2 port map(pc, "0000000000000001",'0',"00", pc_in0,alu_dummy1,alu_dummy2);
+	 alu1 : ALU_2 port map(pc, "0000000000000001",'0',"00", pc_in0);
 	 id: Stage2_WithoutHazards port map (R1out(15 downto 0),R1out(31 downto 16),R1out(47 downto 32),clock,R2in(15 downto 0),R2in(31 downto 16),R2in(47 downto 32),R2in(82 downto 80),if_en,R2in(83),R2in(84));
 	 reg_read: Register_Read port map (R2out(31 downto 16), R2out(15 downto 0), R2out(47 downto 32), R2out(63 downto 48), R2out(79 downto 64), R2out(95 downto 80),d1,d2, RefAdd_out, R3in(15 downto 0), R3in(47 downto 32), R3in(63 downto 48), R3in(79 downto 64),R3in(95 downto 80), a1, a2, d3, a3, RefAdd_E, RefAdd_out, R3in(31 downto 16), rf_wr);
 	 ex: Stage4_Exec port map (R3out(15 downto 0),R3out(31 downto 16),R3out(47 downto 32),R3out(63 downto 48),R3out(79 downto 64), R3out(95 downto 80),clock,R4in(15 downto 0),R4in(31 downto 16),R4in(47 downto 32),R4in(63 downto 48),R4in(79 downto 64), R4in(95 downto 80),pc_in_exec,pc_wr_ex);

@@ -19,41 +19,19 @@ entity Write_Back is		--DON'T FORGET TO CHANGE TOP LEVEL ENTITY AND EVEN IN ITS 
 end entity;			
 
 architecture WB of Write_Back is
-signal opcode : std_logic_vector(3 downto 0) := (others => '0');
-signal condcode : std_logic_vector(2 downto 0) := (others => '0');
-
---component mux4to1 is
---    port (A,B,C,D: in std_logic_vector(15 downto 0); 
---          F : out std_logic_vector(15 downto 0);
---			 S : in std_logic_vector(1 downto 0));
---end component mux4to1;
---
---component mux2to1 is
---    port (A, B: in std_logic_vector(15 downto 0);
---          F : out std_logic_vector(15 downto 0);
---			 S : in std_logic);
---end component mux2to1;
---
---component mux2to1_3bit is
---    port (A, B: in std_logic_vector(2 downto 0);
---          F : out std_logic_vector(2 downto 0);
---			 S : in std_logic);
---end component mux2to1_3bit;
-
-
 begin
 
---muxRF_D3 : mux2to1 port map(B_R5,C_R5,RF_D3, ControlSig_R5(0));-- CHANGE SELECT LINES!!
---RF_A3 <= A_R5(2 downto 0);
 
 
---for decision making
-opcode <= Instr_R5(15 downto 12);
-condcode <= Instr_R5(2 downto 0);
 
-
-linkproc: process(Instr_R5,ControlSig_R5(3),C,Z,opcode,condcode,A_R5,B_R5,C_R5)		--need to check THE SENSITIVITY LIST!!
+linkproc: process(Instr_R5,ControlSig_R5(3),C,Z,A_R5,B_R5,C_R5)		--need to check THE SENSITIVITY LIST!!
+variable opcode : std_logic_vector(3 downto 0) := (others => '0');
+variable condcode : std_logic_vector(2 downto 0) := (others => '0');
 begin
+
+	--for decision making
+	opcode := Instr_R5(15 downto 12);
+	condcode := Instr_R5(2 downto 0);
 
 	if(opcode = "0001" or opcode="0010") then
 		if(condcode(1 downto 0) = "00" or condcode(1 downto 0) = "11") then

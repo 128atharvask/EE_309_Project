@@ -34,7 +34,6 @@ end ALU_2;
 
 
 architecture behavioural of ALU_2 is
-signal ALU_CND : std_logic_vector(1 downto 0) := "00";
 
     -- Ripple Adder Implementation
     function add1(A: in std_logic_vector((operand_width-1) downto 0);
@@ -93,13 +92,14 @@ signal ALU_CND : std_logic_vector(1 downto 0) := "00";
 begin
 
     
-	 add_proc:process(ALU_J, ALU_CND, ALU_A, ALU_B, ALU_Cin)
-    variable sum: std_logic_vector((operand_width-1) downto 0) := "0000000000000001";
-    variable full_add: std_logic_vector((operand_width) downto 0) := "00000000000000000";
-    variable carry: std_logic := '0';
-    variable bitwise_nand: std_logic_vector((operand_width-1) downto 0) := "0000000000000000";
-	 variable sz_int: std_logic := '0'; -- Signal for storing computational Zero output, Z_int
-	 variable sub_result : std_logic_vector(operand_width downto 0);
+	 add_proc:process(ALU_J, ALU_A, ALU_B, ALU_Cin)
+		 variable ALU_CND : std_logic_vector(1 downto 0) := "00";
+		 variable sum: std_logic_vector((operand_width-1) downto 0) := "0000000000000001";
+		 variable full_add: std_logic_vector((operand_width) downto 0) := "00000000000000000";
+		 variable carry: std_logic := '0';
+		 variable bitwise_nand: std_logic_vector((operand_width-1) downto 0) := "0000000000000000";
+		 variable sz_int: std_logic := '0'; -- Signal for storing computational Zero output, Z_int
+		 variable sub_result : std_logic_vector(operand_width downto 0);
 	 begin
 
 

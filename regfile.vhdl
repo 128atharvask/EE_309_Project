@@ -22,55 +22,41 @@ entity regfile is
 end regfile;
 
 architecture behavioural of regfile is
-    signal R1, R2, R3, R4, R5, R6, R7: std_logic_vector((operand_width - 1) downto 0) := (others => '0');
-    signal R0 : std_logic_vector((operand_width - 1) downto 0) := "0000000000000000";
-	 signal counter : integer := 0;
-	 signal incounter,in2counter : integer := 0;
-
-	 
 begin
-	PC_out <= R0;
-    register_write:process(clock, RF_A3, RF_D3, PC_WR, PC_in) --check if Ri should be kept or not|| ,R0,R1,R2,R3,R4,R5,R6,R7,PC_in,RF_D3,RF_A3, PC_WR
-
+    register_proc:process(clock,RF_A1, RF_A2, RF_A3, RF_D3, PC_WR, PC_in) --check if Ri should be kept or not|| ,R0,R1,R2,R3,R4,R5,R6,R7,PC_in,RF_D3,RF_A3, PC_WR
+        variable R1, R2, R3, R4, R5, R6, R7: std_logic_vector((operand_width - 1) downto 0) := (others => '0');
+        variable R0 : std_logic_vector((operand_width - 1) downto 0) := "0000000000000000";
 	 begin
-	 	counter <= counter + 1;
 
-        -- Write only at the rising edge of the clock
-        if rising_edge(clock) then
-		  incounter <= incounter + 1;
+        -- Write only at the falling edge of the clock
+        if(falling_edge(clock)) then
             if(PC_WR = '1') then
-				R0 <= PC_in;
-				in2counter <= in2counter + 1;
-			elsif(RF_WR = '1' and RF_A3 = "000") then
-				R0 <= RF_D3;
-			else null;
-			end if;
+			       R0 := PC_in;
+			   elsif(RF_WR = '1' and RF_A3 = "000") then
+		  	       R0 := RF_D3;
+			   end if;
             if(RF_WR = '1') then    
                 case RF_A3 is
                     when "001" =>
-                        R1 <= RF_D3;
+                        R1 := RF_D3;
                     when "010" =>
-                        R2 <= RF_D3;
+                        R2 := RF_D3;
                     when "011" =>
-                        R3 <= RF_D3;
+                        R3 := RF_D3;
                     when "100" =>
-                        R4 <= RF_D3;
+                        R4 := RF_D3;
                     when "101" =>
-                        R5 <= RF_D3;
+                        R5 := RF_D3;
                     when "110" =>
-                        R6 <= RF_D3;
+                        R6 := RF_D3;
                     when "111" =>
-                        R7 <= RF_D3;
+                        R7 := RF_D3;
                     when others => null;
                 end case;
             end if;
         end if;
-    end process;
-	 	 
-    register_read_1:process(RF_A1,R0,R1,R2,R3,R4,R5,R6,R7)
-    -- Read anytime
-    begin
-        case RF_A1 is
+		  
+		  case RF_A1 is
             when "000" =>
                 RF_D1 <= R0;
             when "001" =>
@@ -88,12 +74,9 @@ begin
             when "111" =>
                 RF_D1 <= R7;
             when others => null;
-        end case;
-    end process;
-    register_read_2:process(RF_A2,R0,R1,R2,R3,R4,R5,R6,R7)
-    -- Read Anytime
-    begin
-        case RF_A2 is
+		  end case;
+		  
+		  case RF_A2 is
             when "000" =>
                 RF_D2 <= R0;
             when "001" =>
@@ -112,7 +95,9 @@ begin
                 RF_D2 <= R7;
             when others => null;
         end case;
+		  PC_out <= R0;
     end process;
+
 end architecture;
 
 -- Description

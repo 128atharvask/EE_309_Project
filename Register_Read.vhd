@@ -32,105 +32,36 @@ entity Register_Read is		--DON'T FORGET TO CHANGE TOP LEVEL ENTITY AND EVEN IN I
 end entity;			
 
 architecture RR of Register_Read is
-signal R2_11_9, R2_8_6,R2_8_0,R2_5_0 : std_logic_vector(15 downto 0):= (others => '0');
-signal compRF_D2 : std_logic_vector(15 downto 0):= (others => '0');
-signal opcode : std_logic_vector(3 downto 0):= (others => '0');
-signal condcode : std_logic_vector(2 downto 0):= (others => '0');
-signal decisioncode : std_logic_vector(6 downto 0):= (others => '0');
-
---component mux4to1 is
---    port (A,B,C,D: in std_logic_vector(15 downto 0);
---          F : out std_logic_vector(15 downto 0);
---			 S : in std_logic_vector(1 downto 0));
---end component mux4to1;
---
---component mux2to1 is
---    port (A, B: in std_logic_vector(15 downto 0);
---          F : out std_logic_vector(15 downto 0);
---			 S : in std_logic);
---end component mux2to1;
---
---component mux2to1_3bit is
---    port (A, B: in std_logic_vector(2 downto 0);
---          F : out std_logic_vector(2 downto 0);
---			 S : in std_logic);
---end component mux2to1_3bit;
 
 component Complementor is
     port (X: in std_logic_vector(15 downto 0);
           Y : out std_logic_vector(15 downto 0));
 end component Complementor;
 
+signal compRF_D2 : std_logic_vector(15 downto 0):= (others => '0');
+
 begin
 
---Instr_R2(11-9) → RF_A3
---A_R2 → RF_D3
---Instr_R2(8-6),(5-3) →  RF_A1,A2
-----------------------
---inputs to A_R3:
---Instr_R2(11-9)  → SE16 →  A_R3
---Instr_R2(8-6) → SE3 → A_R3
---RF_D1 → A_R3
---
---inputs to B_R3:
---RF_D1
---Instr_R2(8-0) → SE9 → B_R3
---RF_D2 → B_R3
---RefAdd → B_R3 //Mem loc to write
---
---inputs to C_R3:
---RF_D2 →  C_R3
---Instr_R2(5-0)  → SE6 →  C_R3
---RF_D2 → COMP→ C_R3
---
---inputs to PC_R3:
---PC_R2 → PC_R3
---
---
---inputs to RefAdd:
---RF_D2 → RefAdd
-
-
-
-
-
-
-
---let's sign extend/complement stuff
-R2_11_9 <= "0000000000000"& Instr_R2(11 downto 9);
-R2_8_6 <= "0000000000000"& Instr_R2(8 downto 6);
-R2_8_0 <= "0000000"& Instr_R2(8 downto 0);
-R2_5_0 <= "0000000000"& Instr_R2(5 downto 0);
 C1 : Complementor port map(RF_D2,compRF_D2);
-
---for decision making
-opcode <= Instr_R2(15 downto 12);
-condcode <= Instr_R2(2 downto 0);
-decisioncode <= opcode & condcode;
 
 --actual mapping starts
 
-linkproc: process(Instr_R2, RF_D1, RF_D2, ControlSig_R2(2 downto 0),opcode,condcode,R2_11_9,compRF_D2,R2_8_6,R2_5_0,R2_8_0,RR_RefAdd_out,PC_R2,A_R2)		--need to check THE SENSITIVITY LIST!!
+linkproc: process(Instr_R2, RF_D1, RF_D2, ControlSig_R2(2 downto 0),compRF_D2,RR_RefAdd_out,PC_R2,A_R2)		--need to check THE SENSITIVITY LIST!!
+	variable R2_11_9, R2_8_6,R2_8_0,R2_5_0 : std_logic_vector(15 downto 0):= (others => '0');
+	variable opcode : std_logic_vector(3 downto 0):= (others => '0');
+	variable condcode : std_logic_vector(2 downto 0):= (others => '0');
 begin
 
---	if(decisioncode = "0001000" or decisioncode = "0001001" or decisioncode = "0001010" or decisioncode = "0001011" or decisioncode = "0010000" or decisioncode="0010001" or decisioncode="0010010") then
---	RF_A1 <= Instr_R2(8 downto 6);
---	RF_A2 <= Instr_R2(5 downto 3);
---	A_R3 <= R2_11_9;
---	B_R3 <= RF_D1;
---	C_R3 <= RF_D2;
---	
---	elsif(decisioncode = "0001100" or decisioncode = "0001101" or decisioncode = "0001110" or decisioncode = "0001111" or decisioncode = "0010100" or decisioncode="0010101" or decisioncode="0010110") then
---	RF_A1 <= Instr_R2(8 downto 6);
---	RF_A2 <= Instr_R2(5 downto 3);
---	A_R3 <= R2_11_9;
---	B_R3 <= RF_D1;
---	C_R3 <= compRF_D2;	
---	
---	elsif(decisioncode = "0000")then
---	
---	end if;
+	--let's sign extend/complement stuff
+	R2_11_9 := "0000000000000"& Instr_R2(11 downto 9);
+	R2_8_6 := "0000000000000"& Instr_R2(8 downto 6);
+	R2_8_0 := "0000000"& Instr_R2(8 downto 0);
+	R2_5_0 := "0000000000"& Instr_R2(5 downto 0);
 
+	--for decision making
+	opcode := Instr_R2(15 downto 12);
+	condcode := Instr_R2(2 downto 0);
+	
 	if(opcode = "0001" or opcode="0010") then
 		if(condcode(2) = '0')then
 			RF_A1 <= Instr_R2(8 downto 6);
@@ -238,29 +169,8 @@ begin
 	
 
 end process;
+
 Instr_R3 <= Instr_R2;
 ControlSig_R3 <= ControlSig_R2;
-
---PC_R3 <= PC_R2;
---
---muxA_R3 : mux4to1 port map(R2_11_9,R2_8_6,RF_D1,"0000000000000000",A_R3, ControlSig_R2(1 downto 0));  --SELECT LINES!!
---
---muxB_R3 : mux4to1 port map(RF_D1,R2_8_0,RF_D2,RR_RefAdd_out,B_R3, ControlSig_R2(1 downto 0));-- CHANGE SELECT LINES!!
---
---muxC_R3 : mux4to1 port map(RF_D2,R2_5_0,compRF_D2,"0000000000000000",C_R3, ControlSig_R2(1 downto 0));-- CHANGE SELECT LINES!!
---
---ControlSig_R3 <= ControlSig_R2; 		--check!!!!!!
---
---muxRF_A1 : mux2to1_3bit port map(Instr_R2(11 downto 9),Instr_R2(8 downto 6),RF_A1,ControlSig_R2(0));  --CHANGE SELECT LINES!!(CONTROLSIG)
---
---RF_A2 <= Instr_R2(8 downto 6);
---
---RF_D3 <= A_R2;
---
---RF_A3 <= Instr_R2(11 downto 9);
---
---RR_RefAdd_in <= RF_D2;
---
---Instr_R3 <= Instr_R2;
 
 end architecture RR;
