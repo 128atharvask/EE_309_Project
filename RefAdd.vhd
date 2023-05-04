@@ -17,7 +17,7 @@ begin
 	process(clk)
 	    variable content : std_logic_vector(15 downto 0):= (others => '0');
 	begin
-	if(falling_edge(clk)) then
+	if(rising_edge(clk)) then
 		if(RefAdd_E = '1') then
 			content := RefAdd_in;
 		end if;

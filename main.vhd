@@ -205,7 +205,7 @@ end component;
 	
 			RF_D3 : out std_logic_vector(15 downto 0);
 			RF_A3 : out std_logic_vector(2 downto 0);
-			RF_WR : out std_logic
+			RF_WR_out : out std_logic
 			);
 	end component;
 

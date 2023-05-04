@@ -16,7 +16,7 @@ begin
 	 carry_proc:process(clock)
 		  variable carry: std_logic:='0';
 	 begin
-        if (falling_edge(clock)) then
+        if (rising_edge(clock)) then
             if (c_en = '1') then
                 carry := c_in;
 				else
@@ -50,7 +50,7 @@ begin
     zero_proc:process(clock)
 		  variable zero: std_logic:='0';
 	 begin
-        if (falling_edge(clock)) then
+        if (rising_edge(clock)) then
             if (z_en = '1') then
                 zero := z_in;
 				else

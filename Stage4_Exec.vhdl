@@ -75,7 +75,6 @@ begin
     stage_proc:process(clock, C_out, Z_out, ALU2_A, ALU2_B, ALU3_A, ALU3_B,ALU3_C, ALU2_Cin, C_in, Z_in,ALU2_Cout,ALU2_Z,A_R3,B_R3,C_R3,ALU2_C,Instr_R3)
 		 variable opcode: std_logic_vector(3 downto 0):= (others => '0');
 		 variable condcode: std_logic_vector(1 downto 0):= (others => '0');
-		 variable carry, zero: std_logic:= '0';
 		 
 	 begin
        opcode := Instr_R3(15 downto 12);
@@ -149,7 +148,7 @@ begin
                         C_R4 <= ALU2_C;
                         Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                     when "01" =>
-                        if (zero = '1') then
+                        if (Z_out = '1') then
                             ALU2_Cin <= '0';
                             Z_WR <= '1';
                             C_R4 <= ALU2_C;
@@ -160,7 +159,7 @@ begin
                             Instr_R4(15 downto 12) <= "1110"; -- Do Nothing
                         end if;
                     when "10" =>
-                        if (carry = '1') then
+                        if (C_out = '1') then
                             ALU2_Cin <= '0';
                             Z_WR <= '1';
                             C_R4 <= ALU2_C;
