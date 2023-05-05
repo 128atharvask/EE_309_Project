@@ -284,12 +284,15 @@ end component;
 
 	begin
 	
-	 Hzd_comb <= HzdRR or HzdEX;
-	 pc_en <= if_en or pc_wr_ex or pc_wr_rr;
+	 Hzd_comb1 <= HzdRR or HzdEX;
+	 Hzd_comb2 <= HzdEx and load_hzd;
+	 Hzd_comb3 <= if_en and not load_hzd;
+	 Hzd_comb4 <= not load_hzd;
+	 pc_en <= (if_en or pc_wr_ex or pc_wr_rr) and not load_hzd;
 	 
-	 PReg1 : pipe_reg port map (clock, if_en, R1in, Hzd_comb, R1out);
-	 PReg2 : pipe_reg port map (clock, PR_Write, R2in, Hzd_comb, R2out);
-	 PReg3 : pipe_reg port map (clock, PR_Write, R3in, HzdEX, R3out);
+	 PReg1 : pipe_reg port map (clock, Hzd_comb3, R1in, Hzd_comb1, R1out);
+	 PReg2 : pipe_reg port map (clock, Hzd_comb4, R2in, Hzd_comb1, R2out);
+	 PReg3 : pipe_reg port map (clock, PR_Write, R3in, Hzd_comb2, R3out);
 	 PReg4 : pipe_reg port map (clock, PR_Write, R4in, '0', R4out);
 	 PReg5 : pipe_reg port map (clock, PR_Write, R5in, '0', R5out);
 	 
@@ -324,7 +327,10 @@ end component;
 	
 	select_proc: process(R2out,R3out,R4out,R5out)
 		begin	
-		if(R2out(31 downto 30) = "00") then
+		if(R2out(31 downto 30) = "00" and (R3out(31 downto 28) = "0100" or R3out(31 downto 28) = "0110")) then
+			load_hzd <= '1';
+		elsif(R2out(31 downto 30) = "00") then
+			load_hzd <= '0';
 		-- fwd_sel1
 			if(R2out(24 downto 22) = R3out(27 downto 25)) then
 				fwd_sel1 <= "01";
