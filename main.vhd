@@ -259,8 +259,8 @@ end component;
 	 signal sel1, sel2, sel3, sel4, del5 : std_logic := '0';
 	 
 	 
-	 signal D_Add, Din, C_to_din, WB_data_in, WB_add_in, Dout, WB_d_out, WB_a_out : std_logic_vector((operand_width)-1 downto 0) := (others => '0');
-	 signal mem_wr, dout_sel : std_logic := '0';
+	 signal D_Add, Din, C_to_din, WB_data_in, WB_add_in, WB_d_out, WB_a_out : std_logic_vector((operand_width)-1 downto 0) := (others => '0');
+	 signal mem_wr : std_logic := '0';
 	 signal RefAdd_out, RefAdd_in : std_logic_vector(15 downto 0) := (others => '0');
 	 signal RefAdd_E : std_logic := '0';
 	 signal if_en : std_logic := '0';
@@ -302,8 +302,8 @@ end component;
 	 --alu1 : ADDER port map (pc,pc_in0);
 	 alu1 : ALU_2 port map(pc, "0000000000000001",'0',"00", pc_in0);
 	 id: Stage2_WithoutHazards port map (R1out(15 downto 0),R1out(31 downto 16),R1out(47 downto 32),clock,R2in(15 downto 0),R2in(31 downto 16),R2in(47 downto 32),R2in(82 downto 80),if_en,R2in(83),R2in(84));
-	 reg_read: Register_Read port map (R2out(31 downto 16), R2out(15 downto 0), R2out(47 downto 32), R2out(63 downto 48), R2out(79 downto 64), R2out(95 downto 80),d1,d2, RefAdd_out, R3in(15 downto 0), RR_out1, RR_out2, R3in(79 downto 64),R3in(95 downto 80), a1, a2, pc_in_rr, RefAdd_E, RefAdd_out, R3in(31 downto 16), pc_wr_rr, HzdRR);
-	 ex: Stage4_Exec port map (R3out(15 downto 0),R3out(31 downto 16),R3out(47 downto 32),R3out(63 downto 48),R3out(79 downto 64), R3out(95 downto 80),clock,R4in(15 downto 0),R4in(31 downto 16),R4in(47 downto 32),R4in(63 downto 48),R4in(79 downto 64), R4in(95 downto 80),pc_in_exec,pc_wr_ex, ALU_out_exec, HzdEX);
+	 reg_read: Register_Read port map (R2out(31 downto 16), R2out(15 downto 0), R2out(47 downto 32), R2out(63 downto 48), R2out(79 downto 64), R2out(95 downto 80),d1,d2, RefAdd_out, R3in(15 downto 0), RR_out1, RR_out2, C_R3,R3in(95 downto 80), a1, a2, pc_in_rr, RefAdd_E, RefAdd_out, R3in(31 downto 16), pc_wr_rr, HzdRR);
+	 ex: Stage4_Exec port map (R3out(15 downto 0),R3out(31 downto 16),R3out(47 downto 32),R3out(63 downto 48),R3out(79 downto 64), R3out(95 downto 80),clock,R4in(15 downto 0),R4in(31 downto 16),A_R4,R4in(63 downto 48),R4in(79 downto 64), R4in(95 downto 80),pc_in_exec,pc_wr_ex, ALU_out_exec, HzdEX);
 	 --NEED TO CHECK R3 & R4(87 downto 86) in one of the inputs to Exec Stage
 	 m_acc: MEM_STAGE port map (clock,R4out(63 downto 48),R4out(47 downto 32),R4out(79 downto 64),R4out(79 downto 64),R4out(47 downto 32),R4out(31 downto 16),R4out(84),R4out(83),R5in(63 downto 48),R5in(79 downto 64),R5in(47 downto 32),R5in(31 downto 16),R5in(83));
 
@@ -316,9 +316,11 @@ end component;
 	 R1in(31 downto 16) <= instr;
 
 	 --hazard mitigation in RR
-	 mux2: mux4to1 port map(RR_out1, ALU_out_exec, TO DO, R5in(63 downto 48), R3in(47 downto 32), fwd_sel1);	-- usual RR_out, from alu_c, from d_out of mem, from WB
-	 mux3: mux4to1 port map(RR_out2, ALU_out_exec, TO DO, R5in(63 downto 48), R3in(63 downto 48), fwd_sel2);
-	-- think abt fwd_sel
+	 mux2: mux4to1 port map(RR_out2, ALU_out_exec, R5in(63 downto 48), R5out(63 downto 48), R3in(63 downto 48), fwd_sel1);	-- usual RR_out, from alu_c, from d_out of mem, from WB
+	 mux3: mux4to1 port map(C_R3, ALU_out_exec, R5in(63 downto 48), R5out(63 downto 48), R3in(79 downto 64), fwd_sel2);
+	 mux4: mux3to1 port map(RR_out1, R5in(63 downto 48), R5out(63 downto 48), R3in(47 downto 32), fwd_sel3);
+	 mux5: mux2to1 port map(A_R4, R5in(63 downto 48), R4in(47 downto 32), fwd_sel4);
+	 -- think abt fwd_sel
 	
 	-- 31 downto 16
 	-- 31-28, 27-25, 24-22, 21-19
@@ -326,12 +328,15 @@ end component;
 	-- ulte order mein assign kiya he start mein
 	
 	select_proc: process(R2out,R3out,R4out,R5out)
-		begin	
-		if(R2out(31 downto 30) = "00" and (R3out(31 downto 28) = "0100" or R3out(31 downto 28) = "0110")) then
+		begin
+		--------  A&L  --------
+		if(R2out(31 downto 30) = "00" and (R3out(31 downto 28) = "0100" or R3out(31 downto 28) = "0110")
+			and (R2out(24 downto 22) = R3out(27 downto 25) or R2out(21 downto 19) = R3out(27 downto 25))) then
 			load_hzd <= '1';
 		elsif(R2out(31 downto 30) = "00") then
 			load_hzd <= '0';
-		-- fwd_sel1
+			
+			-- fwd_sel1
 			if(R2out(24 downto 22) = R3out(27 downto 25)) then
 				fwd_sel1 <= "01";
 			elsif(R2out(24 downto 22) = R4out(27 downto 25)) then
@@ -352,8 +357,34 @@ end component;
 			else
 				fwd_sel2 <= "00";
 			end if;
-		elsif(R2out(31 downto 28) = "0100")
+
+			fwd_sel3 <= "00";
+		
+		--------  Store  --------
+		elsif(R2out(31 downto 28) = "0101" or R2out(31 downto 28) = "0111") then
+			
+			if(R2out(27 downto 25) = R4out(27 downto 25)) then
+				fwd_sel3 <= "01";
+			elsif(R2out(27 downto 25) = R5out(27 downto 25)) then
+				fwd_sel3 <= "10";
+			else
+				fwd_sel3 <= "00";
+			end if;
+
+			fwd_sel1 <= "00";
+			fwd_sel2 <= "00";
+		
+		elsif() then
 		end if;
+
+		--------  SW <- LW  --------
+		if((R3out(31 downto 28) = "0101" or R3out(31 downto 28) = "0111") and
+			(R3out(31 downto 28) = "0100" or R3out(31 downto 28) = "0110")) then
+			fwd_sel4 <= '1';
+		else
+			fwd_Sel <= '0';
+		end if;
+
 	end process;
 end behav;
 -- implement 1 cycle wait in case of LOAD

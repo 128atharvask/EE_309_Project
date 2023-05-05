@@ -76,7 +76,7 @@ begin
 				mem_wr <= '0';
 			end if;
 
-			if(instr(15 downto 12) = "0011" or instr(15 downto 12) = "0100" or instr(15 downto 12) = "0110") then
+			if(instr(15 downto 12) = "0100" or instr(15 downto 12) = "0110") then
 				dout_select <= '1';
 			else
 				dout_select <= '0';

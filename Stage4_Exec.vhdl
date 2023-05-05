@@ -68,7 +68,7 @@ architecture behavioural of Stage4_Exec is
    signal ALU2_J, ALU3_J: std_logic_vector(1 downto 0):= (others => '0');
 begin
 	 ControlSig_R4 <= ControlSig_R3;
-     ALU_out <= ALU2_Cout;
+     ALU_out <= ALU2_C;
 	 cf: carry_flag port map(c_in=>C_in, c_en=>C_WR, clock=>clock, c_out=>C_out);
 	 zf: zero_flag port map (z_in=>Z_in, z_en=>Z_WR, clock=>clock, z_out=>Z_out);
 	 ALU2: ALU_2 port map(ALU_A => ALU2_A, ALU_B => ALU2_B, ALU_Cin => ALU2_Cin, ALU_J => ALU2_J, ALU_C => ALU2_C, ALU_Cout => ALU2_Cout, ALU_Z => ALU2_Z);
