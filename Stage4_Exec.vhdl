@@ -19,7 +19,8 @@ entity Stage4_Exec is
         A_R4, B_R4, C_R4:out std_logic_vector((operand_width-1) downto 0);
         ControlSig_R4:out std_logic_vector((operand_width - 1) downto 0);
         PC: out std_logic_vector((operand_width-1) downto 0);
-        PC_WR: out std_logic
+        PC_WR: out std_logic;
+        branch_hazard: out std_logic
    );
 end Stage4_Exec;
 
@@ -65,7 +66,6 @@ architecture behavioural of Stage4_Exec is
    signal ALU2_Cin, ALU2_Cout, ALU2_Z, ALU3_Cin, ALU3_Cout, ALU3_Z: std_logic:= '0';
    signal ALU2_J, ALU3_J: std_logic_vector(1 downto 0):= (others => '0');
 begin
-    
 	 ControlSig_R4 <= ControlSig_R3;
 	 cf: carry_flag port map(c_in=>C_in, c_en=>C_WR, clock=>clock, c_out=>C_out);
 	 zf: zero_flag port map (z_in=>Z_in, z_en=>Z_WR, clock=>clock, z_out=>Z_out);
@@ -86,6 +86,7 @@ begin
 		  Z_in <= ALU2_Z;
         case opcode is
             when "0001" => -- Add
+                branch_hazard <= '0';
                 A_R4 <= A_R3;
                 ALU2_A <= B_R3;
                 ALU2_B <= C_R3;
@@ -135,6 +136,7 @@ begin
                         Z_WR <= '0';
                 end case;
             when "0010" => -- NAND
+                branch_hazard <= '0';
                 A_R4 <= A_R3;
                 ALU2_A <= B_R3;
                 ALU2_B <= C_R3;
@@ -172,6 +174,7 @@ begin
                     when others => null;
                 end case;
             when "0000" => -- Add Immediate
+                branch_hazard <= '0';
                 A_R4 <= A_R3;
                 ALU2_A <= B_R3;
                 ALU2_B <= C_R3;
@@ -181,6 +184,7 @@ begin
                 PC_WR <= '0';
                 Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
             when "0011" => -- LLI
+                branch_hazard <= '0';
                 A_R4 <= A_R3;
                 B_R4 <= B_R3;
                 Z_WR <= '0';
@@ -188,6 +192,7 @@ begin
                 PC_WR <= '0';
                 Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
             when "0100" => -- LW
+                branch_hazard <= '0';
                 A_R4 <= A_R3;
                 ALU2_A <= B_R3;
                 ALU2_B <= C_R3;
@@ -198,6 +203,7 @@ begin
                 PC_WR <= '0';
                 Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
             when "0101" => -- SW
+                branch_hazard <= '0';
                 A_R4 <= A_R3;
                 ALU2_A <= B_R3;
                 ALU2_B <= C_R3;
@@ -208,6 +214,7 @@ begin
                 PC_WR <= '0';
                 Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
             when "0110" => -- LM
+                branch_hazard <= '0';
                 A_R4 <= A_R3;
                 ALU2_A <= B_R3;
                 ALU2_B <= C_R3;
@@ -218,6 +225,7 @@ begin
                 PC_WR <= '0';
                 Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
             when "0111" => -- SM
+                branch_hazard <= '0';
                 A_R4 <= A_R3;
                 ALU2_A <= B_R3;
                 ALU2_B <= C_R3;
@@ -238,8 +246,10 @@ begin
                     PC <= ALU3_C;
 						  ALU3_J <= "00";
                     PC_WR <= '1';
+                    branch_hazard <= '1';
                 else 
                     PC_WR <= '0';
+                    branch_hazard <= '0';
                 end if;
                 -- HAZARD HANDLING
             when "1001" => -- BLT
@@ -253,8 +263,10 @@ begin
                     PC <= ALU3_C;
                     ALU3_J <= "00";
                     PC_WR <= '1';
+                    branch_hazard <= '1';
                 else 
                     PC_WR <= '0';
+                    branch_hazard <= '0';
                 end if;
                 -- HAZARD HANDLING
             when "1010" => -- BLE
@@ -268,11 +280,14 @@ begin
                     PC <= ALU3_C;
                     ALU3_J <= "00";
                     PC_WR <= '1';
+                    branch_hazard <= '1';
                 else
                     PC_WR <= '0';
+                    branch_hazard <= '0';
                 end if;
                 -- HAZARD HANDLING
             when "1100" => -- JAL
+                branch_hazard <= '1';
                 ALU3_A <= PC_R3;
                 ALU3_B <= "000000" & Instr_R3(8 downto 0) & "0";
                 PC <= ALU3_C;
@@ -284,7 +299,9 @@ begin
             when "1101" => -- JLR
                 Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                 A_R4 <= A_R3;
+                branch_hazard <= '0';
             when "1111" => -- JRI
+                branch_hazard <= '1';
                 ALU3_A <= A_R3;
                 ALU3_B <= "000000" & Instr_R3(8 downto 0)
                  & "0";
@@ -292,7 +309,12 @@ begin
                 ALU3_J <= "00";
                 PC_WR <= '1';
                 Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
+            when "1110" => -- NOP
+                branch_hazard <= '0';
+                Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
+                PC_WR <= '0';
             when others => null;
         end case;
     end process;
 end architecture;
+-- 1110 -> NO

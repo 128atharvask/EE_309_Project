@@ -103,7 +103,7 @@ begin
 				
 				ControlSig_R2_RFWR <= '0';
 			
------------  OTHERS  ------------
+-----------  OTHERS (including NOP)  ------------
 		  when others=>
 				Instr_R2 <= Instr_R1;
 				IF_en <= '1';

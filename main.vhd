@@ -111,31 +111,32 @@ end component;
 	end component;
 
 	component Register_Read is
-   port (Instr_R2:	in std_logic_vector(15 downto 0);
-			PC_R2:	in std_logic_vector(15 downto 0);
-			A_R2:	in std_logic_vector(15 downto 0);
-			B_R2:	in std_logic_vector(15 downto 0);
-			C_R2:	in std_logic_vector(15 downto 0);
-			ControlSig_R2:	in std_logic_vector(15 downto 0);	--later, change size of the control signals!!
-			RF_D1 : in std_logic_vector(15 downto 0);
-			RF_D2 : in std_logic_vector(15 downto 0);			
-			RR_RefAdd_out : in std_logic_vector(15 downto 0);
-			
-	
-			PC_R3: out std_logic_vector(15 downto 0);
-			A_R3:	out std_logic_vector(15 downto 0);
-			B_R3:	out std_logic_vector(15 downto 0);
-			C_R3:	out std_logic_vector(15 downto 0);
-			ControlSig_R3:	out std_logic_vector(15 downto 0); ---check if needed here
-			RF_A1 : out std_logic_vector(2 downto 0);
-			RF_A2 : out std_logic_vector(2 downto 0);
-			PC_in : out std_logic_vector(15 downto 0);
-			RR_RefAdd_E : out std_logic;
-			RR_RefAdd_in : out std_logic_vector(15 downto 0);
-			Instr_R3	: out std_logic_vector(15 downto 0);
-			PC_WR : out std_logic
-			);
-	end component;
+		port (Instr_R2:	in std_logic_vector(15 downto 0);
+				 PC_R2:	in std_logic_vector(15 downto 0);
+				 A_R2:	in std_logic_vector(15 downto 0);
+				 B_R2:	in std_logic_vector(15 downto 0);
+				 C_R2:	in std_logic_vector(15 downto 0);
+				 ControlSig_R2:	in std_logic_vector(15 downto 0);	--later, change size of the control signals!!
+				 RF_D1 : in std_logic_vector(15 downto 0);
+				 RF_D2 : in std_logic_vector(15 downto 0);			
+				 RR_RefAdd_out : in std_logic_vector(15 downto 0);
+				 
+		 
+				 PC_R3: out std_logic_vector(15 downto 0);
+				 A_R3:	out std_logic_vector(15 downto 0);
+				 B_R3:	out std_logic_vector(15 downto 0);
+				 C_R3:	out std_logic_vector(15 downto 0);
+				 ControlSig_R3:	out std_logic_vector(15 downto 0); ---check if needed here
+				 RF_A1 : out std_logic_vector(2 downto 0);
+				 RF_A2 : out std_logic_vector(2 downto 0);
+				 PC_in : out std_logic_vector(15 downto 0);
+				 RR_RefAdd_E : out std_logic;
+				 RR_RefAdd_in : out std_logic_vector(15 downto 0);
+				 Instr_R3	: out std_logic_vector(15 downto 0);
+				 PC_WR : out std_logic;
+				 jlr_hazard: out std_logic
+				 );
+	end component;	
 
 	component RefAdd is
     port(clk : in std_logic;
@@ -163,7 +164,8 @@ end component;
         A_R4, B_R4, C_R4:out std_logic_vector((operand_width-1) downto 0);
         ControlSig_R4:out std_logic_vector((operand_width - 1) downto 0);
         PC: out std_logic_vector((operand_width-1) downto 0);
-        PC_WR: out std_logic
+        PC_WR: out std_logic;
+        branch_hazard: out std_logic
    );
 	end component;
 	
@@ -224,10 +226,12 @@ end component;
 	end component;
 	
 	component pipe_reg is
-	port (	clock: in std_logic;
-            PR_WR: in std_logic;
-            Data_In: in std_logic_vector(95 downto 0);
-            Data_Out: out std_logic_vector(95 downto 0)
+	port (	
+			clock: in std_logic;
+			PR_WR: in std_logic;
+			Data_In: in std_logic_vector(95 downto 0);
+			Hzd_in: in std_logic;
+			Data_Out: out std_logic_vector(95 downto 0)
         );
 	end component;
 	 
@@ -257,24 +261,25 @@ end component;
 	--ControlSig_R2(...), PC_R2(16), A_R2(16), B_R2(16), C_R2(16), Instr_R2(16)
 	
 	signal PR_Write : std_logic := '1';
+	signal HzdRR, HzdEX : std_logic := '0';
 	
 	begin
-	 PReg1 : pipe_reg port map (clock, if_en, R1in, R1out);
-	 PReg2 : pipe_reg port map (clock, PR_Write, R2in, R2out);
-	 PReg3 : pipe_reg port map (clock, PR_Write, R3in, R3out);
-	 PReg4 : pipe_reg port map (clock, PR_Write, R4in, R4out);
-	 PReg5 : pipe_reg port map (clock, PR_Write, R5in, R5out);
+	 PReg1 : pipe_reg port map (clock, if_en, R1in, HzdRR or HzdEX, R1out);
+	 PReg2 : pipe_reg port map (clock, PR_Write, R2in, HzdRR or HzdEX, R2out);
+	 PReg3 : pipe_reg port map (clock, PR_Write, R3in, HzdEX, R3out);
+	 PReg4 : pipe_reg port map (clock, PR_Write, R4in, '0', R4out);
+	 PReg5 : pipe_reg port map (clock, PR_Write, R5in, '0', R5out);
 	 
 	 
 	 
-	 rf: regfile port map (clock,rf_wr,if_en,a1,a2,a3,d3,pc_in,d1,d2,pc);
+	 rf: regfile port map (clock,rf_wr,if_en or pc_wr_ex or pc_wr_rr,a1,a2,a3,d3,pc_in,d1,d2,pc);
 	 RAR1 : RefAdd port map(clock, RefAdd_in, RefAdd_out, RefAdd_E); 
 	 i_mem: instr_mem port map (pc, instr);
 	 --alu1 : ADDER port map (pc,pc_in0);
 	 alu1 : ALU_2 port map(pc, "0000000000000001",'0',"00", pc_in0);
 	 id: Stage2_WithoutHazards port map (R1out(15 downto 0),R1out(31 downto 16),R1out(47 downto 32),clock,R2in(15 downto 0),R2in(31 downto 16),R2in(47 downto 32),R2in(82 downto 80),if_en,R2in(83),R2in(84));
-	 reg_read: Register_Read port map (R2out(31 downto 16), R2out(15 downto 0), R2out(47 downto 32), R2out(63 downto 48), R2out(79 downto 64), R2out(95 downto 80),d1,d2, RefAdd_out, R3in(15 downto 0), R3in(47 downto 32), R3in(63 downto 48), R3in(79 downto 64),R3in(95 downto 80), a1, a2, pc_in_rr, RefAdd_E, RefAdd_out, R3in(31 downto 16), pc_wr_rr);
-	 ex: Stage4_Exec port map (R3out(15 downto 0),R3out(31 downto 16),R3out(47 downto 32),R3out(63 downto 48),R3out(79 downto 64), R3out(95 downto 80),clock,R4in(15 downto 0),R4in(31 downto 16),R4in(47 downto 32),R4in(63 downto 48),R4in(79 downto 64), R4in(95 downto 80),pc_in_exec,pc_wr_ex);
+	 reg_read: Register_Read port map (R2out(31 downto 16), R2out(15 downto 0), R2out(47 downto 32), R2out(63 downto 48), R2out(79 downto 64), R2out(95 downto 80),d1,d2, RefAdd_out, R3in(15 downto 0), R3in(47 downto 32), R3in(63 downto 48), R3in(79 downto 64),R3in(95 downto 80), a1, a2, pc_in_rr, RefAdd_E, RefAdd_out, R3in(31 downto 16), pc_wr_rr, HzdRR);
+	 ex: Stage4_Exec port map (R3out(15 downto 0),R3out(31 downto 16),R3out(47 downto 32),R3out(63 downto 48),R3out(79 downto 64), R3out(95 downto 80),clock,R4in(15 downto 0),R4in(31 downto 16),R4in(47 downto 32),R4in(63 downto 48),R4in(79 downto 64), R4in(95 downto 80),pc_in_exec,pc_wr_ex, HzdEX);
 	 --NEED TO CHECK R3 & R4(87 downto 86) in one of the inputs to Exec Stage
 	 m_acc: MEM_STAGE port map (clock,R4out(63 downto 48),R4out(47 downto 32),R4out(79 downto 64),R4out(79 downto 64),R4out(47 downto 32),R4out(31 downto 16),R4out(84),R4out(83),R5in(63 downto 48),R5in(79 downto 64),R5in(47 downto 32),R5in(31 downto 16),R5in(83));
 
