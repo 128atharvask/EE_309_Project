@@ -1,5 +1,5 @@
 Analysis & Synthesis report for IITB_RISC23
-Wed May 03 22:39:17 2023
+Thu May 04 10:09:02 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -61,7 +61,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 03 22:39:17 2023       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 04 10:09:02 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_RISC23                                 ;
 ; Top-level Entity Name              ; main                                        ;
@@ -476,7 +476,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed May 03 22:39:03 2023
+    Info: Processing started: Thu May 04 10:08:48 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_RISC23 -c IITB_RISC23
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -536,7 +536,42 @@ Warning (10036): Verilog HDL or VHDL warning at main.vhd(251): object "alu_dummy
 Warning (10540): VHDL Signal Declaration warning at main.vhd(253): used explicit default value for signal "PR_Write" because signal was never assigned a value File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 253
 Info (12128): Elaborating entity "pipe_reg" for hierarchy "pipe_reg:PReg1" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 256
 Info (12128): Elaborating entity "regfile" for hierarchy "regfile:rf" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 264
-Warning (10492): VHDL Process Statement warning at regfile.vhdl(36): signal "counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 36
+Warning (10541): VHDL Signal Declaration warning at regfile.vhdl(20): used implicit default value for signal "PC_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 20
+Warning (10540): VHDL Signal Declaration warning at regfile.vhdl(25): used explicit default value for signal "R7" because signal was never assigned a value File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 25
+Warning (10631): VHDL Process Statement warning at regfile.vhdl(66): inferring latch(es) for signal or variable "RF_D1", which holds its previous value in one or more paths through the process File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Warning (10631): VHDL Process Statement warning at regfile.vhdl(66): inferring latch(es) for signal or variable "RF_D2", which holds its previous value in one or more paths through the process File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D2[0]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D2[1]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D2[2]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D2[3]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D2[4]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D2[5]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D2[6]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D2[7]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D2[8]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D2[9]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D2[10]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D2[11]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D2[12]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D2[13]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D2[14]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D2[15]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D1[0]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D1[1]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D1[2]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D1[3]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D1[4]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D1[5]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D1[6]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D1[7]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D1[8]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D1[9]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D1[10]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D1[11]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D1[12]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D1[13]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D1[14]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
+Info (10041): Inferred latch for "RF_D1[15]" at regfile.vhdl(66) File: D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl Line: 66
 Info (12128): Elaborating entity "RefAdd" for hierarchy "RefAdd:RAR1" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 265
 Info (12128): Elaborating entity "instr_mem" for hierarchy "instr_mem:i_mem" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 266
 Info (12128): Elaborating entity "ALU_2" for hierarchy "ALU_2:alu1" File: D:/Hazardless_Testbox/EE_309_Project/main.vhd Line: 268
@@ -888,10 +923,10 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 57 warnings
-    Info: Peak virtual memory: 4790 megabytes
-    Info: Processing ended: Wed May 03 22:39:17 2023
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 60 warnings
+    Info: Peak virtual memory: 4782 megabytes
+    Info: Processing ended: Thu May 04 10:09:02 2023
     Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Total CPU time (on all processors): 00:00:15
 
 
