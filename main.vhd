@@ -261,18 +261,23 @@ end component;
 	--ControlSig_R2(...), PC_R2(16), A_R2(16), B_R2(16), C_R2(16), Instr_R2(16)
 	
 	signal PR_Write : std_logic := '1';
-	signal HzdRR, HzdEX : std_logic := '0';
+	signal HzdRR, HzdEX, Hzd_comb : std_logic := '0';
+	signal pc_en : std_logic := '1';
 	
 	begin
-	 PReg1 : pipe_reg port map (clock, if_en, R1in, HzdRR or HzdEX, R1out);
-	 PReg2 : pipe_reg port map (clock, PR_Write, R2in, HzdRR or HzdEX, R2out);
+	
+	 Hzd_comb <= HzdRR or HzdEX;
+	 pc_en <= if_en or pc_wr_ex or pc_wr_rr;
+	 
+	 PReg1 : pipe_reg port map (clock, if_en, R1in, Hzd_comb, R1out);
+	 PReg2 : pipe_reg port map (clock, PR_Write, R2in, Hzd_comb, R2out);
 	 PReg3 : pipe_reg port map (clock, PR_Write, R3in, HzdEX, R3out);
 	 PReg4 : pipe_reg port map (clock, PR_Write, R4in, '0', R4out);
 	 PReg5 : pipe_reg port map (clock, PR_Write, R5in, '0', R5out);
 	 
 	 
 	 
-	 rf: regfile port map (clock,rf_wr,if_en or pc_wr_ex or pc_wr_rr,a1,a2,a3,d3,pc_in,d1,d2,pc);
+	 rf: regfile port map (clock,rf_wr,pc_en,a1,a2,a3,d3,pc_in,d1,d2,pc);
 	 RAR1 : RefAdd port map(clock, RefAdd_in, RefAdd_out, RefAdd_E); 
 	 i_mem: instr_mem port map (pc, instr);
 	 --alu1 : ADDER port map (pc,pc_in0);

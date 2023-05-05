@@ -1,5 +1,5 @@
 Analysis & Synthesis report for IITB_RISC23
-Fri May 05 12:49:58 2023
+Fri May 05 13:05:21 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -61,7 +61,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 05 12:49:58 2023       ;
+; Analysis & Synthesis Status        ; Successful - Fri May 05 13:05:21 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_RISC23                                 ;
 ; Top-level Entity Name              ; main                                        ;
@@ -171,8 +171,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -182,28 +182,28 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                            ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                     ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
-; mux2to1.vhd                      ; yes             ; User VHDL File  ; C:/Users/theas/Documents/EE_309_Project/EE_309_Project/mux2to1.vhd               ;         ;
-; Stage4_Exec.vhdl                 ; yes             ; User VHDL File  ; C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl          ;         ;
-; instr_mem.vhdl                   ; yes             ; User VHDL File  ; C:/Users/theas/Documents/EE_309_Project/EE_309_Project/instr_mem.vhdl            ;         ;
-; data_mem.vhdl                    ; yes             ; User VHDL File  ; C:/Users/theas/Documents/EE_309_Project/EE_309_Project/data_mem.vhdl             ;         ;
-; ALU_2.vhdl                       ; yes             ; User VHDL File  ; C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl                ;         ;
-; Flags.vhd                        ; yes             ; User VHDL File  ; C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Flags.vhd                 ;         ;
-; regfile.vhdl                     ; yes             ; User VHDL File  ; C:/Users/theas/Documents/EE_309_Project/EE_309_Project/regfile.vhdl              ;         ;
-; Write_Back.vhd                   ; yes             ; User VHDL File  ; C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Write_Back.vhd            ;         ;
-; Register_Read.vhd                ; yes             ; User VHDL File  ; C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd         ;         ;
-; RefAdd.vhd                       ; yes             ; User VHDL File  ; C:/Users/theas/Documents/EE_309_Project/EE_309_Project/RefAdd.vhd                ;         ;
-; MEM_STAGE.vhd                    ; yes             ; User VHDL File  ; C:/Users/theas/Documents/EE_309_Project/EE_309_Project/MEM_STAGE.vhd             ;         ;
-; Complementor.vhd                 ; yes             ; User VHDL File  ; C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Complementor.vhd          ;         ;
-; main.vhd                         ; yes             ; User VHDL File  ; C:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd                  ;         ;
-; Stage2_WithoutHazards.vhd        ; yes             ; User VHDL File  ; C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage2_WithoutHazards.vhd ;         ;
-; pipe_reg.vhd                     ; yes             ; User VHDL File  ; C:/Users/theas/Documents/EE_309_Project/EE_309_Project/pipe_reg.vhd              ;         ;
-; mux3to1.vhd                      ; yes             ; User VHDL File  ; C:/Users/theas/Documents/EE_309_Project/EE_309_Project/mux3to1.vhd               ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                            ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
+; mux2to1.vhd                      ; yes             ; User VHDL File  ; C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/mux2to1.vhd               ;         ;
+; Stage4_Exec.vhdl                 ; yes             ; User VHDL File  ; C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl          ;         ;
+; instr_mem.vhdl                   ; yes             ; User VHDL File  ; C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/instr_mem.vhdl            ;         ;
+; data_mem.vhdl                    ; yes             ; User VHDL File  ; C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/data_mem.vhdl             ;         ;
+; ALU_2.vhdl                       ; yes             ; User VHDL File  ; C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl                ;         ;
+; Flags.vhd                        ; yes             ; User VHDL File  ; C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Flags.vhd                 ;         ;
+; regfile.vhdl                     ; yes             ; User VHDL File  ; C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/regfile.vhdl              ;         ;
+; Write_Back.vhd                   ; yes             ; User VHDL File  ; C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Write_Back.vhd            ;         ;
+; Register_Read.vhd                ; yes             ; User VHDL File  ; C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd         ;         ;
+; RefAdd.vhd                       ; yes             ; User VHDL File  ; C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/RefAdd.vhd                ;         ;
+; MEM_STAGE.vhd                    ; yes             ; User VHDL File  ; C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/MEM_STAGE.vhd             ;         ;
+; Complementor.vhd                 ; yes             ; User VHDL File  ; C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Complementor.vhd          ;         ;
+; main.vhd                         ; yes             ; User VHDL File  ; C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd                  ;         ;
+; Stage2_WithoutHazards.vhd        ; yes             ; User VHDL File  ; C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd ;         ;
+; pipe_reg.vhd                     ; yes             ; User VHDL File  ; C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/pipe_reg.vhd              ;         ;
+; mux3to1.vhd                      ; yes             ; User VHDL File  ; C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/mux3to1.vhd               ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -479,409 +479,409 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri May 05 12:49:42 2023
+    Info: Processing started: Fri May 05 13:05:11 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_RISC23 -c IITB_RISC23
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file mux2to1.vhd
-    Info (12022): Found design unit 1: mux2to1-working File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/mux2to1.vhd Line: 12
-    Info (12023): Found entity 1: mux2to1 File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/mux2to1.vhd Line: 6
+    Info (12022): Found design unit 1: mux2to1-working File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/mux2to1.vhd Line: 12
+    Info (12023): Found entity 1: mux2to1 File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/mux2to1.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file stage4_exec.vhdl
-    Info (12022): Found design unit 1: Stage4_Exec-behavioural File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 27
-    Info (12023): Found entity 1: Stage4_Exec File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 4
+    Info (12022): Found design unit 1: Stage4_Exec-behavioural File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 27
+    Info (12023): Found entity 1: Stage4_Exec File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file instr_mem.vhdl
-    Info (12022): Found design unit 1: instr_mem-behavioural File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/instr_mem.vhdl Line: 15
-    Info (12023): Found entity 1: instr_mem File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/instr_mem.vhdl Line: 5
+    Info (12022): Found design unit 1: instr_mem-behavioural File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/instr_mem.vhdl Line: 15
+    Info (12023): Found entity 1: instr_mem File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/instr_mem.vhdl Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file data_mem.vhdl
-    Info (12022): Found design unit 1: data_mem-behavioural File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/data_mem.vhdl Line: 19
-    Info (12023): Found entity 1: data_mem File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/data_mem.vhdl Line: 5
+    Info (12022): Found design unit 1: data_mem-behavioural File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/data_mem.vhdl Line: 19
+    Info (12023): Found entity 1: data_mem File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/data_mem.vhdl Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file alu_2.vhdl
-    Info (12022): Found design unit 1: ALU_2-behavioural File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 36
-    Info (12023): Found entity 1: ALU_2 File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 8
+    Info (12022): Found design unit 1: ALU_2-behavioural File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 36
+    Info (12023): Found entity 1: ALU_2 File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 8
 Info (12021): Found 4 design units, including 2 entities, in source file flags.vhd
-    Info (12022): Found design unit 1: carry_flag-behav File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Flags.vhd Line: 13
-    Info (12022): Found design unit 2: zero_flag-behav File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Flags.vhd Line: 47
-    Info (12023): Found entity 1: carry_flag File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Flags.vhd Line: 6
-    Info (12023): Found entity 2: zero_flag File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Flags.vhd Line: 40
+    Info (12022): Found design unit 1: carry_flag-behav File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Flags.vhd Line: 13
+    Info (12022): Found design unit 2: zero_flag-behav File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Flags.vhd Line: 47
+    Info (12023): Found entity 1: carry_flag File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Flags.vhd Line: 6
+    Info (12023): Found entity 2: zero_flag File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Flags.vhd Line: 40
 Info (12021): Found 2 design units, including 1 entities, in source file regfile.vhdl
-    Info (12022): Found design unit 1: regfile-behavioural File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/regfile.vhdl Line: 24
-    Info (12023): Found entity 1: regfile File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/regfile.vhdl Line: 5
+    Info (12022): Found design unit 1: regfile-behavioural File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/regfile.vhdl Line: 24
+    Info (12023): Found entity 1: regfile File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/regfile.vhdl Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file write_back.vhd
-    Info (12022): Found design unit 1: Write_Back-WB File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Write_Back.vhd Line: 21
-    Info (12023): Found entity 1: Write_Back File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Write_Back.vhd Line: 6
+    Info (12022): Found design unit 1: Write_Back-WB File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Write_Back.vhd Line: 21
+    Info (12023): Found entity 1: Write_Back File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Write_Back.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file register_read.vhd
-    Info (12022): Found design unit 1: Register_Read-RR File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 34
-    Info (12023): Found entity 1: Register_Read File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 6
+    Info (12022): Found design unit 1: Register_Read-RR File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 34
+    Info (12023): Found entity 1: Register_Read File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file refadd.vhd
-    Info (12022): Found design unit 1: RefAdd-king File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/RefAdd.vhd Line: 14
-    Info (12023): Found entity 1: RefAdd File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/RefAdd.vhd Line: 6
+    Info (12022): Found design unit 1: RefAdd-king File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/RefAdd.vhd Line: 14
+    Info (12023): Found entity 1: RefAdd File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/RefAdd.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file mem_stage.vhd
-    Info (12022): Found design unit 1: MEM_STAGE-Structural File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/MEM_STAGE.vhd Line: 33
-    Info (12023): Found entity 1: MEM_STAGE File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/MEM_STAGE.vhd Line: 5
+    Info (12022): Found design unit 1: MEM_STAGE-Structural File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/MEM_STAGE.vhd Line: 33
+    Info (12023): Found entity 1: MEM_STAGE File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/MEM_STAGE.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file complementor.vhd
-    Info (12022): Found design unit 1: Complementor-doit File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Complementor.vhd Line: 10
-    Info (12023): Found entity 1: Complementor File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Complementor.vhd Line: 5
+    Info (12022): Found design unit 1: Complementor-doit File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Complementor.vhd Line: 10
+    Info (12023): Found entity 1: Complementor File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Complementor.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file main.vhd
-    Info (12022): Found design unit 1: main-behav File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd Line: 24
-    Info (12023): Found entity 1: main File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd Line: 6
+    Info (12022): Found design unit 1: main-behav File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd Line: 24
+    Info (12023): Found entity 1: main File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file stage2_withouthazards.vhd
-    Info (12022): Found design unit 1: Stage2_WithoutHazards-behav File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 21
-    Info (12023): Found entity 1: Stage2_WithoutHazards File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 6
+    Info (12022): Found design unit 1: Stage2_WithoutHazards-behav File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 21
+    Info (12023): Found entity 1: Stage2_WithoutHazards File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file pipe_reg.vhd
-    Info (12022): Found design unit 1: pipe_reg-behavioural File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/pipe_reg.vhd Line: 14
-    Info (12023): Found entity 1: pipe_reg File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/pipe_reg.vhd Line: 4
+    Info (12022): Found design unit 1: pipe_reg-behavioural File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/pipe_reg.vhd Line: 14
+    Info (12023): Found entity 1: pipe_reg File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/pipe_reg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mux3to1.vhd
-    Info (12022): Found design unit 1: mux3to1-wrking File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/mux3to1.vhd Line: 13
-    Info (12023): Found entity 1: mux3to1 File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/mux3to1.vhd Line: 6
+    Info (12022): Found design unit 1: mux3to1-wrking File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/mux3to1.vhd Line: 13
+    Info (12023): Found entity 1: mux3to1 File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/mux3to1.vhd Line: 6
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at main.vhd(247): used explicit default value for signal "Z_flag" because signal was never assigned a value File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd Line: 247
-Warning (10540): VHDL Signal Declaration warning at main.vhd(247): used explicit default value for signal "C_flag" because signal was never assigned a value File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd Line: 247
-Warning (10540): VHDL Signal Declaration warning at main.vhd(254): used explicit default value for signal "RefAdd_in" because signal was never assigned a value File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd Line: 254
-Warning (10540): VHDL Signal Declaration warning at main.vhd(263): used explicit default value for signal "PR_Write" because signal was never assigned a value File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd Line: 263
-Info (12128): Elaborating entity "pipe_reg" for hierarchy "pipe_reg:PReg1" File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd Line: 267
-Info (12128): Elaborating entity "regfile" for hierarchy "regfile:rf" File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd Line: 275
-Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR0" assigned a value but never read File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/regfile.vhdl Line: 25
-Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR1" assigned a value but never read File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/regfile.vhdl Line: 25
-Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR2" assigned a value but never read File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/regfile.vhdl Line: 25
-Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR3" assigned a value but never read File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/regfile.vhdl Line: 25
-Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR4" assigned a value but never read File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/regfile.vhdl Line: 25
-Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR5" assigned a value but never read File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/regfile.vhdl Line: 25
-Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR6" assigned a value but never read File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/regfile.vhdl Line: 25
-Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR7" assigned a value but never read File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/regfile.vhdl Line: 25
-Info (12128): Elaborating entity "RefAdd" for hierarchy "RefAdd:RAR1" File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd Line: 276
-Info (12128): Elaborating entity "instr_mem" for hierarchy "instr_mem:i_mem" File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd Line: 277
-Warning (10036): Verilog HDL or VHDL warning at instr_mem.vhdl(17): object "sData" assigned a value but never read File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/instr_mem.vhdl Line: 17
-Warning (10542): VHDL Variable Declaration warning at instr_mem.vhdl(20): used initial value expression for variable "Data" because variable was never assigned a value File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/instr_mem.vhdl Line: 20
-Info (12128): Elaborating entity "ALU_2" for hierarchy "ALU_2:alu1" File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd Line: 279
-Warning (10542): VHDL Variable Declaration warning at ALU_2.vhdl(96): used initial value expression for variable "ALU_CND" because variable was never assigned a value File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 96
-Warning (10631): VHDL Process Statement warning at ALU_2.vhdl(95): inferring latch(es) for signal or variable "ALU_C", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 95
-Warning (10631): VHDL Process Statement warning at ALU_2.vhdl(95): inferring latch(es) for signal or variable "ALU_Cout", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 95
-Warning (10631): VHDL Process Statement warning at ALU_2.vhdl(95): inferring latch(es) for signal or variable "ALU_Z", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 95
-Info (10041): Inferred latch for "ALU_Z" at ALU_2.vhdl(95) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 95
-Info (10041): Inferred latch for "ALU_Cout" at ALU_2.vhdl(95) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 95
-Info (10041): Inferred latch for "ALU_C[0]" at ALU_2.vhdl(95) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 95
-Info (10041): Inferred latch for "ALU_C[1]" at ALU_2.vhdl(95) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 95
-Info (10041): Inferred latch for "ALU_C[2]" at ALU_2.vhdl(95) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 95
-Info (10041): Inferred latch for "ALU_C[3]" at ALU_2.vhdl(95) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 95
-Info (10041): Inferred latch for "ALU_C[4]" at ALU_2.vhdl(95) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 95
-Info (10041): Inferred latch for "ALU_C[5]" at ALU_2.vhdl(95) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 95
-Info (10041): Inferred latch for "ALU_C[6]" at ALU_2.vhdl(95) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 95
-Info (10041): Inferred latch for "ALU_C[7]" at ALU_2.vhdl(95) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 95
-Info (10041): Inferred latch for "ALU_C[8]" at ALU_2.vhdl(95) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 95
-Info (10041): Inferred latch for "ALU_C[9]" at ALU_2.vhdl(95) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 95
-Info (10041): Inferred latch for "ALU_C[10]" at ALU_2.vhdl(95) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 95
-Info (10041): Inferred latch for "ALU_C[11]" at ALU_2.vhdl(95) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 95
-Info (10041): Inferred latch for "ALU_C[12]" at ALU_2.vhdl(95) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 95
-Info (10041): Inferred latch for "ALU_C[13]" at ALU_2.vhdl(95) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 95
-Info (10041): Inferred latch for "ALU_C[14]" at ALU_2.vhdl(95) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 95
-Info (10041): Inferred latch for "ALU_C[15]" at ALU_2.vhdl(95) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl Line: 95
-Info (12128): Elaborating entity "Stage2_WithoutHazards" for hierarchy "Stage2_WithoutHazards:id" File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd Line: 280
-Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(29): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 29
-Info (12128): Elaborating entity "Register_Read" for hierarchy "Register_Read:reg_read" File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd Line: 281
-Warning (10631): VHDL Process Statement warning at Register_Read.vhd(49): inferring latch(es) for signal or variable "jlr_hazard", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Warning (10631): VHDL Process Statement warning at Register_Read.vhd(49): inferring latch(es) for signal or variable "RF_A1", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Warning (10631): VHDL Process Statement warning at Register_Read.vhd(49): inferring latch(es) for signal or variable "RF_A2", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Warning (10631): VHDL Process Statement warning at Register_Read.vhd(49): inferring latch(es) for signal or variable "A_R3", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Warning (10631): VHDL Process Statement warning at Register_Read.vhd(49): inferring latch(es) for signal or variable "B_R3", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Warning (10631): VHDL Process Statement warning at Register_Read.vhd(49): inferring latch(es) for signal or variable "C_R3", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Warning (10631): VHDL Process Statement warning at Register_Read.vhd(49): inferring latch(es) for signal or variable "RR_RefAdd_in", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Warning (10631): VHDL Process Statement warning at Register_Read.vhd(49): inferring latch(es) for signal or variable "RR_RefAdd_E", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Warning (10631): VHDL Process Statement warning at Register_Read.vhd(49): inferring latch(es) for signal or variable "PC_R3", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Warning (10631): VHDL Process Statement warning at Register_Read.vhd(49): inferring latch(es) for signal or variable "PC_in", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_in[0]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_in[1]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_in[2]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_in[3]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_in[4]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_in[5]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_in[6]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_in[7]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_in[8]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_in[9]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_in[10]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_in[11]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_in[12]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_in[13]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_in[14]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_in[15]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_R3[0]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_R3[1]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_R3[2]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_R3[3]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_R3[4]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_R3[5]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_R3[6]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_R3[7]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_R3[8]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_R3[9]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_R3[10]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_R3[11]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_R3[12]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_R3[13]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_R3[14]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "PC_R3[15]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "RR_RefAdd_E" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "RR_RefAdd_in[0]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "RR_RefAdd_in[1]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "RR_RefAdd_in[2]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "RR_RefAdd_in[3]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "RR_RefAdd_in[4]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "RR_RefAdd_in[5]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "RR_RefAdd_in[6]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "RR_RefAdd_in[7]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "RR_RefAdd_in[8]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "RR_RefAdd_in[9]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "RR_RefAdd_in[10]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "RR_RefAdd_in[11]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "RR_RefAdd_in[12]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "RR_RefAdd_in[13]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "RR_RefAdd_in[14]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "RR_RefAdd_in[15]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "C_R3[0]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "C_R3[1]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "C_R3[2]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "C_R3[3]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "C_R3[4]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "C_R3[5]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "C_R3[6]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "C_R3[7]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "C_R3[8]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "C_R3[9]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "C_R3[10]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "C_R3[11]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "C_R3[12]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "C_R3[13]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "C_R3[14]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "C_R3[15]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "B_R3[0]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "B_R3[1]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "B_R3[2]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "B_R3[3]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "B_R3[4]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "B_R3[5]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "B_R3[6]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "B_R3[7]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "B_R3[8]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "B_R3[9]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "B_R3[10]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "B_R3[11]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "B_R3[12]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "B_R3[13]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "B_R3[14]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "B_R3[15]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "A_R3[0]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "A_R3[1]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "A_R3[2]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "A_R3[3]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "A_R3[4]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "A_R3[5]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "A_R3[6]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "A_R3[7]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "A_R3[8]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "A_R3[9]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "A_R3[10]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "A_R3[11]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "A_R3[12]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "A_R3[13]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "A_R3[14]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "A_R3[15]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "RF_A2[0]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "RF_A2[1]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "RF_A2[2]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "RF_A1[0]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "RF_A1[1]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "RF_A1[2]" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (10041): Inferred latch for "jlr_hazard" at Register_Read.vhd(49) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 49
-Info (12128): Elaborating entity "Complementor" for hierarchy "Register_Read:reg_read|Complementor:C1" File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd Line: 45
-Info (12128): Elaborating entity "Stage4_Exec" for hierarchy "Stage4_Exec:ex" File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd Line: 282
-Warning (10541): VHDL Signal Declaration warning at Stage4_Exec.vhdl(18): used implicit default value for signal "PC_R4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 18
-Warning (10540): VHDL Signal Declaration warning at Stage4_Exec.vhdl(66): used explicit default value for signal "ALU3_Cin" because signal was never assigned a value File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 66
-Warning (10036): Verilog HDL or VHDL warning at Stage4_Exec.vhdl(66): object "ALU3_Cout" assigned a value but never read File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 66
-Warning (10036): Verilog HDL or VHDL warning at Stage4_Exec.vhdl(66): object "ALU3_Z" assigned a value but never read File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 66
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(244): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 244
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(261): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 261
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(278): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 278
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(291): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 291
-Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "Instr_R4", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "branch_hazard", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "A_R4", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "ALU2_A", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "ALU2_B", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "ALU2_J", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "PC_WR", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "ALU2_Cin", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "C_WR", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "Z_WR", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "C_R4", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "B_R4", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "ALU3_A", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "ALU3_B", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "PC", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "ALU3_J", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_J[0]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_J[1]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "PC[0]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "PC[1]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "PC[2]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "PC[3]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "PC[4]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "PC[5]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "PC[6]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "PC[7]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "PC[8]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "PC[9]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "PC[10]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "PC[11]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "PC[12]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "PC[13]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "PC[14]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "PC[15]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_B[0]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_B[1]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_B[2]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_B[3]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_B[4]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_B[5]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_B[6]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_B[7]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_B[8]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_B[9]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_B[10]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_B[11]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_B[12]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_B[13]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_B[14]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_B[15]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_A[0]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_A[1]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_A[2]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_A[3]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_A[4]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_A[5]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_A[6]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_A[7]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_A[8]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_A[9]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_A[10]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_A[11]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_A[12]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_A[13]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_A[14]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU3_A[15]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "B_R4[0]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "B_R4[1]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "B_R4[2]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "B_R4[3]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "B_R4[4]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "B_R4[5]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "B_R4[6]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "B_R4[7]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "B_R4[8]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "B_R4[9]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "B_R4[10]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "B_R4[11]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "B_R4[12]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "B_R4[13]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "B_R4[14]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "B_R4[15]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "C_R4[0]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "C_R4[1]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "C_R4[2]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "C_R4[3]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "C_R4[4]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "C_R4[5]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "C_R4[6]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "C_R4[7]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "C_R4[8]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "C_R4[9]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "C_R4[10]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "C_R4[11]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "C_R4[12]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "C_R4[13]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "C_R4[14]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "C_R4[15]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "Z_WR" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "C_WR" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_Cin" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "PC_WR" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_J[0]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_J[1]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_B[0]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_B[1]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_B[2]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_B[3]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_B[4]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_B[5]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_B[6]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_B[7]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_B[8]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_B[9]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_B[10]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_B[11]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_B[12]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_B[13]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_B[14]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_B[15]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_A[0]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_A[1]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_A[2]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_A[3]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_A[4]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_A[5]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_A[6]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_A[7]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_A[8]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_A[9]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_A[10]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_A[11]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_A[12]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_A[13]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_A[14]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "ALU2_A[15]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "A_R4[0]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "A_R4[1]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "A_R4[2]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "A_R4[3]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "A_R4[4]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "A_R4[5]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "A_R4[6]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "A_R4[7]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "A_R4[8]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "A_R4[9]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "A_R4[10]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "A_R4[11]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "A_R4[12]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "A_R4[13]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "A_R4[14]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "A_R4[15]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "branch_hazard" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "Instr_R4[12]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "Instr_R4[13]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "Instr_R4[14]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (10041): Inferred latch for "Instr_R4[15]" at Stage4_Exec.vhdl(75) File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
-Info (12128): Elaborating entity "carry_flag" for hierarchy "Stage4_Exec:ex|carry_flag:cf" File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 70
-Info (12128): Elaborating entity "zero_flag" for hierarchy "Stage4_Exec:ex|zero_flag:zf" File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl Line: 71
-Info (12128): Elaborating entity "MEM_STAGE" for hierarchy "MEM_STAGE:m_acc" File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd Line: 284
-Info (12128): Elaborating entity "data_mem" for hierarchy "MEM_STAGE:m_acc|data_mem:mem" File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/MEM_STAGE.vhd Line: 61
-Warning (10036): Verilog HDL or VHDL warning at data_mem.vhdl(21): object "sData" assigned a value but never read File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/data_mem.vhdl Line: 21
-Warning (10492): VHDL Process Statement warning at data_mem.vhdl(31): signal "mem_add_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/data_mem.vhdl Line: 31
-Info (12128): Elaborating entity "mux2to1" for hierarchy "MEM_STAGE:m_acc|mux2to1:mux" File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/MEM_STAGE.vhd Line: 62
-Info (12128): Elaborating entity "Write_Back" for hierarchy "Write_Back:wb" File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd Line: 286
-Warning (10492): VHDL Process Statement warning at Write_Back.vhd(40): signal "ctr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Write_Back.vhd Line: 40
-Warning (10631): VHDL Process Statement warning at Write_Back.vhd(28): inferring latch(es) for signal or variable "ctr", which holds its previous value in one or more paths through the process File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Write_Back.vhd Line: 28
-Info (12128): Elaborating entity "mux3to1" for hierarchy "mux3to1:mux1" File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd Line: 287
+Warning (10540): VHDL Signal Declaration warning at main.vhd(247): used explicit default value for signal "Z_flag" because signal was never assigned a value File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd Line: 247
+Warning (10540): VHDL Signal Declaration warning at main.vhd(247): used explicit default value for signal "C_flag" because signal was never assigned a value File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd Line: 247
+Warning (10540): VHDL Signal Declaration warning at main.vhd(254): used explicit default value for signal "RefAdd_in" because signal was never assigned a value File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd Line: 254
+Warning (10540): VHDL Signal Declaration warning at main.vhd(263): used explicit default value for signal "PR_Write" because signal was never assigned a value File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd Line: 263
+Info (12128): Elaborating entity "pipe_reg" for hierarchy "pipe_reg:PReg1" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd Line: 272
+Info (12128): Elaborating entity "regfile" for hierarchy "regfile:rf" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd Line: 280
+Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR0" assigned a value but never read File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/regfile.vhdl Line: 25
+Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR1" assigned a value but never read File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/regfile.vhdl Line: 25
+Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR2" assigned a value but never read File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/regfile.vhdl Line: 25
+Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR3" assigned a value but never read File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/regfile.vhdl Line: 25
+Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR4" assigned a value but never read File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/regfile.vhdl Line: 25
+Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR5" assigned a value but never read File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/regfile.vhdl Line: 25
+Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR6" assigned a value but never read File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/regfile.vhdl Line: 25
+Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR7" assigned a value but never read File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/regfile.vhdl Line: 25
+Info (12128): Elaborating entity "RefAdd" for hierarchy "RefAdd:RAR1" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd Line: 281
+Info (12128): Elaborating entity "instr_mem" for hierarchy "instr_mem:i_mem" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd Line: 282
+Warning (10036): Verilog HDL or VHDL warning at instr_mem.vhdl(17): object "sData" assigned a value but never read File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/instr_mem.vhdl Line: 17
+Warning (10542): VHDL Variable Declaration warning at instr_mem.vhdl(20): used initial value expression for variable "Data" because variable was never assigned a value File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/instr_mem.vhdl Line: 20
+Info (12128): Elaborating entity "ALU_2" for hierarchy "ALU_2:alu1" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd Line: 284
+Warning (10542): VHDL Variable Declaration warning at ALU_2.vhdl(96): used initial value expression for variable "ALU_CND" because variable was never assigned a value File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 96
+Warning (10631): VHDL Process Statement warning at ALU_2.vhdl(95): inferring latch(es) for signal or variable "ALU_C", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 95
+Warning (10631): VHDL Process Statement warning at ALU_2.vhdl(95): inferring latch(es) for signal or variable "ALU_Cout", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 95
+Warning (10631): VHDL Process Statement warning at ALU_2.vhdl(95): inferring latch(es) for signal or variable "ALU_Z", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 95
+Info (10041): Inferred latch for "ALU_Z" at ALU_2.vhdl(95) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 95
+Info (10041): Inferred latch for "ALU_Cout" at ALU_2.vhdl(95) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 95
+Info (10041): Inferred latch for "ALU_C[0]" at ALU_2.vhdl(95) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 95
+Info (10041): Inferred latch for "ALU_C[1]" at ALU_2.vhdl(95) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 95
+Info (10041): Inferred latch for "ALU_C[2]" at ALU_2.vhdl(95) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 95
+Info (10041): Inferred latch for "ALU_C[3]" at ALU_2.vhdl(95) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 95
+Info (10041): Inferred latch for "ALU_C[4]" at ALU_2.vhdl(95) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 95
+Info (10041): Inferred latch for "ALU_C[5]" at ALU_2.vhdl(95) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 95
+Info (10041): Inferred latch for "ALU_C[6]" at ALU_2.vhdl(95) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 95
+Info (10041): Inferred latch for "ALU_C[7]" at ALU_2.vhdl(95) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 95
+Info (10041): Inferred latch for "ALU_C[8]" at ALU_2.vhdl(95) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 95
+Info (10041): Inferred latch for "ALU_C[9]" at ALU_2.vhdl(95) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 95
+Info (10041): Inferred latch for "ALU_C[10]" at ALU_2.vhdl(95) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 95
+Info (10041): Inferred latch for "ALU_C[11]" at ALU_2.vhdl(95) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 95
+Info (10041): Inferred latch for "ALU_C[12]" at ALU_2.vhdl(95) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 95
+Info (10041): Inferred latch for "ALU_C[13]" at ALU_2.vhdl(95) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 95
+Info (10041): Inferred latch for "ALU_C[14]" at ALU_2.vhdl(95) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 95
+Info (10041): Inferred latch for "ALU_C[15]" at ALU_2.vhdl(95) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/ALU_2.vhdl Line: 95
+Info (12128): Elaborating entity "Stage2_WithoutHazards" for hierarchy "Stage2_WithoutHazards:id" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd Line: 285
+Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(29): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage2_WithoutHazards.vhd Line: 29
+Info (12128): Elaborating entity "Register_Read" for hierarchy "Register_Read:reg_read" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd Line: 286
+Warning (10631): VHDL Process Statement warning at Register_Read.vhd(49): inferring latch(es) for signal or variable "jlr_hazard", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Warning (10631): VHDL Process Statement warning at Register_Read.vhd(49): inferring latch(es) for signal or variable "RF_A1", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Warning (10631): VHDL Process Statement warning at Register_Read.vhd(49): inferring latch(es) for signal or variable "RF_A2", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Warning (10631): VHDL Process Statement warning at Register_Read.vhd(49): inferring latch(es) for signal or variable "A_R3", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Warning (10631): VHDL Process Statement warning at Register_Read.vhd(49): inferring latch(es) for signal or variable "B_R3", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Warning (10631): VHDL Process Statement warning at Register_Read.vhd(49): inferring latch(es) for signal or variable "C_R3", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Warning (10631): VHDL Process Statement warning at Register_Read.vhd(49): inferring latch(es) for signal or variable "RR_RefAdd_in", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Warning (10631): VHDL Process Statement warning at Register_Read.vhd(49): inferring latch(es) for signal or variable "RR_RefAdd_E", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Warning (10631): VHDL Process Statement warning at Register_Read.vhd(49): inferring latch(es) for signal or variable "PC_R3", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Warning (10631): VHDL Process Statement warning at Register_Read.vhd(49): inferring latch(es) for signal or variable "PC_in", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_in[0]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_in[1]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_in[2]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_in[3]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_in[4]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_in[5]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_in[6]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_in[7]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_in[8]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_in[9]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_in[10]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_in[11]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_in[12]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_in[13]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_in[14]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_in[15]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_R3[0]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_R3[1]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_R3[2]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_R3[3]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_R3[4]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_R3[5]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_R3[6]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_R3[7]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_R3[8]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_R3[9]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_R3[10]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_R3[11]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_R3[12]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_R3[13]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_R3[14]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "PC_R3[15]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "RR_RefAdd_E" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "RR_RefAdd_in[0]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "RR_RefAdd_in[1]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "RR_RefAdd_in[2]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "RR_RefAdd_in[3]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "RR_RefAdd_in[4]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "RR_RefAdd_in[5]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "RR_RefAdd_in[6]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "RR_RefAdd_in[7]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "RR_RefAdd_in[8]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "RR_RefAdd_in[9]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "RR_RefAdd_in[10]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "RR_RefAdd_in[11]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "RR_RefAdd_in[12]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "RR_RefAdd_in[13]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "RR_RefAdd_in[14]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "RR_RefAdd_in[15]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "C_R3[0]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "C_R3[1]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "C_R3[2]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "C_R3[3]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "C_R3[4]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "C_R3[5]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "C_R3[6]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "C_R3[7]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "C_R3[8]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "C_R3[9]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "C_R3[10]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "C_R3[11]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "C_R3[12]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "C_R3[13]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "C_R3[14]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "C_R3[15]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "B_R3[0]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "B_R3[1]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "B_R3[2]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "B_R3[3]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "B_R3[4]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "B_R3[5]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "B_R3[6]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "B_R3[7]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "B_R3[8]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "B_R3[9]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "B_R3[10]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "B_R3[11]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "B_R3[12]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "B_R3[13]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "B_R3[14]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "B_R3[15]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "A_R3[0]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "A_R3[1]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "A_R3[2]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "A_R3[3]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "A_R3[4]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "A_R3[5]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "A_R3[6]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "A_R3[7]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "A_R3[8]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "A_R3[9]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "A_R3[10]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "A_R3[11]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "A_R3[12]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "A_R3[13]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "A_R3[14]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "A_R3[15]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "RF_A2[0]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "RF_A2[1]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "RF_A2[2]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "RF_A1[0]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "RF_A1[1]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "RF_A1[2]" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (10041): Inferred latch for "jlr_hazard" at Register_Read.vhd(49) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 49
+Info (12128): Elaborating entity "Complementor" for hierarchy "Register_Read:reg_read|Complementor:C1" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Register_Read.vhd Line: 45
+Info (12128): Elaborating entity "Stage4_Exec" for hierarchy "Stage4_Exec:ex" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd Line: 287
+Warning (10541): VHDL Signal Declaration warning at Stage4_Exec.vhdl(18): used implicit default value for signal "PC_R4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 18
+Warning (10540): VHDL Signal Declaration warning at Stage4_Exec.vhdl(66): used explicit default value for signal "ALU3_Cin" because signal was never assigned a value File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 66
+Warning (10036): Verilog HDL or VHDL warning at Stage4_Exec.vhdl(66): object "ALU3_Cout" assigned a value but never read File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 66
+Warning (10036): Verilog HDL or VHDL warning at Stage4_Exec.vhdl(66): object "ALU3_Z" assigned a value but never read File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 66
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(244): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 244
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(261): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 261
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(278): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 278
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(291): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 291
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "Instr_R4", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "branch_hazard", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "A_R4", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "ALU2_A", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "ALU2_B", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "ALU2_J", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "PC_WR", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "ALU2_Cin", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "C_WR", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "Z_WR", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "C_R4", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "B_R4", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "ALU3_A", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "ALU3_B", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "PC", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(75): inferring latch(es) for signal or variable "ALU3_J", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_J[0]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_J[1]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "PC[0]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "PC[1]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "PC[2]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "PC[3]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "PC[4]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "PC[5]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "PC[6]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "PC[7]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "PC[8]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "PC[9]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "PC[10]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "PC[11]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "PC[12]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "PC[13]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "PC[14]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "PC[15]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_B[0]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_B[1]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_B[2]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_B[3]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_B[4]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_B[5]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_B[6]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_B[7]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_B[8]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_B[9]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_B[10]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_B[11]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_B[12]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_B[13]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_B[14]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_B[15]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_A[0]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_A[1]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_A[2]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_A[3]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_A[4]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_A[5]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_A[6]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_A[7]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_A[8]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_A[9]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_A[10]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_A[11]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_A[12]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_A[13]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_A[14]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU3_A[15]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "B_R4[0]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "B_R4[1]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "B_R4[2]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "B_R4[3]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "B_R4[4]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "B_R4[5]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "B_R4[6]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "B_R4[7]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "B_R4[8]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "B_R4[9]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "B_R4[10]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "B_R4[11]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "B_R4[12]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "B_R4[13]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "B_R4[14]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "B_R4[15]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "C_R4[0]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "C_R4[1]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "C_R4[2]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "C_R4[3]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "C_R4[4]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "C_R4[5]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "C_R4[6]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "C_R4[7]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "C_R4[8]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "C_R4[9]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "C_R4[10]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "C_R4[11]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "C_R4[12]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "C_R4[13]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "C_R4[14]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "C_R4[15]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "Z_WR" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "C_WR" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_Cin" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "PC_WR" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_J[0]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_J[1]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_B[0]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_B[1]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_B[2]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_B[3]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_B[4]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_B[5]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_B[6]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_B[7]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_B[8]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_B[9]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_B[10]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_B[11]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_B[12]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_B[13]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_B[14]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_B[15]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_A[0]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_A[1]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_A[2]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_A[3]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_A[4]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_A[5]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_A[6]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_A[7]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_A[8]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_A[9]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_A[10]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_A[11]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_A[12]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_A[13]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_A[14]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "ALU2_A[15]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "A_R4[0]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "A_R4[1]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "A_R4[2]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "A_R4[3]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "A_R4[4]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "A_R4[5]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "A_R4[6]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "A_R4[7]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "A_R4[8]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "A_R4[9]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "A_R4[10]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "A_R4[11]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "A_R4[12]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "A_R4[13]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "A_R4[14]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "A_R4[15]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "branch_hazard" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "Instr_R4[12]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "Instr_R4[13]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "Instr_R4[14]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (10041): Inferred latch for "Instr_R4[15]" at Stage4_Exec.vhdl(75) File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 75
+Info (12128): Elaborating entity "carry_flag" for hierarchy "Stage4_Exec:ex|carry_flag:cf" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 70
+Info (12128): Elaborating entity "zero_flag" for hierarchy "Stage4_Exec:ex|zero_flag:zf" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Stage4_Exec.vhdl Line: 71
+Info (12128): Elaborating entity "MEM_STAGE" for hierarchy "MEM_STAGE:m_acc" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd Line: 289
+Info (12128): Elaborating entity "data_mem" for hierarchy "MEM_STAGE:m_acc|data_mem:mem" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/MEM_STAGE.vhd Line: 61
+Warning (10036): Verilog HDL or VHDL warning at data_mem.vhdl(21): object "sData" assigned a value but never read File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/data_mem.vhdl Line: 21
+Warning (10492): VHDL Process Statement warning at data_mem.vhdl(31): signal "mem_add_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/data_mem.vhdl Line: 31
+Info (12128): Elaborating entity "mux2to1" for hierarchy "MEM_STAGE:m_acc|mux2to1:mux" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/MEM_STAGE.vhd Line: 62
+Info (12128): Elaborating entity "Write_Back" for hierarchy "Write_Back:wb" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd Line: 291
+Warning (10492): VHDL Process Statement warning at Write_Back.vhd(40): signal "ctr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Write_Back.vhd Line: 40
+Warning (10631): VHDL Process Statement warning at Write_Back.vhd(28): inferring latch(es) for signal or variable "ctr", which holds its previous value in one or more paths through the process File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/Write_Back.vhd Line: 28
+Info (12128): Elaborating entity "mux3to1" for hierarchy "mux3to1:mux1" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd Line: 292
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "reset" File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd Line: 15
-    Warning (15610): No output dependent on input pin "clock" File: C:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd Line: 16
+    Warning (15610): No output dependent on input pin "reset" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd Line: 15
+    Warning (15610): No output dependent on input pin "clock" File: C:/Users/SCI/Desktop/IIT Bombay/EE 309 Project/EE_309_Project/main.vhd Line: 16
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 61 warnings
-    Info: Peak virtual memory: 4791 megabytes
-    Info: Processing ended: Fri May 05 12:49:58 2023
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Peak virtual memory: 4792 megabytes
+    Info: Processing ended: Fri May 05 13:05:21 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:12
 
 
