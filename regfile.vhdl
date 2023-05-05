@@ -23,6 +23,7 @@ end regfile;
 
 architecture behavioural of regfile is
 signal sR0, sR1, sR2, sR3, sR4, sR5, sR6, sR7: std_logic_vector((operand_width - 1) downto 0) := (others => '0');
+
 begin
     register_proc:process(clock,RF_A1, RF_A2, RF_A3, RF_D3, PC_WR, PC_in) --check if Ri should be kept or not|| ,R0,R1,R2,R3,R4,R5,R6,R7,PC_in,RF_D3,RF_A3, PC_WR
         variable R4, R5, R6, R7: std_logic_vector((operand_width - 1) downto 0) := (others => '0');

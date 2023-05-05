@@ -22,12 +22,11 @@ entity Register_Read is		--DON'T FORGET TO CHANGE TOP LEVEL ENTITY AND EVEN IN I
 			ControlSig_R3:	out std_logic_vector(15 downto 0); ---check if needed here
 			RF_A1 : out std_logic_vector(2 downto 0);
 			RF_A2 : out std_logic_vector(2 downto 0);
-			RF_D3 : out std_logic_vector(15 downto 0);
-			RF_A3 : out std_logic_vector(2 downto 0);
+			PC_in : out std_logic_vector(15 downto 0);
 			RR_RefAdd_E : out std_logic;
 			RR_RefAdd_in : out std_logic_vector(15 downto 0);
 			Instr_R3	: out std_logic_vector(15 downto 0);
-			RF_WR : out std_logic
+			PC_WR : out std_logic
 			);
 end entity;			
 
@@ -152,9 +151,8 @@ begin
 
 	elsif(opcode = "1101") then
 		RF_A1 <= Instr_R2(8 downto 6);
-		RF_WR <= '1';
-		RF_D3 <= RF_D1;		--writing to PC
-		RF_A3 <= "000";		--writing to PC
+		PC_WR <= '1';
+		PC_in <= RF_D1;		--writing to PC
 		A_R3 <= A_R2;
 	
 	elsif(opcode = "1111") then
@@ -162,7 +160,7 @@ begin
 		A_R3 <= RF_D1;
 	
 	else
-		RF_WR <= '0';		--just some bs to write something in else
+		PC_WR <= '0';		--just some bs to write something in else
 	end if;
 	
 	

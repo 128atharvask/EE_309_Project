@@ -19,6 +19,7 @@ entity Write_Back is		--DON'T FORGET TO CHANGE TOP LEVEL ENTITY AND EVEN IN ITS 
 end entity;			
 
 architecture WB of Write_Back is
+signal ctr : integer := 0;
 begin
 
 
@@ -36,6 +37,7 @@ begin
 
 	if(opcode = "0001" or opcode="0010") then
 		if(condcode(1 downto 0) = "00" or condcode(1 downto 0) = "11") then
+		   ctr <= ctr + 1;
 			RF_D3 <=	C_R5;
 			RF_A3 <= A_R5(2 downto 0);
 			RF_WR := '1';
@@ -46,7 +48,9 @@ begin
 			RF_A3 <= A_R5(2 downto 0);		
 		   RF_WR := '1';	
 		else
-			RF_WR := '0';		
+			RF_WR := '0';
+			RF_D3 <= "0000000000000000";
+			RF_A3 <= "000";
 		end if;
 		
 		elsif(condcode(1 downto 0) = "01") then
@@ -56,10 +60,14 @@ begin
 			RF_WR := '1';			
 		else
 			RF_WR := '0';	
+			RF_D3 <= "0000000000000000";
+			RF_A3 <= "000";
 		end if;	
 	
 		else
 			RF_WR := '0';
+			RF_D3 <= "0000000000000000";
+			RF_A3 <= "000";
 		end if;
 	
 	elsif(opcode = "0000") then		
@@ -79,6 +87,8 @@ begin
 	
 	elsif(opcode = "0101") then	
 		RF_WR := '0';
+			RF_D3 <= "0000000000000000";
+			RF_A3 <= "000";
 		
 	elsif(opcode = "0110") then
 		RF_D3 <=	C_R5;
@@ -87,15 +97,23 @@ begin
 	
 	elsif(opcode = "0111") then		
 		RF_WR := '0';
+			RF_D3 <= "0000000000000000";
+			RF_A3 <= "000";
 	
 	elsif(opcode = "1000") then	
 		RF_WR := '0';
+			RF_D3 <= "0000000000000000";
+			RF_A3 <= "000";
 		
 	elsif(opcode = "1001") then
 		RF_WR := '0';
+			RF_D3 <= "0000000000000000";
+			RF_A3 <= "000";
 	
 	elsif(opcode = "1010") then
 		RF_WR := '0';
+			RF_D3 <= "0000000000000000";
+			RF_A3 <= "000";
 
 	elsif(opcode = "1100") then
 		RF_A3 <= Instr_R5(11 downto 9);
@@ -109,10 +127,13 @@ begin
 	
 	elsif(opcode = "1111") then
 		RF_WR := '0';
+			RF_D3 <= "0000000000000000";
+			RF_A3 <= "000";
 	
 	else
 		RF_WR := '0';		--just some bs to write something in else
-		
+			RF_D3 <= "0000000000000000";
+			RF_A3 <= "000";
 	end if;
 	
 	
