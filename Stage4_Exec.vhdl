@@ -20,6 +20,7 @@ entity Stage4_Exec is
         ControlSig_R4:out std_logic_vector((operand_width - 1) downto 0);
         PC: out std_logic_vector((operand_width-1) downto 0);
         PC_WR: out std_logic;
+        ALU_out: out std_logic_vector((operand_width-1) downto 0);
         branch_hazard: out std_logic
    );
 end Stage4_Exec;
@@ -67,6 +68,7 @@ architecture behavioural of Stage4_Exec is
    signal ALU2_J, ALU3_J: std_logic_vector(1 downto 0):= (others => '0');
 begin
 	 ControlSig_R4 <= ControlSig_R3;
+     ALU_out <= ALU2_Cout;
 	 cf: carry_flag port map(c_in=>C_in, c_en=>C_WR, clock=>clock, c_out=>C_out);
 	 zf: zero_flag port map (z_in=>Z_in, z_en=>Z_WR, clock=>clock, z_out=>Z_out);
 	 ALU2: ALU_2 port map(ALU_A => ALU2_A, ALU_B => ALU2_B, ALU_Cin => ALU2_Cin, ALU_J => ALU2_J, ALU_C => ALU2_C, ALU_Cout => ALU2_Cout, ALU_Z => ALU2_Z);
@@ -242,7 +244,7 @@ begin
                 Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                 if (ALU2_Z = '1') then
                     ALU3_A <= PC_R3;
-                    ALU3_B <= "000000000" & Instr_R3(5 downto 0) & "0";
+                    ALU3_B <= "0000000000" & Instr_R3(5 downto 0);
                     PC <= ALU3_C;
 						  ALU3_J <= "00";
                     PC_WR <= '1';
@@ -259,7 +261,7 @@ begin
                 Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                 if (ALU2_Cout = '1') then
                     ALU3_A <= PC_R3;
-                    ALU3_B <= "000000000" & Instr_R3(5 downto 0) & "0";
+                    ALU3_B <= "0000000000" & Instr_R3(5 downto 0);
                     PC <= ALU3_C;
                     ALU3_J <= "00";
                     PC_WR <= '1';
@@ -276,7 +278,7 @@ begin
                 Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                 if ((ALU2_Cout = '1') or (ALU2_Z = '1')) then
                     ALU3_A <= PC_R3;
-                    ALU3_B <= "000000000" & Instr_R3(5 downto 0) & "0";
+                    ALU3_B <= "0000000000" & Instr_R3(5 downto 0);
                     PC <= ALU3_C;
                     ALU3_J <= "00";
                     PC_WR <= '1';
@@ -289,7 +291,7 @@ begin
             when "1100" => -- JAL
                 branch_hazard <= '1';
                 ALU3_A <= PC_R3;
-                ALU3_B <= "000000" & Instr_R3(8 downto 0) & "0";
+                ALU3_B <= "0000000" & Instr_R3(8 downto 0);
                 PC <= ALU3_C;
                 ALU3_J <= "00";
                 PC_WR <= '1';
@@ -303,8 +305,7 @@ begin
             when "1111" => -- JRI
                 branch_hazard <= '1';
                 ALU3_A <= A_R3;
-                ALU3_B <= "000000" & Instr_R3(8 downto 0)
-                 & "0";
+                ALU3_B <= "0000000" & Instr_R3(8 downto 0);
                 PC <= ALU3_C;
                 ALU3_J <= "00";
                 PC_WR <= '1';
