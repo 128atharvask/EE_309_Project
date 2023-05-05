@@ -21,14 +21,14 @@ end entity Stage2_WithoutHazards;
 architecture behav of Stage2_WithoutHazards is
 begin
 	 
-    stage_proc:process(clock)
+    stage_proc:process(Instr_R1)
 	     variable opcode: std_logic_vector(3 downto 0):= (others => '0');
 		  variable ct1,ct2: std_logic_vector(2 downto 0):="000";
 		  variable idx: integer:=0;
     begin
         opcode := Instr_R1(15 downto 12);
 		  
-		  if(rising_edge(clock)) then
+		  --if(rising_edge(clock)) then
 		  case opcode is
 
 -------------  LM  ----------------
@@ -114,7 +114,7 @@ begin
 				ct2 := ct2;
 					 
 		  end case;
-		  end if;
+		  --end if;
 	 end process;
 	 
 	 PC_R2 <= PC_R1;

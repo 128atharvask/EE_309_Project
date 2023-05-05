@@ -12,7 +12,7 @@
 # 
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/mux2to1.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:44:31 on May 05,2023
+# Start time: 12:59:37 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/mux2to1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -20,22 +20,22 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity mux2to1
 # -- Compiling architecture working of mux2to1
-# End time: 09:44:31 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:59:37 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:44:31 on May 05,2023
+# Start time: 12:59:37 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Stage4_Exec
 # -- Compiling architecture behavioural of Stage4_Exec
-# End time: 09:44:31 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:59:37 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/instr_mem.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:44:31 on May 05,2023
+# Start time: 12:59:37 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/instr_mem.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -43,11 +43,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity instr_mem
 # -- Compiling architecture behavioural of instr_mem
-# End time: 09:44:31 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:59:37 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/data_mem.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:44:31 on May 05,2023
+# Start time: 12:59:37 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/data_mem.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -55,11 +55,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity data_mem
 # -- Compiling architecture behavioural of data_mem
-# End time: 09:44:31 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:59:37 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/ALU_2.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:44:31 on May 05,2023
+# Start time: 12:59:37 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/ALU_2.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -67,11 +67,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity ALU_2
 # -- Compiling architecture behavioural of ALU_2
-# End time: 09:44:31 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:59:38 on May 05,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/Flags.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:44:31 on May 05,2023
+# Start time: 12:59:38 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/Flags.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -81,11 +81,11 @@
 # -- Compiling architecture behav of carry_flag
 # -- Compiling entity zero_flag
 # -- Compiling architecture behav of zero_flag
-# End time: 09:44:32 on May 05,2023, Elapsed time: 0:00:01
+# End time: 12:59:38 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:44:32 on May 05,2023
+# Start time: 12:59:38 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -93,11 +93,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity regfile
 # -- Compiling architecture behavioural of regfile
-# End time: 09:44:32 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:59:38 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:44:32 on May 05,2023
+# Start time: 12:59:38 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -105,11 +105,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Write_Back
 # -- Compiling architecture WB of Write_Back
-# End time: 09:44:32 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:59:38 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:44:32 on May 05,2023
+# Start time: 12:59:38 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -117,11 +117,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Register_Read
 # -- Compiling architecture RR of Register_Read
-# End time: 09:44:32 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:59:38 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/RefAdd.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:44:32 on May 05,2023
+# Start time: 12:59:38 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/RefAdd.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -129,11 +129,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RefAdd
 # -- Compiling architecture king of RefAdd
-# End time: 09:44:32 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:59:39 on May 05,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/MEM_STAGE.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:44:32 on May 05,2023
+# Start time: 12:59:39 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/MEM_STAGE.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -141,11 +141,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity MEM_STAGE
 # -- Compiling architecture Structural of MEM_STAGE
-# End time: 09:44:32 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:59:39 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/Complementor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:44:32 on May 05,2023
+# Start time: 12:59:39 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/Complementor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -153,11 +153,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Complementor
 # -- Compiling architecture doit of Complementor
-# End time: 09:44:32 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:59:39 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/main.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:44:32 on May 05,2023
+# Start time: 12:59:39 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/main.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -165,11 +165,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity main
 # -- Compiling architecture behav of main
-# End time: 09:44:33 on May 05,2023, Elapsed time: 0:00:01
+# End time: 12:59:39 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/Stage2_WithoutHazards.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:44:33 on May 05,2023
+# Start time: 12:59:39 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/Stage2_WithoutHazards.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -177,22 +177,22 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Stage2_WithoutHazards
 # -- Compiling architecture behav of Stage2_WithoutHazards
-# End time: 09:44:33 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:59:39 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/pipe_reg.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:44:33 on May 05,2023
+# Start time: 12:59:39 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/pipe_reg.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity pipe_reg
 # -- Compiling architecture behavioural of pipe_reg
-# End time: 09:44:33 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:59:39 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/mux3to1.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:44:33 on May 05,2023
+# Start time: 12:59:39 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/mux3to1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -200,12 +200,12 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity mux3to1
 # -- Compiling architecture wrking of mux3to1
-# End time: 09:44:33 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:59:39 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim work.main
 # vsim work.main 
-# Start time: 09:45:00 on May 05,2023
+# Start time: 12:59:56 on May 05,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -233,9 +233,9 @@ add wave -position insertpoint  \
 sim:/main/rf/counter
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: SCI  Hostname: DESKTOP-U9KSJ6C  ProcessID: 6964
-#           Attempting to use alternate WLF file "./wlft58fkde".
+#           Attempting to use alternate WLF file "./wlftzyjh9i".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft58fkde
+#           Using alternate file: ./wlftzyjh9i
 # ** UI-Msg: (vish-4014) No objects found matching '/main/rf/counter'.
 add wave -position insertpoint  \
 sim:/main/rf/incounter
@@ -415,5 +415,25 @@ run
 #    Time: 1210 ps  Iteration: 0  Instance: /main/m_acc/mem
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 1260 ps  Iteration: 0  Instance: /main/m_acc/mem
-# End time: 10:00:02 on May 05,2023, Elapsed time: 0:15:02
-# Errors: 0, Warnings: 28
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1310 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1360 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1410 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1460 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1510 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1560 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1610 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+run
+# End time: 13:06:04 on May 05,2023, Elapsed time: 0:06:08
+# Errors: 0, Warnings: 35

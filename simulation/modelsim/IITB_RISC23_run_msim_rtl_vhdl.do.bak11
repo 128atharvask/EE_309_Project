@@ -20,4 +20,5 @@ vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/Complementor.vhd}
 vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/main.vhd}
 vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/Stage2_WithoutHazards.vhd}
 vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/pipe_reg.vhd}
+vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/mux3to1.vhd}
 
