@@ -18,9 +18,9 @@ architecture behavioural of instr_mem is
 begin
     mem_read: process(mem_add)
         variable Data: memm := (
-		  0 => "1000010110001000", -- BEQ
-	     1 => "0001001010011000", -- ADD
-	     2 => "0001001010011010", -- ADC
+		  0 => "0001001010011000", -- ADD
+	     1 => "0001001010011010", -- ADC
+		  2 => "1000010110001000", -- BEQ
 	     3 => "0001001010011001", -- ADZ
 	     others => (others => '0')
 	 );

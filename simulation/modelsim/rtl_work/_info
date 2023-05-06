@@ -8,27 +8,27 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/theas/Documents/EE_309_Project/EE_309_Project/simulation/modelsim
+Z0 d/home/shreyas/Documents/IITB/sem4/EE_309_Project/simulation/modelsim
 Ealu_2
-Z1 w1683263971
+Z1 w1683211271
 Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 4
+!i122 5
 R0
-Z5 8C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl
-Z6 FC:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl
+Z5 8/home/shreyas/Documents/IITB/sem4/EE_309_Project/ALU_2.vhdl
+Z6 F/home/shreyas/Documents/IITB/sem4/EE_309_Project/ALU_2.vhdl
 l0
 L8 1
 V_1`iQN6aTJ35_B=TDRghP1
 !s100 9G5[U0gN7UOX5bKT9zPM42
 Z7 OV;C;2020.1;71
 31
-Z8 !s110 1683279809
+Z8 !s110 1683381514
 !i10b 1
-Z9 !s108 1683279809.000000
-Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl|
-Z11 !s107 C:/Users/theas/Documents/EE_309_Project/EE_309_Project/ALU_2.vhdl|
+Z9 !s108 1683381514.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|/home/shreyas/Documents/IITB/sem4/EE_309_Project/ALU_2.vhdl|
+Z11 !s107 /home/shreyas/Documents/IITB/sem4/EE_309_Project/ALU_2.vhdl|
 !i113 1
 Z12 o-93 -work work
 Z13 tExplicit 1 CvgOpt 0
@@ -37,7 +37,7 @@ R2
 R3
 R4
 DEx4 work 5 alu_2 0 22 _1`iQN6aTJ35_B=TDRghP1
-!i122 4
+!i122 5
 l92
 L36 146
 VNI@9DhLDlSh[Qb3n[L[LS3
@@ -57,10 +57,10 @@ R1
 R2
 R3
 R4
-!i122 5
+!i122 6
 R0
-Z14 8C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Flags.vhd
-Z15 FC:/Users/theas/Documents/EE_309_Project/EE_309_Project/Flags.vhd
+Z14 8/home/shreyas/Documents/IITB/sem4/EE_309_Project/Flags.vhd
+Z15 F/home/shreyas/Documents/IITB/sem4/EE_309_Project/Flags.vhd
 l0
 L6 1
 VJ^bz4G4=h_IMmfX;>;daC3
@@ -70,8 +70,8 @@ R7
 R8
 !i10b 1
 R9
-Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Flags.vhd|
-Z17 !s107 C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Flags.vhd|
+Z16 !s90 -reportprogress|300|-93|-work|work|/home/shreyas/Documents/IITB/sem4/EE_309_Project/Flags.vhd|
+Z17 !s107 /home/shreyas/Documents/IITB/sem4/EE_309_Project/Flags.vhd|
 !i113 1
 R12
 R13
@@ -80,7 +80,7 @@ R2
 R3
 R4
 DEx4 work 10 carry_flag 0 22 J^bz4G4=h_IMmfX;>;daC3
-!i122 5
+!i122 6
 l14
 L13 17
 V1^@lJ@A^4L[LGK0JS<n]20
@@ -96,14 +96,14 @@ R17
 R12
 R13
 Ecomplementor
-R1
+Z18 w1683211253
 R2
 R3
 R4
-!i122 11
+!i122 12
 R0
-Z18 8C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Complementor.vhd
-Z19 FC:/Users/theas/Documents/EE_309_Project/EE_309_Project/Complementor.vhd
+Z19 8/home/shreyas/Documents/IITB/sem4/EE_309_Project/Complementor.vhd
+Z20 F/home/shreyas/Documents/IITB/sem4/EE_309_Project/Complementor.vhd
 l0
 L5 1
 VQ01eB;CVJ2z_iMS?D[2mk1
@@ -113,8 +113,8 @@ R7
 R8
 !i10b 1
 R9
-Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Complementor.vhd|
-Z21 !s107 C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Complementor.vhd|
+Z21 !s90 -reportprogress|300|-93|-work|work|/home/shreyas/Documents/IITB/sem4/EE_309_Project/Complementor.vhd|
+Z22 !s107 /home/shreyas/Documents/IITB/sem4/EE_309_Project/Complementor.vhd|
 !i113 1
 R12
 R13
@@ -123,7 +123,7 @@ R2
 R3
 R4
 DEx4 work 12 complementor 0 22 Q01eB;CVJ2z_iMS?D[2mk1
-!i122 11
+!i122 12
 l11
 L10 20
 VN]TRKc_QQ6[WnOb7R[O7]1
@@ -133,20 +133,20 @@ R7
 R8
 !i10b 1
 R9
-R20
 R21
+R22
 !i113 1
 R12
 R13
 Edata_mem
-R1
+Z23 w1683371241
 R2
 R3
 R4
-!i122 3
+!i122 4
 R0
-Z22 8C:/Users/theas/Documents/EE_309_Project/EE_309_Project/data_mem.vhdl
-Z23 FC:/Users/theas/Documents/EE_309_Project/EE_309_Project/data_mem.vhdl
+Z24 8/home/shreyas/Documents/IITB/sem4/EE_309_Project/data_mem.vhdl
+Z25 F/home/shreyas/Documents/IITB/sem4/EE_309_Project/data_mem.vhdl
 l0
 L5 1
 V_Qed0jGWUF:1aE8km_:X92
@@ -155,9 +155,9 @@ R7
 31
 R8
 !i10b 1
-Z24 !s108 1683279808.000000
-Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/theas/Documents/EE_309_Project/EE_309_Project/data_mem.vhdl|
-Z26 !s107 C:/Users/theas/Documents/EE_309_Project/EE_309_Project/data_mem.vhdl|
+R9
+Z26 !s90 -reportprogress|300|-93|-work|work|/home/shreyas/Documents/IITB/sem4/EE_309_Project/data_mem.vhdl|
+Z27 !s107 /home/shreyas/Documents/IITB/sem4/EE_309_Project/data_mem.vhdl|
 !i113 1
 R12
 R13
@@ -166,7 +166,7 @@ R2
 R3
 R4
 DEx4 work 8 data_mem 0 22 _Qed0jGWUF:1aE8km_:X92
-!i122 3
+!i122 4
 l22
 L19 18
 V>7?zPCW7=YUVAd28>PKRC0
@@ -175,32 +175,32 @@ R7
 31
 R8
 !i10b 1
-R24
-R25
+R9
 R26
+R27
 !i113 1
 R12
 R13
 Einstr_mem
-Z27 w1683277889
+Z28 w1683379593
 R2
 R3
 R4
-!i122 2
+!i122 3
 R0
-Z28 8C:/Users/theas/Documents/EE_309_Project/EE_309_Project/instr_mem.vhdl
-Z29 FC:/Users/theas/Documents/EE_309_Project/EE_309_Project/instr_mem.vhdl
+Z29 8/home/shreyas/Documents/IITB/sem4/EE_309_Project/instr_mem.vhdl
+Z30 F/home/shreyas/Documents/IITB/sem4/EE_309_Project/instr_mem.vhdl
 l0
 L5 1
 VOE38<WZa8RV1aNPobm=UO0
 !s100 ^^>4nBh]TcC6nE58>g4Z30
 R7
 31
-Z30 !s110 1683279808
+R8
 !i10b 1
-R24
-Z31 !s90 -reportprogress|300|-93|-work|work|C:/Users/theas/Documents/EE_309_Project/EE_309_Project/instr_mem.vhdl|
-Z32 !s107 C:/Users/theas/Documents/EE_309_Project/EE_309_Project/instr_mem.vhdl|
+R9
+Z31 !s90 -reportprogress|300|-93|-work|work|/home/shreyas/Documents/IITB/sem4/EE_309_Project/instr_mem.vhdl|
+Z32 !s107 /home/shreyas/Documents/IITB/sem4/EE_309_Project/instr_mem.vhdl|
 !i113 1
 R12
 R13
@@ -209,30 +209,30 @@ R2
 R3
 R4
 DEx4 work 9 instr_mem 0 22 OE38<WZa8RV1aNPobm=UO0
-!i122 2
+!i122 3
 l18
 L15 17
-VZTQnSTmKY8fKlz3G>_E?n2
-!s100 77cV[>gEQ2Jd@`WSn?gH^0
+VbokoD4^[X:UkSoMR[dlQo0
+!s100 94@<<mA7>n`gOYQ=oNJ]k3
 R7
 31
-R30
+R8
 !i10b 1
-R24
+R9
 R31
 R32
 !i113 1
 R12
 R13
 Emain
-R27
+Z33 w1683381485
 R2
 R3
 R4
-!i122 12
+!i122 13
 R0
-Z33 8C:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd
-Z34 FC:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd
+Z34 8/home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd
+Z35 F/home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd
 l0
 L6 1
 V<CXfUlGKj_1P[QjNXKS[Z3
@@ -242,8 +242,8 @@ R7
 R8
 !i10b 1
 R9
-Z35 !s90 -reportprogress|300|-93|-work|work|C:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd|
-Z36 !s107 C:/Users/theas/Documents/EE_309_Project/EE_309_Project/main.vhd|
+Z36 !s90 -reportprogress|300|-93|-work|work|/home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd|
+Z37 !s107 /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd|
 !i113 1
 R12
 R13
@@ -252,41 +252,41 @@ R2
 R3
 R4
 DEx4 work 4 main 0 22 <CXfUlGKj_1P[QjNXKS[Z3
-!i122 12
-l267
-L24 276
-VXSCJ9Y[:`c]OjCWflkdZU0
-!s100 :RXm3]nL@[`bWEn2`FY1@1
+!i122 13
+l283
+L24 392
+Vg5P`NzLF2OQJ3OgjoSjNl2
+!s100 h=KMV6dzQgFO>HELn5mVU3
 R7
 31
 R8
 !i10b 1
 R9
-R35
 R36
+R37
 !i113 1
 R12
 R13
 Emem_stage
-R1
+Z38 w1683375492
 R2
 R3
 R4
-!i122 10
+!i122 11
 R0
-Z37 8C:/Users/theas/Documents/EE_309_Project/EE_309_Project/MEM_STAGE.vhd
-Z38 FC:/Users/theas/Documents/EE_309_Project/EE_309_Project/MEM_STAGE.vhd
+Z39 8/home/shreyas/Documents/IITB/sem4/EE_309_Project/MEM_STAGE.vhd
+Z40 F/home/shreyas/Documents/IITB/sem4/EE_309_Project/MEM_STAGE.vhd
 l0
 L5 1
-VHLcXEZ4A<oRD^AJR5ko1f0
-!s100 U[TmWHh==:z9G]EaT]Vk?3
+V<z]]H[5VhR8V8V<fUQFkJ2
+!s100 LTMMbf93GN@]3Mm<HBE?^0
 R7
 31
 R8
 !i10b 1
 R9
-Z39 !s90 -reportprogress|300|-93|-work|work|C:/Users/theas/Documents/EE_309_Project/EE_309_Project/MEM_STAGE.vhd|
-Z40 !s107 C:/Users/theas/Documents/EE_309_Project/EE_309_Project/MEM_STAGE.vhd|
+Z41 !s90 -reportprogress|300|-93|-work|work|/home/shreyas/Documents/IITB/sem4/EE_309_Project/MEM_STAGE.vhd|
+Z42 !s107 /home/shreyas/Documents/IITB/sem4/EE_309_Project/MEM_STAGE.vhd|
 !i113 1
 R12
 R13
@@ -294,42 +294,42 @@ Astructural
 R2
 R3
 R4
-DEx4 work 9 mem_stage 0 22 HLcXEZ4A<oRD^AJR5ko1f0
-!i122 10
-l58
-L33 54
-VL=:LCUMF_=N7`5[Q;ePII1
-!s100 mOWWD6S1oOlQ=@]HJ=CV:1
+DEx4 work 9 mem_stage 0 22 <z]]H[5VhR8V8V<fUQFkJ2
+!i122 11
+l59
+L34 71
+V]L2VO1STcfg>a0IWLmn:f3
+!s100 X1Wzh:8>2>?`o3boemAWY1
 R7
 31
 R8
 !i10b 1
 R9
-R39
-R40
+R41
+R42
 !i113 1
 R12
 R13
 Emux2to1
-R1
+R18
 R2
 R3
 R4
-!i122 0
+!i122 1
 R0
-Z41 8C:/Users/theas/Documents/EE_309_Project/EE_309_Project/mux2to1.vhd
-Z42 FC:/Users/theas/Documents/EE_309_Project/EE_309_Project/mux2to1.vhd
+Z43 8/home/shreyas/Documents/IITB/sem4/EE_309_Project/mux2to1.vhd
+Z44 F/home/shreyas/Documents/IITB/sem4/EE_309_Project/mux2to1.vhd
 l0
 L6 1
 V8VQk[z[@Ji[6>oUZEji>O0
 !s100 8j=z2de=b`=KaD17bAZRE3
 R7
 31
-R30
+R8
 !i10b 1
-R24
-Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/theas/Documents/EE_309_Project/EE_309_Project/mux2to1.vhd|
-Z44 !s107 C:/Users/theas/Documents/EE_309_Project/EE_309_Project/mux2to1.vhd|
+R9
+Z45 !s90 -reportprogress|300|-93|-work|work|/home/shreyas/Documents/IITB/sem4/EE_309_Project/mux2to1.vhd|
+Z46 !s107 /home/shreyas/Documents/IITB/sem4/EE_309_Project/mux2to1.vhd|
 !i113 1
 R12
 R13
@@ -338,83 +338,83 @@ R2
 R3
 R4
 DEx4 work 7 mux2to1 0 22 8VQk[z[@Ji[6>oUZEji>O0
-!i122 0
+!i122 1
 l13
 L12 11
 VZl8f]AJ=WAQhdn?bcBe300
 !s100 L>Rln72@cdoGo;2jiL_K82
 R7
 31
-R30
+R8
 !i10b 1
-R24
-R43
-R44
+R9
+R45
+R46
 !i113 1
 R12
 R13
-Emux3to1
-R1
+Emux4to1
+R23
 R2
 R3
 R4
-!i122 15
+!i122 0
 R0
-Z45 8C:/Users/theas/Documents/EE_309_Project/EE_309_Project/mux3to1.vhd
-Z46 FC:/Users/theas/Documents/EE_309_Project/EE_309_Project/mux3to1.vhd
+Z47 8/home/shreyas/Documents/IITB/sem4/EE_309_Project/mux4to1.vhdl
+Z48 F/home/shreyas/Documents/IITB/sem4/EE_309_Project/mux4to1.vhdl
 l0
 L6 1
-VBDdFSF_<SghFE15G[<a;:0
-!s100 gE6f_YlSTA1j7leGf`YQ`1
+VmZ>DVRWRz3`em;]C[>fCm1
+!s100 ZY[BlUzhM7e48lLbB4NKg1
 R7
 31
-Z47 !s110 1683279810
+R8
 !i10b 1
-Z48 !s108 1683279810.000000
-Z49 !s90 -reportprogress|300|-93|-work|work|C:/Users/theas/Documents/EE_309_Project/EE_309_Project/mux3to1.vhd|
-!s107 C:/Users/theas/Documents/EE_309_Project/EE_309_Project/mux3to1.vhd|
+R9
+Z49 !s90 -reportprogress|300|-93|-work|work|/home/shreyas/Documents/IITB/sem4/EE_309_Project/mux4to1.vhdl|
+Z50 !s107 /home/shreyas/Documents/IITB/sem4/EE_309_Project/mux4to1.vhdl|
 !i113 1
 R12
 R13
-Awrking
+Aworking
 R2
 R3
 R4
-DEx4 work 7 mux3to1 0 22 BDdFSF_<SghFE15G[<a;:0
-!i122 15
-l14
-L13 15
-VCmZ_PcmkP17J4Y_nOY27F0
-!s100 70:]22OVOXW0^4@Dd@IEn3
+DEx4 work 7 mux4to1 0 22 mZ>DVRWRz3`em;]C[>fCm1
+!i122 0
+l13
+L12 15
+Vi3=5g^_Q>QU^nG3DIYO?@0
+!s100 ^k7J<]51TY1nE[i3AIa?23
 R7
 31
-R47
+R8
 !i10b 1
-R48
+R9
 R49
-Z50 !s107 C:/Users/theas/Documents/EE_309_Project/EE_309_Project/mux3to1.vhd|
+R50
 !i113 1
 R12
 R13
 Epipe_reg
-Z51 w1683269641
+R23
 R3
 R4
-!i122 14
+!i122 15
 R0
-Z52 8C:/Users/theas/Documents/EE_309_Project/EE_309_Project/pipe_reg.vhd
-Z53 FC:/Users/theas/Documents/EE_309_Project/EE_309_Project/pipe_reg.vhd
+Z51 8/home/shreyas/Documents/IITB/sem4/EE_309_Project/pipe_reg.vhd
+Z52 F/home/shreyas/Documents/IITB/sem4/EE_309_Project/pipe_reg.vhd
 l0
 L4 1
 V5^e`Dk[[JkEFV2:2Q8jJ[2
 !s100 PhF<R3Pk8@j3dAXn^Nlhd2
 R7
 31
-R47
+R8
 !i10b 1
-R48
-Z54 !s90 -reportprogress|300|-93|-work|work|C:/Users/theas/Documents/EE_309_Project/EE_309_Project/pipe_reg.vhd|
-Z55 !s107 C:/Users/theas/Documents/EE_309_Project/EE_309_Project/pipe_reg.vhd|
+R9
+Z53 !s90 -reportprogress|300|-93|-work|work|/home/shreyas/Documents/IITB/sem4/EE_309_Project/pipe_reg.vhd|
+!s107 /home/shreyas/Documents/IITB/sem4/EE_309_Project/pipe_reg.vhd|
 !i113 1
 R12
 R13
@@ -422,18 +422,18 @@ Abehavioural
 R3
 R4
 DEx4 work 8 pipe_reg 0 22 5^e`Dk[[JkEFV2:2Q8jJ[2
-!i122 14
+!i122 15
 l15
-Z56 L14 15
+Z54 L14 15
 VQ<ZYjdd;J1[UR^:`XQj`L0
 !s100 MFc9IMP5ZO<=2gKEUK8NW3
 R7
 31
-R47
+R8
 !i10b 1
-R48
-R54
-R55
+R9
+R53
+Z55 !s107 /home/shreyas/Documents/IITB/sem4/EE_309_Project/pipe_reg.vhd|
 !i113 1
 R12
 R13
@@ -442,10 +442,10 @@ R1
 R2
 R3
 R4
-!i122 9
+!i122 10
 R0
-Z57 8C:/Users/theas/Documents/EE_309_Project/EE_309_Project/RefAdd.vhd
-Z58 FC:/Users/theas/Documents/EE_309_Project/EE_309_Project/RefAdd.vhd
+Z56 8/home/shreyas/Documents/IITB/sem4/EE_309_Project/RefAdd.vhd
+Z57 F/home/shreyas/Documents/IITB/sem4/EE_309_Project/RefAdd.vhd
 l0
 L6 1
 V]jN^Lm;Ki`fWnVU=j:4E^3
@@ -455,8 +455,8 @@ R7
 R8
 !i10b 1
 R9
-Z59 !s90 -reportprogress|300|-93|-work|work|C:/Users/theas/Documents/EE_309_Project/EE_309_Project/RefAdd.vhd|
-Z60 !s107 C:/Users/theas/Documents/EE_309_Project/EE_309_Project/RefAdd.vhd|
+Z58 !s90 -reportprogress|300|-93|-work|work|/home/shreyas/Documents/IITB/sem4/EE_309_Project/RefAdd.vhd|
+Z59 !s107 /home/shreyas/Documents/IITB/sem4/EE_309_Project/RefAdd.vhd|
 !i113 1
 R12
 R13
@@ -465,9 +465,9 @@ R2
 R3
 R4
 DEx4 work 6 refadd 0 22 ]jN^Lm;Ki`fWnVU=j:4E^3
-!i122 9
+!i122 10
 l15
-R56
+R54
 VIfzkVeMMJW@T6lHENoePh2
 !s100 HCF?Ab]ok`I16b8:RSDGJ0
 R7
@@ -475,20 +475,20 @@ R7
 R8
 !i10b 1
 R9
+R58
 R59
-R60
 !i113 1
 R12
 R13
 Eregfile
-R27
+R23
 R2
 R3
 R4
-!i122 6
+!i122 7
 R0
-Z61 8C:/Users/theas/Documents/EE_309_Project/EE_309_Project/regfile.vhdl
-Z62 FC:/Users/theas/Documents/EE_309_Project/EE_309_Project/regfile.vhdl
+Z60 8/home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl
+Z61 F/home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl
 l0
 L5 1
 V7TPgd[EV3iYINmiFGf7A61
@@ -498,8 +498,8 @@ R7
 R8
 !i10b 1
 R9
-Z63 !s90 -reportprogress|300|-93|-work|work|C:/Users/theas/Documents/EE_309_Project/EE_309_Project/regfile.vhdl|
-Z64 !s107 C:/Users/theas/Documents/EE_309_Project/EE_309_Project/regfile.vhdl|
+Z62 !s90 -reportprogress|300|-93|-work|work|/home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl|
+Z63 !s107 /home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl|
 !i113 1
 R12
 R13
@@ -508,7 +508,7 @@ R2
 R3
 R4
 DEx4 work 7 regfile 0 22 7TPgd[EV3iYINmiFGf7A61
-!i122 6
+!i122 7
 l27
 L24 96
 V96LVl=B2eSbmVk0Ra789H0
@@ -518,31 +518,31 @@ R7
 R8
 !i10b 1
 R9
+R62
 R63
-R64
 !i113 1
 R12
 R13
 Eregister_read
-Z65 w1683270490
+Z64 w1683373766
 R2
 R3
 R4
-!i122 8
+!i122 9
 R0
-Z66 8C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd
-Z67 FC:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd
+Z65 8/home/shreyas/Documents/IITB/sem4/EE_309_Project/Register_Read.vhd
+Z66 F/home/shreyas/Documents/IITB/sem4/EE_309_Project/Register_Read.vhd
 l0
 L6 1
-VNKA_3HHHcg6GP2PjiG<iJ3
-!s100 3Leg@]?JYZ_0QnoC0hYB]2
+V::eO5Y[UbS4@;Y6g7<fS?0
+!s100 TUCf[8jC0JAgb?80RYaSO2
 R7
 31
 R8
 !i10b 1
 R9
-Z68 !s90 -reportprogress|300|-93|-work|work|C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd|
-Z69 !s107 C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Register_Read.vhd|
+Z67 !s90 -reportprogress|300|-93|-work|work|/home/shreyas/Documents/IITB/sem4/EE_309_Project/Register_Read.vhd|
+Z68 !s107 /home/shreyas/Documents/IITB/sem4/EE_309_Project/Register_Read.vhd|
 !i113 1
 R12
 R13
@@ -550,42 +550,42 @@ Arr
 R2
 R3
 R4
-DEx4 work 13 register_read 0 22 NKA_3HHHcg6GP2PjiG<iJ3
-!i122 8
-l43
-L34 167
-VOFP^i>^^C[3e:1>S_d;]?1
-!s100 7cXIENEFlG:;EO<598iIP3
+DEx4 work 13 register_read 0 22 ::eO5Y[UbS4@;Y6g7<fS?0
+!i122 9
+l44
+L35 167
+VTRP3z0j44lfTWPnN@GVzg2
+!s100 SnzB;EVA2VJo_kIe^C=Qb0
 R7
 31
 R8
 !i10b 1
 R9
+R67
 R68
-R69
 !i113 1
 R12
 R13
 Estage2_withouthazards
-Z70 w1683268080
+Z69 w1683373764
 R2
 R3
 R4
-!i122 13
+!i122 14
 R0
-Z71 8C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage2_WithoutHazards.vhd
-Z72 FC:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage2_WithoutHazards.vhd
+Z70 8/home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage2_WithoutHazards.vhd
+Z71 F/home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage2_WithoutHazards.vhd
 l0
 L6 1
 Vci`Nm<hQL=iPz0zE]3Ack1
 !s100 k5nX6@Nh<XQ6TRcbNb>][0
 R7
 31
-R47
+R8
 !i10b 1
-R48
-Z73 !s90 -reportprogress|300|-93|-work|work|C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage2_WithoutHazards.vhd|
-Z74 !s107 C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage2_WithoutHazards.vhd|
+R9
+Z72 !s90 -reportprogress|300|-93|-work|work|/home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage2_WithoutHazards.vhd|
+Z73 !s107 /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage2_WithoutHazards.vhd|
 !i113 1
 R12
 R13
@@ -594,82 +594,82 @@ R2
 R3
 R4
 DEx4 work 21 stage2_withouthazards 0 22 ci`Nm<hQL=iPz0zE]3Ack1
-!i122 13
-l22
-L21 103
-VhFN3]kaljB:V:>V01_8^b2
-!s100 >CJn563zNB[7_UbNnLWk[3
+!i122 14
+l23
+L21 111
+Vfa3bPLai_c_8<N=c`4<lA1
+!s100 lK9[kGgT3nHEWZ0o02NiH0
 R7
 31
-R47
+R8
 !i10b 1
-R48
+R9
+R72
 R73
-R74
 !i113 1
 R12
 R13
 Estage4_exec
-Z75 w1683279719
+Z74 w1683373969
 R3
 R4
-!i122 1
+!i122 2
 R0
-Z76 8C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl
-Z77 FC:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl
+Z75 8/home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl
+Z76 F/home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl
 l0
 L4 1
-Vb?>UWIR<:Kg7_Vm0fXe9`1
-!s100 T`YIF`M:Q6gidz]ZTaml@2
+VmUo8LD]L3nXWgnbe3MG=Y3
+!s100 CIei8l39mFceQjgcCS]:;3
 R7
 31
-R30
+R8
 !i10b 1
-R24
-Z78 !s90 -reportprogress|300|-93|-work|work|C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl|
-Z79 !s107 C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Stage4_Exec.vhdl|
+R9
+Z77 !s90 -reportprogress|300|-93|-work|work|/home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl|
+Z78 !s107 /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl|
 !i113 1
 R12
 R13
 Abehavioural
 R3
 R4
-DEx4 work 11 stage4_exec 0 22 b?>UWIR<:Kg7_Vm0fXe9`1
-!i122 1
-l68
-L27 292
-VMMM2g0;>KkR>44klod`^T1
-!s100 ^_i<OLZi;<g:=1lRS[?7T3
-R7
-31
-R30
-!i10b 1
-R24
-R78
-R79
-!i113 1
-R12
-R13
-Ewrite_back
-R1
-R2
-R3
-R4
-!i122 7
-R0
-Z80 8C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Write_Back.vhd
-Z81 FC:/Users/theas/Documents/EE_309_Project/EE_309_Project/Write_Back.vhd
-l0
-L6 1
-VjD?m7JXGFIm9gZn>H1:Pd3
-!s100 FeRI?0FlO<Dm7I[`nh@dc0
+DEx4 work 11 stage4_exec 0 22 mUo8LD]L3nXWgnbe3MG=Y3
+!i122 2
+l69
+L28 350
+V9EF<7P@Xi=J0bM?oF4LR22
+!s100 <d]fJO_OWcG[UobVMECAT3
 R7
 31
 R8
 !i10b 1
 R9
-Z82 !s90 -reportprogress|300|-93|-work|work|C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Write_Back.vhd|
-Z83 !s107 C:/Users/theas/Documents/EE_309_Project/EE_309_Project/Write_Back.vhd|
+R77
+R78
+!i113 1
+R12
+R13
+Ewrite_back
+Z79 w1683375300
+R2
+R3
+R4
+!i122 8
+R0
+Z80 8/home/shreyas/Documents/IITB/sem4/EE_309_Project/Write_Back.vhd
+Z81 F/home/shreyas/Documents/IITB/sem4/EE_309_Project/Write_Back.vhd
+l0
+L6 1
+VHLHASTmN0ajTSMbfASS9S0
+!s100 a]?RGa?I2=W1S7Q=7:lFC2
+R7
+31
+R8
+!i10b 1
+R9
+Z82 !s90 -reportprogress|300|-93|-work|work|/home/shreyas/Documents/IITB/sem4/EE_309_Project/Write_Back.vhd|
+Z83 !s107 /home/shreyas/Documents/IITB/sem4/EE_309_Project/Write_Back.vhd|
 !i113 1
 R12
 R13
@@ -677,12 +677,12 @@ Awb
 R2
 R3
 R4
-DEx4 work 10 write_back 0 22 jD?m7JXGFIm9gZn>H1:Pd3
-!i122 7
+DEx4 work 10 write_back 0 22 HLHASTmN0ajTSMbfASS9S0
+!i122 8
 l23
-L21 123
-Vnz2EWT<2Oe_:@3?3?=iUO1
-!s100 [jNEJ^z4LAGH@oPkHlPO22
+L21 94
+VYz59A:TDo0JiNX=GYf8C]3
+!s100 F::OZLG6TNZ4D?DBLQGbg2
 R7
 31
 R8
@@ -698,7 +698,7 @@ R1
 R2
 R3
 R4
-!i122 5
+!i122 6
 R0
 R14
 R15
@@ -721,7 +721,7 @@ R2
 R3
 R4
 DEx4 work 9 zero_flag 0 22 o:HQ1a;2L@=f_NBd`5c@F2
-!i122 5
+!i122 6
 l48
 L47 17
 VNCN4J1U]LhZB61oF4coRY0

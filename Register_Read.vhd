@@ -4,7 +4,8 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity Register_Read is
-   port (Instr_R2:	in std_logic_vector(15 downto 0);
+   port (clock : in std_logic;
+			Instr_R2:	in std_logic_vector(15 downto 0);
 			PC_R2:	in std_logic_vector(15 downto 0);
 			A_R2:	in std_logic_vector(15 downto 0);
 			B_R2:	in std_logic_vector(15 downto 0);
@@ -46,7 +47,7 @@ C1 : Complementor port map(RF_D2,compRF_D2);
 
 --actual mapping starts
 
-linkproc: process(Instr_R2, RF_D1, RF_D2, ControlSig_R2(2 downto 0),compRF_D2,RR_RefAdd_out,PC_R2,A_R2)		--need to check THE SENSITIVITY LIST!!
+linkproc: process(clock, Instr_R2, RF_D1, RF_D2, ControlSig_R2(2 downto 0),compRF_D2,RR_RefAdd_out,PC_R2,A_R2)		--need to check THE SENSITIVITY LIST!!
 	variable R2_11_9, R2_8_6,R2_8_0,R2_5_0 : std_logic_vector(15 downto 0):= (others => '0');
 	variable opcode : std_logic_vector(3 downto 0):= (others => '0');
 	variable condcode : std_logic_vector(2 downto 0):= (others => '0');
@@ -91,7 +92,7 @@ begin
 		jlr_hazard <= '0';
 		PC_WR <= '0';
 		A_R3 <= R2_11_9;
-		B_R3 <= R2_8_0;
+		C_R3 <= R2_8_0; -- B to C change
 	
 	elsif(opcode = "0100") then
 		jlr_hazard <= '0';

@@ -230,8 +230,8 @@ begin
                 ALU_out <= ALU2_C;
             when "0011" => -- LLI                
                 A_R4 <= A_R3;
-                B_R4 <= B_R3;
-                ALU_out <= B_R3;
+                C_R4 <= C_R3; -- B to C change
+                ALU_out <= C_R3;
                 Z_WR <= '0';
                 C_WR <= '0';                
                 if(Instr_R3(11 downto 9) = "000") then

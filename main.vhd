@@ -96,46 +96,47 @@ end component;
 
 	 
 	component Stage2_WithoutHazards is
-    port (PC_R1: in std_logic_vector(15 downto 0);
-	       Instr_R1: in std_logic_vector(15 downto 0);
-			 A_R1: in std_logic_vector(15 downto 0);
-			 clock: in std_logic;
-			 
-          PC_R2: out std_logic_vector(15 downto 0);
-			 Instr_R2: out std_logic_vector(15 downto 0);
-			 A_R2: out std_logic_vector(15 downto 0);
-			 Counter1_R2: out std_logic_vector(2 downto 0);
-		    IF_en: out std_logic;
-			 ControlSig_R2_RFWR: out std_logic;
-			 ControlSig_R2_M2WR: out std_logic);
+		port (PC_R1: in std_logic_vector(15 downto 0);
+		Instr_R1: in std_logic_vector(15 downto 0);
+		  A_R1: in std_logic_vector(15 downto 0);
+	   clock: in std_logic;
+		  
+	   PC_R2: out std_logic_vector(15 downto 0);
+		  Instr_R2: out std_logic_vector(15 downto 0);
+		  A_R2: out std_logic_vector(15 downto 0);
+		  Counter1_R2: out std_logic_vector(2 downto 0);
+		 IF_en: out std_logic;
+		  ControlSig_R2_RFWR: out std_logic;
+		  ControlSig_R2_M2WR: out std_logic);
 	end component;
 
 	component Register_Read is
-		port (Instr_R2:	in std_logic_vector(15 downto 0);
-				 PC_R2:	in std_logic_vector(15 downto 0);
-				 A_R2:	in std_logic_vector(15 downto 0);
-				 B_R2:	in std_logic_vector(15 downto 0);
-				 C_R2:	in std_logic_vector(15 downto 0);
-				 ControlSig_R2:	in std_logic_vector(15 downto 0);	--later, change size of the control signals!!
-				 RF_D1 : in std_logic_vector(15 downto 0);
-				 RF_D2 : in std_logic_vector(15 downto 0);			
-				 RR_RefAdd_out : in std_logic_vector(15 downto 0);
-				 
-		 
-				 PC_R3: out std_logic_vector(15 downto 0);
-				 A_R3:	out std_logic_vector(15 downto 0);
-				 B_R3:	out std_logic_vector(15 downto 0);
-				 C_R3:	out std_logic_vector(15 downto 0);
-				 ControlSig_R3:	out std_logic_vector(15 downto 0); ---check if needed here
-				 RF_A1 : out std_logic_vector(2 downto 0);
-				 RF_A2 : out std_logic_vector(2 downto 0);
-				 PC_in : out std_logic_vector(15 downto 0);
-				 RR_RefAdd_E : out std_logic;
-				 RR_RefAdd_in : out std_logic_vector(15 downto 0);
-				 Instr_R3	: out std_logic_vector(15 downto 0);
-				 PC_WR : out std_logic;
-				 jlr_hazard: out std_logic
-				 );
+		port (clock : in std_logic;
+			Instr_R2:	in std_logic_vector(15 downto 0);
+			PC_R2:	in std_logic_vector(15 downto 0);
+			A_R2:	in std_logic_vector(15 downto 0);
+			B_R2:	in std_logic_vector(15 downto 0);
+			C_R2:	in std_logic_vector(15 downto 0);
+			ControlSig_R2:	in std_logic_vector(15 downto 0);	--later, change size of the control signals!!
+			RF_D1 : in std_logic_vector(15 downto 0);
+			RF_D2 : in std_logic_vector(15 downto 0);			
+			RR_RefAdd_out : in std_logic_vector(15 downto 0);
+			
+	
+			PC_R3: out std_logic_vector(15 downto 0);
+			A_R3:	out std_logic_vector(15 downto 0);
+			B_R3:	out std_logic_vector(15 downto 0);
+			C_R3:	out std_logic_vector(15 downto 0);
+			ControlSig_R3:	out std_logic_vector(15 downto 0); ---check if needed here
+			RF_A1 : out std_logic_vector(2 downto 0);
+			RF_A2 : out std_logic_vector(2 downto 0);
+			PC_in : out std_logic_vector(15 downto 0);
+			RR_RefAdd_E : out std_logic;
+			RR_RefAdd_in : out std_logic_vector(15 downto 0);
+			Instr_R3	: out std_logic_vector(15 downto 0);
+			PC_WR : out std_logic;
+			jlr_hazard: out std_logic
+			);
 	end component;	
 
 	component RefAdd is
@@ -148,70 +149,70 @@ end component;
 	
 	component Stage4_Exec is
 		generic
-		(
-			operand_width : integer := 16
-		);
-	   port
-		(
-	   -- inputs
-			PC_R3, Instr_R3:in std_logic_vector((operand_width-1) downto 0);
-			A_R3, B_R3, C_R3:in std_logic_vector((operand_width-1) downto 0);
-			ControlSig_R3:in std_logic_vector((operand_width - 1) downto 0);
-			clock:in std_logic;
-	
-	   -- outputs
-			PC_R4, Instr_R4:out std_logic_vector((operand_width-1) downto 0);
-			A_R4, B_R4, C_R4:out std_logic_vector((operand_width-1) downto 0);
-			ControlSig_R4:out std_logic_vector((operand_width - 1) downto 0);
-			PC: out std_logic_vector((operand_width-1) downto 0);
-			PC_WR: out std_logic;
-			ALU_out: out std_logic_vector((operand_width-1) downto 0);
-			branch_hazard: out std_logic
-	   );
+    (
+        operand_width : integer := 16
+    );
+   port
+    (
+   -- inputs
+        PC_R3, Instr_R3:in std_logic_vector((operand_width-1) downto 0);
+        A_R3, B_R3, C_R3:in std_logic_vector((operand_width-1) downto 0);
+        ControlSig_R3:in std_logic_vector((operand_width - 1) downto 0);
+        clock:in std_logic;
+
+   -- outputs
+        PC_R4, Instr_R4:out std_logic_vector((operand_width-1) downto 0);
+        A_R4, B_R4, C_R4:out std_logic_vector((operand_width-1) downto 0);
+        ControlSig_R4:out std_logic_vector((operand_width - 1) downto 0);
+        PC: out std_logic_vector((operand_width-1) downto 0);
+        PC_WR: out std_logic;
+        ALU_out: out std_logic_vector((operand_width-1) downto 0);
+        branch_hazard: out std_logic
+   );
 	end component;
 	
 	component MEM_STAGE is
 		generic
-		(
-			operand_width : integer := 16
-		);
-   
-	   port
-		(
-	   -- inputs
-		 clock: in std_logic;	  
-		 Dmem_Add:in std_logic_vector((operand_width-1) downto 0);
-		   DMem_Din:in std_logic_vector((operand_width-1) downto 0);		
-		   ALU_C :in std_logic_vector((operand_width-1) downto 0);		
-		   WB_data_in :in std_logic_vector((operand_width-1) downto 0);		
-		   WB_add_in :in std_logic_vector((operand_width-1) downto 0);
-		   instr :in std_logic_vector((operand_width-1) downto 0);
-		   ControlSig_R2_M2WR : in std_logic;
-		   ControlSig_R2_RFWR_in : in std_logic;
-	   -- outputs
-		   Dout:out std_logic_vector((operand_width-1) downto 0);		
-		   WB_data_out:out std_logic_vector((operand_width-1) downto 0);		
-		   WB_add_out :out std_logic_vector((operand_width-1) downto 0);
-		   instr_out :out std_logic_vector((operand_width-1) downto 0);
-		   ControlSig_R2_RFWR_out : out std_logic;
-		   loadr0_hazard: out std_logic
-	   );
+	 (
+		 operand_width : integer := 16
+	 );
+
+    port
+	 (
+    -- inputs
+      clock: in std_logic;	  
+	  Dmem_Add:in std_logic_vector((operand_width-1) downto 0);
+		DMem_Din:in std_logic_vector((operand_width-1) downto 0);		
+		ALU_C :in std_logic_vector((operand_width-1) downto 0);		
+		WB_data_in :in std_logic_vector((operand_width-1) downto 0);		
+		WB_add_in :in std_logic_vector((operand_width-1) downto 0);
+		instr :in std_logic_vector((operand_width-1) downto 0);
+		ControlSig_R2_M2WR : in std_logic;
+		ControlSig_R2_RFWR_in : in std_logic;
+    -- outputs
+		Dout:out std_logic_vector((operand_width-1) downto 0);		
+		WB_data_out:out std_logic_vector((operand_width-1) downto 0);		
+		WB_add_out :out std_logic_vector((operand_width-1) downto 0);
+		instr_out :out std_logic_vector((operand_width-1) downto 0);
+		ControlSig_R2_RFWR_out : out std_logic;
+		loadr0_hazard: out std_logic
+    );
    
    end component;
 
 	component Write_Back is		
-   port (Instr_R5 : in std_logic_vector(15 downto 0);
-			PC_R5:	in std_logic_vector(15 downto 0);
-			A_R5:	in std_logic_vector(15 downto 0);
-			B_R5:	in std_logic_vector(15 downto 0);
-			C_R5:	in std_logic_vector(15 downto 0);
-			ControlSig_R5:	in std_logic_vector(15 downto 0);	
-			C,Z : in std_logic;
-	
-			RF_D3 : out std_logic_vector(15 downto 0);
-			RF_A3 : out std_logic_vector(2 downto 0);
-			RF_WR_out : out std_logic
-			);
+		port (clock : in std_logic;
+		Instr_R5 : in std_logic_vector(15 downto 0);
+		PC_R5:	in std_logic_vector(15 downto 0);
+		A_R5:	in std_logic_vector(15 downto 0);
+		B_R5:	in std_logic_vector(15 downto 0);
+		C_R5:	in std_logic_vector(15 downto 0);
+		ControlSig_R5:	in std_logic_vector(15 downto 0);	--later, change size of the control signals!!
+
+		RF_D3 : out std_logic_vector(15 downto 0);
+		RF_A3 : out std_logic_vector(2 downto 0);
+		RF_WR_out : out std_logic
+		);
 	end component;
 
 	component mux2to1 is
@@ -265,19 +266,19 @@ end component;
 	--ControlSig_R2(...), PC_R2(16), A_R2(16), B_R2(16), C_R2(16), Instr_R2(16)
 	
 	signal PR_Write : std_logic := '1';
-	signal HzdRR, HzdEX, Mem_hzd, load_hzd, Hzd_comb1, Hzd_comb2, Hzd_comb3, Hzd_comb4: std_logic := '0';
-	signal pc_en : std_logic := '1';
+	signal HzdRR, HzdEX, Mem_hzd, load_hzd, Hzd_comb1, Hzd_comb2: std_logic := '0';
+	signal pc_en, Hzd_comb3, Hzd_comb4 : std_logic := '1';
 
 	
 	 -- for data forwarding
-	signal RR_out1, RR_out2: std_logic_vector(15 downto 0);
+	signal sA_R3, sB_R3: std_logic_vector(15 downto 0);
 	signal fwd_sel0, fwd_sel1, fwd_sel2, fwd_sel3 : std_logic_vector(1 downto 0) := "00";
-	signal fwd_sel4 : std_logic;
+	signal fwd_sel4 : std_logic := '0';
 
 	-- data to be forwarded
-	signal ALU_out_exec: std_logic_vector(15 downto 0);
+	signal ALU_out_exec: std_logic_vector(15 downto 0) := "0000000000000000";
 	signal allones: std_logic_vector(15 downto 0):= "1111111111111111";
-	signal sC_R3, sA_R4: std_logic_vector(15 downto 0);
+	signal sC_R3, sA_R4: std_logic_vector(15 downto 0) := "0000000000000000";
 
 	begin
 	 
@@ -299,12 +300,12 @@ end component;
 	 --alu1 : ADDER port map (pc,pc_in0);
 	 alu1 : ALU_2 port map(pc, "0000000000000001",'0',"00", pc_in0);
 	 id: Stage2_WithoutHazards port map (R1out(15 downto 0),R1out(31 downto 16),R1out(47 downto 32),clock,R2in(15 downto 0),R2in(31 downto 16),R2in(47 downto 32),R2in(82 downto 80),if_en,R2in(83),R2in(84));
-	 reg_read: Register_Read port map (R2out(31 downto 16), R2out(15 downto 0), R2out(47 downto 32), R2out(63 downto 48), R2out(79 downto 64), R2out(95 downto 80),d1,d2, RefAdd_out, R3in(15 downto 0), RR_out1, RR_out2, sC_R3,R3in(95 downto 80), a1, a2, pc_in_rr, RefAdd_E, RefAdd_out, R3in(31 downto 16), pc_wr_rr, HzdRR);
+	 reg_read: Register_Read port map (clock, R2out(31 downto 16), R2out(15 downto 0), R2out(47 downto 32), R2out(63 downto 48), R2out(79 downto 64), R2out(95 downto 80),d1,d2, RefAdd_out, R3in(15 downto 0), sA_R3, sB_R3, sC_R3,R3in(95 downto 80), a1, a2, pc_in_rr, RefAdd_E, RefAdd_out, R3in(31 downto 16), pc_wr_rr, HzdRR);
 	 ex: Stage4_Exec port map (R3out(15 downto 0),R3out(31 downto 16),R3out(47 downto 32),R3out(63 downto 48),R3out(79 downto 64), R3out(95 downto 80),clock,R4in(15 downto 0),R4in(31 downto 16),sA_R4,R4in(63 downto 48),R4in(79 downto 64), R4in(95 downto 80),pc_in_exec,pc_wr_ex, ALU_out_exec, HzdEX);
 	 --NEED TO CHECK R3 & R4(87 downto 86) in one of the inputs to Exec Stage
 	 m_acc: MEM_STAGE port map (clock,R4out(63 downto 48),R4out(47 downto 32),R4out(79 downto 64),R4out(79 downto 64),R4out(47 downto 32),R4out(31 downto 16),R4out(84),R4out(83),R5in(63 downto 48),R5in(79 downto 64),R5in(47 downto 32),R5in(31 downto 16),R5in(83), Mem_hzd);
 
-	 wb: Write_Back port map (R5out(31 downto 16), R5out(15 downto 0),R5out(47 downto 32), R5out(63 downto 48), R5out(79 downto 64), R5out(95 downto 80), C_flag, Z_flag, d3, a3, rf_wr);
+	 wb: Write_Back port map (clock, R5out(31 downto 16), R5out(15 downto 0),R5out(47 downto 32), R5out(63 downto 48), R5out(79 downto 64), R5out(95 downto 80), d3, a3, rf_wr);
 	--  mux0: mux3to1 port map (pc_in0, pc_in_exec, pc_in_rr, pc_wr_ex,pc_wr_rr, pc_in);
 	--  mux0: mux8to1 port map(pc_in0, pc_in_exec, pc_in_rr, R5in(63 downto 48), ALU_out_exec, allones, allones, allones, pc_in, fwd_sel0);
      mux0: mux4to1 port map(pc_in0, pc_in_exec, pc_in_rr, R5in(63 downto 48), pc_in, fwd_sel0);
@@ -312,11 +313,13 @@ end component;
 	 -- IF
 	 R1in(15 downto 0) <= pc;
 	 R1in(31 downto 16) <= instr;
+	 R1in(47 downto 32) <= pc;
+
 
 	 --hazard mitigation in RR
-	 mux1: mux4to1 port map(RR_out2, ALU_out_exec, R5in(63 downto 48), R5out(63 downto 48), R3in(63 downto 48), fwd_sel1);	-- usual RR_out, from alu_c, from d_out of mem, from WB
-	 mux2: mux4to1 port map(sC_R3, ALU_out_exec, R5in(63 downto 48), R5out(63 downto 48), R3in(79 downto 64), fwd_sel2);
-	 mux3: mux4to1 port map(RR_out1, R5in(63 downto 48), R5out(63 downto 48), ALU_out_exec, R3in(47 downto 32), fwd_sel3);
+	 mux1: mux4to1 port map(sB_R3, ALU_out_exec, R5in(63 downto 48), d3, R3in(63 downto 48), fwd_sel1);	-- usual RR_out, from alu_c, from d_out of mem, from WB
+	 mux2: mux4to1 port map(sC_R3, ALU_out_exec, R5in(63 downto 48), d3, R3in(79 downto 64), fwd_sel2);
+	 mux3: mux4to1 port map(sA_R3, R5in(63 downto 48), d3, ALU_out_exec, R3in(47 downto 32), fwd_sel3);
 	 mux4: mux2to1 port map(sA_R4, R5in(63 downto 48), R4in(47 downto 32), fwd_sel4);
 	 -- think abt fwd_sel
 	
@@ -325,7 +328,7 @@ end component;
 	-- OPCODE, dest,   RA,   RB
 	-- ulte order mein assign kiya he start mein
 	
-	select_proc: process(R2out,R3out,R4out,R5out)
+	select_proc: process(clock, R2out,R3out,R4out,R5out, ALU_out_exec, pc_in_exec, fwd_sel0, fwd_sel1, fwd_sel2, fwd_sel3, fwd_sel4)
 		begin
 		--------  A&L  --------
 		if(R2out(31 downto 30) = "00" and not(R2out(29 downto 28) = "11")
