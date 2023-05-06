@@ -21,7 +21,20 @@ architecture behavioural of data_mem is
 	 signal sData: memm := (others => (others => '0'));
 begin
 	 mem_proc: process(clock)
-		  variable Data: memm := (others => (others => '0'));
+variable Data: memm := (
+	     0 => "0000000000111000", -- ADD
+	     1 => "0000000000111001", 
+	     2 => "0000000000111010", 
+	     3 => "0000000000111011", 
+	     4 => "0000000000111100",
+	     5 => "0000000000111100", 		 
+	     6 => "0000000000111100", 		 
+	     7 => "1111111111111111", 		 
+		  
+	     others => (others => '0')
+	 );
+
+
 	 begin
 		 if(rising_edge(clock)) then
 			  if(M_WR = '1') then

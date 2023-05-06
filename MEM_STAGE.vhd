@@ -12,20 +12,19 @@ entity MEM_STAGE is
 	 (
     -- inputs
       clock: in std_logic;	  
-	  Dmem_Add:in std_logic_vector((operand_width-1) downto 0);
+	   Dmem_Add:in std_logic_vector((operand_width-1) downto 0);
 		DMem_Din:in std_logic_vector((operand_width-1) downto 0);		
 		ALU_C :in std_logic_vector((operand_width-1) downto 0);		
 		WB_data_in :in std_logic_vector((operand_width-1) downto 0);		
 		WB_add_in :in std_logic_vector((operand_width-1) downto 0);
 		instr :in std_logic_vector((operand_width-1) downto 0);
-		ControlSig_R2_M2WR : in std_logic;
-		ControlSig_R2_RFWR_in : in std_logic;
+		ControlSig_R4 : in std_logic_vector((operand_width -1) downto 0);
     -- outputs
 		Dout:out std_logic_vector((operand_width-1) downto 0);		
 		WB_data_out:out std_logic_vector((operand_width-1) downto 0);		
 		WB_add_out :out std_logic_vector((operand_width-1) downto 0);
 		instr_out :out std_logic_vector((operand_width-1) downto 0);
-		ControlSig_R2_RFWR_out : out std_logic
+		ControlSig_R5 : out std_logic_vector((operand_width -1) downto 0)
     );
 
 end MEM_STAGE;
@@ -54,9 +53,13 @@ end component;
 
 signal dataout : std_logic_vector((operand_width-1) downto 0):= (others => '0');
 signal dout_select, mem_wr : std_logic := '0';
+signal ControlSig_R2_RFWR_out, ControlSig_R2_M2WR : std_logic := '0';
 
 begin
     
+	 ControlSig_R2_M2WR <= ControlSig_R4(4);
+	 ControlSig_R5 <= ControlSig_R4;
+	 
 	 -- can remove two addresses from memory component later
 	 mem: data_mem port map (clock,mem_wr,Dmem_Add,Dmem_Add,DMem_Din,dataout);
 	 mux: mux2to1 port map(ALU_C,dataout,dout_select,Dout);
@@ -64,11 +67,9 @@ begin
 	 WB_data_out <= WB_data_in;
 	 WB_add_out <= WB_add_in;
 
-	 ControlSig_R2_RFWR_out <= ControlSig_R2_RFWR_in;
-
 	 instr_out <= instr;
 
-	 proc: process(instr,ControlSig_R2_M2WR)
+	 proc: process(clock, instr,ControlSig_R2_M2WR)
     begin
 			if(instr(15 downto 12) = "0101" or (instr(15 downto 12) = "0111" and ControlSig_R2_M2WR = '1')) then
 				mem_wr <= '1';
@@ -76,7 +77,7 @@ begin
 				mem_wr <= '0';
 			end if;
 
-			if(instr(15 downto 12) = "0011" or instr(15 downto 12) = "0100" or instr(15 downto 12) = "0110") then
+			if(instr(15 downto 12) = "0100" or instr(15 downto 12) = "0110") then
 				dout_select <= '1';
 			else
 				dout_select <= '0';

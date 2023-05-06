@@ -12,7 +12,7 @@
 # 
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/mux2to1.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:59:37 on May 05,2023
+# Start time: 12:24:06 on May 06,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/mux2to1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -20,22 +20,22 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity mux2to1
 # -- Compiling architecture working of mux2to1
-# End time: 12:59:37 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:24:06 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:59:37 on May 05,2023
+# Start time: 12:24:06 on May 06,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/Stage4_Exec.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Stage4_Exec
 # -- Compiling architecture behavioural of Stage4_Exec
-# End time: 12:59:37 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:24:07 on May 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/instr_mem.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:59:37 on May 05,2023
+# Start time: 12:24:07 on May 06,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/instr_mem.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -43,11 +43,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity instr_mem
 # -- Compiling architecture behavioural of instr_mem
-# End time: 12:59:37 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:24:07 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/data_mem.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:59:37 on May 05,2023
+# Start time: 12:24:07 on May 06,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/data_mem.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -55,11 +55,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity data_mem
 # -- Compiling architecture behavioural of data_mem
-# End time: 12:59:37 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:24:07 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/ALU_2.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:59:37 on May 05,2023
+# Start time: 12:24:07 on May 06,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/ALU_2.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -67,11 +67,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity ALU_2
 # -- Compiling architecture behavioural of ALU_2
-# End time: 12:59:38 on May 05,2023, Elapsed time: 0:00:01
+# End time: 12:24:07 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/Flags.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:59:38 on May 05,2023
+# Start time: 12:24:07 on May 06,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/Flags.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -81,11 +81,11 @@
 # -- Compiling architecture behav of carry_flag
 # -- Compiling entity zero_flag
 # -- Compiling architecture behav of zero_flag
-# End time: 12:59:38 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:24:07 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:59:38 on May 05,2023
+# Start time: 12:24:07 on May 06,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/regfile.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -93,11 +93,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity regfile
 # -- Compiling architecture behavioural of regfile
-# End time: 12:59:38 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:24:07 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:59:38 on May 05,2023
+# Start time: 12:24:07 on May 06,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/Write_Back.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -105,11 +105,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Write_Back
 # -- Compiling architecture WB of Write_Back
-# End time: 12:59:38 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:24:07 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:59:38 on May 05,2023
+# Start time: 12:24:07 on May 06,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/Register_Read.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -117,11 +117,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Register_Read
 # -- Compiling architecture RR of Register_Read
-# End time: 12:59:38 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:24:08 on May 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/RefAdd.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:59:38 on May 05,2023
+# Start time: 12:24:08 on May 06,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/RefAdd.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -129,11 +129,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RefAdd
 # -- Compiling architecture king of RefAdd
-# End time: 12:59:39 on May 05,2023, Elapsed time: 0:00:01
+# End time: 12:24:08 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/MEM_STAGE.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:59:39 on May 05,2023
+# Start time: 12:24:08 on May 06,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/MEM_STAGE.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -141,11 +141,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity MEM_STAGE
 # -- Compiling architecture Structural of MEM_STAGE
-# End time: 12:59:39 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:24:08 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/Complementor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:59:39 on May 05,2023
+# Start time: 12:24:08 on May 06,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/Complementor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -153,11 +153,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Complementor
 # -- Compiling architecture doit of Complementor
-# End time: 12:59:39 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:24:08 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/main.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:59:39 on May 05,2023
+# Start time: 12:24:08 on May 06,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/main.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -165,11 +165,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity main
 # -- Compiling architecture behav of main
-# End time: 12:59:39 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:24:08 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/Stage2_WithoutHazards.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:59:39 on May 05,2023
+# Start time: 12:24:08 on May 06,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/Stage2_WithoutHazards.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -177,22 +177,22 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Stage2_WithoutHazards
 # -- Compiling architecture behav of Stage2_WithoutHazards
-# End time: 12:59:39 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:24:08 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/pipe_reg.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:59:39 on May 05,2023
+# Start time: 12:24:08 on May 06,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/pipe_reg.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity pipe_reg
 # -- Compiling architecture behavioural of pipe_reg
-# End time: 12:59:39 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:24:08 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Hazardless_Testbox/EE_309_Project/mux3to1.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:59:39 on May 05,2023
+# Start time: 12:24:08 on May 06,2023
 # vcom -reportprogress 300 -93 -work work D:/Hazardless_Testbox/EE_309_Project/mux3to1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -200,12 +200,12 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity mux3to1
 # -- Compiling architecture wrking of mux3to1
-# End time: 12:59:39 on May 05,2023, Elapsed time: 0:00:00
+# End time: 12:24:09 on May 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 vsim work.main
 # vsim work.main 
-# Start time: 12:59:56 on May 05,2023
+# Start time: 12:24:12 on May 06,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -230,20 +230,6 @@ vsim work.main
 # ** Warning: (vsim-8683) Uninitialized out port /main/ex/PC_R4(15 downto 0) has no driver.
 # This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
 add wave -position insertpoint  \
-sim:/main/rf/counter
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: SCI  Hostname: DESKTOP-U9KSJ6C  ProcessID: 6964
-#           Attempting to use alternate WLF file "./wlftzyjh9i".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftzyjh9i
-# ** UI-Msg: (vish-4014) No objects found matching '/main/rf/counter'.
-add wave -position insertpoint  \
-sim:/main/rf/incounter
-# ** UI-Msg: (vish-4014) No objects found matching '/main/rf/incounter'.
-add wave -position insertpoint  \
-sim:/main/rf/in2counter
-# ** UI-Msg: (vish-4014) No objects found matching '/main/rf/in2counter'.
-add wave -position insertpoint  \
 sim:/main/reset
 add wave -position insertpoint  \
 sim:/main/clock
@@ -262,18 +248,22 @@ sim:/main/rf/sR5
 add wave -position insertpoint  \
 sim:/main/rf/sR6
 add wave -position insertpoint  \
-sim:/main/rf/sR7add wave -position insertpoint  \
+sim:/main/rf/sR7
+add wave -position insertpoint  \
 sim:/main/pc
-# ** UI-Msg: (vish-4014) No objects found matching '/main/rf/sR7add'.
-# ** UI-Msg: (vish-4014) No objects found matching 'wave'.
-# Unrecognized option: "-position" ignored.
-# ** UI-Msg: (vish-4014) No objects found matching 'insertpoint'.
 add wave -position insertpoint  \
 sim:/main/instr
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: SCI  Hostname: DESKTOP-U9KSJ6C  ProcessID: 6964
+#           Attempting to use alternate WLF file "./wlft7t0q7i".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft7t0q7i
 add wave -position insertpoint  \
 sim:/main/Z_flag
+# ** UI-Msg: (vish-4014) No objects found matching '/main/Z_flag'.
 add wave -position insertpoint  \
 sim:/main/C_flag
+# ** UI-Msg: (vish-4014) No objects found matching '/main/C_flag'.
 add wave -position insertpoint  \
 sim:/main/R1out
 add wave -position insertpoint  \
@@ -299,8 +289,6 @@ sim:/main/reg_read/RF_D1
 add wave -position insertpoint  \
 sim:/main/reg_read/RF_D2
 add wave -position insertpoint  \
-sim:/main/pc_wr_ex
-add wave -position insertpoint  \
 sim:/main/if_en
 add wave -position insertpoint  \
 sim:/main/rf/PC_WR
@@ -325,30 +313,31 @@ sim:/main/wb/RF_WR_out
 add wave -position insertpoint  \
 sim:/main/wb/A_R5
 add wave -position insertpoint  \
+sim:/main/wb/B_R5
+add wave -position insertpoint  \
 sim:/main/wb/C_R5
 add wave -position insertpoint  \
 sim:/main/ex/ALU2_C
 add wave -position insertpoint  \
 sim:/main/alu1/ALU_C
 add wave -position insertpoint  \
-sim:/main/wb/Instr_R5
+sim:/main/id/ctr
 add wave -position insertpoint  \
-sim:/main/wb/PC_R5
+sim:/main/id/IF_en
 add wave -position insertpoint  \
-sim:/main/wb/A_R5
+sim:/main/id/Counter1_R2
 add wave -position insertpoint  \
-sim:/main/wb/B_R5
+sim:/main/m_acc/DMem_Din
 add wave -position insertpoint  \
-sim:/main/wb/C_R5
-add wave -position insertpoint  \
-sim:/main/wb/ControlSig_R5
-add wave -position insertpoint  \
-sim:/main/wb/C
+sim:/main/m_acc/Dmem_Add
 add wave -position insertpoint  \
 sim:/main/wb/Z
+# ** UI-Msg: (vish-4014) No objects found matching '/main/wb/Z'.
 add wave -position insertpoint  \
-sim:/main/wb/ctr
-
+sim:/main/Z_flag
+# ** UI-Msg: (vish-4014) No objects found matching '/main/Z_flag'.
+add wave -position insertpoint  \
+sim:/main/ex/ALU2_Z
 
 force -freeze sim:/main/clock 1 10, 0 {60 ps} -r 100
 
@@ -433,7 +422,108 @@ run
 run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 1610 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1660 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1710 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1760 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1810 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1860 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1910 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1960 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2010 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2060 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2110 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2160 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2210 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2260 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2310 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2360 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2410 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2460 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2510 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2560 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2610 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2660 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2710 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2760 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2810 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2860 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2910 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2960 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3010 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3060 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3110 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3160 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3210 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3260 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3310 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3360 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3410 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3460 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3510 ps  Iteration: 0  Instance: /main/m_acc/mem
 run
 run
-# End time: 13:06:04 on May 05,2023, Elapsed time: 0:06:08
-# Errors: 0, Warnings: 35
+run
+run
+run
+run
+run
+run
+# End time: 12:45:19 on May 06,2023, Elapsed time: 0:21:07
+# Errors: 0, Warnings: 73

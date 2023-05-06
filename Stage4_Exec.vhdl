@@ -66,13 +66,19 @@ architecture behavioural of Stage4_Exec is
    signal ALU2_J, ALU3_J: std_logic_vector(1 downto 0):= (others => '0');
 begin
     
-	 ControlSig_R4 <= ControlSig_R3;
+
+	 
 	 cf: carry_flag port map(c_in=>C_in, c_en=>C_WR, clock=>clock, c_out=>C_out);
 	 zf: zero_flag port map (z_in=>Z_in, z_en=>Z_WR, clock=>clock, z_out=>Z_out);
 	 ALU2: ALU_2 port map(ALU_A => ALU2_A, ALU_B => ALU2_B, ALU_Cin => ALU2_Cin, ALU_J => ALU2_J, ALU_C => ALU2_C, ALU_Cout => ALU2_Cout, ALU_Z => ALU2_Z);
 	 ALU3: ALU_2 port map(ALU_A => ALU3_A, ALU_B => ALU3_B, ALU_Cin => ALU3_Cin, ALU_J => ALU3_J, ALU_C => ALU3_C, ALU_Cout => ALU3_Cout, ALU_Z => ALU3_Z);
 	 
-    stage_proc:process(clock, C_out, Z_out, ALU2_A, ALU2_B, ALU3_A, ALU3_B,ALU3_C, ALU2_Cin, C_in, Z_in,ALU2_Cout,ALU2_Z,A_R3,B_R3,C_R3,ALU2_C,Instr_R3)
+	 ControlSig_R4(4 downto 0) <= ControlSig_R3(4 downto 0);
+	 ControlSig_R4(15 downto 7) <= ControlSig_R3(15 downto 7);
+	 ControlSig_R4(5) <= ALU2_Cout;
+	 ControlSig_R4(6) <= ALU2_Z;
+    
+	 stage_proc:process(clock, C_out, Z_out, ALU2_A, ALU2_B, ALU3_A, ALU3_B,ALU3_C, ALU2_Cin, C_in, Z_in,ALU2_Cout,ALU2_Z,A_R3,B_R3,C_R3,ALU2_C,Instr_R3)
 		 variable opcode: std_logic_vector(3 downto 0):= (others => '0');
 		 variable condcode: std_logic_vector(1 downto 0):= (others => '0');
 		 
@@ -84,7 +90,9 @@ begin
 		  
 		  C_in <= ALU2_Cout;
 		  Z_in <= ALU2_Z;
-        case opcode is
+        
+		  
+		  case opcode is
             when "0001" => -- Add
                 A_R4 <= A_R3;
                 ALU2_A <= B_R3;
@@ -182,7 +190,7 @@ begin
                 Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
             when "0011" => -- LLI
                 A_R4 <= A_R3;
-                B_R4 <= B_R3;
+                C_R4 <= C_R3; 										--make C_R3!!!!!!!!!!!!!
                 Z_WR <= '0';
                 C_WR <= '0';
                 PC_WR <= '0';
@@ -295,4 +303,9 @@ begin
             when others => null;
         end case;
     end process;
+	 
+	 
+
+	 
+	 
 end architecture;
