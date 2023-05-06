@@ -344,22 +344,28 @@ end component;
 			load_hzd <= '0';
 			
 			-- fwd_sel1
-			if(R2out(24 downto 22) = R3out(27 downto 25)) then
+			if(R2out(24 downto 22) = R3out(27 downto 25) and not
+				(R3out(31 downto 28) = "0101" or R3out(31 downto 28) = "0111")) then
 				fwd_sel1 <= "01";
-			elsif(R2out(24 downto 22) = R4out(27 downto 25)) then
+			elsif(R2out(24 downto 22) = R4out(27 downto 25) and not
+				(R4out(31 downto 28) = "0101" or R4out(31 downto 28) = "0111")) then
 				fwd_sel1 <= "10";
-			elsif(R2out(24 downto 22) = R5out(27 downto 25)) then
+			elsif(R2out(24 downto 22) = R5out(27 downto 25) and not
+				(R5out(31 downto 28) = "0101" or R5out(31 downto 28) = "0111")) then
 				fwd_sel1 <= "11";
 			else
 				fwd_sel1 <= "00";
 			end if;
 
 			-- fwd_sel2
-			if(R2out(21 downto 19) = R3out(27 downto 25)) then
+			if(R2out(21 downto 19) = R3out(27 downto 25) and not
+				(R3out(31 downto 28) = "0101" or R3out(31 downto 28) = "0111")) then
 				fwd_sel2 <= "01";
-			elsif(R2out(21 downto 19) = R4out(27 downto 25)) then
+			elsif(R2out(21 downto 19) = R4out(27 downto 25) and not
+				(R4out(31 downto 28) = "0101" or R4out(31 downto 28) = "0111")) then
 				fwd_sel2 <= "10";
-			elsif(R2out(21 downto 19) = R5out(27 downto 25)) then
+			elsif(R2out(21 downto 19) = R5out(27 downto 25) and not
+				(R5out(31 downto 28) = "0101" or R5out(31 downto 28) = "0111")) then
 				fwd_sel2 <= "11";
 			else
 				fwd_sel2 <= "00";
