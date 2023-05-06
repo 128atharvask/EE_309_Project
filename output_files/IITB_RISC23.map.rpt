@@ -1,5 +1,5 @@
 Analysis & Elaboration report for IITB_RISC23
-Sat May  6 20:31:04 2023
+Sat May  6 23:37:04 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -54,7 +54,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Sat May  6 20:31:04 2023       ;
+; Analysis & Elaboration Status      ; Successful - Sat May  6 23:37:04 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_RISC23                                 ;
 ; Top-level Entity Name              ; main                                        ;
@@ -358,7 +358,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat May  6 20:30:54 2023
+    Info: Processing started: Sat May  6 23:36:53 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_RISC23 -c IITB_RISC23 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -415,9 +415,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file pipe_re
 Info (12127): Elaborating entity "main" for the top level hierarchy
 Warning (10540): VHDL Signal Declaration warning at main.vhd(260): used explicit default value for signal "RefAdd_in" because signal was never assigned a value File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 260
 Warning (10540): VHDL Signal Declaration warning at main.vhd(269): used explicit default value for signal "PR_Write" because signal was never assigned a value File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 269
-Warning (10492): VHDL Process Statement warning at main.vhd(405): signal "Mem_hzd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 405
-Warning (10492): VHDL Process Statement warning at main.vhd(407): signal "pc_wr_ex" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 407
-Warning (10492): VHDL Process Statement warning at main.vhd(409): signal "pc_wr_rr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 409
+Warning (10492): VHDL Process Statement warning at main.vhd(411): signal "Mem_hzd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 411
+Warning (10492): VHDL Process Statement warning at main.vhd(413): signal "pc_wr_ex" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 413
+Warning (10492): VHDL Process Statement warning at main.vhd(415): signal "pc_wr_rr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 415
 Info (12128): Elaborating entity "pipe_reg" for hierarchy "pipe_reg:PReg1" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 293
 Info (12128): Elaborating entity "regfile" for hierarchy "regfile:rf" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 299
 Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(26): object "sR0" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl Line: 26
@@ -594,12 +594,11 @@ Warning (10541): VHDL Signal Declaration warning at Stage4_Exec.vhdl(18): used i
 Warning (10540): VHDL Signal Declaration warning at Stage4_Exec.vhdl(67): used explicit default value for signal "ALU3_Cin" because signal was never assigned a value File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 67
 Warning (10036): Verilog HDL or VHDL warning at Stage4_Exec.vhdl(67): object "ALU3_Cout" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 67
 Warning (10036): Verilog HDL or VHDL warning at Stage4_Exec.vhdl(67): object "ALU3_Z" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 67
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(321): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 321
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(339): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 339
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(357): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 357
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(371): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 371
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(345): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 345
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(363): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 363
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(381): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 381
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(395): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 395
 Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "Instr_R4", which holds its previous value in one or more paths through the process File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
-Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "branch_hazard", which holds its previous value in one or more paths through the process File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "A_R4", which holds its previous value in one or more paths through the process File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "ALU2_A", which holds its previous value in one or more paths through the process File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "ALU2_B", which holds its previous value in one or more paths through the process File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
@@ -610,6 +609,7 @@ Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferri
 Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "Z_WR", which holds its previous value in one or more paths through the process File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "C_R4", which holds its previous value in one or more paths through the process File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "PC", which holds its previous value in one or more paths through the process File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
+Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "branch_hazard", which holds its previous value in one or more paths through the process File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "ALU_out", which holds its previous value in one or more paths through the process File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "B_R4", which holds its previous value in one or more paths through the process File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "ALU3_A", which holds its previous value in one or more paths through the process File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
@@ -681,6 +681,7 @@ Info (10041): Inferred latch for "ALU_out[12]" at Stage4_Exec.vhdl(77) File: /ho
 Info (10041): Inferred latch for "ALU_out[13]" at Stage4_Exec.vhdl(77) File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Info (10041): Inferred latch for "ALU_out[14]" at Stage4_Exec.vhdl(77) File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Info (10041): Inferred latch for "ALU_out[15]" at Stage4_Exec.vhdl(77) File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
+Info (10041): Inferred latch for "branch_hazard" at Stage4_Exec.vhdl(77) File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Info (10041): Inferred latch for "PC[0]" at Stage4_Exec.vhdl(77) File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Info (10041): Inferred latch for "PC[1]" at Stage4_Exec.vhdl(77) File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Info (10041): Inferred latch for "PC[2]" at Stage4_Exec.vhdl(77) File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
@@ -767,7 +768,6 @@ Info (10041): Inferred latch for "A_R4[12]" at Stage4_Exec.vhdl(77) File: /home/
 Info (10041): Inferred latch for "A_R4[13]" at Stage4_Exec.vhdl(77) File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Info (10041): Inferred latch for "A_R4[14]" at Stage4_Exec.vhdl(77) File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Info (10041): Inferred latch for "A_R4[15]" at Stage4_Exec.vhdl(77) File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
-Info (10041): Inferred latch for "branch_hazard" at Stage4_Exec.vhdl(77) File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Info (10041): Inferred latch for "Instr_R4[12]" at Stage4_Exec.vhdl(77) File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Info (10041): Inferred latch for "Instr_R4[13]" at Stage4_Exec.vhdl(77) File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Info (10041): Inferred latch for "Instr_R4[14]" at Stage4_Exec.vhdl(77) File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
@@ -785,9 +785,9 @@ Warning (10492): VHDL Process Statement warning at Write_Back.vhd(39): signal "c
 Warning (10631): VHDL Process Statement warning at Write_Back.vhd(28): inferring latch(es) for signal or variable "ctr", which holds its previous value in one or more paths through the process File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Write_Back.vhd Line: 28
 Info (12128): Elaborating entity "mux4to1" for hierarchy "mux4to1:mux0" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 313
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 71 warnings
-    Info: Peak virtual memory: 744 megabytes
-    Info: Processing ended: Sat May  6 20:31:04 2023
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Peak virtual memory: 748 megabytes
+    Info: Processing ended: Sat May  6 23:37:04 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:22
 
 

@@ -88,7 +88,7 @@ begin
 		  Z_in <= ALU2_Z;
         case opcode is
             when "0001" => -- Add
-                branch_hazard <= '0';
+                --branch_hazard <= '0';
                 A_R4 <= A_R3;
                 ALU2_A <= B_R3;
                 ALU2_B <= C_R3;
@@ -107,6 +107,8 @@ begin
 									 Instr_R4(15 downto 12) <= "1110";
 								else
 									Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
+									PC_WR <= '0';
+                            branch_hazard <= '0';
                         end if;
                     when "01" =>
                         if (Z_out = '1') then
@@ -121,12 +123,16 @@ begin
 										 Instr_R4(15 downto 12) <= "1110";
 									else
 										Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
+										PC_WR <= '0';
+                            branch_hazard <= '0';
 									end if;
                         else
                             C_WR <= '0';
                             Z_WR <= '0';
                             ALU2_Cin <= '0';
                             Instr_R4(15 downto 12) <= "1110"; -- Do Nothing
+									 PC_WR <= '0';
+                            branch_hazard <= '0';
                         end if;
                     when "10" =>
                         if (C_out = '1') then
@@ -141,12 +147,16 @@ begin
 										 Instr_R4(15 downto 12) <= "1110";
 									else
 										Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
+										PC_WR <= '0';
+                            branch_hazard <= '0';
 									end if;
                         else
                             C_WR <= '0';
                             Z_WR <= '0';
                             ALU2_Cin <= '0';
                             Instr_R4(15 downto 12) <= "1110"; -- Do Nothing
+									 PC_WR <= '0';
+                            branch_hazard <= '0';
                         end if;
                     when "11" =>
                         ALU2_Cin <= C_out;
@@ -160,10 +170,14 @@ begin
 									 Instr_R4(15 downto 12) <= "1110";
 								else
 									Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
+									PC_WR <= '0';
+                            branch_hazard <= '0';
                         end if;
                     when others =>
                         C_WR <= '0';
                         Z_WR <= '0';
+								PC_WR <= '0';
+                            branch_hazard <= '0';
                 end case;
                 ALU_out <= ALU2_C;
             when "0010" => -- NAND
@@ -186,6 +200,8 @@ begin
 									 Instr_R4(15 downto 12) <= "1110";
 								else
 									Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
+									PC_WR <= '0';
+                            branch_hazard <= '0';
                         end if;
                     when "01" =>
                         if (Z_out = '1') then
@@ -199,11 +215,15 @@ begin
 										 Instr_R4(15 downto 12) <= "1110";
 									else
 										Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
+										PC_WR <= '0';
+                            branch_hazard <= '0';
 									end if;
                         else
                             ALU2_Cin <= '0';
                             Z_WR <= '0';
                             Instr_R4(15 downto 12) <= "1110"; -- Do Nothing
+									 PC_WR <= '0';
+                            branch_hazard <= '0';
                         end if;
                     when "10" =>
                         if (C_out = '1') then
@@ -215,8 +235,12 @@ begin
 										 PC_WR <= '1';
 										 branch_hazard <= '1';
 										 Instr_R4(15 downto 12) <= "1110";
+										 PC_WR <= '0';
+                            branch_hazard <= '0';
 									else
 										Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
+										PC_WR <= '0';
+                            branch_hazard <= '0';
 									end if;
                         else
                             ALU2_Cin <= '0';
@@ -392,6 +416,8 @@ begin
                 branch_hazard <= '0';
                 Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                 PC_WR <= '0';
+					 PC_WR <= '0';
+                branch_hazard <= '0';
             when others => null;
         end case;
     end process;
