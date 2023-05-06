@@ -257,7 +257,7 @@ begin
                 Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                 if (ALU2_Cout = '1') then
                     ALU3_A <= PC_R3;
-                    ALU3_B <= "000000000" & Instr_R3(5 downto 0) & "0";
+                    ALU3_B <= "0000000000" & Instr_R3(5 downto 0);
                     PC <= ALU3_C;
                     ALU3_J <= "00";
                     PC_WR <= '1';
@@ -282,7 +282,7 @@ begin
                 -- HAZARD HANDLING
             when "1100" => -- JAL
                 ALU3_A <= PC_R3;
-                ALU3_B <= "000000" & Instr_R3(8 downto 0) & "0";
+                ALU3_B <= "0000000" & Instr_R3(8 downto 0);
                 PC <= ALU3_C;
                 ALU3_J <= "00";
                 PC_WR <= '1';
@@ -294,8 +294,7 @@ begin
                 A_R4 <= A_R3;
             when "1111" => -- JRI
                 ALU3_A <= A_R3;
-                ALU3_B <= "000000" & Instr_R3(8 downto 0)
-                 & "0";
+                ALU3_B <= "0000000" & Instr_R3(8 downto 0);
                 PC <= ALU3_C;
                 ALU3_J <= "00";
                 PC_WR <= '1';

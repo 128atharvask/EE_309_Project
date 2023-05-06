@@ -284,5 +284,5 @@ end component;
 	 -- IF
 	 R1in(15 downto 0) <= pc;
 	 R1in(31 downto 16) <= instr;
-
+	 R1in(47 downto 32) <= pc;
 end behav;

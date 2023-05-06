@@ -1,5 +1,5 @@
 Analysis & Synthesis report for IITB_RISC23
-Sat May 06 13:26:26 2023
+Sat May 06 15:41:07 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -60,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May 06 13:26:26 2023       ;
+; Analysis & Synthesis Status        ; Successful - Sat May 06 15:41:07 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_RISC23                                 ;
 ; Top-level Entity Name              ; main                                        ;
@@ -430,7 +430,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port             ; Type   ; Severity ; Details                                                                             ;
 +------------------+--------+----------+-------------------------------------------------------------------------------------+
-; data_in[95..32]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; data_in[95..48]  ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; data_out[95..48] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------------------+--------+----------+-------------------------------------------------------------------------------------+
 
@@ -462,7 +462,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat May 06 13:26:12 2023
+    Info: Processing started: Sat May 06 15:40:52 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_RISC23 -c IITB_RISC23
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -874,9 +874,9 @@ Info (21057): Implemented 2 device resources after synthesis - the final resourc
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 68 warnings
-    Info: Peak virtual memory: 4791 megabytes
-    Info: Processing ended: Sat May 06 13:26:26 2023
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Peak virtual memory: 4790 megabytes
+    Info: Processing ended: Sat May 06 15:41:07 2023
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:16
 
 
