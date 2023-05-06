@@ -8,6 +8,7 @@ entity regfile is
         );
 	port (
             clock: in std_logic;
+				reset: in std_logic;
             RF_WR: in std_logic;
             PC_WR: in std_logic;
             RF_A1: in std_logic_vector(2 downto 0);
@@ -37,6 +38,16 @@ begin
 	 begin
 
         -- Write only at the rising edge of the clock
+		  if(reset ='1') then
+			R0 := "0000000000000000";
+			R1 := "0000000000000000";
+			R2 := "0000000000000000";
+			R3 := "0000000000000000";
+			R4 := "0000000000000000";
+			R5 := "0000000000000000";
+			R6 := "0000000000000000";
+			R7 := "0000000000000000";
+		  else
         if(rising_edge(clock)) then
             if(RF_WR = '1' and RF_A3 = "000") then
 		  	       R0 := RF_D3;
@@ -63,7 +74,7 @@ begin
                 end case;
             end if;
         end if;
-		  
+		 end if;
 		  case RF_A1 is
             when "000" =>
                 RF_D1 <= R0;

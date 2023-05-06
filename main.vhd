@@ -29,6 +29,7 @@ architecture behav of main is
         );
 	port (
             clock: in std_logic;
+				reset: in std_logic;
             RF_WR: in std_logic;
             PC_WR: in std_logic;
             RF_A1: in std_logic_vector(2 downto 0);
@@ -266,7 +267,7 @@ end component;
 	--ControlSig_R2(...), PC_R2(16), A_R2(16), B_R2(16), C_R2(16), Instr_R2(16)
 	
 	signal PR_Write : std_logic := '1';
-	signal HzdRR, HzdEX, Mem_hzd, load_hzd, Hzd_comb1, Hzd_comb2: std_logic := '0';
+	signal HzdRR, HzdEX, Mem_hzd, load_hzd, Hzd_comb1, Hzd_comb2, Hzd_comb5: std_logic := '0';
 	signal pc_en, Hzd_comb3, Hzd_comb4 : std_logic := '1';
 
 	
@@ -282,19 +283,20 @@ end component;
 
 	begin
 	 
-	 Hzd_comb1 <= (HzdRR or HzdEX) or Mem_hzd;
-	 Hzd_comb2 <= (HzdEX or load_hzd) or Mem_hzd;
+	 Hzd_comb1 <= ((HzdRR or HzdEX) or Mem_hzd) or reset;
+	 Hzd_comb2 <= ((HzdEX or load_hzd) or Mem_hzd) or reset;
 	 Hzd_comb3 <= (if_en and (not load_hzd)) or Mem_hzd;
 	 Hzd_comb4 <= (not load_hzd) or Mem_hzd;
+	 Hzd_comb5 <= Mem_hzd or reset;
 	 pc_en <= ((if_en or pc_wr_ex or pc_wr_rr) and (not load_hzd)) or Mem_hzd;
 	 
 	 PReg1 : pipe_reg port map (clock, Hzd_comb3, R1in, Hzd_comb1, R1out);
 	 PReg2 : pipe_reg port map (clock, Hzd_comb4, R2in, Hzd_comb1, R2out);
 	 PReg3 : pipe_reg port map (clock, PR_Write, R3in, Hzd_comb2, R3out);
-	 PReg4 : pipe_reg port map (clock, PR_Write, R4in, Mem_hzd, R4out);
-	 PReg5 : pipe_reg port map (clock, PR_Write, R5in, '0', R5out);
+	 PReg4 : pipe_reg port map (clock, PR_Write, R4in, Hzd_comb5, R4out);
+	 PReg5 : pipe_reg port map (clock, PR_Write, R5in, reset, R5out);
 	 
-	 rf: regfile port map (clock,rf_wr,pc_en,a1,a2,a3,d3,pc_in,d1,d2,pc);
+	 rf: regfile port map (clock,reset,rf_wr,pc_en,a1,a2,a3,d3,pc_in,d1,d2,pc);
 	 RAR1 : RefAdd port map(clock, RefAdd_in, RefAdd_out, RefAdd_E); 
 	 i_mem: instr_mem port map (pc, instr);
 	 --alu1 : ADDER port map (pc,pc_in0);

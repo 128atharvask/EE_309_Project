@@ -1,5 +1,5 @@
 Analysis & Elaboration report for IITB_RISC23
-Sat May  6 19:28:27 2023
+Sat May  6 20:31:04 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -54,7 +54,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Sat May  6 19:28:27 2023       ;
+; Analysis & Elaboration Status      ; Successful - Sat May  6 20:31:04 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_RISC23                                 ;
 ; Top-level Entity Name              ; main                                        ;
@@ -308,7 +308,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; data_in[95..84] ; Input ; Info     ; Stuck at GND ;
 ; data_in[82..80] ; Input ; Info     ; Stuck at GND ;
 ; data_in[15..0]  ; Input ; Info     ; Stuck at GND ;
-; hzd_in          ; Input ; Info     ; Stuck at GND ;
 +-----------------+-------+----------+--------------+
 
 
@@ -359,7 +358,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat May  6 19:28:18 2023
+    Info: Processing started: Sat May  6 20:30:54 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_RISC23 -c IITB_RISC23 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -387,7 +386,7 @@ Info (12021): Found 4 design units, including 2 entities, in source file Flags.v
     Info (12023): Found entity 1: carry_flag File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Flags.vhd Line: 6
     Info (12023): Found entity 2: zero_flag File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Flags.vhd Line: 40
 Info (12021): Found 2 design units, including 1 entities, in source file regfile.vhdl
-    Info (12022): Found design unit 1: regfile-behavioural File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl Line: 24
+    Info (12022): Found design unit 1: regfile-behavioural File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl Line: 25
     Info (12023): Found entity 1: regfile File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file Write_Back.vhd
     Info (12022): Found design unit 1: Write_Back-WB File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Write_Back.vhd Line: 21
@@ -414,26 +413,27 @@ Info (12021): Found 2 design units, including 1 entities, in source file pipe_re
     Info (12022): Found design unit 1: pipe_reg-behavioural File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/pipe_reg.vhd Line: 14
     Info (12023): Found entity 1: pipe_reg File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/pipe_reg.vhd Line: 4
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at main.vhd(259): used explicit default value for signal "RefAdd_in" because signal was never assigned a value File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 259
-Warning (10540): VHDL Signal Declaration warning at main.vhd(268): used explicit default value for signal "PR_Write" because signal was never assigned a value File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 268
-Warning (10492): VHDL Process Statement warning at main.vhd(403): signal "Mem_hzd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 403
-Warning (10492): VHDL Process Statement warning at main.vhd(405): signal "pc_wr_ex" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 405
-Warning (10492): VHDL Process Statement warning at main.vhd(407): signal "pc_wr_rr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 407
-Info (12128): Elaborating entity "pipe_reg" for hierarchy "pipe_reg:PReg1" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 291
-Info (12128): Elaborating entity "regfile" for hierarchy "regfile:rf" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 297
-Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR0" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl Line: 25
-Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR1" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl Line: 25
-Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR2" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl Line: 25
-Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR3" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl Line: 25
-Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR4" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl Line: 25
-Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR5" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl Line: 25
-Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR6" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl Line: 25
-Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(25): object "sR7" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl Line: 25
-Info (12128): Elaborating entity "RefAdd" for hierarchy "RefAdd:RAR1" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 298
-Info (12128): Elaborating entity "instr_mem" for hierarchy "instr_mem:i_mem" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 299
+Warning (10540): VHDL Signal Declaration warning at main.vhd(260): used explicit default value for signal "RefAdd_in" because signal was never assigned a value File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 260
+Warning (10540): VHDL Signal Declaration warning at main.vhd(269): used explicit default value for signal "PR_Write" because signal was never assigned a value File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 269
+Warning (10492): VHDL Process Statement warning at main.vhd(405): signal "Mem_hzd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 405
+Warning (10492): VHDL Process Statement warning at main.vhd(407): signal "pc_wr_ex" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 407
+Warning (10492): VHDL Process Statement warning at main.vhd(409): signal "pc_wr_rr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 409
+Info (12128): Elaborating entity "pipe_reg" for hierarchy "pipe_reg:PReg1" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 293
+Info (12128): Elaborating entity "regfile" for hierarchy "regfile:rf" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 299
+Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(26): object "sR0" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl Line: 26
+Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(26): object "sR1" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl Line: 26
+Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(26): object "sR2" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl Line: 26
+Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(26): object "sR3" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl Line: 26
+Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(26): object "sR4" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl Line: 26
+Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(26): object "sR5" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl Line: 26
+Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(26): object "sR6" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl Line: 26
+Warning (10036): Verilog HDL or VHDL warning at regfile.vhdl(26): object "sR7" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl Line: 26
+Warning (10492): VHDL Process Statement warning at regfile.vhdl(41): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl Line: 41
+Info (12128): Elaborating entity "RefAdd" for hierarchy "RefAdd:RAR1" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 300
+Info (12128): Elaborating entity "instr_mem" for hierarchy "instr_mem:i_mem" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 301
 Warning (10036): Verilog HDL or VHDL warning at instr_mem.vhdl(17): object "sData" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/instr_mem.vhdl Line: 17
 Warning (10542): VHDL Variable Declaration warning at instr_mem.vhdl(20): used initial value expression for variable "Data" because variable was never assigned a value File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/instr_mem.vhdl Line: 20
-Info (12128): Elaborating entity "ALU_2" for hierarchy "ALU_2:alu1" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 301
+Info (12128): Elaborating entity "ALU_2" for hierarchy "ALU_2:alu1" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 303
 Warning (10542): VHDL Variable Declaration warning at ALU_2.vhdl(96): used initial value expression for variable "ALU_CND" because variable was never assigned a value File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/ALU_2.vhdl Line: 96
 Warning (10631): VHDL Process Statement warning at ALU_2.vhdl(95): inferring latch(es) for signal or variable "ALU_C", which holds its previous value in one or more paths through the process File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/ALU_2.vhdl Line: 95
 Warning (10631): VHDL Process Statement warning at ALU_2.vhdl(95): inferring latch(es) for signal or variable "ALU_Cout", which holds its previous value in one or more paths through the process File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/ALU_2.vhdl Line: 95
@@ -456,7 +456,7 @@ Info (10041): Inferred latch for "ALU_C[12]" at ALU_2.vhdl(95) File: /home/shrey
 Info (10041): Inferred latch for "ALU_C[13]" at ALU_2.vhdl(95) File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/ALU_2.vhdl Line: 95
 Info (10041): Inferred latch for "ALU_C[14]" at ALU_2.vhdl(95) File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/ALU_2.vhdl Line: 95
 Info (10041): Inferred latch for "ALU_C[15]" at ALU_2.vhdl(95) File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/ALU_2.vhdl Line: 95
-Info (12128): Elaborating entity "Stage2_WithoutHazards" for hierarchy "Stage2_WithoutHazards:id" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 302
+Info (12128): Elaborating entity "Stage2_WithoutHazards" for hierarchy "Stage2_WithoutHazards:id" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 304
 Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(37): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage2_WithoutHazards.vhd Line: 37
 Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(57): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage2_WithoutHazards.vhd Line: 57
 Warning (10492): VHDL Process Statement warning at Stage2_WithoutHazards.vhd(59): signal "Instr_R1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage2_WithoutHazards.vhd Line: 59
@@ -473,7 +473,7 @@ Info (10041): Inferred latch for "stage_proc:ct1[2]" at Stage2_WithoutHazards.vh
 Info (10041): Inferred latch for "stage_proc:ct2[0]" at Stage2_WithoutHazards.vhd(32) File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage2_WithoutHazards.vhd Line: 32
 Info (10041): Inferred latch for "stage_proc:ct2[1]" at Stage2_WithoutHazards.vhd(32) File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage2_WithoutHazards.vhd Line: 32
 Info (10041): Inferred latch for "stage_proc:ct2[2]" at Stage2_WithoutHazards.vhd(32) File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage2_WithoutHazards.vhd Line: 32
-Info (12128): Elaborating entity "Register_Read" for hierarchy "Register_Read:reg_read" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 303
+Info (12128): Elaborating entity "Register_Read" for hierarchy "Register_Read:reg_read" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 305
 Warning (10631): VHDL Process Statement warning at Register_Read.vhd(50): inferring latch(es) for signal or variable "jlr_hazard", which holds its previous value in one or more paths through the process File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Register_Read.vhd Line: 50
 Warning (10631): VHDL Process Statement warning at Register_Read.vhd(50): inferring latch(es) for signal or variable "RF_A1", which holds its previous value in one or more paths through the process File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Register_Read.vhd Line: 50
 Warning (10631): VHDL Process Statement warning at Register_Read.vhd(50): inferring latch(es) for signal or variable "RF_A2", which holds its previous value in one or more paths through the process File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Register_Read.vhd Line: 50
@@ -589,15 +589,15 @@ Info (10041): Inferred latch for "RF_A1[1]" at Register_Read.vhd(50) File: /home
 Info (10041): Inferred latch for "RF_A1[2]" at Register_Read.vhd(50) File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Register_Read.vhd Line: 50
 Info (10041): Inferred latch for "jlr_hazard" at Register_Read.vhd(50) File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Register_Read.vhd Line: 50
 Info (12128): Elaborating entity "Complementor" for hierarchy "Register_Read:reg_read|Complementor:C1" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Register_Read.vhd Line: 46
-Info (12128): Elaborating entity "Stage4_Exec" for hierarchy "Stage4_Exec:ex" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 304
+Info (12128): Elaborating entity "Stage4_Exec" for hierarchy "Stage4_Exec:ex" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 306
 Warning (10541): VHDL Signal Declaration warning at Stage4_Exec.vhdl(18): used implicit default value for signal "PC_R4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 18
 Warning (10540): VHDL Signal Declaration warning at Stage4_Exec.vhdl(67): used explicit default value for signal "ALU3_Cin" because signal was never assigned a value File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 67
 Warning (10036): Verilog HDL or VHDL warning at Stage4_Exec.vhdl(67): object "ALU3_Cout" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 67
 Warning (10036): Verilog HDL or VHDL warning at Stage4_Exec.vhdl(67): object "ALU3_Z" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 67
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(300): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 300
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(318): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 318
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(336): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 336
-Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(350): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 350
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(321): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 321
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(339): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 339
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(357): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 357
+Warning (10492): VHDL Process Statement warning at Stage4_Exec.vhdl(371): signal "PC_R3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 371
 Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "Instr_R4", which holds its previous value in one or more paths through the process File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "branch_hazard", which holds its previous value in one or more paths through the process File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Warning (10631): VHDL Process Statement warning at Stage4_Exec.vhdl(77): inferring latch(es) for signal or variable "A_R4", which holds its previous value in one or more paths through the process File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
@@ -774,20 +774,20 @@ Info (10041): Inferred latch for "Instr_R4[14]" at Stage4_Exec.vhdl(77) File: /h
 Info (10041): Inferred latch for "Instr_R4[15]" at Stage4_Exec.vhdl(77) File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 77
 Info (12128): Elaborating entity "carry_flag" for hierarchy "Stage4_Exec:ex|carry_flag:cf" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 72
 Info (12128): Elaborating entity "zero_flag" for hierarchy "Stage4_Exec:ex|zero_flag:zf" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl Line: 73
-Info (12128): Elaborating entity "MEM_STAGE" for hierarchy "MEM_STAGE:m_acc" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 306
+Info (12128): Elaborating entity "MEM_STAGE" for hierarchy "MEM_STAGE:m_acc" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 308
 Info (12128): Elaborating entity "data_mem" for hierarchy "MEM_STAGE:m_acc|data_mem:mem" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/MEM_STAGE.vhd Line: 62
 Warning (10036): Verilog HDL or VHDL warning at data_mem.vhdl(21): object "sData" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/data_mem.vhdl Line: 21
 Warning (10492): VHDL Process Statement warning at data_mem.vhdl(31): signal "mem_add_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/data_mem.vhdl Line: 31
 Info (12128): Elaborating entity "mux2to1" for hierarchy "MEM_STAGE:m_acc|mux2to1:mux" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/MEM_STAGE.vhd Line: 63
-Info (12128): Elaborating entity "Write_Back" for hierarchy "Write_Back:wb" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 308
+Info (12128): Elaborating entity "Write_Back" for hierarchy "Write_Back:wb" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 310
 Warning (10036): Verilog HDL or VHDL warning at Write_Back.vhd(30): object "condcode" assigned a value but never read File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Write_Back.vhd Line: 30
 Warning (10492): VHDL Process Statement warning at Write_Back.vhd(39): signal "ctr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Write_Back.vhd Line: 39
 Warning (10631): VHDL Process Statement warning at Write_Back.vhd(28): inferring latch(es) for signal or variable "ctr", which holds its previous value in one or more paths through the process File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/Write_Back.vhd Line: 28
-Info (12128): Elaborating entity "mux4to1" for hierarchy "mux4to1:mux0" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 311
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 70 warnings
+Info (12128): Elaborating entity "mux4to1" for hierarchy "mux4to1:mux0" File: /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd Line: 313
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 71 warnings
     Info: Peak virtual memory: 744 megabytes
-    Info: Processing ended: Sat May  6 19:28:27 2023
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Processing ended: Sat May  6 20:31:04 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:21
 
 

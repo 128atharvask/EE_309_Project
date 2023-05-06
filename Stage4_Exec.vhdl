@@ -104,8 +104,10 @@ begin
                             PC <= ALU2_C;
                             PC_WR <= '1';
                             branch_hazard <= '1';
+									 Instr_R4(15 downto 12) <= "1110";
+								else
+									Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                         end if;
-                        Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                     when "01" =>
                         if (Z_out = '1') then
                             ALU2_Cin <= '0';
@@ -113,11 +115,13 @@ begin
                             Z_WR <= '1';
                             C_R4 <= ALU2_C;
                             if(Instr_R3(11 downto 9) = "000") then
-                                PC <= ALU2_C;
-                                PC_WR <= '1';
-                                branch_hazard <= '1';
-                            end if;
-                            Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
+										 PC <= ALU2_C;
+										 PC_WR <= '1';
+										 branch_hazard <= '1';
+										 Instr_R4(15 downto 12) <= "1110";
+									else
+										Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
+									end if;
                         else
                             C_WR <= '0';
                             Z_WR <= '0';
@@ -131,11 +135,13 @@ begin
                             Z_WR <= '1';
                             C_R4 <= ALU2_C;
                             if(Instr_R3(11 downto 9) = "000") then
-                                PC <= ALU2_C;
-                                PC_WR <= '1';
-                                branch_hazard <= '1';
-                            end if;
-                            Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
+										 PC <= ALU2_C;
+										 PC_WR <= '1';
+										 branch_hazard <= '1';
+										 Instr_R4(15 downto 12) <= "1110";
+									else
+										Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
+									end if;
                         else
                             C_WR <= '0';
                             Z_WR <= '0';
@@ -151,8 +157,10 @@ begin
                             PC <= ALU2_C;
                             PC_WR <= '1';
                             branch_hazard <= '1';
+									 Instr_R4(15 downto 12) <= "1110";
+								else
+									Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                         end if;
-                        Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                     when others =>
                         C_WR <= '0';
                         Z_WR <= '0';
@@ -175,19 +183,23 @@ begin
                             PC <= ALU2_C;
                             PC_WR <= '1';
                             branch_hazard <= '1';
+									 Instr_R4(15 downto 12) <= "1110";
+								else
+									Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                         end if;
-                        Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                     when "01" =>
                         if (Z_out = '1') then
                             ALU2_Cin <= '0';
                             Z_WR <= '1';
                             C_R4 <= ALU2_C;
                             if(Instr_R3(11 downto 9) = "000") then
-                                PC <= ALU2_C;
-                                PC_WR <= '1';
-                                branch_hazard <= '1';
-                            end if;
-                            Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
+										 PC <= ALU2_C;
+										 PC_WR <= '1';
+										 branch_hazard <= '1';
+										 Instr_R4(15 downto 12) <= "1110";
+									else
+										Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
+									end if;
                         else
                             ALU2_Cin <= '0';
                             Z_WR <= '0';
@@ -199,11 +211,13 @@ begin
                             Z_WR <= '1';
                             C_R4 <= ALU2_C;
                             if(Instr_R3(11 downto 9) = "000") then
-                                PC <= ALU2_C;
-                                PC_WR <= '1';
-                                branch_hazard <= '1';
-                            end if;
-                            Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
+										 PC <= ALU2_C;
+										 PC_WR <= '1';
+										 branch_hazard <= '1';
+										 Instr_R4(15 downto 12) <= "1110";
+									else
+										Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
+									end if;
                         else
                             ALU2_Cin <= '0';
                             Z_WR <= '0';
@@ -219,10 +233,15 @@ begin
                 ALU2_B <= C_R3;
                 C_R4 <= ALU2_C;
                 if(Instr_R3(11 downto 9) = "000") then
-                    PC <= ALU2_C;
-                    PC_WR <= '1';
-                    branch_hazard <= '1';
-                end if;
+						 PC <= ALU2_C;
+						 PC_WR <= '1';
+						 branch_hazard <= '1';
+						 Instr_R4(15 downto 12) <= "1110";
+					else
+						Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
+						 PC_WR <= '0';
+						  branch_hazard <= '0';
+					end if;
                 ALU2_Cin <= '0';
                 ALU2_J <= "00";
                 PC_WR <= '0';
@@ -235,14 +254,16 @@ begin
                 Z_WR <= '0';
                 C_WR <= '0';                
                 if(Instr_R3(11 downto 9) = "000") then
-					PC_WR <= '1';
+							PC_WR <= '1';
                     branch_hazard <= '1';
                     PC <= B_R3;
+						  Instr_R4(15 downto 12) <= "1110";
 				else
                     PC_WR <= '0';
                     branch_hazard <= '0';
+						  Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
 				end if;
-                Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
+                
             when "0100" => -- LW
                 branch_hazard <= '0';
                 A_R4 <= A_R3;

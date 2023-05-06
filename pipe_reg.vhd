@@ -14,7 +14,12 @@ end pipe_reg;
 architecture behavioural of pipe_reg is
 begin
     clock_proc: process(clock)
-        variable data: std_logic_vector(95 downto 0) := (others => '0');
+        variable data: std_logic_vector(95 downto 0) := (
+		  31 => '1',
+		  30 => '1',
+		  29 => '1',
+		  28 => '0',
+		  others => '0');
 	 begin
         if(rising_edge(clock)) then
             if(Hzd_in = '1') then

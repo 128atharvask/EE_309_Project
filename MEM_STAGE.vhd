@@ -67,10 +67,11 @@ begin
 
 	 ControlSig_R2_RFWR_out <= ControlSig_R2_RFWR_in;
 
-	 instr_out <= instr;
+	 instr_out(11 downto 0) <= instr(11 downto 0);
 
 	 proc: process(clock, instr,ControlSig_R2_M2WR)
     begin
+			
 			if(instr(15 downto 12) = "0101" or (instr(15 downto 12) = "0111" and ControlSig_R2_M2WR = '1')) then
 				mem_wr <= '1';
 			else
@@ -83,10 +84,12 @@ begin
 				dout_select <= '0';
 			end if;
 
-			if(instr(15 downto 12) = "0100") then
+			if(instr(15 downto 12) = "0100" and instr(11 downto 9) = "000") then
 				loadr0_hazard <= '1';
+				instr_out(15 downto 12) <= "0001";
 			else
 				loadr0_hazard <= '0';
+				instr_out(15 downto 12) <= instr(15 downto 12);
 			end if;
 
 		-- 	if(instr(15 downto 12) = "0011") then

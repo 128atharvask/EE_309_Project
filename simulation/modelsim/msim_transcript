@@ -11,7 +11,7 @@
 # 
 # vcom -93 -work work {/home/shreyas/Documents/IITB/sem4/EE_309_Project/mux4to1.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:28:34 on May 06,2023
+# Start time: 20:31:09 on May 06,2023
 # vcom -reportprogress 300 -93 -work work /home/shreyas/Documents/IITB/sem4/EE_309_Project/mux4to1.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -19,11 +19,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity mux4to1
 # -- Compiling architecture working of mux4to1
-# End time: 19:28:34 on May 06,2023, Elapsed time: 0:00:00
+# End time: 20:31:09 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/shreyas/Documents/IITB/sem4/EE_309_Project/mux2to1.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:28:34 on May 06,2023
+# Start time: 20:31:09 on May 06,2023
 # vcom -reportprogress 300 -93 -work work /home/shreyas/Documents/IITB/sem4/EE_309_Project/mux2to1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -31,22 +31,22 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity mux2to1
 # -- Compiling architecture working of mux2to1
-# End time: 19:28:34 on May 06,2023, Elapsed time: 0:00:00
+# End time: 20:31:09 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:28:34 on May 06,2023
+# Start time: 20:31:09 on May 06,2023
 # vcom -reportprogress 300 -93 -work work /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage4_Exec.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Stage4_Exec
 # -- Compiling architecture behavioural of Stage4_Exec
-# End time: 19:28:34 on May 06,2023, Elapsed time: 0:00:00
+# End time: 20:31:09 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/shreyas/Documents/IITB/sem4/EE_309_Project/instr_mem.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:28:34 on May 06,2023
+# Start time: 20:31:09 on May 06,2023
 # vcom -reportprogress 300 -93 -work work /home/shreyas/Documents/IITB/sem4/EE_309_Project/instr_mem.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -54,11 +54,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity instr_mem
 # -- Compiling architecture behavioural of instr_mem
-# End time: 19:28:34 on May 06,2023, Elapsed time: 0:00:00
+# End time: 20:31:09 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/shreyas/Documents/IITB/sem4/EE_309_Project/data_mem.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:28:34 on May 06,2023
+# Start time: 20:31:09 on May 06,2023
 # vcom -reportprogress 300 -93 -work work /home/shreyas/Documents/IITB/sem4/EE_309_Project/data_mem.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -66,11 +66,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity data_mem
 # -- Compiling architecture behavioural of data_mem
-# End time: 19:28:34 on May 06,2023, Elapsed time: 0:00:00
+# End time: 20:31:09 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/shreyas/Documents/IITB/sem4/EE_309_Project/ALU_2.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:28:34 on May 06,2023
+# Start time: 20:31:09 on May 06,2023
 # vcom -reportprogress 300 -93 -work work /home/shreyas/Documents/IITB/sem4/EE_309_Project/ALU_2.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -78,11 +78,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity ALU_2
 # -- Compiling architecture behavioural of ALU_2
-# End time: 19:28:34 on May 06,2023, Elapsed time: 0:00:00
+# End time: 20:31:10 on May 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/shreyas/Documents/IITB/sem4/EE_309_Project/Flags.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:28:34 on May 06,2023
+# Start time: 20:31:10 on May 06,2023
 # vcom -reportprogress 300 -93 -work work /home/shreyas/Documents/IITB/sem4/EE_309_Project/Flags.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -92,11 +92,11 @@
 # -- Compiling architecture behav of carry_flag
 # -- Compiling entity zero_flag
 # -- Compiling architecture behav of zero_flag
-# End time: 19:28:34 on May 06,2023, Elapsed time: 0:00:00
+# End time: 20:31:10 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:28:34 on May 06,2023
+# Start time: 20:31:10 on May 06,2023
 # vcom -reportprogress 300 -93 -work work /home/shreyas/Documents/IITB/sem4/EE_309_Project/regfile.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -104,11 +104,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity regfile
 # -- Compiling architecture behavioural of regfile
-# End time: 19:28:34 on May 06,2023, Elapsed time: 0:00:00
+# End time: 20:31:10 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/shreyas/Documents/IITB/sem4/EE_309_Project/Write_Back.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:28:34 on May 06,2023
+# Start time: 20:31:10 on May 06,2023
 # vcom -reportprogress 300 -93 -work work /home/shreyas/Documents/IITB/sem4/EE_309_Project/Write_Back.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -116,11 +116,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Write_Back
 # -- Compiling architecture WB of Write_Back
-# End time: 19:28:34 on May 06,2023, Elapsed time: 0:00:00
+# End time: 20:31:10 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/shreyas/Documents/IITB/sem4/EE_309_Project/Register_Read.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:28:34 on May 06,2023
+# Start time: 20:31:10 on May 06,2023
 # vcom -reportprogress 300 -93 -work work /home/shreyas/Documents/IITB/sem4/EE_309_Project/Register_Read.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -128,11 +128,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Register_Read
 # -- Compiling architecture RR of Register_Read
-# End time: 19:28:34 on May 06,2023, Elapsed time: 0:00:00
+# End time: 20:31:10 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/shreyas/Documents/IITB/sem4/EE_309_Project/RefAdd.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:28:34 on May 06,2023
+# Start time: 20:31:10 on May 06,2023
 # vcom -reportprogress 300 -93 -work work /home/shreyas/Documents/IITB/sem4/EE_309_Project/RefAdd.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -140,11 +140,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RefAdd
 # -- Compiling architecture king of RefAdd
-# End time: 19:28:34 on May 06,2023, Elapsed time: 0:00:00
+# End time: 20:31:10 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/shreyas/Documents/IITB/sem4/EE_309_Project/MEM_STAGE.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:28:34 on May 06,2023
+# Start time: 20:31:10 on May 06,2023
 # vcom -reportprogress 300 -93 -work work /home/shreyas/Documents/IITB/sem4/EE_309_Project/MEM_STAGE.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -152,11 +152,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity MEM_STAGE
 # -- Compiling architecture Structural of MEM_STAGE
-# End time: 19:28:34 on May 06,2023, Elapsed time: 0:00:00
+# End time: 20:31:10 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/shreyas/Documents/IITB/sem4/EE_309_Project/Complementor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:28:34 on May 06,2023
+# Start time: 20:31:10 on May 06,2023
 # vcom -reportprogress 300 -93 -work work /home/shreyas/Documents/IITB/sem4/EE_309_Project/Complementor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -164,11 +164,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Complementor
 # -- Compiling architecture doit of Complementor
-# End time: 19:28:34 on May 06,2023, Elapsed time: 0:00:00
+# End time: 20:31:10 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:28:34 on May 06,2023
+# Start time: 20:31:10 on May 06,2023
 # vcom -reportprogress 300 -93 -work work /home/shreyas/Documents/IITB/sem4/EE_309_Project/main.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -176,11 +176,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity main
 # -- Compiling architecture behav of main
-# End time: 19:28:34 on May 06,2023, Elapsed time: 0:00:00
+# End time: 20:31:10 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage2_WithoutHazards.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:28:34 on May 06,2023
+# Start time: 20:31:10 on May 06,2023
 # vcom -reportprogress 300 -93 -work work /home/shreyas/Documents/IITB/sem4/EE_309_Project/Stage2_WithoutHazards.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -188,23 +188,51 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Stage2_WithoutHazards
 # -- Compiling architecture behav of Stage2_WithoutHazards
-# End time: 19:28:34 on May 06,2023, Elapsed time: 0:00:00
+# End time: 20:31:10 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/shreyas/Documents/IITB/sem4/EE_309_Project/pipe_reg.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:28:34 on May 06,2023
+# Start time: 20:31:10 on May 06,2023
 # vcom -reportprogress 300 -93 -work work /home/shreyas/Documents/IITB/sem4/EE_309_Project/pipe_reg.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity pipe_reg
 # -- Compiling architecture behavioural of pipe_reg
-# End time: 19:28:34 on May 06,2023, Elapsed time: 0:00:00
+# End time: 20:31:10 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim work.main
 # vsim work.main 
-# Start time: 19:28:51 on May 06,2023
+# Start time: 20:31:23 on May 06,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.main(behav)
+# Loading work.pipe_reg(behavioural)
+# Loading work.regfile(behavioural)
+# Loading work.refadd(king)
+# Loading work.instr_mem(behavioural)
+# Loading work.alu_2(behavioural)
+# Loading work.stage2_withouthazards(behav)
+# Loading work.register_read(rr)
+# Loading work.complementor(doit)
+# Loading work.stage4_exec(behavioural)
+# Loading work.carry_flag(behav)
+# Loading work.zero_flag(behav)
+# Loading work.mem_stage(structural)
+# Loading work.data_mem(behavioural)
+# Loading work.mux2to1(working)
+# Loading work.write_back(wb)
+# Loading work.mux4to1(working)
+# ** Warning: (vsim-8683) Uninitialized out port /main/ex/PC_R4(15 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
+vsim work.main
+# End time: 20:33:01 on May 06,2023, Elapsed time: 0:01:38
+# Errors: 0, Warnings: 1
+# vsim work.main 
+# Start time: 20:33:01 on May 06,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -260,15 +288,8 @@ add wave -position 3  sim:/main/PReg4/Data_Out
 add wave -position 4  sim:/main/PReg5/Data_Out
 force -freeze sim:/main/clock 1 20, 0 {70 ps} -r 100
 add wave -position insertpoint  \
-sim:/main/pc_in \
-sim:/main/pc_in0 \
-sim:/main/pc_in_exec
-add wave -position insertpoint  \
-sim:/main/fwd_sel0 \
-sim:/main/fwd_sel1 \
-sim:/main/fwd_sel2 \
-sim:/main/fwd_sel3 \
-sim:/main/fwd_sel4
+sim:/main/reset
+force -freeze sim:/main/reset 0 0
 force -freeze sim:/main/clock 0 0, 1 {50 ps} -r 100
 run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -280,18 +301,20 @@ run
 run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 120 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 170 ps  Iteration: 0  Instance: /main/m_acc/mem
-run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 220 ps  Iteration: 0  Instance: /main/m_acc/mem
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 270 ps  Iteration: 0  Instance: /main/m_acc/mem
 run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 270 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 320 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 370 ps  Iteration: 0  Instance: /main/m_acc/mem
+force -freeze sim:/main/reset 1 0
 run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 420 ps  Iteration: 0  Instance: /main/m_acc/mem
@@ -300,16 +323,17 @@ run
 run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 520 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 570 ps  Iteration: 0  Instance: /main/m_acc/mem
-run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 620 ps  Iteration: 0  Instance: /main/m_acc/mem
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 670 ps  Iteration: 0  Instance: /main/m_acc/mem
 run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 670 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 720 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 770 ps  Iteration: 0  Instance: /main/m_acc/mem
 run
@@ -320,5 +344,125 @@ run
 run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 920 ps  Iteration: 0  Instance: /main/m_acc/mem
+force -freeze sim:/main/reset 0 0
+run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 970 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1020 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1070 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1120 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1170 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1220 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1270 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1320 ps  Iteration: 0  Instance: /main/m_acc/mem
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-8683) Uninitialized out port /main/ex/PC_R4(15 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
+force -freeze sim:/main/clock 0 0, 1 {50 ps} -r 100
+force -freeze sim:/main/reset 0 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /main/i_mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 150 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 200 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 250 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 300 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 350 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 400 ps  Iteration: 0  Instance: /main/m_acc/mem
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-8683) Uninitialized out port /main/ex/PC_R4(15 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
+force -freeze sim:/main/reset 0 0
+force -freeze sim:/main/clock 0 0, 1 {50 ps} -r 100
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /main/i_mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 150 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 200 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 250 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 300 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 350 ps  Iteration: 0  Instance: /main/m_acc/mem
+force -freeze sim:/main/reset 1 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 400 ps  Iteration: 0  Instance: /main/m_acc/mem
+force -freeze sim:/main/reset 0 0
+run
+run
+run
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 450 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 550 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 600 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 650 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 700 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 750 ps  Iteration: 0  Instance: /main/m_acc/mem
+force -freeze sim:/main/reset 1 0
+run
+force -freeze sim:/main/reset 0 0
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 800 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 850 ps  Iteration: 0  Instance: /main/m_acc/mem
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 900 ps  Iteration: 0  Instance: /main/m_acc/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 950 ps  Iteration: 0  Instance: /main/m_acc/mem
+# End time: 20:40:13 on May 06,2023, Elapsed time: 0:07:12
+# Errors: 0, Warnings: 21
