@@ -68,7 +68,7 @@ architecture behavioural of Stage4_Exec is
    signal ALU2_J, ALU3_J: std_logic_vector(1 downto 0):= (others => '0');
 begin
 	 ControlSig_R4 <= ControlSig_R3;
-     ALU_out <= ALU2_C;
+     
 	 cf: carry_flag port map(c_in=>C_in, c_en=>C_WR, clock=>clock, c_out=>C_out);
 	 zf: zero_flag port map (z_in=>Z_in, z_en=>Z_WR, clock=>clock, z_out=>Z_out);
 	 ALU2: ALU_2 port map(ALU_A => ALU2_A, ALU_B => ALU2_B, ALU_Cin => ALU2_Cin, ALU_J => ALU2_J, ALU_C => ALU2_C, ALU_Cout => ALU2_Cout, ALU_Z => ALU2_Z);
@@ -100,6 +100,11 @@ begin
                         C_WR <= '1';
                         Z_WR <= '1';
                         C_R4 <= ALU2_C;
+                        if(Instr_R3(11 downto 9) = "000") then
+                            PC <= ALU2_C;
+                            PC_WR <= '1';
+                            branch_hazard <= '1';
+                        end if;
                         Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                     when "01" =>
                         if (Z_out = '1') then
@@ -107,6 +112,11 @@ begin
                             C_WR <= '1';
                             Z_WR <= '1';
                             C_R4 <= ALU2_C;
+                            if(Instr_R3(11 downto 9) = "000") then
+                                PC <= ALU2_C;
+                                PC_WR <= '1';
+                                branch_hazard <= '1';
+                            end if;
                             Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                         else
                             C_WR <= '0';
@@ -120,6 +130,11 @@ begin
                             C_WR <= '1';
                             Z_WR <= '1';
                             C_R4 <= ALU2_C;
+                            if(Instr_R3(11 downto 9) = "000") then
+                                PC <= ALU2_C;
+                                PC_WR <= '1';
+                                branch_hazard <= '1';
+                            end if;
                             Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                         else
                             C_WR <= '0';
@@ -132,11 +147,17 @@ begin
                         C_WR <= '1';
                         Z_WR <= '1';
                         C_R4 <= ALU2_C;
+                        if(Instr_R3(11 downto 9) = "000") then
+                            PC <= ALU2_C;
+                            PC_WR <= '1';
+                            branch_hazard <= '1';
+                        end if;
                         Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                     when others =>
                         C_WR <= '0';
                         Z_WR <= '0';
                 end case;
+                ALU_out <= ALU2_C;
             when "0010" => -- NAND
                 branch_hazard <= '0';
                 A_R4 <= A_R3;
@@ -150,12 +171,22 @@ begin
                         ALU2_Cin <= '0';
                         Z_WR <= '1';
                         C_R4 <= ALU2_C;
+                        if(Instr_R3(11 downto 9) = "000") then
+                            PC <= ALU2_C;
+                            PC_WR <= '1';
+                            branch_hazard <= '1';
+                        end if;
                         Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                     when "01" =>
                         if (Z_out = '1') then
                             ALU2_Cin <= '0';
                             Z_WR <= '1';
                             C_R4 <= ALU2_C;
+                            if(Instr_R3(11 downto 9) = "000") then
+                                PC <= ALU2_C;
+                                PC_WR <= '1';
+                                branch_hazard <= '1';
+                            end if;
                             Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                         else
                             ALU2_Cin <= '0';
@@ -167,6 +198,11 @@ begin
                             ALU2_Cin <= '0';
                             Z_WR <= '1';
                             C_R4 <= ALU2_C;
+                            if(Instr_R3(11 downto 9) = "000") then
+                                PC <= ALU2_C;
+                                PC_WR <= '1';
+                                branch_hazard <= '1';
+                            end if;
                             Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
                         else
                             ALU2_Cin <= '0';
@@ -175,23 +211,37 @@ begin
                         end if;
                     when others => null;
                 end case;
+                ALU_out <= ALU2_C;
             when "0000" => -- Add Immediate
                 branch_hazard <= '0';
                 A_R4 <= A_R3;
                 ALU2_A <= B_R3;
                 ALU2_B <= C_R3;
                 C_R4 <= ALU2_C;
+                if(Instr_R3(11 downto 9) = "000") then
+                    PC <= ALU2_C;
+                    PC_WR <= '1';
+                    branch_hazard <= '1';
+                end if;
                 ALU2_Cin <= '0';
                 ALU2_J <= "00";
                 PC_WR <= '0';
                 Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
-            when "0011" => -- LLI
-                branch_hazard <= '0';
+                ALU_out <= ALU2_C;
+            when "0011" => -- LLI                
                 A_R4 <= A_R3;
                 B_R4 <= B_R3;
+                ALU_out <= B_R3;
                 Z_WR <= '0';
-                C_WR <= '0';
-                PC_WR <= '0';
+                C_WR <= '0';                
+                if(Instr_R3(11 downto 9) = "000") then
+					PC_WR <= '1';
+                    branch_hazard <= '1';
+                    PC <= B_R3;
+				else
+                    PC_WR <= '0';
+                    branch_hazard <= '0';
+				end if;
                 Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
             when "0100" => -- LW
                 branch_hazard <= '0';
@@ -204,6 +254,7 @@ begin
                 ALU2_J <= "00";
                 PC_WR <= '0';
                 Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
+                ALU_out <= ALU2_C;
             when "0101" => -- SW
                 branch_hazard <= '0';
                 A_R4 <= A_R3;
@@ -215,6 +266,7 @@ begin
                 C_WR <= '0';
                 PC_WR <= '0';
                 Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
+                ALU_out <= ALU2_C;
             when "0110" => -- LM
                 branch_hazard <= '0';
                 A_R4 <= A_R3;
@@ -226,6 +278,7 @@ begin
                 C_WR <= '0';
                 PC_WR <= '0';
                 Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
+                ALU_out <= ALU2_C;
             when "0111" => -- SM
                 branch_hazard <= '0';
                 A_R4 <= A_R3;
@@ -237,6 +290,7 @@ begin
                 C_WR <= '0';
                 PC_WR <= '0';
                 Instr_R4(15 downto 12) <= Instr_R3(15 downto 12);
+                ALU_out <= ALU2_C;
             when "1000" => -- BEQ
                 ALU2_A <= A_R3;
                 ALU2_B <= B_R3;
@@ -253,6 +307,7 @@ begin
                     PC_WR <= '0';
                     branch_hazard <= '0';
                 end if;
+                ALU_out <= ALU2_C;
                 -- HAZARD HANDLING
             when "1001" => -- BLT
                 ALU2_A <= A_R3;
@@ -270,6 +325,7 @@ begin
                     PC_WR <= '0';
                     branch_hazard <= '0';
                 end if;
+                ALU_out <= ALU2_C;
                 -- HAZARD HANDLING
             when "1010" => -- BLE
                 ALU2_A <= A_R3;
@@ -287,6 +343,7 @@ begin
                     PC_WR <= '0';
                     branch_hazard <= '0';
                 end if;
+                ALU_out <= ALU2_C;
                 -- HAZARD HANDLING
             when "1100" => -- JAL
                 branch_hazard <= '1';

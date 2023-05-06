@@ -25,7 +25,8 @@ entity MEM_STAGE is
 		WB_data_out:out std_logic_vector((operand_width-1) downto 0);		
 		WB_add_out :out std_logic_vector((operand_width-1) downto 0);
 		instr_out :out std_logic_vector((operand_width-1) downto 0);
-		ControlSig_R2_RFWR_out : out std_logic
+		ControlSig_R2_RFWR_out : out std_logic;
+		loadr0_hazard: out std_logic
     );
 
 end MEM_STAGE;
@@ -81,6 +82,23 @@ begin
 			else
 				dout_select <= '0';
 			end if;
+
+			if(instr(15 downto 12) = "0100") then
+				loadr0_hazard <= '1';
+			else
+				loadr0_hazard <= '0';
+			end if;
+
+		-- 	if(instr(15 downto 12) = "0011") then
+		-- 		if(instr(11 downto 9) == "000") then
+		-- 			loadr0_hazard <= '1';
+		-- 		else
+		-- 			loadr0_hazard <= '0';
+		-- 		end if;
+		-- 	else
+		-- 		loadr0_hazard <= '0';
+		-- 	end if;
+		
 		end process;
     
 end Structural;
